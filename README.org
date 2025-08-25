@@ -15,7 +15,7 @@
 
 - The goal of this lecture is to give an introduction to the fascinating world
   of electric machines.
-- We will start from understanding how they work to the types currenty
+- We will start from understanding how they work to the types currently
   used in commercial and industrial applications.
 - The lecture will focus on mathematical and engineering concepts which
   will have direct use with real-life engineering applications.
@@ -63,7 +63,6 @@
 - The lecture will have a single personal assignment comprising of a set list
   of questions and a final exam comprising of all the topics covered
   in the lecture. Instructions will be given in the assignment.
-
 - For the written exam you are allowed to write your personal equation
   reference paper, as long as it is a single sheet of A4, double sided and
   contains no exercise or solutions. Your reference sheet will be collected
