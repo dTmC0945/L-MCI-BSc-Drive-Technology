@@ -3,6 +3,7 @@
 
 ** Table of Contents :TOC_2:
   - [[#lecture-information][Lecture Information]]
+  - [[#guided-self-study-sessions][Guided Self Study Sessions]]
   - [[#requirements-and-the-learning-outcomes][Requirements and the Learning Outcomes]]
   - [[#grading-of-the-lecture][Grading of the Lecture]]
   - [[#lecture-sources][Lecture Sources]]
@@ -19,7 +20,18 @@
   used in commercial and industrial applications.
 - The lecture will focus on mathematical and engineering concepts which
   will have direct use with real-life engineering applications.
-    
+
+** Guided Self Study Sessions                                       :note:
+
+- For two (2) sessions there will be a self-guided study which will require you
+  to work through the material on your own.
+- In these sessions you should focus on two topics: *Electromechanic Energy
+  conversion* and *Rotating Magnetic Fields*. You can either access this
+  content on WebBook or LectureBook which hold the *same* content.
+- The next face-to-face session will focus on a recap of these topics along
+  with any questions you may have. Afterwards there will be a 15 min long
+  quiz covering these two topics *only*.
+  
 | DESCRIPTION        | VALUE                              |
 | Official Name      | Antriebstechnik                    |
 | Lecture Code       | ANT                                |
