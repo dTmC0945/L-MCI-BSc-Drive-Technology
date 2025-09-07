@@ -1,0 +1,139 @@
+<!DOCTYPE html> 
+<html lang="en-US" xml:lang="en-US" > 
+<head>
+<title></title>
+    <link rel='icon' type='image/x-icon' href='figures/logo.svg'></link> 
+<meta  charset="utf-8" /> 
+<meta name="generator" content="ParSnip" /> 
+<meta name="viewport" content="width=device-width,initial-scale=1" /> 
+<link rel="stylesheet" type="text/css" href="DriveTechnologyLectureBook.css" /> 
+<meta name="src" content="DriveTechnologyLectureBook.tex" /> 
+ <script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>  
+ <link rel="stylesheet" type="text/css" href="flatweb.css"> 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+ <script src="flatjs.js"></script> <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>  
+<script type="module"> import pdfjsDist from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.3.93/+esm' </script>  
+<script>  
+function moveTOC() { 
+var htmlShow = document.getElementsByClassName("wide"); 
+if (htmlShow[0].style.display === "none") { 
+htmlShow[0].style.display = "block"; 
+} else { 
+htmlShow[0].style.display = "none"; 
+} 
+}  
+</script> <link href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css" rel="stylesheet" type="text/css" /> 
+ <script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script> 
+ <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"> </script>  
+<link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"/>  
+<script src="flatjs.js"> </script> 
+<header>  
+</header> 
+</head><body 
+>                                                                                
+                                                                                
+<!--l. 2--><p class="noindent" >
+                                                                                
+                                                                                
+</p><!--l. 4--><p class="noindent" ><span 
+class="ec-lmr-7">(2025, D. T. McGuines, Ph.D) </span><br 
+class="newline" />
+</p><!--l. 8--><p class="noindent" ><span 
+class="ec-lmr-7">Current version is WS.2025. </span><br 
+class="newline" />
+</p><!--l. 10--><p class="noindent" ><span 
+class="ec-lmr-7">This document includes the contents of Drive Technology, official name being </span><italic>Antriebstechnik</italic><span 
+class="ec-lmr-7">, taught at MCI in the Mechatronik</span>
+<span 
+class="ec-lmr-7">Design Innovation. This document is the part of the module MECH-B-5-ANT-ANT-ILV taught in the B.Sc degree.</span>
+<br 
+class="newline" />
+</p><!--l. 16--><p class="noindent" ><span 
+class="ec-lmr-7">All relevant code of the document is done using </span><italic>SageMath</italic> <span 
+class="ec-lmr-7">where stated and Python v3.13.7. </span><br 
+class="newline" />
+</p><!--l. 19--><p class="noindent" ><span 
+class="ec-lmr-7">This document was compiled with LuaTeX v1.22.0, and all editing were done using GNU Emacs v30.1 using AUCTeX and</span>
+<span 
+class="ec-lmr-7">org-mode package. </span><br 
+class="newline" />
+</p><!--l. 23--><p class="noindent" ><span 
+class="ec-lmr-7">This document is based on the following books and resources shown in no particular order: </span><br 
+class="newline" />
+</p><!--l. 25--><p class="noindent" ><italic>Advanced electric drives: analysis control and modeling using MATLAB/Simulink</italic> <span 
+class="ec-lmr-7">by Mohan Ned. , John Wiley &#x0026; Sons 2014.</span>
+<italic>Analysis of electric machinery and drive systems</italic> <span 
+class="ec-lmr-7">by Krause Paul C. et. al. , Vol. 2 IEEE Press 2002. </span><italic>Design of rotating
+electrical machines</italic> <span 
+class="ec-lmr-7">by Pyrhonen Juha et. al , John Wiley &#x0026; Sons 2013. </span><italic>Electric Machinery Fundamentals (5th Edition)</italic> <span 
+class="ec-lmr-7">by</span>
+<span 
+class="ec-lmr-7">Stephen J. Chapman. , (2012). </span><italic>Electric Machinery</italic> <span 
+class="ec-lmr-7">by Fitzgerald A. E. et. al. , McGraw Hill (2003). </span><italic>Electric Motors and Drives:
+Fundamentals Types and Applications</italic> <span 
+class="ec-lmr-7">by Hughes A. et. al. , Newnes 2019. </span><italic>Electrical Machines and Drives: Fundamentals
+and Advanced Modelling</italic> <span 
+class="ec-lmr-7">by Melkebeek A. , Springer 2018. </span><italic>Electrical machines, drives, and power systems</italic> <span 
+class="ec-lmr-7">by</span>
+<span 
+class="ec-lmr-7">Wildi T. , Pearson Education 2006. </span><italic>Fundamentals of Electrical Drives</italic> <span 
+class="ec-lmr-7">by Veltman A. et. al. , Springer 2007.</span>
+<br 
+class="newline" /><br 
+class="newline" /><br 
+class="newline" /><span 
+class="ec-lmr-7">The document is designed with no intention of publication and has only been designed for education purposes.</span>
+<br 
+class="newline" />
+</p><!--l. 39--><p class="noindent" ><span 
+class="ec-lmr-7">The current maintainer of this work along with the primary lecturer </span><br 
+class="newline" /><span 
+class="ec-lmr-7">is D. T. McGuines, Ph.D.  (dtm@mci4me.at).</span>
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+</p><!--l. 108--><p class="noindent" ><a 
+ id="chapter*.1"></a>
+</p>
+<div class="tableofcontents">
+<span class="chapterToc" >1 <a 
+href="DriveTechnologyLectureBookch1.html#x3-20001" id="QQ2-3-2">Magnetic Circuits and Materials</a></span>
+<br /><span class="sectionToc" >1.1  <a 
+href="DriveTechnologyLectureBookch1.html#x3-30001.1" id="QQ2-3-3">Introduction</a></span>
+<br /><span class="sectionToc" >1.2  <a 
+href="DriveTechnologyLectureBookch1.html#x3-50001.2" id="QQ2-3-8">Flux Linkage, Inductance, and Energy</a></span>
+<br /><span class="sectionToc" >1.3  <a 
+href="DriveTechnologyLectureBookch1.html#x3-60001.3" id="QQ2-3-11">Magnetic Material Properties</a></span>
+<br /><span class="sectionToc" >1.4  <a 
+href="DriveTechnologyLectureBookch1.html#x3-80001.4" id="QQ2-3-15">AC Excitation</a></span>
+<br /><span class="chapterToc" > <a 
+href="DriveTechnologyLectureBookch1.html#Q1-3-22">List of Acronyms</a></span>
+</div>
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+<!--l. 7--><p class="noindent" >
+                                                                                
+                                                                                
+</p>
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+</p><!--l. 1--><p class="noindent" >
+                                                                                
+                                                                                
+</p><!--l. 1--><p class="noindent" ><a 
+ id="chapter*.5"></a>
+</p> 
+</body> 
+</html>
+                                                                                
+
+

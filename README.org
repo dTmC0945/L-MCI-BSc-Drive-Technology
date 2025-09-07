@@ -3,7 +3,6 @@
 
 ** Table of Contents :TOC_2:
   - [[#lecture-information][Lecture Information]]
-  - [[#guided-self-study-sessions][Guided Self Study Sessions]]
   - [[#requirements-and-the-learning-outcomes][Requirements and the Learning Outcomes]]
   - [[#grading-of-the-lecture][Grading of the Lecture]]
   - [[#lecture-sources][Lecture Sources]]
@@ -21,16 +20,6 @@
 - The lecture will focus on mathematical and engineering concepts which
   will have direct use with real-life engineering applications.
 
-** Guided Self Study Sessions                                       :note:
-
-- For two (2) sessions there will be a self-guided study which will require you
-  to work through the material on your own.
-- In these sessions you should focus on two topics: *Electromechanic Energy
-  conversion* and *Rotating Magnetic Fields*. You can either access this
-  content on WebBook or LectureBook which hold the *same* content.
-- The next face-to-face session will focus on a recap of these topics along
-  with any questions you may have. Afterwards there will be a 15 min long
-  quiz covering these two topics *only*.
   
 | DESCRIPTION        | VALUE                              |
 | Official Name      | Antriebstechnik                    |
@@ -81,25 +70,26 @@
   after the exam.
    
 | ASSIGNMENT TYPE     | VALUE | QUANTITY |
-| Personal Assignment |    20 |        1 |
+| Quiz                |     5 |        1 |
+| Personal Assignment |    15 |        1 |
 | Final Exam          |    30 |        1 |
 | Lab Work            |    50 |        4 |
-| SUM                 |   100 |        6 |
+| SUM                 |   100 |        7 |
 
-** Lecture Sources
+** Lecture Sources                                                 
 
 The following is a reference material table with useful resources which
 complement well with the lecture.
 
 | AUTHOR                   | TITLE                                                                         | PUBLISHER               |
-| Mohan Ned.               | Advanced electric drives: analysis control and modeling using MATLAB/Simulink | John Wiley & Sons 2014. |
-| Krause Paul C. et. al.   | Analysis of electric machinery and drive systems                              | Vol. 2 IEEE Press 2002. |
-| Pyrhonen Juha et. al     | Design of rotating electrical machines                                        | John Wiley & Sons 2013. |
+| Mohan Ned.               | Advanced Electric Drives: Analysis Control and Modeling Using MATLAB/Simulink | John Wiley & Sons 2014. |
+| Krause Paul C. et. al.   | Analysis of Electric Machinery and Drive Systems                              | Vol. 2 IEEE Press 2002. |
+| Pyrhonen Juha et. al     | Design of Rotating Electrical Machines                                        | John Wiley & Sons 2013. |
 | Stephen J. Chapman.      | Electric Machinery Fundamentals (5th Edition)                                 | (2012).                 |
 | Fitzgerald A. E. et. al. | Electric Machinery                                                            | McGraw Hill (2003).     |
 | Hughes A. et. al.        | Electric Motors and Drives: Fundamentals Types and Applications               | Newnes 2019.            |
 | Melkebeek A.             | Electrical Machines and Drives: Fundamentals and Advanced Modelling           | Springer 2018.          |
-| Wildi T.                 | Electrical machines, drives, and power systems                                | Pearson Education 2006. |
+| Wildi T.                 | Electrical Machines, Drives, and Power Systems                                | Pearson Education 2006. |
 | Veltman A. et. al.       | Fundamentals of Electrical Drives                                             | Springer 2007.          |
 
 ** Content and Unit Distribution
@@ -108,21 +98,21 @@ complement well with the lecture.
 - The content and unit distribution of the lecture is as follows where a unit
   is defined as 45 min lecture.
     
-| ORDER | TOPIC                                   | UNITS | SELF STUDY |
-|     1 | Magnetic Circuits and Materials         |     4 |          4 |
-|     2 | Transformers                            |     4 |          4 |
-|     3 | Electromechanical Energy Conversion     |     4 |          8 |
-|     4 | Lab 1: Installation of a Drive System   |     3 |          6 |
-|     5 | Rotating Magnetic Fields                |     2 |          4 |
-|     6 | Lab 2: Building a Lathe                 |     4 |          8 |
-|     7 | Synchronous Machines                    |     4 |          8 |
-|     8 | Poly-phase Induction Drives             |     4 |          8 |
-|     9 | Lab 3: Synchronous and Induction Drives |     4 |          8 |
-|    10 | DC Drives                               |     4 |          8 |
-|    11 | Special Machines                        |     2 |          3 |
-|    12 | Lab 4: Photovoltaic Cells               |     4 |          8 |
-|    13 | Final Exam                              |     2 |          4 |
-|    14 | Total                                   |    45 |         90 |
+| ORDER | TOPIC                                            | UNITS | SELF STUDY |
+|     1 | Magnetic Circuits and Materials                  |     4 |          4 |
+|     2 | Transformers                                     |     4 |          4 |
+|     3 | Electromechanical Energy Conversion (Self Study) |     4 |          8 |
+|     4 | Lab 1: Installation of a Drive System            |     3 |          6 |
+|     5 | Rotating Magnetic Fields (Self Study)            |     2 |          4 |
+|     6 | Lab 2: Building a Lathe                          |     4 |          8 |
+|     7 | Synchronous Machines                             |     4 |          8 |
+|     8 | Poly-phase Induction Drives                      |     4 |          8 |
+|     9 | Lab 3: Synchronous and Induction Drives          |     4 |          8 |
+|    10 | DC Drives                                        |     4 |          8 |
+|    11 | Special Machines                                 |     2 |          3 |
+|    12 | Lab 4: Photovoltaic Cells                        |     4 |          8 |
+|    13 | Final Exam                                       |     2 |          4 |
+|    14 | Total                                            |    45 |         90 |
 
 ** Lecture Table of Contents
 
