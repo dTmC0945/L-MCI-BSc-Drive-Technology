@@ -1,0 +1,1355 @@
+<!DOCTYPE html> 
+<html lang="en">  
+<head><title>AC Excitation</title> 
+<meta  charset="utf-8" /> 
+<meta name="generator" content="lms-WebBook" /> 
+<meta name="viewport" content="width=device-width,initial-scale=1" /> 
+<link rel="stylesheet" type="text/css" href="\" /> 
+<meta name="src" content="DriveTechnologyLectureBook.tex" /> 
+ <script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>  
+<title>Drive Technology</title> 
+<link rel="icon" type="image/x-icon" href="logo/lms.ico"> 
+<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" /> 
+<link rel ="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@main/flatweb.css"> 
+<script src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@main/flatweb.js" async='true' crossorigin='anonymous'></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css"/> 
+<script src ="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script> 
+<link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"/> 
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet'> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <style> 
+ </style> 
+ <header> 
+ <pagefind-modal></pagefind-modal> 
+ </header> 
+</head><body 
+>
+<page> 
+<div class="keyboard-help-menu"><div style="overflow-x:auto"> <table> <thead> <tr> <th>Key</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td><kbd>t</kbd></td> <td>Enable/Disable Table of Contents</td> </tr> <tr> <td><kbd>n</kbd></td> <td>Visit Next Chapter</td> </tr> <tr> <td><kbd>p</kbd></td> <td>Visit Previous Chapter</td> </tr> <tr> <td><kbd>u</kbd></td> <td>Go to Top of Page</td> </tr> <tr> <td><kbd>b</kbd></td> <td>Go to Bottom of Page</td> </tr> <tr> <td><kbd>i</kbd></td> <td>Visit the Introduction Page</td> </tr> </tbody> </table> </div> </div> <nav class="wide"><img class="webbook-logo" src="logo/webbook-logo.svg"></img> <div class="header"> <div class="header-left"><span class="header-lecture-grade">B.Sc</span> 
+<span class="header-lecture-name">Drive Technology</span> 
+<span class="header-webBook">WebBook 2.1</span> </div> <div class="header-right"> <span class="header-version">WS.2026</span> 
+ <span class="header-chapter">Magnetic Circuits and Materials</span></div></div> <div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style='font-size:20px'></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&hl=en\&user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style='font-size:20px'></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style='font-size:20px'></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style='font-size:20px'></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style='font-size:20px'></i></a></div><hr><span class="chapterToc"><span class="number">0</span><span class="title"><a 
+href="index.html#x2-10000">index</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a 
+href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a 
+href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic
+Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a 
+href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a 
+href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a 
+href="MagneticMaterialProperties.html#x6-60001.3">Magnetic
+Material Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a 
+href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a 
+href="#x7-80001.4">AC Excitation</a></span></span>
+<!--l. 853--><p class="noindent" ><div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> 
+<span class="nav-footer-webBook"><span id="bold" style="font-weight:bold;">Last Updated:</span> 14.8.2026, at 14:1.</span></div></div><span class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span></div></div></nav> 
+
+</p>
+<article class="chapter"> 
+<nav class="crosslinks-top"> <span class="nav-inactive"><span class="nav-next">NEXT</span></span> <a 
+href="MagneticMaterialProperties.html" ><span class="nav-prev">PREV</span></a><a 
+href="MagneticMaterialProperties.html#tailMagneticMaterialProperties.html" ><span class="nav-prev-tail">PREV-TAIL</span></a><a 
+href="#tailACExcitation.html"><span class="nav-tail">TAIL</span></a><a 
+href="MagneticCircuitsandMaterials.html#ACExcitation.html" ><span class="nav-up">UP</span></a></nav> 
+<div class="section-header"> <h3 id="header-section-1.4"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.1.4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-pdf" viewBox="0 0 16 16"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">1.4</span> <span class="title">  <a 
+ id="x7-80001.4"></a>AC Excitation</span></h3></div><p>
+<!--l. 855--><p class="noindent" >In <span class="acronym"><span class="acronym-short"><a 
+href="#glo:ac" class="glossary" >AC</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:ac" class="glossary" >Alternating Current</a></span><span class="acronym-desc"><a 
+href="#glo:ac" class="glossary" >An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in one direction.</a></span></span></span>
+power systems, the wave-forms of voltage and flux <span class="alert"><alert style="color: #821131;">closely approximate</alert></span> sinusoidal functions of <span class="margin-block">time.
+<span class="margin-comment"><span class="ellipsis">[20]</span> 
+<span class="sidenote">We say here closely as we must take into account environmental factors, such as noise and interference,
+which distorts the waveform.</span></span></span> We will now look at the excitation characteristics and losses
+associated with steady-state <span class="acronym"><span class="acronym-short"><a 
+href="#glo:ac" class="glossary" >AC</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:ac" class="glossary" >Alternating Current</a></span><span class="acronym-desc"><a 
+href="#glo:ac" class="glossary" >An electric current that periodically
+reverses direction and changes its magnitude continuously with time, in contrast to direct
+current (DC), which flows only in one direction.</a></span></span></span> operation of magnetic materials under
+such operating conditions. We use as our model a closed-core magnetic <span class="margin-block">circuit, <span class="margin-comment"><span class="ellipsis">[21]</span> 
+<span class="sidenote">This means
+our circuit has no air gap.</span></span></span> such as that shown in <span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="AnOverviewonMagneticCircuits.html#x4-4009r2">1.2<!--tex4ht:ref: fig:magnetic-circuit --></a>. The magnetic path length is
+<!--l. 861--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>l</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math>, and the
+cross-sectional area is <!--l. 862--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math>
+throughout the length of the core.
+</p><!--l. 864--><p class="noindent" >We further assume a sinusoidal variation of the core flux
+<!--l. 864--><math 
+ 
+display="inline" ><mi 
+>ϕ</mi><msup><mrow 
+><mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle style="color:#FF0000;"><mi 
+>t</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow 
+></mrow></msup 
+></math>, which
+gives: </p><table class="equation"><tr><td>
+<!--l. 866--><math 
+ 
+display="block" class="equation">
+                         <mstyle 
+   id="x7-8001r42"  class="label" ></mstyle><!--endlabel-->
+                         <mi 
+>ϕ</mi><msup><mrow 
+><mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle style="color:#FF0000;"><mi 
+>t</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow 
+></mrow></msup 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>ϕ</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+> <mi class="loglike">sin</mi><mo>⁡<!--FUNCTION APPLICATION--></mo><!--nolimits--><mi 
+>ω</mi><mi 
+>t</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+><mo> <mi class="loglike">sin</mi><mo>⁡<!--FUNCTION APPLICATION--></mo></mo><!--nolimits--><mi 
+>ω</mi><mi 
+>t</mi>
+</math></td><td class="eq-no">(1.42)</td></tr></table>
+<!--l. 870--><p class="noindent" ><p>where, </p>
+<ul class="itemize1">     
+<li class="itemize">
+<!--l. 875--><p class="noindent" ><!--l. 875--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>ϕ</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+></math>
+is the amplitude of core flux <!--l. 875--><math 
+ 
+display="inline" ><mi 
+>ϕ</mi></math>
+                                                                                
+                                                                                
+     
+(<!--l. 875--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>W</mi><mi 
+>b</mi></mstyle></math>),
+</p>     
+</li>
+<li class="itemize">     
+<!--l. 876--><p class="noindent" ><!--l. 876--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+></math>
+is the amplitude of flux density <!--l. 876--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math>
+(<!--l. 876--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>T</mi></mstyle></math>),
+</p>     
+</li>
+<li class="itemize">     
+<!--l. 877--><p class="noindent" ><!--l. 877--><math 
+ 
+display="inline" ><mi 
+>ω</mi></math>
+is the angular frequency defined as <!--l. 877--><math 
+ 
+display="inline" ><mi 
+>ω</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mi 
+>π</mi><mi 
+>f</mi></math>,
+and
+</p>     
+</li>
+<li class="itemize">     
+<!--l. 878--><p class="noindent" ><!--l. 878--><math 
+ 
+display="inline" ><mi 
+>f</mi></math>
+is the frequency (<!--l. 878--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>H</mi><mi 
+>z</mi></mstyle></math>).</p></li></ul>
+<!--l. 881--><p class="noindent" >From <span> Eq. (<a 
+href="FluxLinkageInductanceandEnergy.html#x5-5003r22">1.22<!--tex4ht:ref: eq:mc-26 --></a>)</span> , the voltage induced in the
+<!--l. 881--><math 
+ 
+display="inline" ><mi 
+>N</mi></math>-turn
+winding is: </p><table class="equation"><tr><td>
+<!--l. 883--><math 
+ 
+display="block" class="equation">
+                         <mstyle 
+   id="x7-8002r43"  class="label" ></mstyle><!--endlabel-->
+                         <mstyle style="color:#FF0000;"><mi 
+>e</mi></mstyle><msup><mrow 
+>
+                          <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle style="color:#FF0000;"><mi 
+>t</mi></mstyle>
+                           </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow 
+></mrow></msup 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mi 
+>ω</mi><mi 
+>N</mi><msub><mrow 
+><mi 
+>ϕ</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+> <mi class="loglike">cos</mi><mo>⁡<!--FUNCTION APPLICATION--></mo><!--nolimits--><mi 
+>ω</mi><mi 
+>t</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>E</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+><mo> <mi class="loglike">cos</mi><mo>⁡<!--FUNCTION APPLICATION--></mo></mo><!--nolimits--><mi 
+>ω</mi><mi 
+>t</mi>
+</math></td><td class="eq-no">(1.43)</td></tr></table>
+<!--l. 885--><p class="noindent" ><p>where </p><table class="equation"><tr><td>
+<!--l. 889--><math 
+ 
+display="block" class="equation">
+                          <mstyle 
+   id="x7-8003r44"  class="label" ></mstyle><!--endlabel-->
+                          <msub><mrow 
+><mi 
+>E</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mi 
+>ω</mi><mi 
+>N</mi><msub><mrow 
+><mi 
+>ϕ</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>E</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+> <mi class="loglike">cos</mi><mo>⁡<!--FUNCTION APPLICATION--></mo><!--nolimits--><mi 
+>ω</mi><mi 
+>t</mi>
+</math></td><td class="eq-no">(1.44)</td></tr></table>
+                                                                                
+                                                                                
+<!--l. 891--><p class="noindent" ><p>In steady-state <span class="acronym"><span class="acronym-short"><a 
+href="#glo:ac" class="glossary" >AC</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:ac" class="glossary" >Alternating Current</a></span><span class="acronym-desc"><a 
+href="#glo:ac" class="glossary" >An electric current that periodically reverses direction and
+changes its magnitude continuously with time, in contrast to direct current (DC), which flows only in
+one direction.</a></span></span></span> operation, we usually are more interested in the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent direct
+current (DC) voltage of an alternating current (AC) source.</a></span></span></span> values of voltages and currents than their
+instantaneous or maximum values. In general, the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent direct current
+(DC) voltage of an alternating current (AC) source.</a></span></span></span> value of a periodic function of time, say
+<!--l. 895--><math 
+ 
+display="inline" ><mi 
+>f</mi><msup><mrow 
+> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle style="color:#FF0000;"><mi 
+>t</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow 
+></mrow></msup 
+></math>, of
+period <!--l. 895--><math 
+ 
+display="inline" ><mi 
+>T</mi></math>
+is defined as: </p><table class="equation"><tr><td>
+<!--l. 897--><math 
+ 
+display="block" class="equation">
+                             <mstyle 
+   id="x7-8004r45"  class="label" ></mstyle><!--endlabel-->
+                             <msub><mrow 
+><mi 
+>F</mi></mrow><mrow 
+><mi 
+>r</mi><mi 
+>m</mi><mi 
+>s</mi></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow><msup><mrow 
+>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow 
+><mn>1</mn></mrow>
+<mrow 
+>
+<mi 
+>T</mi></mrow></mfrac><msubsup><mrow 
+><mo  
+>∫
+ <!--nolimits--></mo><!--nolimits--></mrow><mrow 
+><mn>0</mn></mrow><mrow 
+><mi 
+>T</mi></mrow></msubsup 
+><msup><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+><mo 
+class="MathClass-open" stretchy="false">(</mo><mi 
+>t</mi><mo 
+class="MathClass-close" stretchy="false">)</mo><mspace width="0.17em" class="thinspace"/><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mi 
+>t</mi>
+</mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow 
+></mrow></msup 
+></mrow></msqrt>
+</math></td><td class="eq-no">(1.45)</td></tr></table>
+<!--l. 904--><p class="noindent" ><p>From <span> Eq. (<a 
+href="#x7-8004r45">1.45<!--tex4ht:ref: eq:mc-50 --></a>)</span> , the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent direct current (DC) voltage
+of an alternating current (AC) source.</a></span></span></span> value of a sine wave can be shown to be
+<!--l. 907--><math 
+ 
+display="inline" ><mstyle 
+class="text"><mtext  ></mtext><mstyle 
+class="math"><mn>1</mn></mstyle><mtext  ></mtext><mstyle 
+class="math"></mstyle><mtext  ></mtext><mstyle 
+class="math"><mo 
+class="MathClass-bin" stretchy="false">/</mo></mstyle><mtext  ></mtext><mstyle 
+class="math"></mstyle><mtext  ></mtext><mstyle 
+class="math"><msqrt><mrow>
+<mn>2</mn></mrow></msqrt></mstyle><mtext  ></mtext></mstyle></math> times
+its peak value. Therefore, the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent direct current (DC) voltage of an
+alternating current (AC) source.</a></span></span></span> value of the induced voltage is: </p><table class="equation"><tr><td>
+<!--l. 910--><math 
+ 
+display="block" class="equation">
+                      <mstyle 
+   id="x7-8005r46"  class="label" ></mstyle><!--endlabel-->
+                      <msub><mrow 
+><mi 
+>E</mi></mrow><mrow 
+><mi 
+>r</mi><mi 
+>m</mi><mi 
+>s</mi></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo>  <mfrac><mrow 
+><mn>2</mn><mi 
+>π</mi></mrow> 
+<mrow 
+>
+<msqrt>
+<mrow>
+<mn>2</mn></mrow></msqrt></mrow></mfrac><mi 
+>f</mi><mi 
+>N</mi><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
+<mn>2</mn></mrow></msqrt><mi 
+>π</mi><mi 
+>f</mi><mi 
+>N</mi><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+>
+</math></td><td class="eq-no">(1.46)</td></tr></table>
+<!--l. 914--><p class="noindent" ><p>An excitation current <!--l. 916--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mi 
+>ϕ</mi></mrow></msub 
+></math>,
+corresponding to an excitation <span class="acronym"><span class="acronym-short"><a 
+href="#glo:mmf" class="glossary" >MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:mmf" class="glossary" >Magneto-motive Force</a></span><span class="acronym-desc"><a 
+href="#glo:mmf" class="glossary" >The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span>
+<!--l. 916--><math 
+ 
+display="inline" ><mi 
+>N</mi><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mi 
+>ϕ</mi></mrow></msub 
+><mo 
+class="MathClass-open" stretchy="false">(</mo><mi 
+>t</mi><mo 
+class="MathClass-close" stretchy="false">)</mo></math>, is <span id="bold" style="font-weight:bold;">required</span> to
+produce the flux <!--l. 917--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mi 
+>ϕ</mi></mrow></msub 
+><mo 
+class="MathClass-open" stretchy="false">(</mo><mi 
+>t</mi><mo 
+class="MathClass-close" stretchy="false">)</mo></math>
+in the core.
+</p>
+<div class="warning">
+<!--l. 922--><p class="noindent" >Because of the non-linear magnetic properties of the core, the excitation current corresponding to a
+sinusoidal core flux will be <span class="alert"><alert style="color: #821131;">non-sinusoidal</alert></span>.
+                                                                                
+                                                                                
+</p>
+</div>
+<!--l. 924--><p class="noindent" >As <!--l. 924--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math> and
+<!--l. 924--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>H</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math> are related
+to <!--l. 924--><math 
+ 
+display="inline" ><mi 
+>ϕ</mi></math> and
+<!--l. 924--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mi 
+>ϕ</mi></mrow></msub 
+></math> by
+known <span id="bold" style="font-weight:bold;">geometric constants</span>, the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:ac" class="glossary" >AC</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:ac" class="glossary" >Alternating Current</a></span><span class="acronym-desc"><a 
+href="#glo:ac" class="glossary" >An electric current that periodically reverses
+direction and changes its magnitude continuously with time, in contrast to direct current (DC),
+which flows only in one direction.</a></span></span></span> hysteresis loop of <span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="#x7-8006r8">1.8<!--tex4ht:ref: fig:ac-excitation --></a> has been drawn in terms of
+<!--l. 926--><math 
+ 
+display="inline" ><mi 
+>ϕ</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math> and is
+<!--l. 926--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mi 
+>ϕ</mi></mrow></msub 
+></math> =
+<!--l. 926--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>H</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>l</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><mo 
+class="MathClass-bin" stretchy="false">/</mo><mi 
+>N</mi></math>. The sine waves of
+induced voltage (<!--l. 927--><math 
+ 
+display="inline" ><mi 
+>e</mi></math>),
+and flux (<!--l. 927--><math 
+ 
+display="inline" ><mi 
+>ϕ</mi></math>),
+are shown in the left side of <span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="#x7-8006r8">1.8<!--tex4ht:ref: fig:ac-excitation --></a>.
+</p>
+<figure class="figure"> 
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+<a 
+ id="x7-8006r8"></a>
+<figcaption class="caption" ><span class="id">Figure 1.8: 
+         </span><span  
+class="content">Excitation phenomena where left side shows the Voltage, flux, and exciting current and right shows the
+         corresponding hysteresis loop. The current is not to scale.                                </span></figcaption><!--tex4ht:label?: x7-8006r8 -->
+ <img 
+ 
+src="figures/Magnetic-Circuits-and-Materials/figures-10.png" alt="PIC"  
+style="" />
+                                                                                
+                                                                                
+</figure>
+<!--l. 937--><p class="noindent" >At any given time, the value of <!--l. 937--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mi 
+>ϕ</mi></mrow></msub 
+></math>
+corresponding to the given value of flux can be found directly from the hysteresis loop.
+</p><!--l. 940--><p class="noindent" >As an example, at time <!--l. 940--><math 
+ 
+display="inline" ><mstyle style="color:#FF0000;"><msubsup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+></mstyle></math>
+the flux is <!--l. 940--><math 
+ 
+display="inline" ><msubsup><mrow 
+><mi 
+>ϕ</mi></mrow><mrow 
+></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+></math> and the
+current is <!--l. 941--><math 
+ 
+display="inline" ><mstyle style="color:#FF0000;"><msubsup><mrow 
+><mi 
+>i</mi></mrow><mrow 
+></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+></mstyle></math>, and at time
+<!--l. 941--><math 
+ 
+display="inline" ><mstyle style="color:#FF0000;"><msubsup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+></mrow><mrow 
+><mi 
+>″</mi></mrow></msubsup 
+></mstyle></math> the corresponding
+values are <!--l. 941--><math 
+ 
+display="inline" ><msubsup><mrow 
+><mi 
+>ϕ</mi></mrow><mrow 
+></mrow><mrow 
+><mi 
+>″</mi></mrow></msubsup 
+></math>
+and <!--l. 942--><math 
+ 
+display="inline" ><mstyle style="color:#FF0000;"><msubsup><mrow 
+><mi 
+>i</mi></mrow><mrow 
+></mrow><mrow 
+><mi 
+>″</mi></mrow></msubsup 
+></mstyle></math>.
+Please observe that since the hysteresis loop is multi-valued, it is necessary to be careful to pick
+the rising-flux values from the <span id="bold" style="font-weight:bold;">rising-flux portion</span> of the hysteresis loop. In the same
+context, the falling-flux portion of the hysteresis loop must be selected for the falling-flux
+values.
+</p><!--l. 947--><p class="noindent" >A second point worth mentioning is, due to the hysteresis loop “flattening out” from the
+<span class="alert"><alert style="color: #821131;">saturation effects</alert></span>, the waveform of the exciting current is sharply peaked. Its <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean
+Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent direct current (DC) voltage of an alternating current (AC) source.</a></span></span></span> value
+<!--l. 949--><math 
+ 
+display="inline" ><msub><mrow 
+><mstyle style="color:#FF0000;"><mi 
+>I</mi></mstyle></mrow><mrow 
+>
+<mstyle 
+class="text"><mtext  >ϕ, rms</mtext></mstyle></mrow></msub 
+></math> defined by <span> Eq.
+(<a 
+href="#x7-8004r45">1.45<!--tex4ht:ref: eq:mc-50 --></a>)
+</span> , where <!--l. 949--><math 
+ 
+display="inline" ><mi 
+>T</mi></math>
+is the period of a cycle. It is related to the corresponding <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean
+Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent direct current (DC) voltage of an alternating current (AC) source.</a></span></span></span> value
+<!--l. 950--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>H</mi></mrow><mrow 
+><mi 
+>c</mi><mo 
+class="MathClass-punc" stretchy="false">,</mo><mi 
+>r</mi><mi 
+>m</mi><mi 
+>s</mi></mrow></msub 
+></math> of
+<!--l. 950--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>H</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math> by the
+relationship: </p><table class="equation"><tr><td>
+<!--l. 953--><math 
+ 
+display="block" class="equation">
+                                <mstyle 
+   id="x7-8007r47"  class="label" ></mstyle><!--endlabel--><msub><mrow 
+>
+                                <mstyle style="color:#FF0000;"><mi 
+>I</mi></mstyle>
+                                 </mrow><mrow 
+><mstyle 
+class="text"><mtext  >ϕ, rms</mtext></mstyle></mrow></msub 
+>
+                                       <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow 
+><msub><mrow 
+><mi 
+>l</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>H</mi></mrow><mrow 
+><mi 
+>c</mi><mo 
+class="MathClass-punc" stretchy="false">,</mo><mi 
+>r</mi><mi 
+>m</mi><mi 
+>s</mi></mrow></msub 
+></mrow>
+ 
+<mrow 
+>
+<mstyle style="color:#FF0000;"><mi 
+>N</mi></mstyle>
+</mrow>
+</mfrac>
+</math></td><td class="eq-no">(1.47)</td></tr></table>
+<!--l. 957--><p class="noindent" ><p>
+The <span class="acronym"><span class="acronym-short"><a 
+href="#glo:ac" class="glossary" >AC</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:ac" class="glossary" >Alternating Current</a></span><span class="acronym-desc"><a 
+href="#glo:ac" class="glossary" >An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in one direction.</a></span></span></span>
+excitation characteristics of core materials are often described in terms of <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean
+Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent direct current (DC) voltage of an alternating current (AC) source.</a></span></span></span> volt-amperes
+(<!--l. 960--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>V</mi></mstyle><mspace width="0.17em" class="thinspace"/><mstyle mathvariant="normal"><mi 
+>A</mi></mstyle></math>) rather than a
+magnetisation curve relating <!--l. 961--><math 
+ 
+display="inline" ><mstyle mathvariant="bold"><mi 
+>B</mi></mstyle></math>
+and <!--l. 961--><math 
+ 
+display="inline" ><mstyle mathvariant="bold"><mi 
+>H</mi></mstyle></math>.
+The theory behind this representation can be explained by combining <span> Eq. (<a 
+href="#x7-8007r47">1.47<!--tex4ht:ref: eq:mc-52 --></a>)</span>  and <span> Eq. (<a 
+href="#x7-8008r48">1.48<!--tex4ht:ref: eq:mc-53 --></a>)</span> .
+Therefore, from <span> Eq. (<a 
+href="#x7-8007r47">1.47<!--tex4ht:ref: eq:mc-52 --></a>)</span> , and <span> Eq. (<a 
+href="#x7-8008r48">1.48<!--tex4ht:ref: eq:mc-53 --></a>)</span>  the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent direct current
+(DC) voltage of an alternating current (AC) source.</a></span></span></span> volt-amperes required to excite the core of
+                                                                                
+                                                                                
+<span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="AnOverviewonMagneticCircuits.html#x4-4009r2">1.2<!--tex4ht:ref: fig:magnetic-circuit --></a> to a specified flux density is equal to
+</p><!--tex4ht:inline--><!--l. 972--><math 
+ 
+display="block" ><mtable 
+displaystyle="true" columnalign="left" class="align">
+                       <mtr><mtd 
+columnalign="right" class="align-odd"><mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> <msub><mrow 
+><mi 
+>E</mi></mrow><mrow 
+><mi 
+>r</mi><mi 
+>m</mi><mi 
+>s</mi></mrow></msub 
+><msub><mrow 
+><mstyle style="color:#FF0000;"><mi 
+>I</mi></mstyle></mrow><mrow 
+><mstyle 
+class="text"><mtext  >ϕ, rms</mtext></mstyle></mrow></msub 
+></mtd>
+                  <mtd 
+class="split-mtd"> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
+<mn>2</mn></mrow></msqrt><mi 
+>π</mi><mi 
+>f</mi><mstyle style="color:#FF0000;"><mi 
+>N</mi></mstyle><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+><mfrac>
+      <mrow 
+>
+      <msub><mrow 
+><mi 
+>l</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>H</mi></mrow><mrow 
+><mi 
+>c</mi><mo 
+class="MathClass-punc" stretchy="false">,</mo><mi 
+>r</mi><mi 
+>m</mi><mi 
+>s</mi></mrow></msub 
+></mrow>
+      
+<mrow 
+>
+<mstyle style="color:#FF0000;"><mi 
+>N</mi></mstyle>
+</mrow>
+</mfrac>    </mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd">               </mtd>
+               <mtd 
+class="split-mtd"> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
+<mn>2</mn></mrow></msqrt><mi 
+>f</mi><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>H</mi></mrow><mrow 
+><mi 
+>r</mi><mi 
+>m</mi><mi 
+>s</mi></mrow></msub 
+><msup><mrow 
+> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>l</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow 
+></mrow></msup 
+></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd">                   </mtd>
+</mtr></mtable>                                                                                                                                </mtd>
+                                                                                                                              <mtd 
+class="align-even"><mspace width="2em"/></mtd>
+                                                                                                                                                     <mtd 
+columnalign="right" class="align-label"><mstyle 
+   id="x7-8008r48"  class="label" ></mstyle><!--endlabel--><mstyle 
+class="maketag"><mtext  >(1.48)</mtext></mstyle><mspace width="0.33em" class="nbsp" />
+</mtd></mtr></mtable></math>
+<!--l. 974--><p class="noindent" >In <span> Eq. (<a 
+href="#x7-8008r48">1.48<!--tex4ht:ref: eq:mc-53 --></a>)</span> , the product <!--l. 974--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>l</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math>
+can be seen to be equal to the volume of the core and hence the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent
+direct current (DC) voltage of an alternating current (AC) source.</a></span></span></span> exciting volt-amperes
+required to excite the core with sinusoidal can be seen to be proportional to the frequency of
+excitation, the core volume and the product of the peak flux density and the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean
+Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent direct current (DC) voltage of an alternating current (AC) source.</a></span></span></span> magnetic field
+intensity.
+For a magnetic material of mass density <!--l. 979--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>ρ</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math>,
+the mass of the core is <!--l. 980--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>l</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>ρ</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math>
+and the exciting <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent direct current (DC)
+voltage of an alternating current (AC) source.</a></span></span></span> voltamperes per unit mass,
+<!--l. 980--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>S</mi></mrow><mrow 
+><mi 
+>a</mi></mrow></msub 
+></math>, can be
+expressed as </p><table class="equation"><tr><td>
+<!--l. 983--><math 
+ 
+display="block" class="equation">
+                       <mstyle 
+   id="x7-8009r49"  class="label" ></mstyle><!--endlabel-->
+                       <msub><mrow 
+><mi 
+>S</mi></mrow><mrow 
+><mi 
+>a</mi></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mfrac>
+ <mrow 
+>
+ <msub><mrow 
+><mi 
+>E</mi></mrow><mrow 
+><mi 
+>r</mi><mi 
+>m</mi><mi 
+>s</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>I</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >ϕ, rms</mtext></mstyle></mrow></msub 
+></mrow>
+ <mrow 
+><mstyle 
+class="text"><mtext  >mass</mtext></mstyle></mrow></mfrac> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
+<mn>2</mn></mrow></msqrt><mi 
+>π</mi><mi 
+>f</mi><msup><mrow 
+> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow 
+><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>H</mi></mrow><mrow 
+><mi 
+>r</mi><mi 
+>m</mi><mi 
+>s</mi></mrow></msub 
+></mrow>
+
+<mrow 
+><msub><mrow 
+>
+<mi 
+>ρ</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow></mfrac>       </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow 
+></mrow></msup 
+>
+</math></td><td class="eq-no">(1.49)</td></tr></table>
+<!--l. 987--><p class="noindent" ><p>Observe that excitation of the material really depends on frequency and
+<!--l. 989--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>m</mi><mi 
+>a</mi><mi 
+>x</mi></mrow></msub 
+></math>. As a
+result, the ac excitation requirements for a magnetic material are often supplied by manufacturers in
+terms of <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rms" class="glossary" >Root-Mean Square</a></span><span class="acronym-desc"><a 
+href="#glo:rms" class="glossary" >Equivalent direct current (DC) voltage of an alternating current (AC)
+                                                                                
+                                                                                
+source.</a></span></span></span> voltamperes per unit weight as determined by laboratory tests on closed-core samples of the
+material.
+The exciting current supplies the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:mmf" class="glossary" >MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:mmf" class="glossary" >Magneto-motive Force</a></span><span class="acronym-desc"><a 
+href="#glo:mmf" class="glossary" >The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> required to
+produce the core flux and the power input associated with the energy in the magnetic field in the
+core. Part of this energy is dissipated as losses and results in heating of the core. The rest
+appears as reactive power associated with energy storage in the magnetic field. This reactive
+power is not dissipated in the core; it is cyclically supplied and absorbed by the excitation
+source.
+There are two (<span class="alert"><alert style="color: #821131;">2</alert></span>) loss mechanisms are associated with time-varying fluxes in magnetic
+materials.
+
+</p>
+<!--l. 1002--><p class="noindent" ><span class="paragraphHead"> <a 
+ id="x7-9000"></a>Eddy Current Losses</span>
+The first is ohmic (<!--l. 1004--><math 
+ 
+display="inline" ><mstyle style="color:#FF0000;"><msubsup><mrow 
+><mi 
+>I</mi></mrow><mrow 
+></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mstyle><mi 
+>R</mi></math>)
+heating, associated with induced currents in the core material. From Faraday’s law (<span> Eq.
+(<a 
+href="FluxLinkageInductanceandEnergy.html#x5-5003r22">1.22<!--tex4ht:ref: eq:mc-26 --></a>)
+</span> ) we see that time-varying magnetic fields give rise to electric fields. In magnetic
+materials, these electric fields result in induced currents, commonly referred to as eddy currents,
+which circulate in the core material and <span id="bold" style="font-weight:bold;">oppose</span> changes in flux density in the material. To
+counteract the corresponding demagnetising effect, the current in the exciting winding must
+increase.
+</p><!--l. 1011--><p class="noindent" >This causes the resultant “dynamic” B-H loop under ac operation to become somewhat “fatter” than
+the hysteresis loop for slowly varying conditions, and this effect increases as the excitation frequency is
+increased.
+</p><!--l. 1015--><p class="noindent" >It is for this reason that the characteristics of electrical steels vary with frequency and therefore
+manufacturers typically supply characteristics over the expected operating frequency range of a
+particular electrical steel.
+</p><!--l. 1019--><p class="noindent" >To reduce the effects of eddy currents, magnetic structures are usually built of <span id="bold" style="font-weight:bold;">thin sheets of
+laminations</span> of the magnetic <span class="margin-block"><span class="margin"><span>material. <span class="ellipsis">[22]</span></span><span class="sidenote"><span class="sidenote-image"><img 
+ 
+src="figures/Magnetic-Circuits-and-Materials/raster/sheet-lamination.jpeg" alt="PIC"  
+style="" /></span><span class="sidenote-text"><span class="ellipsis">[22]</span>The primary reason is to reduce the volume
+in which the current flows. Smaller the volume, smaller the losses <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a 
+ id="x7-9001"></a>Jiangyin. EI 133.2
+Transformer Lamination Core with Grade 800 600 470 0.5mm 2025</span></span>.</span></span></span></span> These laminations, which are
+<span class="alert"><alert style="color: #821131;">aligned in the direction of the field lines</alert></span>, are insulated from each other by an
+oxide layer on their surfaces or by a thin coat of insulating enamel or varnish. This greatly
+reduces the magnitude of the eddy currents since the layers of insulation interrupt the current
+paths.
+</p>
+<div class="warning">
+<!--l. 1030--><p class="noindent" >The thinner the laminations, the lower the losses.
+</p>
+</div>
+<!--l. 1032--><p class="noindent" >In general, eddy-current loss tends to increase as the <span id="bold" style="font-weight:bold;">square of the excitation frequency</span> and also
+as the square of the peak flux density.
+
+                                                                                
+                                                                                
+</p>
+<!--l. 1035--><p class="noindent" ><span class="paragraphHead"> <a 
+ id="x7-10000"></a>Hysteresis Losses</span>
+The second loss mechanism is due to the <span class="alert"><alert style="color: #821131;">hysteretic nature of magnetic material</alert></span>. In
+a magnetic circuit similar to <span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="AnOverviewonMagneticCircuits.html#x4-4009r2">1.2<!--tex4ht:ref: fig:magnetic-circuit --></a>, a time-varying excitation will cause the magnetic
+material to undergo a cyclic variation described by a hysteresis loop such as that shown in
+<span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="#x7-10002r9">1.9<!--tex4ht:ref: fig:hysteresis-curve --></a>.
+We can use <span> Eq. (<a 
+href="FluxLinkageInductanceandEnergy.html#x5-5090r40">1.40<!--tex4ht:ref: eq:mc-45 --></a>)</span>   to calculate the energy input
+<!--l. 1042--><math 
+ 
+display="inline" ><mi 
+>W</mi></math> to the
+magnetic core of <span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="AnOverviewonMagneticCircuits.html#x4-4009r2">1.2<!--tex4ht:ref: fig:magnetic-circuit --></a> as the material undergoes a single cycle: </p><table class="equation"><tr><td>
+<!--l. 1045--><math 
+ 
+display="block" class="equation">
+                   <mstyle 
+   id="x7-10001r50"  class="label" ></mstyle><!--endlabel-->
+                   <mi 
+>W</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mi 
+>∮</mi>
+ <msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mi 
+>ϕ</mi></mrow></msub 
+><mspace width="0.17em" class="thinspace"/><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mi 
+>λ</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mi 
+>∮</mi><msup><mrow 
+>
+ <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow 
+><msub><mrow 
+><mi 
+>H</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>l</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow>
+
+<mrow 
+>
+<mstyle style="color:#FF0000;"><mi 
+>N</mi></mstyle>
+</mrow>
+</mfrac>  </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow 
+></mrow></msup 
+><msup><mrow 
+> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><mi 
+>N</mi><mspace width="0.17em" class="thinspace"/><mstyle 
+class="text"><mtext  >d</mtext></mstyle><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow 
+></mrow></msup 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>l</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+> <mi 
+>∮</mi>
+ <msub><mrow 
+><mi 
+>H</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><mspace width="0.17em" class="thinspace"/><mstyle 
+class="text"><mtext  >d</mtext></mstyle><msub><mrow 
+><mi 
+>B</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+>
+</math></td><td class="eq-no">(1.50)</td></tr></table>
+<!--l. 1056--><p class="noindent" ><p>
+</p>
+<div class="sidenote"> <span class="figure" 
+>
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+<a 
+ id="x7-10002r9"></a>
+<figcaption class="caption" ><span class="id">Figure 1.9: </span><span  
+class="content">Hysteresis loop; hysteresis loss is proportional to the loop area (shaded).                      </span></figcaption><!--tex4ht:label?: x7-10002r9 -->
+ <img 
+ 
+src="figures/Magnetic-Circuits-and-Materials/figures-2.png" alt="PIC"  
+style="" />
+                                                                                
+                                                                                
+</div>
+<!--l. 1064--><p class="noindent" ></div> </p><p>
+<!--l. 1066--><p class="noindent" >Looking at <span> Eq. (<a 
+href="#x7-10001r50">1.50<!--tex4ht:ref: eq:mc-55 --></a>)</span> , we see that <!--l. 1066--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+><msub><mrow 
+><mi 
+>l</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math>
+is the volume of the core and the integral is the area of the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:ac" class="glossary" >AC</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:ac" class="glossary" >Alternating Current</a></span><span class="acronym-desc"><a 
+href="#glo:ac" class="glossary" >An electric current
+that periodically reverses direction and changes its magnitude continuously with time, in contrast to
+direct current (DC), which flows only in one direction.</a></span></span></span> hysteresis loop, and we see each time the
+magnetic material undergoes a cycle, there is a net energy input into the material. This energy is
+required to move around the magnetic dipoles in the material and is dissipated as heat in the
+material.
+</p>
+<div class="knowledge">
+<!--l. 1074--><p class="noindent" >Therefore for a given flux level, the corresponding hysteresis losses are proportional to the area of the
+hysteresis loop and to the total volume of material.
+</p>
+</div><p class="noindent">
+<!--l. 1076--><p class="noindent" >Since there is an energy loss per cycle, hysteresis power loss is proportional to the frequency of the
+applied excitation.
+</p><!--l. 1079--><p class="noindent" >In general, these losses depend on the metallurgy of the material as well as the flux
+density and frequency. Information on core loss is typically presented in graphical form.
+It is plotted in terms of watts per unit weight as a function of flux density; often a
+family of curves for different frequencies are given. <span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="#x7-10003r10">1.10<!--tex4ht:ref: fig:core-loss-data-sheet-plot --></a> shows the core loss
+(<!--l. 1083--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math>) for M130-27S grain-oriented electrical steel at
+<!--l. 1083--><math 
+ 
+display="inline" ><mn>6</mn><mn>0</mn></math> <!--l. 1083--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>H</mi><mi 
+>z</mi></mstyle></math>
+and <!--l. 1084--><math 
+ 
+display="inline" ><mn>5</mn><mn>0</mn></math> <!--l. 1084--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>H</mi><mi 
+>z</mi></mstyle></math>.
+</p>
+<figure class="figure"> 
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+<a 
+ id="x7-10003r10"></a>
+<figcaption class="caption" ><span class="id">Figure 1.10: 
+          </span><span  
+class="content">Core-loss          density          of          M130-27S,          Electric          Grain          steel          under
+          <!--l. 1090--><math 
+ 
+display="inline" ><mn>5</mn><mn>0</mn></math><!--l. 1090--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>H</mi><mi 
+>z</mi></mstyle></math>
+          and <!--l. 1090--><math 
+ 
+display="inline" ><mn>6</mn><mn>0</mn></math><!--l. 1090--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>H</mi><mi 
+>z</mi></mstyle></math>.
+          The following plot has been generated using the Steinmetz equation.                        </span></figcaption><!--tex4ht:label?: x7-10003r10 -->
+ <img 
+ 
+src="figures/Magnetic-Circuits-and-Materials/figures-5.png" alt="PIC"  
+style="" />
+                                                                                
+                                                                                
+</figure>
+<!--l. 1094--><p class="noindent" >Nearly all transformers and certain sections of electric machines use sheet-steel material that has
+<span id="bold" style="font-weight:bold;">highly favourable directions of magnetisation</span> along which the core loss is low and the
+permeability is high. This material is termed <span id="bold" style="font-weight:bold;">grain-oriented steel</span>.
+</p>
+<div class="info-block"> <span class="info-upper"> <span class="info-header"> <span id="bold" style="font-weight:bold;">Information 1.<a 
+ id="x7-10004r4"></a>4: </span> </span> <span class="info-title"> Orientation of Atoms </span> </span> <div class="body"><p>
+<!--l. 1102--><p class="noindent" >The reason for this property lies in the atomic structure of a crystal of the silicon-iron alloy, which is a
+body-centred cube. Each cube has an atom at each comer as well as one in the centre of the cube. In
+the cube, the easiest axis of magnetisation is the cube edge; the diagonal across the cube face is more
+difficult, and the diagonal through the cube is the most difficult. By suitable manufacturing
+techniques most of the crystalline cube edges are aligned in the rolling direction to make it the
+favourable direction of magnetisation. The behaviour in this direction is superior in core loss and
+permeability to non-oriented steels in which the crystals are randomly oriented to produce
+a material with characteristics which are uniform in all directions. As a result, oriented
+steels can be operated at higher flux densities than the non-oriented grades. <hr><p class="noindent">Non-oriented
+electrical steels are used in applications where the flux does not follow a path which can be
+oriented with the rolling direction or where low cost is of importance. In these steels the
+losses are somewhat higher and the permeability is very much lower than in grain-oriented
+steels.
+</p></div></div><p class="noindent">
+                                                                                
+                                                                                
+</p>
+<div class="crosslinks-bottom"><span class="nav-inactive"><span class="nav-next">NEXT</span></span> <a 
+href="MagneticMaterialProperties.html" ><span class="nav-prev">PREV</span></a><a 
+href="MagneticMaterialProperties.html#tailMagneticMaterialProperties.html" ><span class="nav-prev-tail">PREV-TAIL</span></a><a 
+href="ACExcitation.html" ><span class="nav-front">FRONT</span></a><a 
+href="MagneticCircuitsandMaterials.html#ACExcitation.html" ><span class="nav-up">UP</span></a></nav><a 
+ id="tailACExcitation.html"></a>  </div> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span> 
+<span class="footer-webBook"><span id="bold" style="font-weight:bold;">Last Updated:</span> 14.8.2026, at 14:1.</span> </div> </div> </div> <div class="author-notes"> 
+<span class="note">Authors Note </span> 
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span> 
+</div> 
+</article> 
+<div class="mode-line"> 
+<div class="core-line"> 
+<div class="button-group"> 
+</div> 
+</div> 
+<div class="supp-line"></div> 
+</div> 
+</page> 
+ 
+</body> 
+</html>

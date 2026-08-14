@@ -1,0 +1,1447 @@
+<!DOCTYPE html> 
+<html lang="en">  
+<head><title>Flux Linkage, Inductance, and Energy</title> 
+<meta  charset="utf-8" /> 
+<meta name="generator" content="lms-WebBook" /> 
+<meta name="viewport" content="width=device-width,initial-scale=1" /> 
+<link rel="stylesheet" type="text/css" href="\" /> 
+<meta name="src" content="DriveTechnologyLectureBook.tex" /> 
+ <script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>  
+<title>Drive Technology</title> 
+<link rel="icon" type="image/x-icon" href="logo/lms.ico"> 
+<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" /> 
+<link rel ="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@main/flatweb.css"> 
+<script src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@main/flatweb.js" async='true' crossorigin='anonymous'></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css"/> 
+<script src ="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script> 
+<link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"/> 
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet'> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <style> 
+ </style> 
+ <header> 
+ <pagefind-modal></pagefind-modal> 
+ </header> 
+</head><body 
+>
+<page> 
+<div class="keyboard-help-menu"><div style="overflow-x:auto"> <table> <thead> <tr> <th>Key</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td><kbd>t</kbd></td> <td>Enable/Disable Table of Contents</td> </tr> <tr> <td><kbd>n</kbd></td> <td>Visit Next Chapter</td> </tr> <tr> <td><kbd>p</kbd></td> <td>Visit Previous Chapter</td> </tr> <tr> <td><kbd>u</kbd></td> <td>Go to Top of Page</td> </tr> <tr> <td><kbd>b</kbd></td> <td>Go to Bottom of Page</td> </tr> <tr> <td><kbd>i</kbd></td> <td>Visit the Introduction Page</td> </tr> </tbody> </table> </div> </div> <nav class="wide"><img class="webbook-logo" src="logo/webbook-logo.svg"></img> <div class="header"> <div class="header-left"><span class="header-lecture-grade">B.Sc</span> 
+<span class="header-lecture-name">Drive Technology</span> 
+<span class="header-webBook">WebBook 2.1</span> </div> <div class="header-right"> <span class="header-version">WS.2026</span> 
+ <span class="header-chapter">Magnetic Circuits and Materials</span></div></div> <div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style='font-size:20px'></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&hl=en\&user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style='font-size:20px'></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style='font-size:20px'></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style='font-size:20px'></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style='font-size:20px'></i></a></div><hr><span class="chapterToc"><span class="number">0</span><span class="title"><a 
+href="index.html#x2-10000">index</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a 
+href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a 
+href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic
+Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a 
+href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a 
+href="#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a 
+href="MagneticMaterialProperties.html#x6-60001.3">Magnetic
+Material Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a 
+href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a 
+href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span>
+<!--l. 431--><p class="noindent" ><div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> 
+<span class="nav-footer-webBook"><span id="bold" style="font-weight:bold;">Last Updated:</span> 14.8.2026, at 14:1.</span></div></div><span class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span></div></div></nav> 
+
+</p>
+<article class="chapter"> 
+<nav class="crosslinks-top"> <a 
+href="MagneticMaterialProperties.html" ><span class="nav-next">NEXT</span></a><a 
+href="AnOverviewonMagneticCircuits.html" ><span class="nav-prev">PREV</span></a><a 
+href="AnOverviewonMagneticCircuits.html#tailAnOverviewonMagneticCircuits.html" ><span class="nav-prev-tail">PREV-TAIL</span></a><a 
+href="#tailFluxLinkageInductanceandEnergy.html"><span class="nav-tail">TAIL</span></a><a 
+href="MagneticCircuitsandMaterials.html#FluxLinkageInductanceandEnergy.html" ><span class="nav-up">UP</span></a></nav> 
+<div class="section-header"> <h3 id="header-section-1.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.1.2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-pdf" viewBox="0 0 16 16"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">1.2</span> <span class="title">  <a 
+ id="x5-50001.2"></a>Flux Linkage, Inductance, and Energy</span></h3></div><p>
+<!--l. 433--><p class="noindent" >When a magnetic field varies with time, an electric field is produced in space as per <span class="margin-block"><span class="margin"><span>Faraday’s <span class="ellipsis">[13]</span></span><span class="sidenote"><span class="sidenote-image"><img 
+ 
+src="figures/Magnetic-Circuits-and-Materials/raster/portrait-faraday.jpg" alt="PIC"  
+style="" /></span><span class="sidenote-text"><span class="ellipsis">[13]</span><span id="bold" style="font-weight:bold;">Michael Faraday</span>
+(<italic>1791  - 1867</italic>)
+An English chemist and physicist who contributed to the study of electro-chemistry and
+electromagnetism. His main discoveries include the principles underlying electromagnetic induction,
+diamagnetism, and electrolysis. Although Faraday received little formal education, as a self-made man,
+he was one of the most influential scientists in history <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a 
+ id="x5-5001"></a>Rao, C. N. R. Understanding chemistry
+(Universities Press, 2000)</span></span>. It was by his research on the magnetic field around a conductor carrying
+a direct current Faraday established the concept of the electromagnetic field in physics.
+Faraday also established magnetism could affect rays of light and that there was an underlying
+relationship between the two phenomena. He similarly discovered the principles of electromagnetic
+induction, diamagnetism, and the laws of electrolysis. His inventions of electromagnetic rotary devices
+formed the foundation of electric motor technology, and it was largely due to his efforts that electricity
+became practical for use in technology. The SI unit of capacitance, the farad, is named after him.</span></span></span></span> law:
+</p><table class="equation"><tr><td>
+<!--l. 455--><math 
+ 
+display="block" class="equation">
+                            <mstyle 
+   id="x5-5002r21"  class="label" ></mstyle><!--endlabel--><msub><mrow 
+>
+                            <mi 
+>∮</mi>
+                              </mrow><mrow 
+><mstyle 
+mathvariant="script"><mi 
+>C</mi></mstyle></mrow></msub 
+>
+                               <mstyle mathvariant="bold">
+                               <mi 
+>E</mi></mstyle>
+                                 <mi 
+>·</mi> <mspace width="0.17em" class="thinspace"/><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mstyle mathvariant="bold"><mi 
+>s</mi></mstyle> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mo 
+class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow> <mstyle 
+class="text"><mtext  >d</mtext></mstyle>
+</mrow><mrow><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mi 
+>t</mi></mrow></mfrac></mstyle><msub><mrow 
+><mo  
+>∫
+ <!--nolimits--></mo><!--nolimits--></mrow><mrow 
+><mstyle 
+mathvariant="script"><mi 
+>S</mi></mstyle></mrow></msub 
+><mstyle mathvariant="bold"><mi 
+>B</mi></mstyle> <mi 
+>·</mi> <mspace width="0.17em" class="thinspace"/><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mstyle mathvariant="bold"><mi 
+>a</mi></mstyle>
+</math></td><td class="eq-no">(1.21)</td></tr></table>
+<!--l. 458--><p class="noindent" ><p><span> Eq. (<a 
+href="#x5-5003r22">1.22<!--tex4ht:ref: eq:mc-26 --></a>)</span>  states: <div class="quote"><p>   The line integral of the electric field intensity
+(<!--l. 463--><math 
+ 
+display="inline" ><mstyle mathvariant="bold"><mi 
+>E</mi></mstyle></math>) around a
+closed contour (<!--l. 464--><math 
+ 
+display="inline" ><mstyle 
+mathvariant="script"><mi 
+>C</mi></mstyle></math>)
+is equal to the time rate of change of the magnetic flux linking, passing through, that contour.  </p></p></div><p>  In
+magnetic structures with windings of high electrical conductivity, such as in <span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="AnOverviewonMagneticCircuits.html#x4-4009r2">1.2<!--tex4ht:ref: fig:magnetic-circuit --></a>, it can be shown,
+the <!--l. 469--><math 
+ 
+display="inline" ><mstyle mathvariant="bold"><mi 
+>E</mi></mstyle></math>
+                                                                                
+                                                                                
+field in the wire is extremely small and can be neglected, so that the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:lhs" class="glossary" >LHS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:lhs" class="glossary" >Left Hand
+Side</a></span><span class="acronym-desc"><a 
+href="#glo:lhs" class="glossary" >Left Hand Side</a></span></span></span> of <span> Eq. (<a 
+href="#x5-5003r22">1.22<!--tex4ht:ref: eq:mc-26 --></a>)</span>  reduces to the negative of the induced voltage
+(<!--l. 471--><math 
+ 
+display="inline" ><mi 
+>e</mi></math>) at the winding
+terminals. In addition, the flux on the <span class="acronym"><span class="acronym-short"><a 
+href="#glo:rhs" class="glossary" >RHS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:rhs" class="glossary" >Right Hand Side</a></span><span class="acronym-desc"><a 
+href="#glo:rhs" class="glossary" >Right Hand Side</a></span></span></span> of <span> Eq. (<a 
+href="#x5-5003r22">1.22<!--tex4ht:ref: eq:mc-26 --></a>)</span>  is dominated by the core flux
+<!--l. 472--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>ϕ</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math>. Since the winding, and
+therefore the contour <!--l. 473--><math 
+ 
+display="inline" ><mstyle 
+mathvariant="script"><mi 
+>C</mi></mstyle></math>,
+links the core flux <!--l. 473--><math 
+ 
+display="inline" ><mi 
+>N</mi></math>
+times, <span> Eq. (<a 
+href="#x5-5003r22">1.22<!--tex4ht:ref: eq:mc-26 --></a>)</span>  reduces to: <div class="highlight-equation"> <span class="highlight-equation-title"> </span><table class="equation"><tr><td>
+<!--l. 475--><math 
+ 
+display="block" class="equation">
+                                 <mstyle 
+   id="x5-5003r22"  class="label" ></mstyle><!--endlabel-->
+                                 <mi 
+>e</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mi 
+>N</mi><mstyle displaystyle="true"><mfrac><mrow><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mi 
+>ϕ</mi>
+</mrow><mrow><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mi 
+>t</mi> </mrow></mfrac></mstyle> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mi 
+>λ</mi>
+</mrow><mrow><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mi 
+>t</mi> </mrow></mfrac></mstyle>
+</math></td><td class="eq-no">(1.22)</td></tr></table>
+<!--l. 479--><p class="noindent" ><p></div></p></div><p class="noindent"> where <!--l. 481--><math 
+ 
+display="inline" ><mi 
+>λ</mi></math>
+is the flux linkage of the winding and is defined as: <table class="equation"><tr><td>
+<!--l. 483--><math 
+ 
+display="block" class="equation">
+                                     <mstyle 
+   id="x5-5004r23"  class="label" ></mstyle><!--endlabel-->
+                                     <mi 
+>λ</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mi 
+>N</mi><mi 
+>ϕ</mi>
+</math></td><td class="eq-no">(1.23)</td></tr></table>
+<!--l. 485--><p class="noindent" ><p>Flux linkage is measured in units of <!--l. 487--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>W</mi><mi 
+>b</mi></mstyle></math>
+(or equivalently <!--l. 487--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>W</mi><mi 
+>b</mi></mstyle><mspace width="0.17em" class="thinspace"/><mstyle mathvariant="normal"><mi 
+>T</mi><mi 
+>u</mi><mi 
+>r</mi><mi 
+>n</mi></mstyle></math>).
+The symbol <!--l. 488--><math 
+ 
+display="inline" ><mi 
+>ϕ</mi></math>
+is used to indicate the <span id="bold" style="font-weight:bold;">instantaneous value</span> of a time-varying flux. In general the flux linkage of a coil
+is equal to the <span class="alert"><alert style="color: #821131;">surface integral</alert></span> of the <span id="bold" style="font-weight:bold;">normal component of the magnetic flux density</span>
+integrated over any surface spanned by that coil.
+</p>
+<div class="warning">
+<!--l. 496--><p class="noindent" >Direction of the induced voltage (<!--l. 496--><math 
+ 
+display="inline" ><mi 
+>e</mi></math>)
+is defined by <span> Eq. (<a 
+href="#x5-5003r22">1.22<!--tex4ht:ref: eq:mc-26 --></a>)</span>  so if the winding terminals were <span class="alert"><alert style="color: #821131;">short-circuited</alert></span>, a current would flow in
+such a direction as to <span class="alert"><alert style="color: #821131;">oppose the change of flux linkage</alert></span>.
+</p>
+</div>
+                                                                                
+                                                                                
+<!--l. 498--><p class="noindent" >For a magnetic circuit composed of magnetic material of constant magnetic
+permeability or which includes a dominating air gap, the relationship between
+<!--l. 499--><math 
+ 
+display="inline" ><mi 
+>λ</mi></math> and
+<!--l. 499--><math 
+ 
+display="inline" ><mi 
+>i</mi></math> will be <span id="bold" style="font-weight:bold;">linear</span> and we
+can define the inductance <!--l. 500--><math 
+ 
+display="inline" ><mi 
+>L</mi></math>
+as:
+</p>
+<div class="highlight-equation"> <span class="highlight-equation-title"> </span><table class="equation"><tr><td>
+<!--l. 502--><math 
+ 
+display="block" class="equation">
+                                     <mstyle 
+   id="x5-5005r24"  class="label" ></mstyle><!--endlabel-->
+                                     <mi 
+>L</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow 
+><mi 
+>λ</mi></mrow> 
+<mrow 
+>
+<mi 
+>i</mi></mrow></mfrac>
+</math></td><td class="eq-no">(1.24)</td></tr></table>
+<!--l. 504--><p class="noindent" ><p></div></p></div><p class="noindent">
+<!--l. 506--><p class="noindent" >Substitution of <span> Eq. (<a 
+href="AnOverviewonMagneticCircuits.html#x4-4012r5">1.5<!--tex4ht:ref: eq:mc-5 --></a>)</span> , <span> Eq. (<a 
+href="AnOverviewonMagneticCircuits.html#x4-4025r18">1.18<!--tex4ht:ref: eq:mc-18 --></a>)</span>  and <span> Eq. (<a 
+href="#x5-5004r23">1.23<!--tex4ht:ref: eq:mc-27 --></a>)</span>  into <span> Eq. (<a 
+href="#x5-5005r24">1.24<!--tex4ht:ref: eq:mc-28 --></a>)</span>  gives: </p><table class="equation-star"><tr><td>
+<!--l. 508--><math 
+ 
+display="block" class="equation">
+                                    <mi 
+>L</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo>  <mfrac><mrow 
+><msup><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow>
+ 
+<mrow 
+><msub><mrow 
+>
+<mstyle 
+mathvariant="script"><mi 
+>R</mi></mstyle>
+</mrow><mrow 
+><mstyle 
+class="text"><mtext  >tot</mtext></mstyle></mrow></msub 
+></mrow></mfrac>
+</math></td></tr></table>
+<!--l. 511--><p class="noindent" ><p>From which we see that the inductance of a winding in a magnetic circuit is proportional to the square
+of the turns and inversely proportional to the reluctance of the magnetic circuit associated with that
+winding.
+</p><!--l. 517--><p class="noindent" >As an example, from <span> Eq. (<a 
+href="AnOverviewonMagneticCircuits.html#x4-4028r20">1.20<!--tex4ht:ref: eq:mc-20 --></a>)</span> , under the assumption that the reluctance of the core is negligible
+as compared to that of the air gap, the inductance of the winding in <span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="AnOverviewonMagneticCircuits.html#x4-4009r2">1.2<!--tex4ht:ref: fig:magnetic-circuit --></a> is equal to
+</p><table class="equation"><tr><td>
+                                                                                
+                                                                                
+<!--l. 521--><math 
+ 
+display="block" class="equation">
+                             <mstyle 
+   id="x5-5006r25"  class="label" ></mstyle><!--endlabel-->
+                             <mi 
+>L</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo>     <mfrac><mrow 
+><msup><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow>
+ 
+<mrow 
+><msup><mrow 
+> 
+<mrow><mo fence="true" form="prefix">(</mo><mrow><mi 
+>g</mi><mo 
+class="MathClass-bin" stretchy="false">/</mo><msub><mrow 
+><mi 
+>μ</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>g</mi></mrow></msub 
+>
+</mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow 
+></mrow></msup 
+></mrow></mfrac> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow 
+><msup><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+><msub><mrow 
+><mi 
+>μ</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>g</mi></mrow></msub 
+></mrow>
+ 
+<mrow 
+>
+<mi 
+>g</mi></mrow></mfrac>
+</math></td><td class="eq-no">(1.25)</td></tr></table>
+<!--l. 525--><p class="noindent" ><p>Inductance is measured in <span class="margin-block"><span class="margin"><span>henrys <span class="ellipsis">[14]</span></span><span class="sidenote"><span class="sidenote-image"><img 
+ 
+src="figures/Magnetic-Circuits-and-Materials/raster/portrait-henry.jpg" alt="PIC"  
+style="" /></span><span class="sidenote-text"><span class="ellipsis">[14]</span><span id="bold" style="font-weight:bold;">Joseph Henry</span>
+(<italic>1797  - 1878</italic>)
+An American physicist and inventor who served as the first secretary of the Smithsonian Institution.
+While building electromagnets, discovered self-inductance. He also discovered mutual inductance
+independently of Michael Faraday, though Faraday was the first to make the discovery and publish
+his results and work on the electromagnetic relay was the basis of the practical electrical
+telegraph. In his honour, the SI unit of inductance is named the henry.</span></span></span></span> (H) or weber-turns per
+ampere.
+</p><!--l. 538--><p class="noindent" ><span> Eq. (<a 
+href="#x5-5006r25">1.25<!--tex4ht:ref: eq:mc-30 --></a>)</span> shows the dimensional form of expressions for inductance; <div class="quote"><p>  Inductance is proportional to
+the square of the number of turns, to a magnetic permeability, and to a cross-sectional area and is
+inversely proportional to a length.  </p></p></div><p>
+<div class="info-block"> <span class="info-upper"> <span class="info-header"> <span id="bold" style="font-weight:bold;">Information 1.<a 
+ id="x5-5007r2"></a>2: </span> </span> <span class="info-title"> Requirements for Defining Inductance </span> </span> <div class="body"><p>
+<!--l. 547--><p class="noindent" >It must be emphasised that, strictly speaking, the concept of inductance requires a <span class="alert"><alert style="color: #821131;">linear
+relationship</alert></span> between flux and <span class="acronym"><span class="acronym-short"><a 
+href="#glo:mmf" class="glossary" >MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:mmf" class="glossary" >Magneto-motive Force</a></span><span class="acronym-desc"><a 
+href="#glo:mmf" class="glossary" >The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span>. Therefore, it
+cannot be rigorously applied in situations where the nonlinear characteristics of magnetic materials,
+dominate the magnetic system. <hr><p class="noindent">However, for many situations of practical interest, the reluctance of the
+system is dominated by that of an air gap, which is of course linear, and the non-linear effects of the
+magnetic material can be ignored.
+</p></div></div><p class="noindent">
+</p><!--l. 560--><p class="noindent" >In other cases it may be perfectly acceptable to assume an average value of magnetic permeability for
+the core material and to calculate a corresponding average inductance which can be used for
+calculations of reasonable engineering accuracy.
+</p>
+<a 
+ id="x5-5008r1"></a>
+<div class="exer-block"> <span class="exer-upper"> <span class="exer-header"><span id="bold" style="font-weight:bold;"><span id="bold" style="font-weight:bold;">Exercise</span> 1.1: </span></span><span class="exer-title">Plotting Permeability</span> <button class="exer-button-display" onclick="HideMyBody(this)"><i class="fa-solid fa-bars"></i></button></span> </span> <div class="body"><p>
+<!--l. 564--><p class="noindent" >Using Python, plot the inductance of the magnetic circuit given in <span id="bold" style="font-weight:bold;">(TutBook) Ex. ??</span> as a function of core permeability
+over the range <!--l. 564--><math 
+ 
+display="inline" ><mn>1</mn><mn>0</mn><mn>0</mn> <mo 
+class="MathClass-rel" stretchy="false">⩽</mo> <msubsup><mrow 
+><mi 
+>μ</mi></mrow><mrow 
+><mi 
+>r</mi></mrow><mrow 
+></mrow></msubsup 
+> <mo 
+class="MathClass-rel" stretchy="false">⩽</mo> <mn>1</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>0</mn></math>.
+<hr></br>
+</p><!--l. 564--><p class="noindent" >The script for the plot is as follows: </p><pre><code class="language-python">
+<pre class="fancyvrb" id="fancyvrb1"><a 
+ id="x5-5010r24"></a><span style="color:#918273;"><italic>#+begin_src python</italic></span> 
+<a 
+ id="x5-5012r25"></a><span style="color:#9E0005;">import</span> <span style="color:#427A59;">numpy</span> <span style="color:#9E0005;">as</span> <span style="color:#427A59;">np</span> 
+<a 
+ id="x5-5014r26"></a><span style="color:#9E0005;">import</span> <span style="color:#427A59;">matplotlib.pyplot</span> <span style="color:#9E0005;">as</span> <span style="color:#427A59;">plt</span> 
+<a 
+ id="x5-5016r27"></a> 
+<a 
+ id="x5-5018r28"></a>mu0 = <span style="color:#8F4070;">4</span> * np.pi * <span style="color:#8F4070;">1e-7</span>          <span style="color:#918273;"><italic># (H/m) permeability of free space</italic></span> 
+<a 
+ id="x5-5020r29"></a>lc  = <span style="color:#8F4070;">0.3</span>                       <span style="color:#918273;"><italic># (m)  length</italic></span> 
+<a 
+ id="x5-5022r30"></a>Ac  = <span style="color:#8F4070;">9e-4</span>                      <span style="color:#918273;"><italic># (m2) cross-sectional area</italic></span> 
+<a 
+ id="x5-5024r31"></a>Ag  = <span style="color:#8F4070;">9e-4</span>                      <span style="color:#918273;"><italic># (m2) cross-sectional area</italic></span> 
+<a 
+ id="x5-5026r32"></a>g   = <span style="color:#8F4070;">5e-4</span>                      <span style="color:#918273;"><italic># (m)  air gap length</italic></span> 
+<a 
+ id="x5-5028r33"></a>N   = <span style="color:#8F4070;">500</span>                       <span style="color:#918273;"><italic># (-)  number of turns</italic></span> 
+<a 
+ id="x5-5030r34"></a>Bc  = <span style="color:#8F4070;">1</span>                         <span style="color:#918273;"><italic># (T)  Core magnetic field density</italic></span> 
+<a 
+ id="x5-5032r35"></a> 
+<a 
+ id="x5-5034r36"></a>Rel_g = (g) / (mu0 * Ag)        <span style="color:#918273;"><italic># (Ampere-Turns/Weber) air-gap reluctance</italic></span> 
+<a 
+ id="x5-5036r37"></a> 
+<a 
+ id="x5-5038r38"></a>mur = np.zeros(<span style="color:#8F4070;">1000</span>)            <span style="color:#918273;"><italic># Relative Permeability emtpy array for looping</italic></span> 
+<a 
+ id="x5-5040r39"></a> 
+<a 
+ id="x5-5042r40"></a><span style="color:#9E0005;">for</span> i <span style="color:#9E0005;">in</span> <span style="color:#B03B03;">range</span>(<span style="color:#B03B03;">len</span>(mur)): 
+<a 
+ id="x5-5044r41"></a>    mur[i] = <span style="color:#8F4070;">100</span> + (<span style="color:#8F4070;">100000</span> - <span style="color:#8F4070;">100</span>) * (i - <span style="color:#8F4070;">1</span>)/<span style="color:#8F4070;">1000</span> 
+<a 
+ id="x5-5046r42"></a> 
+<a 
+ id="x5-5048r43"></a> 
+<a 
+ id="x5-5050r44"></a>Rel_c = (lc) / (mur * mu0 * Ac) <span style="color:#918273;"><italic># (Ampere-Turns/Weber) core reluctance</italic></span> 
+<a 
+ id="x5-5052r45"></a>R_tot = Rel_c + Rel_g           <span style="color:#918273;"><italic># (Ampere-Turns/Weber) total reluctance</italic></span> 
+<a 
+ id="x5-5054r46"></a> 
+<a 
+ id="x5-5056r47"></a>L= N**<span style="color:#8F4070;">2</span> / R_tot                 <span style="color:#918273;"><italic># (H) Inductance</italic></span> 
+<a 
+ id="x5-5058r48"></a> 
+<a 
+ id="x5-5060r49"></a><span style="color:#918273;"><italic># -- Plotting</italic></span> 
+<a 
+ id="x5-5062r50"></a>plt.xlabel(<span style="color:#78730D;">&#x0027;Core Relative Permeability ($\mu_r$) [H/m]&#x0027;</span>) 
+<a 
+ id="x5-5064r51"></a>plt.ylabel(<span style="color:#78730D;">&#x0027;Inductance [H]&#x0027;</span>) 
+<a 
+ id="x5-5066r52"></a>plt.xlim(<span style="color:#8F4070;">0</span>, <span style="color:#8F4070;">0.8e5</span>) 
+<a 
+ id="x5-5068r53"></a>plt.ylim(<span style="color:#8F4070;">0</span>, <span style="color:#8F4070;">1</span>) 
+<a 
+ id="x5-5070r54"></a>plt.title(<span style="color:#78730D;">&#x0022;Core Relative Permeability vs. Inductance Graph&#x0022;</span>, color=<span style="color:#78730D;">&#x0027;#c6d0f5&#x0027;</span>) 
+<a 
+ id="x5-5072r55"></a>plt.plot(mur, L,<span style="color:#78730D;">&#x0027;#ef9f76&#x0027;</span>, linewidth=<span style="color:#8F4070;">5</span>) 
+<a 
+ id="x5-5074r56"></a>fig.tight_layout()</pre>
+</code></pre><p> Please observe the resultant plot. The figure clearly confirms that, for the magnetic circuit of this
+example, the inductance is quite <span id="bold" style="font-weight:bold;">insensitive</span> to relative permeability until the relative permeability
+drops to on the order of 1000. Therefore, as long as the effective relative permeability of the core is
+“large”, which in this case greater than 1000, any non-linearities in the properties of the core material
+will have little effect on the terminal properties of the inductor.
+<!--l. 564--><p class="noindent" ></p></div></div><p class="noindent">
+                                                                                
+                                                                                
+</p>
+<figure class="figure"> 
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+<!--l. 569--><p class="noindent" > <img 
+ 
+src="figures/Magnetic-Circuits-and-Materials/figures-6.png" alt="PIC"  
+style="" /> <a 
+ id="x5-5075r4"></a>
+</p>
+<figcaption class="caption" ><span class="id">Figure 1.4: </span><span  
+class="content">An example of a magnetic circuit, excited with two windings.                             </span></figcaption><!--tex4ht:label?: x5-5075r4 -->
+                                                                                
+                                                                                
+</figure>
+<!--l. 574--><p class="noindent" ><span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="#x5-5075r4">1.4<!--tex4ht:ref: fig:magnetic-circuit-with-two-windings --></a> shows a magnetic circuit with an air gap and two (<span class="alert"><alert style="color: #821131;">2</alert></span>) windings. In this case please observe the
+<span class="acronym"><span class="acronym-short"><a 
+href="#glo:mmf" class="glossary" >MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:mmf" class="glossary" >Magneto-motive Force</a></span><span class="acronym-desc"><a 
+href="#glo:mmf" class="glossary" >The magnetic pressure which drives magnetic flux in a magnetic circuit,
+and is the work done to move a unit magnetic pole.</a></span></span></span> acting on the magnetic circuit is given by the
+<span class="alert"><alert style="color: #821131;">total ampere-turns</alert></span> acting on the magnetic <span class="margin-block">circuit <span class="margin-comment"><span class="ellipsis">[15]</span> 
+<span class="sidenote">i.e., the net ampere turns of both windings.</span></span></span> and
+that the reference directions for the currents have been chosen to produce flux in the same
+direction.
+</p><!--l. 580--><p class="noindent" >The total <span class="acronym"><span class="acronym-short"><a 
+href="#glo:mmf" class="glossary" >MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:mmf" class="glossary" >Magneto-motive Force</a></span><span class="acronym-desc"><a 
+href="#glo:mmf" class="glossary" >The magnetic pressure which drives magnetic flux in a
+magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> is therefore calculated to
+be:
+</p>
+<div class="highlight-equation"> <span class="highlight-equation-title"> </span><table class="equation"><tr><td>
+<!--l. 583--><math 
+ 
+display="block" class="equation">
+                                 <mstyle 
+   id="x5-5076r26"  class="label" ></mstyle><!--endlabel-->
+                                 <mstyle 
+mathvariant="script"><mi 
+>F</mi></mstyle>
+                                   <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin" stretchy="false">+</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>
+</math></td><td class="eq-no">(1.26)</td></tr></table>
+<!--l. 585--><p class="noindent" ><p></div></p></div><p class="noindent">
+and from <span> Eq. (<a 
+href="AnOverviewonMagneticCircuits.html#x4-4028r20">1.20<!--tex4ht:ref: eq:mc-20 --></a>)</span> , with the reluctance of the core neglected and assuming
+<!--l. 588--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>g</mi></mrow></msub 
+></math>, the core
+flux <!--l. 588--><math 
+ 
+display="inline" ><mi 
+>ϕ</mi></math> is:
+<table class="equation"><tr><td>
+<!--l. 590--><math 
+ 
+display="block" class="equation">
+                              <mstyle 
+   id="x5-5077r27"  class="label" ></mstyle><!--endlabel-->
+                              <mi 
+>ϕ</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo><msup><mrow 
+> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin" stretchy="false">+</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow 
+></mrow></msup 
+><mfrac>
+ <mrow 
+>
+ <msub><mrow 
+><mi 
+>μ</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow>
+ 
+<mrow 
+>
+<mstyle style="color:#FF0000;"><mi 
+>g</mi></mstyle>
+</mrow>
+</mfrac>
+</math></td><td class="eq-no">(1.27)</td></tr></table>
+<!--l. 593--><p class="noindent" ><p>In <span> Eq. (<a 
+href="#x5-5077r27">1.27<!--tex4ht:ref: eq:mc-32 --></a>)</span> , <!--l. 595--><math 
+ 
+display="inline" ><mi 
+>ϕ</mi></math>
+is the resultant core flux produced by the total <span class="acronym"><span class="acronym-short"><a 
+href="#glo:mmf" class="glossary" >MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:mmf" class="glossary" >Magneto-motive Force</a></span><span class="acronym-desc"><a 
+href="#glo:mmf" class="glossary" >The magnetic pressure
+which drives magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> of
+the two windings.
+</p>
+<div class="warning">
+                                                                                
+                                                                                
+<!--l. 600--><p class="noindent" >It is this resultant <!--l. 600--><math 
+ 
+display="inline" ><mi 
+>ϕ</mi></math>
+which determines the operating point of the core material.
+</p>
+</div>
+<!--l. 602--><p class="noindent" >If <span> Eq. (<a 
+href="#x5-5077r27">1.27<!--tex4ht:ref: eq:mc-32 --></a>)</span>  is broken up into individual currents, the resultant flux linkages of coil 1 can be
+expressed as </p><table class="equation"><tr><td>
+<!--l. 605--><math 
+ 
+display="block" class="equation">
+                      <mstyle 
+   id="x5-5078r28"  class="label" ></mstyle><!--endlabel-->
+                      <msub><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mi 
+>ϕ</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>1</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow 
+><msub><mrow 
+><mi 
+>μ</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow>
+<mrow 
+>
+<mi 
+>g</mi></mrow></mfrac>   </mrow><mo fence="true" form="postfix">)</mo></mrow><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin" stretchy="false">+</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac>
+<mrow 
+>
+<msub><mrow 
+><mi 
+>μ</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow>
+
+<mrow 
+>
+<mi 
+>g</mi></mrow></mfrac>   </mrow><mo fence="true" form="postfix">)</mo></mrow><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>
+</math></td><td class="eq-no">(1.28)</td></tr></table>
+<!--l. 608--><p class="noindent" ><p>which can be written in a simpler form as: </p><table class="equation"><tr><td>
+<!--l. 612--><math 
+ 
+display="block" class="equation">
+                                <mstyle 
+   id="x5-5079r29"  class="label" ></mstyle><!--endlabel-->
+                                <msub><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>L</mi></mrow><mrow 
+><mn>1</mn><mn>1</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin" stretchy="false">+</mo> <msub><mrow 
+><mi 
+>L</mi></mrow><mrow 
+><mn>1</mn><mn>2</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>
+</math></td><td class="eq-no">(1.29)</td></tr></table>
+<!--l. 615--><p class="noindent" ><p>where: </p><table class="equation"><tr><td>
+<!--l. 619--><math 
+ 
+display="block" class="equation">
+                                 <mstyle 
+   id="x5-5080r30"  class="label" ></mstyle><!--endlabel-->
+                                 <msub><mrow 
+><mi 
+>L</mi></mrow><mrow 
+><mn>1</mn><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>1</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+><mfrac><mrow 
+><msub><mrow 
+><mi 
+>μ</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow>
+<mrow 
+>
+<mi 
+>g</mi></mrow></mfrac>
+</math></td><td class="eq-no">(1.30)</td></tr></table>
+<!--l. 622--><p class="noindent" ><p>is the <span class="alert"><alert style="color: #821131;">self-inductance</alert></span> of Coil 1, and <!--l. 624--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>L</mi></mrow><mrow 
+><mn>1</mn><mn>1</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>
+is the flux linkage of Coil 1 due to its own current
+<!--l. 625--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mi 
+>l</mi></mrow></msub 
+></math>. The
+<span class="alert"><alert style="color: #821131;">mutual inductance</alert></span> between coils 1 and 2 is: </p><table class="equation"><tr><td>
+                                                                                
+                                                                                
+<!--l. 627--><math 
+ 
+display="block" class="equation">
+                                <mstyle 
+   id="x5-5081r31"  class="label" ></mstyle><!--endlabel-->
+                                <msub><mrow 
+><mi 
+>L</mi></mrow><mrow 
+><mn>1</mn><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mfrac>
+   <mrow 
+>
+   <msub><mrow 
+><mi 
+>μ</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow>
+  
+<mrow 
+>
+<mstyle style="color:#FF0000;"><mi 
+>g</mi></mstyle>
+</mrow>
+</mfrac>
+</math></td><td class="eq-no">(1.31)</td></tr></table>
+<!--l. 631--><p class="noindent" ><p>and <!--l. 633--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>L</mi></mrow><mrow 
+><mn>1</mn><mn>2</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math> is the flux linkage
+of coil 1 due to current <!--l. 633--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>
+in the other coil. Similarly, the flux linkage of coil 2 is </p><table class="equation"><tr><td>
+<!--l. 636--><math 
+ 
+display="block" class="equation">
+                      <mstyle 
+   id="x5-5082r32"  class="label" ></mstyle><!--endlabel-->
+                      <msub><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mi 
+>ϕ</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac>
+<mrow 
+>
+<msub><mrow 
+><mi 
+>μ</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow>
+
+<mrow 
+>
+<mi 
+>g</mi></mrow></mfrac>   </mrow><mo fence="true" form="postfix">)</mo></mrow><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin" stretchy="false">+</mo> <msubsup><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>2</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow 
+><msub><mrow 
+><mi 
+>μ</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow>
+<mrow 
+>
+<mi 
+>g</mi></mrow></mfrac>   </mrow><mo fence="true" form="postfix">)</mo></mrow><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>
+</math></td><td class="eq-no">(1.32)</td></tr></table>
+<!--l. 639--><p class="noindent" ><p>or </p><table class="equation"><tr><td>
+<!--l. 643--><math 
+ 
+display="block" class="equation">
+                                <mstyle 
+   id="x5-5083r33"  class="label" ></mstyle><!--endlabel-->
+                                <msub><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>L</mi></mrow><mrow 
+><mn>2</mn><mn>1</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin" stretchy="false">+</mo> <msub><mrow 
+><mi 
+>L</mi></mrow><mrow 
+><mn>2</mn><mn>2</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>
+</math></td><td class="eq-no">(1.33)</td></tr></table>
+<!--l. 646--><p class="noindent" ><p>where <!--l. 648--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>L</mi></mrow><mrow 
+><mn>2</mn><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
+><mi 
+>L</mi></mrow><mrow 
+><mn>1</mn><mn>2</mn></mrow></msub 
+></math>
+is the mutual inductance and </p><table class="equation"><tr><td>
+                                                                                
+                                                                                
+<!--l. 650--><math 
+ 
+display="block" class="equation">
+                                 <mstyle 
+   id="x5-5084r34"  class="label" ></mstyle><!--endlabel-->
+                                 <msub><mrow 
+><mi 
+>L</mi></mrow><mrow 
+><mn>2</mn><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mn>2</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+><mfrac><mrow 
+><msub><mrow 
+><mi 
+>μ</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><msub><mrow 
+><mi 
+>A</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow>
+<mrow 
+>
+<mi 
+>g</mi></mrow></mfrac>
+</math></td><td class="eq-no">(1.34)</td></tr></table>
+<!--l. 653--><p class="noindent" ><p>is the self-inductance of coil 2.
+</p>
+<div class="warning">
+<!--l. 662--><p class="noindent" >It is important to note that the resolution of the resultant flux linkages into the components produced
+by <!--l. 662--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mi 
+>l</mi></mrow></msub 
+></math> and
+<!--l. 662--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>i</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math> is
+based on superposition of the individual effects and therefore implies a linear flux-<span class="acronym"><span class="acronym-short"><a 
+href="#glo:mmf" class="glossary" >MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:mmf" class="glossary" >Magneto-motive
+Force</a></span><span class="acronym-desc"><a 
+href="#glo:mmf" class="glossary" >The magnetic pressure which drives magnetic flux in a magnetic circuit, and is the work
+done to move a unit magnetic pole.</a></span></span></span> <span class="margin-block">relationship. <span class="margin-comment"><span class="ellipsis">[16]</span> 
+<span class="sidenote">characteristic of materials of constant
+permeability.</span></span></span>
+</p>
+</div>
+<!--l. 664--><p class="noindent" >Substitution of <span> Eq. (<a 
+href="#x5-5005r24">1.24<!--tex4ht:ref: eq:mc-28 --></a>)</span>  in <span> Eq. (<a 
+href="#x5-5003r22">1.22<!--tex4ht:ref: eq:mc-26 --></a>)</span>  gives: </p><table class="equation"><tr><td>
+<!--l. 666--><math 
+ 
+display="block" class="equation">
+                                    <mstyle 
+   id="x5-5085r35"  class="label" ></mstyle><!--endlabel-->
+                                    <mi 
+>e</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow><mstyle 
+class="text"><mtext  >d</mtext></mstyle><msup><mrow 
+> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi 
+>L</mi><mstyle style="color:#FF0000;"><mi 
+>i</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow 
+></mrow></msup 
+>
+</mrow><mrow><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mstyle style="color:#FF0000;"><mi 
+>t</mi></mstyle>  </mrow></mfrac></mstyle>
+</math></td><td class="eq-no">(1.35)</td></tr></table>
+<!--l. 670--><p class="noindent" ><p>for a magnetic circuit with a single winding. For a static magnetic circuit, the inductance is <span class="margin-block">fixed,
+<span class="margin-comment"><span class="ellipsis">[17]</span> 
+<span class="sidenote">assuming that material non-linearities do not cause the inductance to vary</span></span></span> and this equation reduces to
+the familiar circuit-theory form:
+</p>
+<div class="highlight-equation"> <span class="highlight-equation-title"> </span><table class="equation"><tr><td>
+<!--l. 677--><math 
+ 
+display="block" class="equation">
+                                    <mstyle 
+   id="x5-5086r36"  class="label" ></mstyle><!--endlabel-->
+                                    <mi 
+>e</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mi 
+>L</mi><mfrac><mrow 
+><mi 
+>d</mi><mi 
+>i</mi></mrow>
+<mrow 
+>
+<mi 
+>d</mi><mi 
+>t</mi></mrow></mfrac>
+</math></td><td class="eq-no">(1.36)</td></tr></table>
+<!--l. 679--><p class="noindent" ><p></div></p></div><p class="noindent">
+                                                                                
+                                                                                
+<!--l. 681--><p class="noindent" >However, in electromechanical energy conversion devices, inductances are often time-varying, and <span> Eq.
+(<a 
+href="#x5-5085r35">1.35<!--tex4ht:ref: eq:mc-40 --></a>)
+</span> must be written as </p><table class="equation"><tr><td>
+<!--l. 684--><math 
+ 
+display="block" class="equation">
+                                  <mstyle 
+   id="x5-5087r37"  class="label" ></mstyle><!--endlabel-->
+                                  <mi 
+>e</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mi 
+>L</mi><mfrac><mrow 
+><mi 
+>d</mi><mi 
+>i</mi></mrow>
+<mrow 
+>
+<mi 
+>d</mi><mi 
+>t</mi></mrow></mfrac> <mo 
+class="MathClass-bin" stretchy="false">+</mo> <mi 
+>i</mi><mfrac><mrow 
+><mi 
+>d</mi><mi 
+>L</mi></mrow>
+<mrow 
+>
+<mi 
+>d</mi><mi 
+>t</mi></mrow></mfrac>
+</math></td><td class="eq-no">(1.37)</td></tr></table>
+<!--l. 687--><p class="noindent" ><p>Note that in situations with multiple windings, the total flux linkage of each winding must be used in <span>
+Eq. 
+(<a 
+href="#x5-5003r22">1.22<!--tex4ht:ref: eq:mc-26 --></a>)
+</span> to find the winding-terminal voltage. The power at the terminals of a winding on a magnetic
+circuit is a measure of the rate of energy flow into the circuit through that particular winding. The <span class="alert"><alert style="color: #821131;">power</alert></span>,
+<!--l. 692--><math 
+ 
+display="inline" ><mi 
+>p</mi></math>, is
+determined from the product of the voltage and the current </p><table class="equation"><tr><td>
+<!--l. 695--><math 
+ 
+display="block" class="equation">
+                                  <mstyle 
+   id="x5-5088r38"  class="label" ></mstyle><!--endlabel-->
+                                  <mi 
+>p</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mi 
+>i</mi><mi 
+>e</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mi 
+>i</mi><mfrac><mrow 
+><mi 
+>d</mi><mi 
+>λ</mi></mrow>
+<mrow 
+>
+<mi 
+>d</mi><mi 
+>t</mi></mrow></mfrac> <mo 
+class="MathClass-rel" stretchy="false"> :</mo>
+</math></td><td class="eq-no">(1.38)</td></tr></table>
+<!--l. 698--><p class="noindent" ><p>and its unit is watts (<!--l. 700--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>W</mi></mstyle></math>), or
+(<!--l. 700--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>J</mi></mstyle><mspace width="0.17em" class="thinspace"/><msup><mrow 
+><mstyle mathvariant="normal"><mi 
+>s</mi></mstyle></mrow><mrow 
+><mo 
+class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup 
+></math>). Therefore, the change in
+magnetic stored <span class="alert"><alert style="color: #821131;">energy</alert></span> <!--l. 701--><math 
+ 
+display="inline" ><mi mathvariant="normal">Δ</mi><mi 
+>W</mi></math> in the
+magnetic circuit in the time interval <!--l. 701--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>
+to <!--l. 702--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math> is
+</p><table class="equation"><tr><td>
+<!--l. 704--><math 
+ 
+display="block" class="equation">
+                            <mstyle 
+   id="x5-5089r39"  class="label" ></mstyle><!--endlabel-->
+                            <mi mathvariant="normal">Δ</mi><mi 
+>W</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow 
+><mo  
+> ∫
+ <!--nolimits--></mo><!--nolimits--></mrow><mrow 
+><mn>0</mn></mrow><mrow 
+><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>
+      </mrow></msubsup 
+><mi 
+>p</mi><mspace width="0.17em" class="thinspace"/><mi 
+>d</mi><mi 
+>t</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow 
+><mo  
+> ∫
+ <!--nolimits--></mo><!--nolimits--></mrow><mrow 
+><mn>0</mn></mrow><mrow 
+><msub><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>
+      </mrow></msubsup 
+><mi 
+>i</mi><mspace width="0.17em" class="thinspace"/><mi 
+>d</mi><mi 
+>λ</mi>
+</math></td><td class="eq-no">(1.39)</td></tr></table>
+                                                                                
+                                                                                
+<!--l. 706--><p class="noindent" ><p>In SI units, the magnetic stored energy <!--l. 708--><math 
+ 
+display="inline" ><mi 
+>W</mi></math>
+is measured in joules (<!--l. 708--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>J</mi></mstyle></math>).
+For a single-winding system of constant inductance, the change in magnetic stored energy as the flux level is
+changed from <!--l. 710--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>
+to <!--l. 710--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math> can
+be written as </p><table class="equation"><tr><td>
+<!--l. 712--><math 
+ 
+display="block" class="equation">
+                    <mstyle 
+   id="x5-5090r40"  class="label" ></mstyle><!--endlabel-->
+                    <mi mathvariant="normal">Δ</mi><mi 
+>W</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow 
+><mo  
+> ∫
+ <!--nolimits--></mo><!--nolimits--></mrow><mrow 
+><mn>1</mn></mrow><mrow 
+><msub><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>
+      </mrow></msubsup 
+><mi 
+>i</mi><mspace width="0.17em" class="thinspace"/><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mi 
+>λ</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow 
+><mo  
+> ∫
+ <!--nolimits--></mo><!--nolimits--></mrow><mrow 
+><msub><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mrow 
+><msub><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>
+        </mrow></msubsup 
+> <mfrac>
+ <mrow 
+>
+ <mi 
+>λ</mi></mrow>
+<mrow 
+>
+<mstyle style="color:#FF0000;"><mi 
+>L</mi></mstyle></mrow></mfrac><mspace width="0.17em" class="thinspace"/><mstyle 
+class="text"><mtext  >d</mtext></mstyle><mi 
+>λ</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo>  <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+>
+<mn>2</mn><mstyle style="color:#FF0000;"><mi 
+>L</mi></mstyle></mrow></mfrac><msup><mrow 
+> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>2</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+> <mo 
+class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+>
+<mn>1</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow 
+></mrow></msup 
+>
+</math></td><td class="eq-no">(1.40)</td></tr></table>
+<!--l. 717--><p class="noindent" ><p>The total magnetic stored energy at any given value of
+<!--l. 719--><math 
+ 
+display="inline" ><mi 
+>λ</mi></math> can be found
+from setting <!--l. 720--><math 
+ 
+display="inline" ><msub><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>
+equal to zero:
+</p>
+<div class="highlight-equation"> <span class="highlight-equation-title"> </span><table class="equation"><tr><td>
+<!--l. 723--><math 
+ 
+display="block" class="equation">
+                                <mstyle 
+   id="x5-5091r41"  class="label" ></mstyle><!--endlabel-->
+                                <mi 
+>W</mi> <mo 
+class="MathClass-rel" stretchy="false">=</mo>  <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+>
+<mn>2</mn><mstyle style="color:#FF0000;"><mi 
+>L</mi></mstyle></mrow></mfrac><msubsup><mrow 
+><mi 
+>λ</mi></mrow><mrow 
+></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+> <mo 
+class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow 
+><mstyle style="color:#FF0000;"><mi 
+>L</mi></mstyle></mrow> 
+<mrow 
+>
+<mn>2</mn></mrow></mfrac> <mstyle style="color:#FF0000;"><msubsup><mrow 
+><mi 
+>i</mi></mrow><mrow 
+></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mstyle>
+</math></td><td class="eq-no">(1.41)</td></tr></table>
+<!--l. 725--><p class="noindent" ><p></div></p></div><p class="noindent">
+<div class="info-block"> <span class="info-upper"> <span class="info-header"> <span id="bold" style="font-weight:bold;">Information 1.<a 
+ id="x5-5092r3"></a>3: </span> </span> <span class="info-title"> The First Electrical Motor </span> </span> <div class="body"><p>
+<div class="sidenote"> <span class="figure" 
+>
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+<a 
+ id="x5-5093r5"></a>
+<figcaption class="caption" ><span class="id">Figure 1.5: </span><span  
+class="content">Faraday’s electromagnetic experiment, 1821, the first demonstration of the conversion of electrical energy
+into motion <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail">Gooding, D. Faraday, Thomson, and the concept of the magnetic field. The British Journal for the
+history of Science <span id="bold" style="font-weight:bold;">13</span><span id="bold" style="font-weight:bold;">,</span> 91–120 (1980)</span></span> .
+</span></figcaption><!--tex4ht:label?: x5-5093r5 -->
+<div 
+class="colorbox" id="colorbox1"><img 
+ 
+src="figures/Magnetic-Circuits-and-Materials/raster/first-motor.jpg" alt="PIC"  
+style="" /></div>
+                                                                                
+                                                                                
+</div>
+<!--l. 736--><p class="noindent" ></div> </p><p>
+<!--l. 738--><p class="noindent" >Before their modern versions, motors using electrostatic forces were investigated. The first electric
+motors were simple electrostatic devices described in experiments by <span class="alert"><alert style="color: #821131;">Andrew Gordon</alert></span> and
+<span class="alert"><alert style="color: #821131;">Benjamin Franklin</alert></span> in the 1740s <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a 
+ id="x5-5095"></a>Jefimenko, O. D. &#x0026; Walker, D. K. Electrostatic motors: their
+history, types, and principles of operation. (No Title) (1973)</span></span>. However, due to the difficulty of
+generating the high voltages they required, electrostatic motors were never used for practical
+purposes.
+The invention of the electro-chemical battery by <span class="alert"><alert style="color: #821131;">Alessandro Volta</alert></span> in 1799 <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a 
+ id="x5-5096"></a>Guarnieri, M. The Big
+Jump from the Legs of a Frog [Historical]. IEEE Industrial Electronics Magazine <span id="bold" style="font-weight:bold;">8</span><span id="bold" style="font-weight:bold;">,</span> 59–61 (2014)</span></span> made
+persistent electric currents possible. <span class="alert"><alert style="color: #821131;">Hans Christian Ørsted</alert></span> discovered in 1820 that an electric
+current creates a magnetic field, which can exert a force on a magnet. It only took a few weeks for
+<span class="alert"><alert style="color: #821131;">André-Marie Ampère</alert></span> to develop the first formulation of the electromagnetic interaction
+and present the Ampère’s force law, that described the production of mechanical force by
+the interaction of an electric current and a magnetic field <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a 
+ id="x5-5097"></a>Guarnieri, M. Revolving and
+evolving-early DC machines [Historical]. IEEE Industrial Electronics Magazine <span id="bold" style="font-weight:bold;">12</span><span id="bold" style="font-weight:bold;">,</span> 38–43
+(2018)</span></span>.
+<span class="alert"><alert style="color: #821131;">Michael Faraday</alert></span> gave the first demonstration of the effect with a rotary motion in 1821 <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a 
+ id="x5-5098"></a>ri2021.
+The Birth of Electric Motion 2021</span></span>. A free-hanging wire was dipped into a pool of mercury, on
+which a <span class="acronym"><span class="acronym-short"><a 
+href="#glo:pm" class="glossary" >PM</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:pm" class="glossary" >Permanent Magnet</a></span><span class="acronym-desc"><a 
+href="#glo:pm" class="glossary" >An object made from a material that is magnetized and
+creates its own persistent magnetic field</a></span></span></span> was placed. When a current was passed through the
+wire, the wire rotated around the magnet, showing that the current gave rise to a close
+circular magnetic field around the wire <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a 
+ id="x5-5099"></a>van Geloven, A. The development of the electric
+motor</span></span>.
+</p></div></div><p class="noindent">
+                                                                                
+                                                                                
+</p>
+<div class="crosslinks-bottom"><a 
+href="MagneticMaterialProperties.html" ><span class="nav-next">NEXT</span></a><a 
+href="AnOverviewonMagneticCircuits.html" ><span class="nav-prev">PREV</span></a><a 
+href="AnOverviewonMagneticCircuits.html#tailAnOverviewonMagneticCircuits.html" ><span class="nav-prev-tail">PREV-TAIL</span></a><a 
+href="FluxLinkageInductanceandEnergy.html" ><span class="nav-front">FRONT</span></a><a 
+href="MagneticCircuitsandMaterials.html#FluxLinkageInductanceandEnergy.html" ><span class="nav-up">UP</span></a></nav><a 
+ id="tailFluxLinkageInductanceandEnergy.html"></a> </div> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span> 
+<span class="footer-webBook"><span id="bold" style="font-weight:bold;">Last Updated:</span> 14.8.2026, at 14:1.</span> </div> </div> </div> <div class="author-notes"> 
+<span class="note">Authors Note </span> 
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span> 
+</div> 
+</article> 
+<div class="mode-line"> 
+<div class="core-line"> 
+<div class="button-group"> 
+</div> 
+</div> 
+<div class="supp-line"></div> 
+</div> 
+</page> 
+ 
+</body> 
+</html>
