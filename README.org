@@ -1,248 +1,125 @@
-#+title: BSc Drive Technology
- 
 
-** Table of Contents :TOC_2:
-  - [[#lecture-information][Lecture Information]]
-  - [[#requirements-and-the-learning-outcomes][Requirements and the Learning Outcomes]]
-  - [[#grading-of-the-lecture][Grading of the Lecture]]
-  - [[#lecture-sources][Lecture Sources]]
-  - [[#content-and-unit-distribution][Content and Unit Distribution]]
-  - [[#lecture-table-of-contents][Lecture Table of Contents]]
-  - [[#documentation][Documentation]]
-  - [[#related-links][Related Links]]
+#+title: LS BSc Drive Technology
+#+author: Daniel McGuiness
 
-** Lecture Information
+* Lecture Information
+
+** Lecture Overview
 
 - The goal of this lecture is to give an introduction to the fascinating world
-  of electric machines.
-- We will start from understanding how they work to the types currently
-  used in commercial and industrial applications.
-- The lecture will focus on mathematical and engineering concepts which
-  will have direct use with real-life engineering applications.
+  of electric machines and relevant mathematical methods.
+- We will start from understanding how machines work to the types currently used
+  in commercial and industrial applications.
+- The lecture will focus on mathematical and engineering concepts which will
+  have direct use with real-life engineering applications.
 
-  
-| DESCRIPTION        | VALUE                              |
-| Official Name      | Antriebstechnik                    |
-| Lecture Code       | ANT                                |
-| Module Code        | MECH-B-5-ANT-ANT-ILV               |
-| Degree             | B.Sc                               |
-| Program Name       | Mechatronik Design Innovation      |
-| Lecture Name       | Drive Technology                   |
-| Semester           | 5                                  |
-| Season             | WS                                 |
-| Room Type          | Lecture Room                       |
-| Assignments        | Personal Assignment Final Exam     |
-| Lecturer           | Daniel T. McGuiness, Ph.D          |
-| Module Responsible | DaM                                |
-| Software           | Python, Simulink                   |
-| Hardware           | Electric Machines and Control Unit |
-| SWS Total          | 3                                  |
-| SWS Teaching       | 2                                  |
-| SWS Laboratory     | 1                                  |
-| UE Total           | 45                                 |
-| ECTS               | 5                                  |
-| Lecture Type       | ILV                                |
-| Working Language   | English                            |
+#+name: WORKBOOK
+| INDEX | DESCRIPTION        | VALUE                           |
+|-------+--------------------+---------------------------------|
+|     1 | Official Name      | Antriebstechnik                 |
+|-------+--------------------+---------------------------------|
+|     2 | Lecture Code       | ANT                             |
+|     3 | Module Code        | MECH-B-5-ANT-ANT-ILV            |
+|     4 | Degree             | B.Sc                            |
+|     5 | Program Name       | Mechatronik Design Innovation   |
+|     6 | Lecture Name       | Drive Technology                |
+|     7 | Semester           | 5                               |
+|     8 | Season             | WS                              |
+|     9 | Room Type          | Lecture Room                    |
+|    10 | Assignments        | Personal Assignment, Final Exam |
+|    11 | Lecturer           | Daniel T. McGuiness, Ph.D       |
+|    12 | Module Responsible | DaM                             |
+|-------+--------------------+---------------------------------|
+|    13 | Software           | Python, MATLAB, Simulink        |
+|    14 | Hardware           | Electric Drive Lab Equipment    |
+|-------+--------------------+---------------------------------|
+|    15 | SWS Total          | 3                               |
+|    16 | SWS Teaching       | 2                               |
+|    17 | SWS Tutorial       | 0                               |
+|    18 | SWS Laboratory     | 1                               |
+|    19 | SWS Project Work   | 0                               |
+|-------+--------------------+---------------------------------|
+|    20 | UE Total           | 45                              |
+|    21 | UE Teaching        | 30                              |
+|    22 | UE Tutorial        | 0                               |
+|    23 | UE Laboratory      | 15                              |
+|    24 | Assessment Units   | 0                               |
+|    25 | Planned Units      | 45                              |
+|-------+--------------------+---------------------------------|
+|    26 | ECTS               | 5                               |
+|    27 | Lecture Type       | ILV                             |
+|    28 | Working Language   | English                         |
+|-------+--------------------+---------------------------------|
 
 ** Requirements and the Learning Outcomes
 
-- The student should have a good background in circuit analysis and familiarity
-  with integral/differential calculus.
+- The student should have a strong background in circuit analysis and
+  familiarity with integral/differential calculus.
 - After completion, the student will have a good grasp of electrical machines
   from their construction, how they are designed, what types out there and what
   applications are possible.
-
-| REQUIREMENTS          | TAUGHT LECTURE | MODULE CODE | DEGREE | OUTCOME                     |
-| Vector Calculus       | Mathematik 1   | MAT         | B.Sc   | Python Programming          |
-| Differential Calculus | Mathematik 2   | MAT         | B.Sc   | Electric Drive Fundamentals |
-| Linear Algebra        | Mathematik 1   | MAT         | B.Sc   | Magnetic Circutis           |
-| Physics               | Physik         | PHY         |        | Electric Motor Analysis     |
-| -                     |                |             |        | -                           |
-
 ** Grading of the Lecture
 
-- The lecture will have a single personal assignment comprising of a set list
-  of questions and a final exam comprising of all the topics covered
-  in the lecture. Instructions will be given in the assignment.
-- For the written exam you are allowed to write your personal equation
-  reference paper, as long as it is a single sheet of A4, double sided and
-  contains no exercise or solutions. Your reference sheet will be collected
-  after the exam.
-   
+
+- The lecture will have a single personal assignment comprising of a set list of
+  questions and a final exam comprising of all the topics covered in the
+  lecture.
+  - Additional instructions for both will be given in the lecture(s).
+- For the written exam you are allowed to write your personal equation reference
+  paper, as long as it is a single sheet of A4, double sided and contains no
+  exercise or solutions.
+  - Your reference sheet will be collected after the exam.
+
+
 | ASSIGNMENT TYPE     | VALUE | QUANTITY |
-| Quiz                |     5 |        1 |
-| Personal Assignment |    15 |        1 |
+|---------------------+-------+----------|
+| Personal Assignment |    20 |        1 |
 | Final Exam          |    30 |        1 |
 | Lab Work            |    50 |        4 |
-| SUM                 |   100 |        7 |
+|---------------------+-------+----------|
+| SUM                 |   100 |        6 |
 
-** Lecture Sources                                                 
+** Lecture Sources
 
 The following is a reference material table with useful resources which
 complement well with the lecture.
 
-| AUTHOR                   | TITLE                                                                         | PUBLISHER               |
-| Mohan Ned.               | Advanced Electric Drives: Analysis Control and Modeling Using MATLAB/Simulink | John Wiley & Sons 2014. |
-| Krause Paul C. et. al.   | Analysis of Electric Machinery and Drive Systems                              | Vol. 2 IEEE Press 2002. |
-| Pyrhonen Juha et. al     | Design of Rotating Electrical Machines                                        | John Wiley & Sons 2013. |
-| Stephen J. Chapman.      | Electric Machinery Fundamentals (5th Edition)                                 | (2012).                 |
-| Fitzgerald A. E. et. al. | Electric Machinery                                                            | McGraw Hill (2003).     |
-| Hughes A. et. al.        | Electric Motors and Drives: Fundamentals Types and Applications               | Newnes 2019.            |
-| Melkebeek A.             | Electrical Machines and Drives: Fundamentals and Advanced Modelling           | Springer 2018.          |
-| Wildi T.                 | Electrical Machines, Drives, and Power Systems                                | Pearson Education 2006. |
-| Veltman A. et. al.       | Fundamentals of Electrical Drives                                             | Springer 2007.          |
+| INDEX | AUTHOR                   | TITLE                                                                         | PUBLISHER               |
+|-------+--------------------------+-------------------------------------------------------------------------------+-------------------------|
+|     1 | Mohan Ned.               | Advanced Electric Drives: Analysis Control and Modeling Using MATLAB/Simulink | John Wiley & Sons 2014. |
+|     2 | Krause Paul C. et. al.   | Analysis of Electric Machinery and Drive Systems                              | Vol. 2 IEEE Press 2002. |
+|     3 | Pyrhonen Juha et. al     | Design of Rotating Electrical Machines                                        | John Wiley & Sons 2013. |
+|     4 | Stephen J. Chapman.      | Electric Machinery Fundamentals (5th Edition)                                 | (2012).                 |
+|     5 | Fitzgerald A. E. et. al. | Electric Machinery                                                            | McGraw Hill (2003).     |
+|     6 | Hughes A. et. al.        | Electric Motors and Drives: Fundamentals Types and Applications               | Newnes 2019.            |
+|     7 | Melkebeek A.             | Electrical Machines and Drives: Fundamentals and Advanced Modelling           | Springer 2018.          |
+|     8 | Wildi T.                 | Electrical Machines, Drives, and Power Systems                                | Pearson Education 2006. |
+|     9 | Veltman A. et. al.       | Fundamentals of Electrical Drives                                             | Springer 2007.          |
+|-------+--------------------------+-------------------------------------------------------------------------------+-------------------------|
 
 ** Content and Unit Distribution
 
-    
 - The content and unit distribution of the lecture is as follows where a unit
   is defined as 45 min lecture.
-    
-| ORDER | TOPIC                                            | UNITS | SELF STUDY |
-|     1 | Magnetic Circuits and Materials                  |     4 |          4 |
-|     2 | Transformers                                     |     4 |          4 |
-|     3 | Electromechanical Energy Conversion (Self Study) |     4 |          8 |
-|     4 | Lab 1: Installation of a Drive System            |     3 |          6 |
-|     5 | Rotating Magnetic Fields (Self Study)            |     2 |          4 |
-|     6 | Lab 2: Building a Lathe                          |     4 |          8 |
-|     7 | Synchronous Machines                             |     4 |          8 |
-|     8 | Poly-phase Induction Drives                      |     4 |          8 |
-|     9 | Lab 3: Synchronous and Induction Drives          |     4 |          8 |
-|    10 | DC Drives                                        |     4 |          8 |
-|    11 | Special Machines                                 |     2 |          3 |
-|    12 | Lab 4: Photovoltaic Cells                        |     4 |          8 |
-|    13 | Final Exam                                       |     2 |          4 |
-|    14 | Total                                            |    45 |         90 |
 
-** Lecture Table of Contents
-
-- Magnetic Circuits and Materials
-  - Introduction
-    - Maxwell's Equations
-  - Flux Linkage, Inductance, and Energy
-  - Magnetic Material Properties
-    - Ferromagnetic Materials
-  - AC Excitation
-- Transformers
-  - The Stationary Electric Machine
-    - An Overview of Transformers
-  - Transformers under No-Load Conditions
-  - The Effect of Secondary Current on an Ideal Transformer
-  - Reactances and Types of Equivalent Circuits
-  - Understanding Transformer Behaviour
-  - Auto and Multiwinding Transformers
-    - AutoTransformers
-    - Multiwinding Transformers
-  - Poly-Phase Transformers
-    - Connection Types
-  - Voltage and Current Transformers
-- Electromechanic Energy Conversion
-  - The Necessary Definitions
-  - Forces and Torque under Magnetic Field
-  - The Theory of Energy Balance
-    - The Energy Method
-  - Energy in a Singly Excited Magnetic Circuit
-  - Determining Force and Torque from Energy
-  - Determination of Magnetic Force and Torque from CoEnergy
-  - Multiply Excited Magnetic Systems
-- Lab 1: Installation of a Drive System
-  - Hands-on Laboratory Work       
-- Rotating Magnetic Fields
-  - Fundamental Concepts
-    - A Look at AC and DC Drives
-      - Synchronous Machines
-      - Induction Drives
-    - DC Machines
-  - MMF of Distributed Windings
-    - AC Machines
-    - DC Machines
-  - Magnetic Field in Rotating Machinery
-    - Machines with uniform air Gaps
-    - Machines with a Non-Uniform Air Gap
-  - Describing Rotating MMF Waves in AC Machines
-    - MMF Wave of a Single-Phase Winding
-    - MMF Wave of a Polyphase Winding
-    - Graphical Analysis of Polyphase MMF
-  - Generated Voltage
-    - AC Machines
-    - DC Machines
-  - Torque in Non-Salient-Pole Machines
-    - Coupled-Circuit Viewpoint
-    - Magnetic Field Viewpoint
-  - Magnetic Saturation
-  - Leakage Flux  
-- Lab 2: Building a Lathe
-  - Hands-on Laboratory Work     
-- Synchronous Machines
-  - To Spin with Synchronicity
-    - Construction
-    - Excitation
-    - Parallel Operation
-    - Starting Method
-  - Equivalent Circuits
-    - The Rotor Self-Inductance
-    - Stator-to-Rotor Mutual Inductance
-    - Synchronous Inductance
-    - Deriving the Equivalent Circuit
-  - Open and Short Circuit Characteristics
-    - Open-Circuit Saturation Characteristic and No-Load Rotational Losses
-    - Short-Circuit Characteristic and Load Loss
-  - Steady-State Power-Angle Characteristics
-  - Steady-State Operating Characteristics
-- Induction Machines
-  - Introduction to Induction Machines
-  - Current and Fluxes in Induction Machines
-  - Induction Machine Equivalent Circuit
-  - Analysis of the Equivalent Circuit
-  - Calculating Power and Torque using Thevenin
-  - Parameters Determination from No-Load and Blocked-Rotor Tests
-  - The Effects of Rotor Resistance
-    - Wound-Rotor Motors
-    - Motor-Application Considerations
-- Lab 3: Synchronous and Induction Drives
-  - Hands-on Laboratory Work     
-- DC Machines
-  - Introduction
-    - Construction
-      - Commutator Brushes
-  - The Process of Commutation
-  - Analytical Study
-  - Armature Reaction
-    - Magnetic Circuits
-    - Armature Reaction Neglected
-  - Steady-State Performance
-  - Permanent Magnet Motors
-  - Commutation and Interpoles
-  - Compensation Windings
-  - Series Universal Motor
-- Special Machines
-  - Single-Phase Induction Motors
-    - Structure
-    - Classification
-      - Split-Phase Motors
-      - Capacitor Types
-  - Shaded Pole
-  - Brushless DC Motors
-    - Construction Types
-      - Surface-Mounted Magnets
-      - Inset Magnets
-      - Interior (Buried) PM with Radial Magnetization
-      - Interior (Buried) PM with Circumferential Magnetisation
-    - Advantages v. Disadvantages
-  - Switched Reluctance Motors
-    - Operation Principle
-    - Modeling and Torque
-    - Advantages v. Disadvantages
-    - Applications
-- Lab 4: Photovoltaic Cells
-  - Hands-on Laboratory Work           
-- Final Exam
-  - Written Exam
+| ORDER | TOPIC                                   | UNITS | SELF STUDY |
+|-------+-----------------------------------------+-------+------------|
+|     1 | Magnetic Circuits and Materials         |     4 |          4 |
+|     2 | Transformers                            |     6 |          4 |
+|     3 | Electromechanical Energy Conversion     |     4 |          8 |
+|     4 | Lab 1: Installation of a Drive System   |     3 |          6 |
+|     5 | Rotating Magnetic Fields                |     6 |          4 |
+|     6 | Lab 2: Building a Lathe                 |     4 |          8 |
+|     7 | Synchronous Machines                    |     4 |          8 |
+|     8 | Poly-phase Induction Drives             |     4 |          8 |
+|     9 | Lab 3: Synchronous and Induction Drives |     4 |          8 |
+|    10 | Lab 4: Photovoltaic Cells               |     4 |          8 |
+|    11 | Final Exam                              |     2 |          4 |
+|-------+-----------------------------------------+-------+------------|
+|    12 | Total                                   |    45 |         90 |
 
 ** Documentation
 
 For any student in need of a LaTeX class designed from the ground-up for
 assignment/lab/thesis/slide for MCI needs please have a look at ~mcidoc~ class
 hosted at [[https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc][GitHub]].
-
-(-DTMc 2025)
