@@ -1,8 +1,10 @@
-
 #+title: LS BSc Drive Technology
-#+author: Daniel McGuiness
+ 
+
+
 
 * Lecture Information
+
 
 ** Lecture Overview
 
@@ -12,8 +14,7 @@
   in commercial and industrial applications.
 - The lecture will focus on mathematical and engineering concepts which will
   have direct use with real-life engineering applications.
-
-#+name: WORKBOOK
+  
 | INDEX | DESCRIPTION        | VALUE                           |
 |-------+--------------------+---------------------------------|
 |     1 | Official Name      | Antriebstechnik                 |
@@ -51,6 +52,7 @@
 |    28 | Working Language   | English                         |
 |-------+--------------------+---------------------------------|
 
+
 ** Requirements and the Learning Outcomes
 
 - The student should have a strong background in circuit analysis and
@@ -58,6 +60,8 @@
 - After completion, the student will have a good grasp of electrical machines
   from their construction, how they are designed, what types out there and what
   applications are possible.
+
+
 ** Grading of the Lecture
 
 
@@ -69,8 +73,7 @@
   paper, as long as it is a single sheet of A4, double sided and contains no
   exercise or solutions.
   - Your reference sheet will be collected after the exam.
-
-
+   
 | ASSIGNMENT TYPE     | VALUE | QUANTITY |
 |---------------------+-------+----------|
 | Personal Assignment |    20 |        1 |
@@ -79,7 +82,7 @@
 |---------------------+-------+----------|
 | SUM                 |   100 |        6 |
 
-** Lecture Sources
+** Lecture Sources                                                 
 
 The following is a reference material table with useful resources which
 complement well with the lecture.
@@ -101,7 +104,7 @@ complement well with the lecture.
 
 - The content and unit distribution of the lecture is as follows where a unit
   is defined as 45 min lecture.
-
+    
 | ORDER | TOPIC                                   | UNITS | SELF STUDY |
 |-------+-----------------------------------------+-------+------------|
 |     1 | Magnetic Circuits and Materials         |     4 |          4 |

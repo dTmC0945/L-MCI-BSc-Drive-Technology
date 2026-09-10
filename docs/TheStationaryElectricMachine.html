@@ -1,0 +1,279 @@
+<!DOCTYPE html> 
+<html lang="en">  
+<head><title>The Stationary Electric Machine</title> 
+<meta  charset="utf-8" /> 
+<meta name="generator" content="lms-WebBook" /> 
+<meta name="viewport" content="width=device-width,initial-scale=1" /> 
+<link rel="stylesheet" type="text/css" href="\aa:CssFile " /> 
+<meta name="src" content="DriveTechnologyLectureBook.tex" /> 
+ <script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>  
+<link rel="icon" type="image/x-icon" href="logo/lms.ico"> 
+<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" /> 
+<link rel ="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css"> 
+<script src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js" async='true' crossorigin='anonymous'></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css"/> 
+<script src ="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script> 
+<link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"/> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/> 
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet/'> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script> 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script> 
+ <style></style> </head><body 
+>
+<page> 
+<nav class="wide"><img class="webbook-logo" src="logo/webbook-logo.svg"></img> <div class="header"> <div class="header-left"><span class="header-lecture-grade">B.Sc</span> 
+<span class="header-lecture-name">Drive Technology</span> 
+<span class="header-webBook">WebBook 2.1</span> </div> <div class="header-right"> <span class="header-version">WS.2026</span> 
+ <span class="header-chapter">Transformers</span></div></div> <div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style='font-size:20px'></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&hl=en\&user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style='font-size:20px'></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style='font-size:20px'></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style='font-size:20px'></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style='font-size:20px'></i></a></div><hr /><span class="chapterToc"><span class="number">0</span><span class="title"><a 
+href="index.html#x2-10000">index</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a 
+href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a 
+href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic
+Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a 
+href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a 
+href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a 
+href="MagneticMaterialProperties.html#x6-60001.3">Magnetic
+Material Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a 
+href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a 
+href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a 
+href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a 
+href="#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a 
+href="#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a 
+href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a 
+href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a 
+href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The
+Effect of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a 
+href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types
+of Equivalent Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a 
+href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a 
+href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit
+Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a 
+href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a 
+href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a 
+href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a 
+href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a 
+href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span>
+<!--l. 53--><p class="noindent" ><div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> 
+<span class="nav-footer-webBook"><span id="bold" style="font-weight:bold;">Last Updated:</span> 10.9.2026, at 11:1.</span></div></div><span class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span></div></div></nav> 
+
+                                                                                
+                                                                                
+</p>
+<article class="chapter"> 
+<nav class="crosslinks-top"> <a 
+href="AMathematicalModeloftheTransformer.html" ><span class="nav-next">NEXT</span></a><a 
+href="Transformers.html" ><span class="nav-prev">PREV</span></a><a 
+href="Transformers.html#tailTransformers.html" ><span class="nav-prev-tail">PREV-TAIL</span></a><a 
+href="#tailTheStationaryElectricMachine.html"><span class="nav-tail">TAIL</span></a><a 
+href="Transformers.html#TheStationaryElectricMachine.html" ><span class="nav-up">UP</span></a></nav> 
+<div class="section-header"> <h3 id="header-section-2.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.2.1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-pdf" viewBox="0 0 16 16"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">2.1</span> <span class="title">  <a 
+ id="x9-120002.1"></a>The Stationary Electric Machine</span></h3></div><p>
+<!--l. 55--><p class="noindent" >Let’s have a look at the machine which plays an integral role in efficient power transmission.
+
+</p>
+<!--l. 57--><p class="noindent" ><div class="subsection-header"> <h4 id="header-subsection-2.1.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.2.1.1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-pdf" viewBox="0 0 16 16"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.1.1</span> <span class="title">  <a 
+ id="x9-130002.1.1"></a>An Overview of Transformers</span></h4></div><p>
+</p><!--l. 59--><p class="noindent" >To give a brief definition, a transformer consists of two (<span class="alert"><alert style="color: #821131;">2</alert></span>) or more windings coupled by <span id="bold" style="font-weight:bold;">mutual
+magnetic flux</span>. If one of these windings, <span id="bold" style="font-weight:bold;">the primary</span>, is connected to an <span class="acronym"><span class="acronym-short"><a 
+href="#glo:ac" class="glossary" >AC</a></span><span class="acronym-detail"><span class="acronym-long"><a 
+href="#glo:ac" class="glossary" >Alternating Current</a></span><span class="acronym-desc"><a 
+href="#glo:ac" class="glossary" >An
+electric current that periodically reverses direction and changes its magnitude continuously
+with time, in contrast to direct current (DC), which flows only in one direction.</a></span></span></span> source,
+alternating flux will be produced whose amplitude will depend on the primary voltage, the
+frequency of the applied voltage, and finally, the number of turns. The mutual flux will link the
+other winding, <span id="bold" style="font-weight:bold;">the secondary</span>, and will induce a voltage in it whose value will depend
+on the number of secondary turns as well as the magnitude of the mutual flux and the
+frequency.
+</p>
+<div class="warning">
+<!--l. 70--><p class="noindent" >By properly proportioning the number of primary and secondary turns, almost <span class="alert"><alert style="color: #821131;">any desired voltage
+ratio</alert></span>, or ratio of transformation, can be obtained.
+</p>
+</div>
+<figure class="figure"> 
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+<a 
+ id="x9-13001r1"></a>
+<figcaption class="caption" ><span class="id">Figure 2.1: </span><span  
+class="content">Schematic views of (a) core-type and (b) shell-type transformers.                           </span></figcaption><!--tex4ht:label?: x9-13001r1 -->
+ <img 
+ 
+src="figures/Transformers/figures-5.png" alt="PIC"  
+style="" />
+                                                                                
+                                                                                
+</figure>
+<!--l. 79--><p class="noindent" >The essence of transformer action requires only the existence of a <span class="alert"><alert style="color: #821131;">time-varying mutual flux</alert></span> linking
+the two (<span class="alert"><alert style="color: #821131;">2</alert></span>) windings. Such action can occur for two (<span class="alert"><alert style="color: #821131;">2</alert></span>) windings coupled through air, but coupling
+between the windings can be made much more effectively using a core of iron or other ferromagnetic
+material, as most of the flux is then confined to a definite, high-permeability path, linking both
+windings. </p><div class="knowledge">
+<!--l. 90--><p class="noindent" >Such a transformer is commonly called an <span class="alert"><alert style="color: #821131;">iron-core transformer</alert></span> which makes majority of the
+<span class="margin-block"><span class="margin"><span>market. <span class="ellipsis">[25]</span></span><span class="sidenote"><span class="sidenote-image"><img 
+ 
+src="figures/Transformers/raster/iron-core-transformer.jpg" alt="PIC"  
+style="" /></span><span class="sidenote-text"><span class="ellipsis">[25]</span>An example of an iron-core transformer.</span></span></span></span>
+</p>
+</div>
+<!--l. 92--><p class="noindent" >The chapter is concerned primarily with <span id="bold" style="font-weight:bold;">iron-core transformers</span>. As we looked at the topic
+previously, to reduce the losses caused by eddy currents in the core, the magnetic circuit usually
+consists of a <span class="alert"><alert style="color: #821131;">stack of thin laminations</alert></span>. Two common construction types are shown in <span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="#x9-13001r1">2.1<!--tex4ht:ref: fig:transformer-types --></a>:
+</p><div class="description">     
+<dl class="description"><dt class="description"><a 
+ id="x9-13002x2.1.1"></a>
+<span style="color:#1C2E4A;">Core</span> 
+</dt><dd 
+class="description">
+<!--l. 98--><p class="noindent" > Shown in <span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="#x9-13001r1">2.1<!--tex4ht:ref: fig:transformer-types --></a>a, the windings are <span id="bold" style="font-weight:bold;">wound around two legs</span> of a rectangular magnetic
+core.
+</p>     
+</dd>
+<dt class="description"><a 
+ id="x9-13003x2.1.1"></a>
+<span style="color:#1C2E4A;">Shell</span> 
+</dt><dd 
+class="description">
+<!--l. 100--><p class="noindent" > Shown in <span id="bold" style="font-weight:bold;">Fig.</span> <a 
+href="#x9-13001r1">2.1<!--tex4ht:ref: fig:transformer-types --></a>b the windings are wound <span id="bold" style="font-weight:bold;">around the centre leg</span> of a three-legged
+core.</p></dd></dl>
+</div><p> Silicon-steel laminations (<!--l. 104--><math 
+ 
+display="inline" ><mn>0</mn><mi 
+>,</mi><mn>5</mn><mn>5</mn></math> <!--l. 104--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>m</mi><mi 
+>m</mi></mstyle></math>)
+thick are generally used for transformers operating at frequencies below a few hundred
+<!--l. 105--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>H</mi><mi 
+>z</mi></mstyle></math>. Silicon steel has the
+desirable properties of low cost, low core loss, and high permeability at high flux <span class="margin-block">densities. <span class="margin-comment"><span class="ellipsis">[26]</span> 
+<span class="sidenote">This value ranges between
+<!--l. 107--><math 
+ 
+display="inline" ><mn>1</mn></math> <!--l. 107--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>T</mi></mstyle></math>
+to 
+<!--l. 107--><math 
+ 
+display="inline" ><mn>1</mn><mi 
+>,</mi><mn>5</mn></math> <!--l. 107--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>T</mi></mstyle></math>.</span></span></span>
+The cores of small transformers used in communication circuits at high frequencies and low energy
+levels are sometimes made of compressed powdered ferromagnetic alloys known as <span class="margin-block"><span class="margin"><span>ferrites.
+<span class="ellipsis">[27]</span></span><span class="sidenote"><span class="sidenote-image"><img 
+ 
+src="figures/Transformers/raster/ceramic-magnets.jpg" alt="PIC"  
+style="" /></span><span class="sidenote-text"><span class="ellipsis">[27]</span>A family of iron oxide-containing magnetic ceramic materials. They are ferrimagnetic,
+meaning they are attracted by magnetic fields and can be magnetized to become permanent
+magnets. Unlike many ferromagnetic materials, most ferrites are not electrically conductive,
+making them useful in applications like magnetic cores for transformers to suppress eddy
+currents.</span></span></span></span>
+<!--l. 116--><p class="noindent" >In each of these configurations, most of the flux is confined to the core and therefore links both
+windings. The windings also produce additional flux, known as <span id="bold" style="font-weight:bold;">leakage flux</span>, which links one winding
+without linking the other.
+</p>
+<div class="warning">
+<!--l. 123--><p class="noindent" >Although leakage flux is a small fraction of the total flux, it plays an <span class="alert"><alert style="color: #821131;">important role in
+determining the overall behavior</alert></span> of the transformer which will be looked later.
+</p>
+                                                                                
+                                                                                
+</div>
+<!--l. 125--><p class="noindent" >In practice, leakage is reduced by subdividing the windings into sections placed as close together as
+possible. In the core-type construction, each winding consists of two sections, one section on each of the
+two legs of the core, the primary and secondary windings being <span id="bold" style="font-weight:bold;">concentric coils</span>. In the shell-type
+construction, variations of the <span id="bold" style="font-weight:bold;">concentric-winding</span> arrangement may be used, or the windings may
+consist of a number of thin “pancake” coils assembled in a stack with primary and secondary coils
+interleaved.
+</p>
+<div class="info-block"> <span class="info-upper"> <span class="info-header"> <span id="bold" style="font-weight:bold;">Information 2.<a 
+ id="x9-13004r5"></a>5: </span> </span> <span class="info-title"> Distribution Transformers </span> </span> <div class="body"><p>
+<!--l. 134--><p class="noindent" >Provides a final voltage reduction in the electric power distribution system, stepping down the
+voltage used in the distribution lines to the level used by the <span class="margin-block"><span class="margin"><span>customer. <span class="ellipsis">[28]</span></span><span class="sidenote"><span class="sidenote-image"><img 
+ 
+src="figures/Transformers/raster/distribution-transformer.jpg" alt="PIC"  
+style="" /></span><span class="sidenote-text"><span class="ellipsis">[28]</span>A single-phase
+distribution transformer.</span></span></span></span> If mounted on a utility pole, they are called pole-mount transformers.
+When placed either at ground level or underground, distribution transformers are mounted
+on concrete pads and locked in steel cases, thus known as distribution tap pad-mounted
+transformers.
+</p><!--l. 142--><p class="noindent" >Distribution transformers typically have ratings less than
+<!--l. 142--><math 
+ 
+display="inline" ><mn>2</mn><mn>0</mn><mn>0</mn></math> <!--l. 142--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>k</mi><mi 
+>V</mi><mi 
+>A</mi></mstyle></math>,
+although some national standards allow units up to
+<!--l. 143--><math 
+ 
+display="inline" ><mn>5</mn><mi 
+>,</mi><mn>0</mn><mn>0</mn><mn>0</mn> <mi 
+>×</mi> <mn>1</mn><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mn>3</mn></mrow></msup 
+></math> <!--l. 143--><math 
+ 
+display="inline" ><mstyle mathvariant="normal"><mi 
+>k</mi><mi 
+>V</mi><mi 
+>A</mi></mstyle></math>
+to be described as distribution transformers. Since distribution transformers are energized 24
+hours a day even when they don’t carry any load, <span class="alert"><alert style="color: #821131;">reducing iron losses is vital in
+their design</alert></span>. They usually don’t operate at full load, so they are <span class="alert"><alert style="color: #821131;">designed to have
+maximum efficiency at lower loads</alert></span>. To have better efficiency, voltage regulation in these
+transformers is kept to a minimum. Therefore, they are <span class="alert"><alert style="color: #821131;">designed to have small leakage
+reactance</alert></span>.
+</p></div></div> </p>
+                                                                                
+                                                                                
+<div class="crosslinks-bottom"><a 
+href="AMathematicalModeloftheTransformer.html" ><span class="nav-next">NEXT</span></a><a 
+href="Transformers.html" ><span class="nav-prev">PREV</span></a><a 
+href="Transformers.html#tailTransformers.html" ><span class="nav-prev-tail">PREV-TAIL</span></a><a 
+href="TheStationaryElectricMachine.html" ><span class="nav-front">FRONT</span></a><a 
+href="Transformers.html#TheStationaryElectricMachine.html" ><span class="nav-up">UP</span></a></nav><a 
+ id="tailTheStationaryElectricMachine.html"></a>  </div> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span> 
+<span class="footer-webBook"><span id="bold" style="font-weight:bold;">Last Updated:</span> 10.9.2026, at 11:1.</span> </div> </div> </div> <div class="author-notes"> 
+<span class="note">Authors Note </span> 
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span> 
+</div> 
+</article> 
+<div class="mode-line"> 
+<div class="core-line"> 
+<div class="button-group"> 
+</div> 
+</div> 
+<div class="supp-line"></div> 
+</div> 
+</page> 
+ 
+</body> 
+</html>
