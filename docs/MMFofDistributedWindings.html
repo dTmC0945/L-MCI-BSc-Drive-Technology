@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>MMF of Distributed Windings</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Rotating Magnetic Fields</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="MagneticFieldinRotatingMachinery.html">Magnetic Field in Rotating Machinery</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="FundamentalConcepts.html">Fundamental Concepts</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="RotatingMagneticFields.html#MMFofDistributedWindings.html">Chapter: Rotating
+Magnetic Fields</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-4.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.4.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">4.2</span> <span class="title"> <a id="x20-520004.2"></a>MMF of Distributed
+Windings</span></h3></div>
+<p class="noindent">Most armatures have <b>distributed windings</b>, such as windings spread over a number of slots around
+the air-gap periphery. The individual coils are <b>inter-connected</b> so the result is a magnetic field having
+the same number of poles as the field winding.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x20-52001r14"></a>
+<figcaption class="caption"><span class="id">Figure 4.14: 
+          </span><span class="content">(a) Flux produced by a concentrated, full-pitch winding in a machine with a uniform air gap. (b) The
+          air-gap MMF produced by current in this winding.                                    </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-4.png" style=""/>
+</figure>
+<p class="noindent">The study of the magnetic fields of distributed windings can be approached
+by examining the magnetic field produced by a winding consisting of a single
+<math display="inline"><mi>N</mi></math>-turn coil which spans
+<math display="inline"><mn>1</mn><mn>8</mn><mn>0</mn></math><math display="inline"><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>
+electrical, as shown in <b>Fig.</b> <a href="#x20-52001r14">4.14</a>a.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">A coil which spans <math display="inline"><mn>1</mn><mn>8</mn><mn>0</mn></math><math display="inline"><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>
+electrical is known as a <span class="alert">full-pitch coil</span>. </p></div></div>
+<p class="noindent">The dot and cross indicate current flow toward and away from the reader, respectively.
+</p><p class="noindent">For simplicity, a concentric cylindrical rotor is shown. The dipole nature of the magnetic field produced
+by the current in the coil is shown by the flux lines in <b>Fig.</b> <a href="#x20-52001r14">4.14</a>a. Given the permeability of
+the armature and field iron is much greater than that of air, it is sufficiently accurate for
+our present purposes to assume that all the reluctance of the magnetic circuit is in the air
+gap.
+</p><p class="noindent">From symmetry of the structure it is evident that the magnetic field intensity
+(<math display="inline"><msub><mrow><mi>H</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ag</mtext></mstyle></mrow></msub></math>) in the air gap at angle
+<math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow></msub></math> under one pole is the same in
+magnitude as that at angle <math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>π</mi></math>
+under the opposite pole, but the fields are in the opposite direction.
+</p><p class="noindent">Around any of the closed paths shown by the flux lines in <b>Fig.</b> <a href="#x20-52001r14">4.14</a>a the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The
+magnetic pressure which drives magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic
+pole.</a></span></span></span> is <math display="inline"><mi>N</mi><mi>i</mi></math>.
+Because we have assumed that the reluctance of the magnetic circuit is predominantly that of the air
+gap, the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in
+a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> drop in the iron
+can be neglected and all of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which
+drives magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic
+pole.</a></span></span></span> drop will appear across the air gap. By symmetry we argued that the air-gap fields
+<math display="inline"><msub><mrow><mi>H</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ag</mtext></mstyle></mrow></msub></math> on
+opposite sides of the rotor are equal in magnitude but opposite in direction. It follows that the
+air-gap <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in a
+magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> should be similarly
+distributed given each flux line crosses the air gap twice, the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The
+magnetic pressure which drives magnetic flux in a magnetic circuit, and is the work done to
+move a unit magnetic pole.</a></span></span></span> drop across the air gap must be equal to half of the total or
+<math display="inline"><mi>N</mi><mi>i</mi><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></math>.
+<b>Fig.</b> <a href="#x20-52001r14">4.14</a>b shows the air gap and winding in developed <span class="margin-block">form. <span class="margin-comment"><span class="ellipsis">[87]</span>
+<span class="sidenote">i.e., laid out flat</span></span></span> The air-gap
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in a magnetic circuit, and is
+the work done to move a unit magnetic pole.</a></span></span></span> distribution is shown by the step-like distribution of amplitude
+<math display="inline"><mi>N</mi><mi>i</mi><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></math>. On the
+assumption of narrow slot openings, the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> jumps abruptly
+by <math display="inline"><mi>N</mi><mi>i</mi></math> in
+crossing from one side to the other of a coil.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-4.2.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.4.2.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">4.2.1</span> <span class="title"> <a id="x20-530004.2.1"></a>AC Machines</span></h4></div>
+</p><p class="noindent">Fourier <span class="margin-block"><span class="margin"><span>analysis <span class="ellipsis">[88]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Rotating-Magnetic-Fields/raster/portrait-fourier.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[88]</span><b>Jean-Baptiste Joseph Fourier</b>
+(<i>1768  - 1830</i>)
+French mathematician and physicist born in <i>Auxerre, Burgundy</i> and best known for initiating
+the investigation of Fourier series, which eventually developed into Fourier analysis and
+harmonic analysis, and their applications to problems of heat transfer and vibrations. The
+Fourier transform and Fourier’s law of conduction are also named in his honor.</span></span></span></span> can be used
+to show that the air-gap <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span>
+produced by a single coil such as the full-pitch coil of <b>Fig.</b> <a href="#x20-52001r14">4.14</a> consists of a fundamental
+space-harmonic component as well as a series of higher-order harmonic components. In the
+design of <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction and
+changes its magnitude continuously with time, in contrast to direct current (DC), which flows
+only in one direction.</a></span></span></span> machines, serious efforts are made to distribute the coils making up
+the windings so as to minimise the higher-order harmonic components and to produce an
+air-gap <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in a
+magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> wave which consists
+predominantly of the space-fundamental sinusoidal component. It is therefore appropriate
+here to assume that this has been done and to focus our attention on the fundamental
+component.
+The rectangular air-gap <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic
+flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> wave of the
+concentrated two-pole, full-pitch coil of <b>Fig.</b> <a href="#x20-52001r14">4.14</a>b can be resolved into a <i>Fourier</i> series comprising
+a fundamental component and a series of <b>odd</b> harmonics. The fundamental component
+<math display="inline"><msub><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow></msub></math> is:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-53001r4"></mstyle><msub><mrow>
+<mstyle mathvariant="script"><mi>F</mi></mstyle>
+</mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>N</mi><mi>i</mi></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mi class="loglike">cos</mi><mo>⁡</mo><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(4.4)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow></msub></math>
+is measured from the <b>magnetic axis of the stator coil</b>, as shown by the dashed sinusoid in
+<b>Fig.</b> <a href="#x20-52001r14">4.14</a>b. It is a sinusoidal space wave with an amplitude of: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-53002r5"></mstyle>
+<msub><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mstyle class="text"><mtext>peak</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>N</mi><mi>i</mi></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(4.5)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">with its peak <span class="alert">aligned with the magnetic axis of the coil</span>.
+</p><p class="noindent">Let’s change our focus and consider a <span class="alert">distributed winding</span>, consisting of coils distributed in several slots. For example,
+Fig4.17a shows phase <i>a</i> of the armature winding of a somewhat simplified two-pole, three-phase
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in one direction.</a></span></span></span>
+machine.
+The windings of the three phases are identical and are located with their magnetic axes
+<math display="inline"><mn>1</mn><mn>2</mn><mn>0</mn></math><math display="inline"><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>
+apart. We direct our attention to the air-gap <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which
+drives magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> of phase
+<math display="inline"><mi>a</mi></math>
+alone for now. The winding is arranged in two layers, each full-pitch coil of
+<math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mi>c</mi></mrow></msub></math> turns
+having one side in the top of a slot and the other coil side in the bottom of a slot a pole pitch
+away.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">This two-layer arrangement simplifies the geometric problem of getting the end turns of the individual
+coils past each other when the winding is inserted in the stator. </p></div></div>
+<p class="noindent">Figure 4.17b shows one pole of this winding laid out flat. With the coils connected in series and therefore
+carrying the same current, the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in
+a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> wave is a series of steps each of height
+<math display="inline"><mn>2</mn><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">c</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub></math><span class="margin-block">, <span class="margin-comment"><span class="ellipsis">[89]</span>
+<span class="sidenote">equal to the ampere-turns
+in the slot.</span></span></span> where <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow></msub></math>
+is the winding current.
+</p><p class="noindent">Its space-fundamental component is shown by the sinusoid. It can be seen that the distributed winding
+produces an <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in a
+magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> wave which is a closer
+approximation to a sinusoidal <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic
+flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> wave than that of the
+concentrated coil of <b>Fig.</b> <a href="#x20-52001r14">4.14</a>.
+The modified form of <span> Eq. (<a href="#x20-53001r4">4.4</a>)</span>  for a distributed multi-pole winding having
+<math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ph</mtext></mstyle></mrow></msub></math> series
+turns per phase is as follows: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-53003r6"></mstyle><msub><mrow>
+<mstyle mathvariant="script"><mi>F</mi></mstyle>
+</mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac>
+<mrow>
+<msub><mrow><mi>k</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">w</mtext></mstyle></mrow></msub><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ph</mtext></mstyle></mrow></msub></mrow>
+<mrow><mstyle class="text"><mtext>poles</mtext></mstyle></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub><mi class="loglike">cos</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mstyle class="text"><mtext>poles</mtext></mstyle></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac>
+<mrow>
+<msub><mrow><mi>k</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">w</mtext></mstyle></mrow></msub><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ph</mtext></mstyle></mrow></msub></mrow>
+<mrow><mstyle class="text"><mtext>poles</mtext></mstyle></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub><mo><mi class="loglike">cos</mi><mo>⁡</mo></mo><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ae</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(4.6)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">in which the factor <math display="inline"><mn>4</mn><mo class="MathClass-bin" stretchy="false">/</mo><mi>π</mi></math>
+arises from the Fourier-series analysis of the rectangular <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic
+pressure which drives magnetic flux in a magnetic circuit, and is the work done to move
+a unit magnetic pole.</a></span></span></span> wave of a concentrated <b>full-pitch coil</b>, as in <span> Eq. (<a href="#x20-53001r4">4.4</a>)</span> , and the <span class="alert">winding factor</span>
+(<math display="inline"><msub><mrow><mi>k</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">w</mtext></mstyle></mrow></msub></math>) takes
+into account the distribution of the winding.
+</p>
+<div class="info-block" id="info-block-4.23"> <a class="copiable-link" href="#info-block-4.23"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 4.<a id="x20-53004r23"></a>23: </b> </span> <span class="info-title"> The Use of Winding Factor </span> </span> <div class="body">
+<p class="noindent">This factor is required because the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span>s
+produced by the individual coils of any one phase group have different magnetic axes and
+hence don’t sum directly. When they are connected in series to form the phase winding,
+their phasor sum is then less than their numerical sum. </p>
+<hr/>
+<p class="noindent"> 
+For most three-phase windings,
+<math display="inline"><msub><mrow><mi>k</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">w</mtext></mstyle></mrow></msub></math>
+typically falls in the range of 0.85 to 0.95.
+</p>
+</div></div>
+<p class="noindent">The factor <math display="inline"><msub><mrow><mi>k</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">w</mtext></mstyle></mrow></msub><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ph</mtext></mstyle></mrow></msub></math>
+is called the <span class="alert">effective series turns per phase</span> for the fundamental <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span>. The peak
+amplitude of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in a
+magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> wave of <span> Eq. (<a href="#x20-53003r6">4.6</a>)</span>  is
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-53005r7"></mstyle>
+<msub><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mstyle class="text"><mtext>peak</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac>
+<mrow>
+<msub><mrow><mi>k</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">w</mtext></mstyle></mrow></msub><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ph</mtext></mstyle></mrow></msub></mrow>
+<mrow><mstyle class="text"><mtext>poles</mtext></mstyle></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(4.7)</td></tr></table>
+<p class="noindent"></p>
+<a id="x20-53006r1"></a>
+<div class="exer-block"> <span class="exer-upper"> <span class="exer-header"> <b><b>Exercise</b> 4.1: </b> </span> <span class="exer-title"> Studying MMF Waves </span> </span> <div class="body">
+<p class="noindent">A single armature winding phase of a two-pole machine can be considered to consist of 8
+<math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>N</mi></mrow><mrow><mi>c</mi></mrow><mrow></mrow></msubsup></mstyle></math>-turn,
+full-pitch coils connected in series, with each slot containing two coils.
+There are a total of 24 armature slots, and thus each slot is separated by
+<math display="inline"><mn>3</mn><mn>6</mn><mn>0</mn></math><math display="inline"><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>
+/ 24 = 15.
+</p><p class="noindent">Define the angle <math display="inline"><msubsup><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup></math>
+as being measured from the magnetic axis of phase a such that the four (<span class="alert">4</span>) slots containing the coil sides labeled
+a are at <math display="inline"><msubsup><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle class="text"><mtext>67.5</mtext></mstyle><mi>◦</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>82.5</mtext></mstyle><mi>◦</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>97.5</mtext></mstyle><mi>◦</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>and</mtext></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>112.5</mtext></mstyle><mi>◦</mi></math>.
+</p><p class="noindent">The opposite sides of each coil are thus found in the slots found at
+<math display="inline"><mstyle class="text"><mtext>-112.5</mtext></mstyle><mi>◦</mi></math>,
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle class="text"><mtext>97.5</mtext></mstyle><mi>◦</mi></math>,
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle class="text"><mtext>82.5</mtext></mstyle><mi>◦</mi></math> and
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle class="text"><mtext>67.5</mtext></mstyle><mi>◦</mi></math>, respectively. Assume this
+winding to be carrying current <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup></mstyle></math>.
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+a. 
+</dt><dd class="enumerate-enumitem">Write an expression for the space-fundamental <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic
+pressure which drives magnetic flux in a magnetic circuit, and is the work done to move a
+unit magnetic pole.</a></span></span></span> produced by the two coils whose sides are in the slots at <math display="inline"><msubsup><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mn>1</mn><mn>2</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>
+and <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>6</mn><mn>7</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>.
+</dd>
+<dt class="enumerate-enumitem">
+b. 
+</dt><dd class="enumerate-enumitem">Write an expression for the space-fundamental <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic
+pressure which drives magnetic flux in a magnetic circuit, and is the work done to move a
+unit magnetic pole.</a></span></span></span> produced by the two coils whose sides are in the slots at <math display="inline"><msubsup><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>6</mn><mn>7</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>
+and <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>1</mn><mn>1</mn><mn>2</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>.
+</dd>
+<dt class="enumerate-enumitem">
+c. 
+</dt><dd class="enumerate-enumitem">Write an expression for the space-fundamental <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic
+pressure which drives magnetic flux in a magnetic circuit, and is the work done to move a
+unit magnetic pole.</a></span></span></span> of the complete armature winding.
+</dd>
+<dt class="enumerate-enumitem">
+d. 
+</dt><dd class="enumerate-enumitem">Determine the winding factor <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>k</mi></mrow><mrow><mi>w</mi></mrow><mrow></mrow></msubsup></mstyle></math>
+for this distributed winding.</dd></dl>
+<hr/>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+a. 
+</dt><dd class="enumerate-enumitem">Noting that the magnetic axis of this pair of coils is at <table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msubsup><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mn>1</mn><mn>1</mn><mn>2</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>6</mn><mn>7</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mn>2</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle>
+</math></td></tr></table>
+<p class="noindent">and that the total ampere-turns in each slot is equal to
+<math display="inline"><mn>2</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>N</mi></mrow><mrow><mi>c</mi></mrow><mrow></mrow></msubsup></mstyle><mstyle style="color:#FF0000;"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup></mstyle></math>,
+the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in a magnetic
+circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> produced by this pair of coils can be
+found from analogy with <span> Eq. (<a href="#x20-53001r4">4.4</a>)</span>  to be </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn><mn>2</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>2</mn><msub><mrow><mi>N</mi></mrow><mrow><mi>c</mi></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext>a</mtext></mstyle></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mi class="loglike">cos</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>2</mn><mn>2</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup>
+</math></td></tr></table>
+</dd>
+<dt class="enumerate-enumitem">
+b. 
+</dt><dd class="enumerate-enumitem">This pair of coils produces the same space-fundamental mmf as
+the pair of part (a) with the exception that this mmf is centered at
+<math display="inline"><msubsup><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn><mn>2</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>.
+Thus <table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mstyle class="text"><mtext>ag1</mtext></mstyle></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn><mn>2</mn><mo class="MathClass-punc" stretchy="false">.</mo><msup><mrow><mn>5</mn></mrow><mrow><mi>◦</mi></mrow></msup></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>2</mn><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext>c</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext>a</mtext></mstyle></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow><mi class="loglike">cos</mi><mo>⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext>a</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>2</mn><mn>2</mn><mo class="MathClass-punc" stretchy="false">.</mo><msup><mrow><mn>5</mn></mrow><mrow><mi>◦</mi></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td></tr></table>
+</dd>
+<dt class="enumerate-enumitem">
+c. 
+</dt><dd class="enumerate-enumitem">By analogy with parts (a) and (b), the total space-fundamental mmf can be written
+as
+<math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><msub><mrow><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mstyle class="text"><mtext>total</mtext></mstyle></mrow></msub></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn><mn>2</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>7</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></mrow></msub><mspace class="nbsp" width="0.33em"></mspace> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>7</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn><mn>2</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></mrow></msub><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>2</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>N</mi></mrow><mrow><mi>c</mi></mrow><mrow></mrow></msubsup></mstyle></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle style="color:#FF0000;"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup></mstyle><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mi>×</mi> <mstyle mathsize="1.61em"><mrow><mo fence="true" form="prefix">[</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle> <mi class="loglike">cos</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>2</mn><mn>2</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mspace class="nbsp" width="0.33em"></mspace> <mo class="MathClass-bin" stretchy="false">+</mo><mo> <mi class="loglike">cos</mi><mo>⁡</mo></mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mi>𝜃</mi></mrow><mrow>
+<mi>a</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>7</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo><mo> <mi class="loglike">cos</mi><mo>⁡</mo></mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mi>𝜃</mi></mrow><mrow>
+<mi>a</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>7</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mspace class="nbsp" width="0.33em"></mspace> <mo class="MathClass-bin" stretchy="false">+</mo><mo> <mi class="loglike">cos</mi><mo>⁡</mo></mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>𝜃</mi></mrow><mrow>
+<mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>2</mn><mn>2</mn><mi>,</mi><mn>5</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mstyle mathsize="1.61em"><mrow><mo fence="true" form="prefix">]</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>7</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>6</mn><mn>6</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>N</mi></mrow><mrow><mi>c</mi></mrow><mrow></mrow></msubsup></mstyle></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle style="color:#FF0000;"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup></mstyle> <mi class="loglike">cos</mi><mo>⁡</mo><msubsup><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>4</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>8</mn><mn>8</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>N</mi></mrow><mrow><mi>c</mi></mrow><mrow></mrow></msubsup></mstyle><mstyle style="color:#FF0000;"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup></mstyle> <mi class="loglike">cos</mi><mo>⁡</mo><msubsup><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+</dd>
+<dt class="enumerate-enumitem">
+d. 
+</dt><dd class="enumerate-enumitem">Recognizing that, for this winding <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>N</mi></mrow><mrow><mi>p</mi><mi>h</mi></mrow><mrow></mrow></msubsup></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>8</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>N</mi></mrow><mrow><mi>c</mi></mrow><mrow></mrow></msubsup></mstyle></math>,
+the total <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in a
+magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> of part (c) can be rewritten
+as <table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mstyle class="text"><mtext>total</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>9</mn><mn>5</mn><mn>8</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>N</mi></mrow><mrow><mi>p</mi><mi>h</mi></mrow><mrow></mrow></msubsup></mstyle></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle style="color:#FF0000;"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup></mstyle> <mi class="loglike">cos</mi><mo>⁡</mo><msubsup><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup>
+</math></td></tr></table>
+<p class="noindent">Comparison with <span> Eq. (<a href="#x20-53003r6">4.6</a>)</span>  shows that for this winding, the winding factor is
+<math display="inline"><msub><mrow><mi>k</mi></mrow><mrow><mi>w</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>9</mn><mn>5</mn><mn>8</mn></math>.</p></dd></dl>
+<p class="noindent"></p></div> </div>
+<p class="noindent"><span> Eq. (<a href="#x20-53003r6">4.6</a>)</span> describes the space-fundamental component of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic
+pressure which drives magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic
+pole.</a></span></span></span> wave produced by current in phase-<i>a</i> of a distributed winding. If the phase-<i>a</i> current is sinusoidal in
+time, e.g., <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">max</mtext></mstyle></mrow></msub><mi class="loglike">cos</mi><mo>⁡</mo><mi>ω</mi><mi>t</mi></math>,
+the result will be an <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic
+pole.</a></span></span></span> wave which is stationary in space and varies sinusoidally both with respect to
+<math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow></msub></math> and in
+time.
+In a directly analogous fashion, rotor windings are often distributed in slots to reduce the effects of
+<b>space harmonics</b>. Figure 4.18a shows the rotor of a typical two pole round-rotor generator. Although
+the winding is symmetric with respect to the rotor axis, the number of turns per slot can be varied to
+control the various harmonics.
+</p><p class="noindent">In Fig. 4.18b it can be seen that there are fewer turns in the slots nearest the <span class="margin-block">pole face. <span class="margin-comment"><span class="ellipsis">[90]</span>
+<span class="sidenote">pole axis</span></span></span> In
+addition, the designer can vary the spacing of the slots. As for distributed armature windings, the
+fundamental air-gap <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in a
+magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> wave of a multi-pole rotor
+winding can be expressed in the form of <span> Eq. (<a href="#x20-53003r6">4.6</a>)</span>  in terms of the total number of series turns
+<math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">r</mtext></mstyle></mrow></msub></math>, the winding
+current <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">r</mtext></mstyle></mrow></msub></math>, and a
+winding factor <math display="inline"><msub><mrow><mi>k</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">r</mtext></mstyle></mrow></msub></math>
+as </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-53015r8"></mstyle><msub><mrow>
+<mstyle mathvariant="script"><mi>F</mi></mstyle>
+</mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><msub><mrow><mi>k</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">r</mtext></mstyle></mrow></msub><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">r</mtext></mstyle></mrow></msub></mrow>
+<mrow>
+<mstyle class="text"><mtext>poles</mtext></mstyle>
+</mrow>
+</mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">r</mtext></mstyle></mrow></msub><mi class="loglike">cos</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mstyle class="text"><mtext>poles</mtext></mstyle></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">r</mtext></mstyle></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(4.8)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>t</mi><mi>h</mi><mi>e</mi><mi>t</mi><msub><mrow><mi>a</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">r</mtext></mstyle></mrow></msub></math>
+is the spatial angle measured with respect to the rotor magnetic axis, as shown in Fig. 4.18b. Its peak
+amplitude is: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-53016r9"></mstyle>
+<msub><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mstyle mathvariant="script"><mi>F</mi></mstyle></mrow><mrow><mi>a</mi><mi>g</mi><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mstyle class="text"><mtext>peak</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn></mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><msub><mrow><mi>k</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">r</mtext></mstyle></mrow></msub><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">r</mtext></mstyle></mrow></msub></mrow>
+<mrow>
+<mstyle class="text"><mtext>poles</mtext></mstyle>
+</mrow>
+</mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">r</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(4.9)</td></tr></table>
+<p class="noindent"></p>
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:ac">¶</a>
+<dt class="acr-bottom" id="glo:ac"><span class="acr-short">AC</span><span class="acr-long">Alternating Current</span></dt>
+<dd class="acr-desc"><p>An electric current that periodically reverses direction and
+changes its magnitude continuously with time, in contrast to direct current (DC), which flows
+only in one direction.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:mmf">¶</a>
+<dt class="acr-bottom" id="glo:mmf"><span class="acr-short">MMF</span><span class="acr-long">Magneto-motive Force</span></dt>
+<dd class="acr-desc"><p>The
+magnetic pressure which drives magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic
+pole.</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="MagneticFieldinRotatingMachinery.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="FundamentalConcepts.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="RotatingMagneticFields.html#MMFofDistributedWindings.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 4.2: MMF of Distributed Windings</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

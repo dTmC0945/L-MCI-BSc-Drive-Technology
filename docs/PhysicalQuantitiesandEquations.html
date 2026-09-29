@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Physical Quantities and Equations</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Dimensional Analysis</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="ThePrincipleofDimensionalAnalysis.html">The Principle of Dimensional Analysis</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="DimensionalAnalysis.html">Chapter: Dimensional
+Analysis</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="DimensionalAnalysis.html#PhysicalQuantitiesandEquations.html">Chapter: Dimensional
+Analysis</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-B.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.B.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">B.1</span> <span class="title"> <a id="x42-139000B.1"></a>Physical Quantities and
+Equations</span></h3></div>
+<p class="noindent">Science begins with the observation and <b>precise description of things and events</b>. It is at this very
+first step that we face the fact upon which dimensional analysis rests:
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Description in absolute terms is <span class="alert">impossible</span>. </p></div></div>
+<p class="noindent">We can do no more than compare one thing with another, to <i>catch the resemblance of things</i>. </p><div class="quote">  Fore
+example, when we say that something <b>is</b> a <span class="margin-block"><span class="margin"><span>tree, <span class="ellipsis">[228]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Dimensional-Analysis/raster/tree.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[228]</span>From this image it is obvious to call it a tree and
+not a cat. But on thinking it further when we say it is a tree we mean it contains elements
+which in total make up an object in which we call tree.</span></span></span></span> we mean simply that it has a set of
+attributes that are in some way shared by certain familiar objects we have agreed to call trees.
+</div>
+<p class="noindent">With this, let us begin with understanding how we describe physical properties.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-B.1.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.B.1.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">B.1.1</span> <span class="title"> <a id="x42-140000B.1.1"></a>Physical properties</span></h4></div>
+</p><p class="noindent">Continuing from our previous example regarding trees, it is fair to say that our brains have evolved to
+the point where we can recognize trees almost instantly, but describing something like a tree is actually
+a very complex process.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Physics starts by breaking the descriptive process down into simpler terms such as <span class="alert">length</span>, <span class="alert">mass</span>, <span class="alert">color</span>, <span class="alert">shape</span>, <span class="alert">speed</span>, and <span class="alert">time</span>.
+</p></div></div>
+<p class="noindent">None of these properties can be defined in <span class="alert">absolute terms</span>, but only by <span class="alert">reference</span> to something else: </p><div class="quote">  For example we would say
+an object has the length of a meter stick, we say, the color of an orange, the weight of a certain familiar
+lump of material, or the shape of a sphere. </div>
+<p class="noindent">The references may look to be more precise in nature, but in essence “description” is simply a noting of
+the similarities between one thing and a set of others that are known to us.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">We can do no more than <span class="alert">compare one thing with another</span>. </p></div></div>
+<p class="noindent">A physical property first arises as a concept based on experience, and is formalized by
+defining a comparison operation for determining whether two (<span class="alert">2</span>) samples of it are equal
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math> or unequal
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>≠</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math><span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[229]</span>
+<span class="sidenote">We
+will use bold symbols when we are referring not to numerical values, but to actual physical attributes.
+This does not mean they are vectors or matrices, however.</span></span></span>
+</p><p class="noindent">This operation, which is an entirely physical procedure, defines the <span class="alert">property</span>. Properties of the same <span class="margin-block">kind <span class="margin-comment"><span class="ellipsis">[230]</span>
+<span class="sidenote">or
+simply, the same properties.</span></span></span> are compared by means of the same comparison operation.
+Properties of different kinds cannot be compared because there exists no operation that defines
+equality.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Asking whether a particular mass is physically equal to a particular length is <span class="margin-block">meaningless. <span class="margin-comment"><span class="ellipsis">[231]</span>
+<span class="sidenote">no procedure
+exists for making the comparison.</span></span></span> </p></div></div>
+<p class="noindent">If a property is defined only in terms of a comparison operation, we have a procedure for establishing
+whether two samples of it are <b>equal</b> or <b>unequal</b>, but no concept of what it means for one to be larger
+or smaller than the other. Shape and color are examples. </p><div class="quote">  We have procedures for determining if two
+objects have the same shape, or the same color. But asking whether a square shape is smaller or larger
+than a circular shape, or whether green is smaller or larger than white, makes no sense.
+</div>
+<p class="noindent">Properties like shape and color are useful for describing things, but cannot play a role in any
+quantitative analysis, which deals with relative magnitudes.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-B.1.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.B.1.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">B.1.2</span> <span class="title"> <a id="x42-141000B.1.2"></a>Physical Quantities and Base Quantities</span></h4></div>
+</p><p class="noindent">Science begins with observation and description, but its ultimate goal is to infer from those
+observations laws which express the phenomena of the physical world in the simplest and most general
+terms. That the language of mathematics is ideally suited for expressing those laws is not accidental,
+but follows from the constraints we put on the types of physical properties that are allowed to appear
+in quantitative analysis.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The allowed types of properties are called <span class="alert">physical quantities</span>. </p></div></div>
+<p class="noindent">Physical quantities are of two (<span class="alert">2</span>) types: </p><div class="quote">  base quantities and derived quantities. </div>
+<p class="noindent">The base quantities, which are defined in entirely physical terms, form a complete set of basic building
+blocks for an open-ended system of <span class="alert">derived</span> quantities which can be introduced as necessary. The base and
+derived quantities together provide a rational basis for describing and analyzing the physical world in
+quantitative terms.
+</p><p class="noindent">A base quantity is defined by specifying <b>two physical operations</b>: </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">A comparison operation for determining whether two samples <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>
+and <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+of the property are equal <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>
+or unequal <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>≠</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>,
+and
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">An addition operation which defines what is meant by the sum <math display="inline"><mstyle mathvariant="bold"><mi>C</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+of two samples of the property.</p></li></ul>
+<p class="noindent">Base quantities with the same comparison and addition operations are of the same
+<span class="margin-block">kind. <span class="margin-comment"><span class="ellipsis">[232]</span>
+<span class="sidenote">That is, different examples of the same quantity.</span></span></span> The addition operation
+<math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle></math> defines a physical
+quantity <math display="inline"><mstyle mathvariant="bold"><mi>C</mi></mstyle></math> of
+the same kind as the quantities being added.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Quantities with different comparison and addition operations cannot be compared or added as no
+procedures exist for executing such operations. </p></div></div>
+<p class="noindent">All physical quantities are properties of physical things or events. They are not themselves physical
+things or events. The comparison and addition operations involve physical manipulations of objects or
+events that possess the property under consideration.
+</p><p class="noindent">The comparison and addition operations are <b>physical</b>, but are required to have certain properties
+which mimic those of the corresponding mathematical operations for pure numbers:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+i. 
+</dt><dd class="enumerate-enumitem">The comparison operation must obey the <b>identity law</b>, and
+</dd>
+<dt class="enumerate-enumitem">
+ii. 
+</dt><dd class="enumerate-enumitem">the addition operation must be commutative <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>,
+associative <math display="inline"><mo class="MathClass-open" stretchy="false">[</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>C</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>C</mi></mstyle><mo class="MathClass-close" stretchy="false">]</mo></math>,
+and <span class="margin-block">unique. <span class="margin-comment"><span class="ellipsis">[233]</span>
+<span class="sidenote">if <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>C</mi></mstyle></math>,
+there exists no finite <math display="inline"><mstyle mathvariant="bold"><mi>D</mi></mstyle></math>
+such that <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>D</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>C</mi></mstyle></math>.</span></span></span></dd></dl>
+<div class="desc-block" id="desc-block-B.2"> <a class="copiable-link" href="#desc-block-B.2"> ¶</a> <span class="desc-upper"> <span class="desc-header"> <b>Description: B.<a id="x42-141003r2"></a>2: </b> </span> <span class="desc-title"> Identity Law </span> </span> <div class="body">
+<p class="noindent">An <span class="alert">identity</span> is an equality relating one mathematical expression
+<math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math> to another mathematical
+expression <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>,
+such that <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math><span class="margin-block"> <span class="margin-comment"><span class="ellipsis">[234]</span>
+<span class="sidenote">which might
+contain some variables</span></span></span> produce the same value for all values of the variables within a certain domain of discourse.
+</p>
+<hr/>
+<p class="noindent"> 
+In other words, <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+is an identity if <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>
+and <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+define the same functions, and an identity is an equality between functions that are differently
+defined.
+</p>
+</div> </div>
+<p class="noindent">The two operations together define, in entirely physical terms,
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+i. 
+</dt><dd class="enumerate-enumitem">the concept of larger and smaller for like quantities. If there exists a finite <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+such that <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>C</mi></mstyle></math>,
+then <math display="inline"><mstyle mathvariant="bold"><mi>C</mi></mstyle> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle></math>,
+</dd>
+<dt class="enumerate-enumitem">
+ii. 
+</dt><dd class="enumerate-enumitem">subtraction of like quantities. If <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>C</mi></mstyle></math>,
+then <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>C</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle></math>,
+</dd>
+<dt class="enumerate-enumitem">
+iii. 
+</dt><dd class="enumerate-enumitem">multiplication of a physical quantity by a pure number. If <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle></math>,
+then <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>≡</mi> <mn>3</mn><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>),
+and
+</dd>
+<dt class="enumerate-enumitem">
+iv. 
+</dt><dd class="enumerate-enumitem">division of a physical quantity by a pure number. If <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle></math>,
+then <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>≡</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mn>3</mn></math>).</dd></dl>
+<p class="noindent">A base quantity is therefore a property for which the following mathematical operations are defined in
+physical terms:
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">comparison, addition, subtraction, multiplication by a pure number, and division by a pure number.
+</p></div></div>
+<p class="noindent">Each of these operations is performed on physical properties of the same kind and gives a physical
+property of that kind, and each physical operation obeys the same rules as the corresponding
+mathematical operation for pure numbers.
+</p><p class="noindent">This sets the stage for not only <span class="alert">catching the resemblance of things</span>, but also expressing that resemblance in the language of mathematics.
+It is important to note that mathematical operations other than the ones listed above are
+<b>NOT</b> defined in physical terms. </p><div class="quote">  No defining operation exists for forming a tangible entity that
+represents the product of a mass and a time, for example, or, for that matter, the product of one length
+and another. Nor can we point to some tangible thing that “is” the cube root of a length, say, or the
+natural logarithm of a time. </div>
+<div class="info-block" id="info-block-B.46"> <a class="copiable-link" href="#info-block-B.46"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information B.<a id="x42-141008r46"></a>46: </b> </span> <span class="info-title"> Mathematical Reasoning </span> </span> <div class="body">
+<p class="noindent">Products, ratios, powers, and exponential and other functions such as trigonometric functions and
+logarithms are defined for numbers, but have no physical correspondence in operations involving actual
+physical quantities.
+</p>
+</div></div>
+<p class="noindent">Figure 2.1 illustrates the comparison and addition operations of some well-known physical quantities
+that can be chosen as base quantities.
+</p>
+<p class="noindent"></p><figure class="float">
+<p class="noindent"> <img alt="PIC" src="figures/Dimensional-Analysis/figures-1.png" style=""/> <a id="x42-141009r2"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure B.2: </span><span class="content"> </span></figcaption>
+</figure>
+<p class="noindent">Figure 2.1a: The comparison and addition operations of length. Figure 2.1b: The comparison and
+addition operations of mass. Figure 2.1c: The comparison and addition operations of area. Figure 2.1d:
+The comparison and addition operations of velocity. Figure 2.1e: The comparison and addition
+operations of force.
+</p><p class="noindent">The comparison and addition operations for length and mass are familiar. Only one comment is
+necessary: the mass referred to in the figure is the <span class="alert">gravitational mass</span>, for which equality is defined by the statement that
+two masses are equal if a third mass exerts the same gravitational force on each of them separately at
+the same relative position.
+</p><p class="noindent">Time is omitted from the figure, largely because its defining operations defy illustration in such
+simplistic terms. The concept of time is deeply rooted in our biological beings. It is, after all, the warp
+of our existence, the stuff that keeps everything from happening at once. Time characterizes an event,
+not a thing. Aristotle referred to time as a “dimension of motion”, which pleases the poet in us, but
+leaves the scientist unmoved. We do best if we adopt a pragmatic notion of time and think of it as
+being defined in terms of comparison and addition operations involving idealized clocks or
+stopwatches. Whether those clocks are hourglasses or atomic clocks will affect the precision of the
+operations, but not their intrinsic character. What time “is” has no relevance in the present
+context, only the defining operations <span class="margin-block">matter. <span class="margin-comment"><span class="ellipsis">[235]</span>
+<span class="sidenote">Sir Arthur Eddinton (1939): “It has come to be
+accepted practice in introducing new physical quantities that they shall be regarded as
+defined by the series of measuring operations and calculations of which they are the result.
+Those who associate with the result a mental picture of some entity disporting itself in a
+metaphysical realm of existence do so at their own risk; physics can accept no responsibility for this
+embellishment”.</span></span></span>
+</p><p class="noindent">The concept of force arises in primitive terms from muscular effort, and is formalized based on the
+observation that a net force on an <span class="margin-block">object <span class="margin-comment"><span class="ellipsis">[236]</span>
+<span class="sidenote">The vector sum of all the forces acting on the object.</span></span></span> causes a
+rate of change in its velocity.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Directionality is important in the definition as force is a <span class="alert">vector quantity</span>. </p></div></div>
+<p class="noindent">For us whom we are accustomed to considering speed as <i>distance divided by time</i> and area as <i>length
+squared</i> may be surprised to see them included in figure 2.1 as possible base quantities with their own
+comparison and addition operations. We include them to show that the set of base quantities is very
+much a matter of choice. <span class="margin-block">Velocity <span class="margin-comment"><span class="ellipsis">[237]</span>
+<span class="sidenote">or speed, if direction is presumed.</span></span></span> is a certain property of motion. A
+self-propelled toy car running across a tabletop has a speed, and we can define acceptable procedures
+for establishing whether two speeds are equal or unequal and for adding two speeds, as in figure 2.1d.
+Speed can therefore be taken as a base quantity, should we choose to do so. The same goes for
+area. Note that two areas may be equal without being congruent, provided one of them can
+be <i>cut up</i> and reassembled into a form which is congruent with the other: </p><div class="quote">  the addition
+operation is invoked in making a comparison, and the comparison operation in addition.q
+</div>
+<p class="noindent">We have said that shape and color, though acceptable physical properties, cannot be base quantities
+because they lack acceptable addition operations. That shape is disqualified is obvious: what is the sum
+of a square and a circle? But why is color disqualified? We know that color in the form of light can be
+added according to well-defined rules, as when red light added to green produces yellow. Is this not an
+acceptable definition of physical addition? The answer is no. Blue equals blue. But according to this
+addition operation, blue plus blue also equals blue. The addition operation is not unique:
+<math display="inline"><mi>n</mi><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle></math> for any
+color <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>,
+where <math display="inline"><mi>n</mi></math>
+is any number. This disqualifies color from the ranks of physical <span class="margin-block">quantities. <span class="margin-comment"><span class="ellipsis">[238]</span>
+<span class="sidenote">This makes measurement of
+color in terms of a unit impossible.</span></span></span> But, we may argue, the color of an object can be identified by the
+wavelength of light reflected from it, and wavelength can be added. </p><div class="quote">  Is this not acceptable for an
+addition rule? </div>
+<p class="noindent">The answer is again no. This is a rule for adding lengths, not for adding the property we perceive as
+color.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-B.1.3"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.B.1.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">B.1.3</span> <span class="title"> <a id="x42-142000B.1.3"></a>Unit and numerical value</span></h4></div>
+</p><p class="noindent">The two operations which define a base quantity make it possible to express any such quantity as a
+multiple of a standard sample of its own kind, that is, to “measure it in terms of a unit”. The standard
+<span class="margin-block">sample <span class="margin-comment"><span class="ellipsis">[239]</span>
+<span class="sidenote">Also called the unit.</span></span></span> may be chosen arbitrarily. The comparison operation allows the replication
+of the unit, and the addition operation allows the identification and replication of fractions of the unit.
+The measuring process consists of physically adding replicas of the unit and fractions thereof until
+the sum equals the quantity being measured (figure 2.2). A count of the number of whole
+and fractional units required yields the numerical value of the quantity being measured. If
+<math display="inline"><mstyle mathvariant="bold"><mi>a</mi></mstyle></math> is the unit chosen for quantities of
+type <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>, the process of measurement
+gives a numerical value <math display="inline"><mi>A</mi></math>,
+a number, such that </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-142001r1"></mstyle>
+<mstyle mathvariant="bold">
+<mi>A</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>A</mi><mstyle mathvariant="bold"><mi>a</mi></mstyle>
+</math></td><td class="eq-no">(B.1)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The measurement process is entirely <b>physical</b>. The only mathematics involved is the counting of the
+number of whole and fractional units once physical equality has been established between the quantity
+being measured and a sum of replicas of the unit and fractions thereof.
+</p><p class="noindent">It should be emphasized that numbers can be ascribed to properties in many arbitrary ways, but such
+numbers will not represent numerical values of physical quantities unless they are assigned by a
+procedure consistent with the one defined above.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The numerical value of a base quantity depends on the choice of unit. </p></div></div>
+<p class="noindent">A physical quantity exists, independent of the choice of unit. A forefinger has the
+same length, regardless of whether we measure it in centimeters or inches. A quantity
+<math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>
+can be measured in terms of a unit a or in terms of another unit
+<math display="inline"><msup><mrow><mstyle mathvariant="bold"><mi>a</mi></mstyle></mrow><mrow><mi>′</mi></mrow></msup></math>, but
+the quantity itself remains physically the same, that is, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-142002r2"></mstyle>
+<mstyle mathvariant="bold">
+<mi>A</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>A</mi><mstyle mathvariant="bold"><mi>a</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>A</mi></mrow><mrow><mi>′</mi></mrow></msup><msup><mrow><mstyle mathvariant="bold"><mi>a</mi></mstyle></mrow><mrow><mi>′</mi></mrow></msup>
+</math></td><td class="eq-no">(B.2)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">If the unit <math display="inline"><msup><mrow><mstyle mathvariant="bold"><mi>a</mi></mstyle></mrow><mrow><mi>′</mi></mrow></msup></math>
+is <math display="inline"><mi>n</mi></math> times
+larger than <math display="inline"><mstyle mathvariant="bold"><mi>a</mi></mstyle></math>,
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-142003r3"></mstyle><msup><mrow>
+<mstyle mathvariant="bold">
+<mi>a</mi></mstyle>
+</mrow><mrow><mi>′</mi></mrow></msup>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>n</mi><mstyle mathvariant="bold"><mi>a</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(B.3)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">it follows from Eq. (<a href="#x42-142002r2">B.2</a>) that </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-142004r4"></mstyle>
+<msup><mrow><mi>A</mi></mrow><mrow><mi>′</mi></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>n</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><mi>A</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(B.4)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">If the size of a base quantity’s unit is changed by a factor
+<math display="inline"><mi>n</mi></math>, the quantity’s numerical
+value changes by a factor <math display="inline"><msup><mrow><mi>n</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>.
+</p><p class="noindent">By convention, all base quantities of the same kind are always measured in terms of the same unit. All
+base quantities of the same kind thus change by the same factor when the size of that quantity’s unit is
+changed.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The ratio of the numerical values of any two quantities of the same kind is <span class="alert">independent of base unit size</span>. </p></div></div>
+<p class="noindent">Note also that when base quantities of the same kind are added physically
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="sans-serif"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>C</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>, the
+numerical values satisfy an equation of the same form as the physical quantity equation
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>A</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>B</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>C</mi><mo class="MathClass-close" stretchy="false">)</mo></math>,
+regardless of the size of the chosen unit.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The numerical value equation <span class="alert">mimics the physical equation</span>, and its form is independent of the unit’s size. </p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-B.1.4"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.B.1.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">B.1.4</span> <span class="title"> <a id="x42-143000B.1.4"></a>Derived quantities, dimensions, and dimensionless quantities</span></h4></div>
+</p><p class="noindent">In describing physical things and events quantitatively, we refer to <b>numerical values</b>
+of base quantities, and also introduce numbers <b>derived</b> by inserting these values
+into certain mathematical formulas. </p><div class="quote">  For example, we determine the distance
+<math display="inline"><mi>L</mi></math> that an object moves in
+time <math display="inline"><mi>t</mi></math>, and calculate its
+speed <math display="inline"><mi>V</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>. We can also
+measure a body’s mass <math display="inline"><mi>m</mi></math>
+and speed <math display="inline"><mi>V</mi> </math> and calculate
+its kinetic energy <math display="inline"><mi>K</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></math>.
+</div>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">These numbers are <span class="alert">derived quantities of the first kind</span>. </p></div></div>
+<p class="noindent">Not all numbers obtained by inserting base quantities into formulas can be considered physical
+<span class="margin-block">quantities. <span class="margin-comment"><span class="ellipsis">[240]</span>
+<span class="sidenote">From this point on, the term quantity will be used for the <i>numerical value</i> of a physical
+quantity, unless otherwise noted.</span></span></span> Base quantities have a transparently physical origin, which
+gives rise to the fact that the ratio of any two samples of a base quantity remains constant
+when the base unit size is changed; an arbitrary choice cannot affect a relative physical
+magnitude.
+</p><p class="noindent">P. W. <span class="margin-block"><span class="margin"><span>Bridgman <span class="ellipsis">[241]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Dimensional-Analysis/raster/portrait-bridgman.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[241]</span><b>Percy Williams Bridgman</b>
+<i>(1882  -  1961)</i>
+was an American physicist who received the Nobel Prize in Physics in 1946 for his work on the physics
+of high pressures. He also wrote extensively on the scientific method and on other aspects of the
+philosophy of science. The <b>Bridgman effect</b>, the <b>BridgmanStockbarger technique</b>, and the
+high-pressure mineral <b>bridgmanite</b> are named after him.</span></span></span></span> postulated that this is in fact a defining
+attribute of <i>all</i> physical quantities. This is Bridgman’s principle of absolute significance of relative
+magnitude:
+</p>
+<div class="theo-block" id="theo-block-B.4"> <a class="copiable-link" href="#theo-block-B.4"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory B.<a id="x42-143001r4"></a>4: </b> </span> <span class="theo-title"> Principle of Absolute Significance of Relative Magnitude </span> </span> <div class="body">
+<p class="noindent">A number <math display="inline"><mi>Q</mi></math>
+obtained by inserting the numerical values of base quantities into a formula is a physical
+quantity if the ratio of any two samples of it remains constant when base unit sizes are
+changed.
+</p>
+</div> </div>
+<p class="noindent">Bridgman went on to show that a monomial formula satisfies the principle absolute significance of
+relative magnitude only if it has the power-law form </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-143002r5"></mstyle>
+<mi>Q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>α</mi><msup><mrow><mi>A</mi></mrow><mrow><mi>a</mi></mrow></msup><msup><mrow><mi>B</mi></mrow><mrow><mi>b</mi></mrow></msup><msup><mrow><mi>C</mi></mrow><mrow><mi>c</mi></mrow></msup><mi>…</mi>
+</math></td><td class="eq-no">(B.5)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>A</mi></math>,
+<math display="inline"><mi>B</mi></math>,
+<math display="inline"><mi>C</mi></math>,
+etc. are <b>numerical values</b> of base quantities and the coefficient
+<math display="inline"><mi>α</mi></math> and
+exponents <math display="inline"><mi>a</mi></math>,
+<math display="inline"><mi>b</mi></math>,
+<math display="inline"><mi>c</mi></math>, etc.
+are real numbers whose values distinguish one type of derived quantity from another.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">All monomial derived quantities have this power-law form and no other form represents a physical
+quantity. </p></div></div>
+<p class="noindent">A derived quantity of the first kind is defined in terms of a numerical value, which depends on the
+choice of base units. A derived quantity does not necessarily represent something tangible in the same
+sense as a base quantity, although it may. </p><div class="quote">  The square root of time, for example, is a derived quantity
+because it has the required power-law form, but we cannot point to any physical thing that <b>is</b> the
+square root of time. </div>
+<p class="noindent">To avoid talking of <i>units</i> for quantities that may have no physical representation, but whose
+numerical values nevertheless depend on the choice of base units, we introduce the
+concept of <b>dimension</b>. Each type of base quantity has by definition its own dimension. If
+<math display="inline"><mi>A</mi></math>
+is the numerical value of a length, we say it <span class="alert">has the dimension of length</span>, and write this as
+<math display="inline"><mo class="MathClass-open" stretchy="false">[</mo><mi>A</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi></math> where the square brackets
+imply <i>the dimension of</i> and <math display="inline"><mi>L</mi></math>
+symbolizes the concept of length. By this we mean simply that if the length unit size is increased by a factor
+<math display="inline"><mi>n</mi></math>, the numerical
+value <math display="inline"><mi>A</mi></math> will increase
+by a factor <math display="inline"><msup><mrow><mi>n</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>.
+</p><p class="noindent">The dimension of a derived quantity conveys the same information in generalized form, for derived as
+well as base quantities. Consider a quantity defined by the formula </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-143003r6"></mstyle>
+<mi>Q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>α</mi><msubsup><mrow><mi>L</mi></mrow><mrow><mn>1</mn></mrow><mrow><msub><mrow><mi>l</mi></mrow><mrow><mn>1</mn></mrow></msub>
+</mrow></msubsup><msubsup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow><mrow><msub><mrow><mi>l</mi></mrow><mrow><mn>2</mn></mrow></msub>
+</mrow></msubsup><mo>…</mo><msubsup><mrow><mi>M</mi></mrow><mrow><mn>1</mn></mrow><mrow><msub><mrow><mi>m</mi></mrow><mrow><mn>1</mn></mrow></msub>
+</mrow></msubsup><msubsup><mrow><mi>M</mi></mrow><mrow><mn>2</mn></mrow><mrow><msub><mrow><mi>m</mi></mrow><mrow><mn>2</mn></mrow></msub>
+</mrow></msubsup><mo>…</mo><msubsup><mrow><mi>t</mi></mrow><mrow><mn>1</mn></mrow><mrow><msub><mrow><mi>τ</mi></mrow><mrow><mn>1</mn></mrow></msub>
+</mrow></msubsup><msubsup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow><mrow><msub><mrow><mi>τ</mi></mrow><mrow><mn>2</mn></mrow></msub>
+</mrow></msubsup><mo>…</mo>
+</math></td><td class="eq-no">(B.6)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where the <math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mi>i</mi></mrow></msub></math>’s are numerical
+values of certain lengths, <math display="inline"><msub><mrow><mi>M</mi></mrow><mrow><mi>i</mi></mrow></msub></math>’s
+of certain masses, and <math display="inline"><msub><mrow><mi>t</mi></mrow><mrow><mi>i</mi></mrow></msub></math>’s
+of certain times, and <math display="inline"><mi>α</mi></math>
+and all exponents are real numbers. If the length unit is changed by a factor
+<math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>L</mi></mrow></msub></math>, the mass unit by a
+factor <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>m</mi></mrow></msub></math>, and the time
+unit by a factor <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>t</mi></mrow></msub></math>,
+it follows from Eq. (<a href="#x42-142004r4">B.4</a>) and brefeq:dimen-2-6 that the value of
+<math display="inline"><mi>Q</mi></math>
+changes to </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-143004r7"></mstyle>
+<msup><mrow><mi>Q</mi></mrow><mrow><mi>′</mi></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>n</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><mi>Q</mi><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>where</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mi>n</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>n</mi></mrow><mrow>
+<mi>L</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo>∑</mo>
+<msub><mrow><mi>l</mi></mrow><mrow><mi>i</mi></mrow></msub>
+</mrow></msup><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>n</mi></mrow><mrow><mi>m</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo>∑</mo>
+<msub><mrow><mi>m</mi></mrow><mrow><mi>i</mi></mrow></msub>
+</mrow></msup><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>n</mi></mrow><mrow><mi>t</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo>∑</mo>
+<msub><mrow><mi>t</mi></mrow><mrow><mi>i</mi></mrow></msub>
+</mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(B.7)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This implies that <math display="inline"><mi>Q</mi></math>
+transforms like the numerical value of a base quantity with a unit whose size is proportional to
+<math display="inline"><msup><mrow><mi>L</mi></mrow><mrow><mi class="MathClass-op">∑</mi><mo> ⁡</mo>
+<msub><mrow><mi>l</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow></msup><msup><mrow><mi>M</mi></mrow><mrow><mi class="MathClass-op">∑</mi><mo> ⁡</mo>
+<msub><mrow><mi>m</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mi class="MathClass-op">∑</mi><mo> ⁡</mo>
+<msub><mrow><mi>τ</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow></msup></math>, where
+<math display="inline"><mi>L</mi></math>,
+<math display="inline"><mi>M</mi></math>, and
+<math display="inline"><mi>t</mi></math>
+represent the sizes of the length, mass, and time units, respectively. By analogy with the
+meaning of dimension for base quantities, we therefore say that the derived quantity
+<math display="inline"><mi>Q</mi></math> has the
+dimension </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-143005r8"></mstyle>
+<mo class="MathClass-open" stretchy="false">[</mo><mi>Q</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>L</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo>∑</mo>
+<msub><mrow><mi>l</mi></mrow><mrow><mi>i</mi></mrow></msub>
+</mrow></msup><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>M</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo>∑</mo>
+<msub><mrow><mi>m</mi></mrow><mrow><mi>i</mi></mrow></msub>
+</mrow></msup><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mo>∑</mo>
+<msub><mrow><mi>t</mi></mrow><mrow><mi>i</mi></mrow></msub>
+</mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(B.8)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Whether applied to a base or derived quantity, the dimension is simply a formulaic
+indication of how the quantity’s numerical value transforms when the sizes of the base units
+are changed. A derived quantity’s dimension follows from its defining equation. To obtain
+the result in Eq. (<a href="#x42-143005r8">B.8</a>) for the quantity defined in Eq. (<a href="#x42-143003r6">B.6</a>) we simply substitute for each
+base quantity in Eq. (<a href="#x42-143003r6">B.6</a>) the symbol for its dimension, omit the numerical coefficient
+<math display="inline"><mi>α</mi></math>,
+and obtain Eq. (<a href="#x42-143005r8">B.8</a>) by algebra. The dimension of a kinetic energy
+<math display="inline"><mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></math>, for example,
+is <math display="inline"><mi>M</mi><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>L</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math>.
+</p><p class="noindent">Statements to the effect that a quantity’s dimension is an <i>expression of its essential physical nature</i> are
+either a meaningless <span class="margin-block">tautology <span class="margin-comment"><span class="ellipsis">[242]</span>
+<span class="sidenote">in the case of base quantities.</span></span></span> or <span class="margin-block">nonsense <span class="margin-comment"><span class="ellipsis">[243]</span>
+<span class="sidenote">in the case of derived
+quantities</span></span></span>. We shall see that a quantity’s dimension depends on the choice of the system of units,
+and is therefore under the control of the observer rather than an inherent attribute of that
+quantity.
+</p><p class="noindent">By convention, a particular derived quantity is specified by its numerical value followed by the base units upon
+which that value is based, the latter arranged in a form which reflects the quantity’s dimension. The statement
+<math display="inline"><mi>Q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mi>,</mi><mn>0</mn><mn>2</mn><mn>1</mn><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>k</mi><mi>g</mi><msqrt><mrow><mi>s</mi></mrow></msqrt></mstyle></math> implies that
+<math display="inline"><mi>Q</mi></math> is a quantity with
+dimension <math display="inline"><mi>M</mi><msup><mrow><mi>t</mi></mrow><mrow><msqrt><mrow>
+<mn>2</mn></mrow></msqrt></mrow></msup></math> and
+has a magnitude <math display="inline"><mn>0</mn><mi>,</mi><mn>0</mn><mn>2</mn><mn>1</mn></math>
+if mass is measured in kilograms and time in seconds. Speaking loosely, it may be said that the quantity
+<math display="inline"><mi>Q</mi></math> is <i>measured
+in units of <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>g</mi><msqrt><mrow><mi>s</mi></mrow></msqrt></mstyle></math></i>,
+which implies both its dimension and the base units on which the indicated value is based. In common
+parlance the terms unit and dimension are often used synonymously, but such usage is undesirable in a
+treatise where fundamental understanding is paramount.
+</p><p class="noindent">Some important points about derived quantities:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+i. 
+</dt><dd class="enumerate-enumitem">The dimension of any derived physical quantity is a product of powers of the base quantity
+dimensions.
+</dd>
+<dt class="enumerate-enumitem">
+ii. 
+</dt><dd class="enumerate-enumitem">Sums of derived quantities with the same dimension are derived quantities of the same
+dimension.  Products  and  ratios  of  derived  quantities  are  also  derived  quantities,  with
+dimensions which are usually different from the original quantities.
+</dd>
+<dt class="enumerate-enumitem">
+iii. 
+</dt><dd class="enumerate-enumitem">All derived quantities with the same dimension change their values by the same factor
+when the sizes of the base units are changed.
+</dd>
+<dt class="enumerate-enumitem">
+iv. 
+</dt><dd class="enumerate-enumitem">A derived quantity is <i>dimensionless</i> if its numerical value remains invariant when the base
+units are changed. An example is <math display="inline"><mi>V</mi> <mi>t</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>L</mi></math>,
+where <math display="inline"><mi>V</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>d</mi><mi>x</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><mi>t</mi></math>
+is a velocity, <math display="inline"><mi>t</mi></math>
+is a time and <math display="inline"><mi>L</mi></math>
+is a length. The dimension of a dimensionless quantity is unity, the factor by which the
+quantity’s numerical value changes when base units sizes are changed.
+</dd>
+<dt class="enumerate-enumitem">
+v. 
+</dt><dd class="enumerate-enumitem">Special  <span class="margin-block">functions  <span class="margin-comment"><span class="ellipsis">[244]</span>
+<span class="sidenote">logarithmic,  exponential,  trigonometric,  etc.</span></span></span>  of  dimensional  derived
+quantities are in general not derived quantities because their values do not in general
+transform like derived quantities when base unit size changes. Only when the arguments
+of these functions are dimensionless will the arguments and therefore the values of the
+functions remain invariant when units are changed. Special functions with dimensionless
+arguments are therefore derived quantities with dimension unity.</dd></dl>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-B.1.5"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.B.1.5"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">B.1.5</span> <span class="title"> <a id="x42-144000B.1.5"></a>Physical Equations and Constants, Dimensional homogeneity</span></h4></div>
+</p><p class="noindent">In <b>quantitative analysis</b> of physical events we seek mathematical relationships between the <i>numerical
+values</i> of the physical quantities that describe the <span class="alert">event</span>.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">We are <b>NOT</b> interested in just any relationships which can apply
+between the values of <span class="alert">physical quantities</span><span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[245]</span>
+<span class="sidenote">For example, it is possible that some mass in
+<math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>g</mi></mstyle></math> is exactly equal to
+someone’s height in <math display="inline"><mstyle mathvariant="normal"><mi>c</mi><mi>m</mi></mstyle></math>.
+We dismiss this kind of <i>relationship</i> as an accidental result of the choice of units.</span></span></span> </p></div></div>
+<p class="noindent">Science is concerned only with expressing a <b>physical</b> relationship between one quantity and a set of
+others, that is, with <span class="alert">physical equations</span>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Nature is <span class="alert">indifferent</span> to the arbitrary choices we make when we pick base units. </p></div></div>
+<p class="noindent">We are interested, therefore, only in numerical relationships that remain true independent of base unit
+size.
+</p><p class="noindent">This puts certain constraints on the allowable form of physical equations. Let’s suppose that, in a specified physical event,
+the numerical value <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mi>o</mi></mrow></msub></math>
+of a physical quantity is determined by the numerical values of a set
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math> other
+physical quantities, that is, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-144001r9"></mstyle>
+<msub><mrow><mi>Q</mi></mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(B.9)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The principle of absolute significance of relative values tells us that the relationship implied by Eq. (<a href="#x42-144001r9">B.9</a>) can be physically
+relevant only if <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mi>o</mi></mrow></msub></math>
+and <math display="inline"><mi>f</mi></math>
+change by the <b>same factor</b> when the magnitudes of any base units are changed.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">To put it simply, a physical equation must be <span class="alert">dimensionally homogeneous</span>. </p></div></div>
+<p class="noindent">This dimensional homogeneity imposes the following constraints on any mathematical representation of
+a relationship given in Eq. (<a href="#x42-144001r9">B.9</a>):
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+i. 
+</dt><dd class="enumerate-enumitem">both sides of the equation must have the <b>same dimension</b>;
+</dd>
+<dt class="enumerate-enumitem">
+ii. 
+</dt><dd class="enumerate-enumitem">wherever a sum of quantities appears in <math display="inline"><mi>f</mi></math>,
+all the terms in the sum must have the same dimension;
+</dd>
+<dt class="enumerate-enumitem">  
+iii. 
+</dt><dd class="enumerate-enumitem">all arguments of any exponential, logarithmic, trigonometric or other special functions that
+appear in <math display="inline"><mi>f</mi></math>
+must be dimensionless.</dd></dl>
+<p class="noindent">For example, if a physical equation is represented by </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-144005r10"></mstyle>
+<mi>A</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>B</mi><mi class="loglike">exp</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi>C</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>D</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>D</mi></mrow><mrow><mn>2</mn></mrow></msub>
+</mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow>
+<mrow>
+<mi>E</mi></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>F</mi><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(B.10)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"><math display="inline"><mi>C</mi></math> must be
+dimensionless, <math display="inline"><msub><mrow><mi>D</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>D</mi></mrow><mrow><mn>2</mn></mrow></msub></math> must have the same
+dimension, and <math display="inline"><mi>A</mi></math>,
+<math display="inline"><mi>B</mi></math>,
+<math display="inline"><mi>D</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>E</mi></math> and
+<math display="inline"><mi>F</mi></math> must
+have the same dimension.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">An important consequence of dimensional homogeneity is that the form of a physical equation is <span class="alert">independent of the size of the base units</span>.
+</p></div></div>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-23"> <a id="x42-145000"></a>An Example of Acceleration</h5>
+</p><p class="noindent">The following example may help to illustrate the reason for dimensional homogeneity in
+physical equations and show how conceptual errors that may arise if homogeneity isn’t
+recognized.
+</p><p class="noindent">Suppose we release an object from rest in a <i>uniform gravitational field</i>, in vacuum, and ask what distance
+<math display="inline"><mi>x</mi></math> it will fall
+in a time <math display="inline"><mi>t</mi></math>.
+We know of course that elementary <i>Newtonian mechanics</i> gives the answer as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-145001r11"></mstyle>
+<mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mi>g</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(B.11)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>g</mi></math> is the local acceleration of
+gravity and has the dimension <math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math>.
+This equation expresses the result of a general physical law, and is clearly <b>dimensionally
+homogeneous</b>.
+</p><p class="noindent">The physical basis of dimensional homogeneity becomes apparent when we consider the same
+phenomenon from a different perspective.
+</p><p class="noindent">Suppose we are ignorant of mechanics and conduct a large variety of <span class="margin-block"><span class="margin"><span>experiments, <span class="ellipsis">[246]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Dimensional-Analysis/raster/cathedral.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[246]</span>For example,
+these examples could be conducted by tossing balls from the top of <i>Innsbruck</i> Cathedral.</span></span></span></span> on the time
+<math display="inline"><mi>t</mi></math> it takes a body
+with mass <math display="inline"><mi>m</mi></math> to
+fall a distance <math display="inline"><mi>x</mi></math>
+from rest in an evacuated chamber. After performing experiments with numerous masses and distances, we find
+that if <math display="inline"><mi>t</mi></math> is measured
+in seconds (<math display="inline"><mstyle mathvariant="normal"><mi>s</mi></mstyle></math>)
+and <math display="inline"><mi>x</mi></math> in
+meters (<math display="inline"><mstyle mathvariant="normal"><mi>m</mi></mstyle></math>),
+all our data can be accurately represented, regardless of mass, with the single equation
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-145002r12"></mstyle>
+<mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>4</mn><mi>,</mi><mn>9</mn><mn>1</mn><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup>
+</math></td><td class="eq-no">(B.12)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This is a perfectly correct equation as it describes and predicts all experiments to a very good
+accuracy.
+</p><p class="noindent">However, it appears at first glance to be dimensionally non-homogeneous, the two sides seemingly
+having different dimensions, and therefore appears not to be a true physical equation.
+</p><p class="noindent">This impression is, however, based on the false presumption that the coefficient
+<math display="inline"><mn>4</mn><mi>,</mi><mn>9</mn><mn>1</mn></math>
+remains <b>invariant</b> when units are changed. In fact, the coefficient
+<math display="inline"><mn>4</mn><mi>,</mi><mn>9</mn><mn>1</mn></math>
+represents not a dimensionless number, but a particular numerical value of
+a dimensional physical quantity which characterizes the relationship between
+<math display="inline"><mi>x</mi></math> and
+<math display="inline"><mi>t</mi></math>. That
+this must be so becomes clear when we consider how Eq. (<a href="#x42-145002r12">B.12</a>) must transform when units are
+changed.
+</p><p class="noindent">We know that when units are changed, the actual physical distance
+<math display="inline"><mi>x</mi></math>
+remains invariant, and we therefore argue that to obtain the falling distance in feet, for example, the
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:rhs">RHS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:rhs">Right Hand Side</a></span><span class="acronym-desc"><a class="glossary" href="#glo:rhs">Right Hand Side</a></span></span></span> of Eq. (<a href="#x42-145002r12">B.12</a>), which gives it in meters, must be multiplied by
+<math display="inline"><mn>3</mn><mi>,</mi><mn>2</mn><mn>8</mn></math>, the
+number of feet in one meter.
+Thus, if x is measured in feet and <math display="inline"><mi>t</mi></math>
+in seconds, the correct version of Eq. (<a href="#x42-145002r12">B.12</a>) is: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-145003r13"></mstyle>
+<mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mn>6</mn><mi>,</mi><mn>1</mn><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup>
+</math></td><td class="eq-no">(B.13)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This same transformation could also have been obtained by arguing that Eq. (<a href="#x42-145002r12">B.12</a>), being an
+expression of a general physical law, must, according to Bridgman’s principle of absolute significance of
+relative magnitude, be dimensionally homogeneous, and therefore should properly have been written
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-145004r14"></mstyle>
+<mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>c</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>where</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mo class="MathClass-open" stretchy="false">(</mo><mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>4</mn><mi>,</mi><mn>9</mn><mn>1</mn><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>m</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td><td class="eq-no">(B.14)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This form makes clear that the coefficient <math display="inline"><mi>c</mi></math>
+is a <b>physical quantity</b> rather than a numerical coefficient. The units of
+<math display="inline"><mi>c</mi></math> indicate its
+dimension and show that a change of the length unit from meters to feet, with the time unit remaining <b>invariant</b>,
+changes <math display="inline"><mi>c</mi></math> by
+the factor <math display="inline"><mn>3</mn><mi>,</mi><mn>2</mn><mn>8</mn></math>,
+the inverse of the factor by which the length unit is changed.
+</p><p class="noindent">This gives <math display="inline"><mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mn>6</mn><mi>,</mi><mn>1</mn><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>f</mi><mi>t</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math>,
+as in Eq. (<a href="#x42-145003r13">B.13</a>).
+</p><p class="noindent">Eq. (<a href="#x42-145004r14">B.14</a>) is the correct way of representing the data of equation Eq. (<a href="#x42-145001r11">B.11</a>). It is dimensionally
+homogeneous, and makes the transformation to different base units straightforward.
+</p><p class="noindent">Every correct physical <span class="margin-block">equation <span class="margin-comment"><span class="ellipsis">[247]</span>
+<span class="sidenote">that is, every equation that expresses a physically significant
+relationship between numerical values of physical quantities.</span></span></span> must be dimensionally homogeneous. A
+fitting formula derived from correct empirical data may at first sight appear dimensionally
+non-homogeneous because it is intended for particular base units.
+</p><p class="noindent">Such formulas can always be rewritten in general, homogeneous form by the following
+procedure <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a id="x42-145005"></a>Sonin, A. A. Dimensional analysis. The Physical Basis of Dimensional Analysis,
+Cambridge, Department of Mechanical Engineering, MIT, 42–43 (2001)</span></span>:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+i. 
+</dt><dd class="enumerate-enumitem">Replace all the numerical coefficients in the equation with unknown dimensional constants.
+</dd>
+<dt class="enumerate-enumitem">
+ii. 
+</dt><dd class="enumerate-enumitem">Determine  the  dimensions  of  these  constants  by  requiring  that  the  new  equation  be
+dimensionally homogeneous.
+</dd>
+<dt class="enumerate-enumitem">
+iii. 
+</dt><dd class="enumerate-enumitem">Determine the numerical values of the constants by matching them with those in the original
+equation when the units are the <span class="margin-block">same. <span class="margin-comment"><span class="ellipsis">[248]</span>
+<span class="sidenote">This is of course how Eq. (<a href="#x42-145004r14">B.14</a>) was derived from
+Eq. 
+(<a href="#x42-145002r12">B.12</a>)
+.</span></span></span></dd></dl>
+<p class="noindent">Another example serves to reinforce this point. Suppose it is found that the pressure distribution in the
+earth’s atmosphere can be <i>approximately</i> represented by the formula: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-145009r15"></mstyle>
+<mi>p</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mi>,</mi><mn>0</mn><mn>1</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>5</mn></mrow></msup> <mi class="loglike">exp</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>0</mn><mn>0</mn><mn>0</mn><mn>1</mn><mn>2</mn><mi>z</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(B.15)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>p</mi></math> is the
+pressure in <math display="inline"><mstyle mathvariant="normal"><mi>N</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> and
+<math display="inline"><mi>z</mi></math> is the altitude
+in meters (<math display="inline"><mstyle mathvariant="normal"><mi>m</mi></mstyle></math>).
+This expression applies only with the described units. The correct, dimensionally homogeneous form of
+this equation is </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-145010r16"></mstyle>
+<mi>p</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>a</mi><mi class="loglike">exp</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mi>b</mi><mi>z</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>where</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mi>a</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mi>,</mi><mn>0</mn><mn>1</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>5</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>N</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup><mspace class="quad" width="1em"></mspace><mstyle class="text"><mtext>and</mtext></mstyle><mspace class="quad" width="1em"></mspace><mi>b</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mi>,</mi><mn>2</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>4</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup>
+</math></td><td class="eq-no">(B.16)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>a</mi></math>
+and <math display="inline"><mi>b</mi></math>
+are physical quantities. In this form the equation is valid independent of the chosen base
+units.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The dimensions of <math display="inline"><mi>a</mi></math>
+and <math display="inline"><mi>b</mi></math>
+indicate <span class="alert">how these quantities change when units are changed</span>. </p></div></div>
+<p class="noindent">The two quantities <math display="inline"><mi>a</mi></math>
+and <math display="inline"><mi>b</mi></math> in
+Eq. 
+(<a href="#x42-145010r16">B.16</a>) 
+are physical constants in the sense that their values are <b>fixed</b> once the system of units is
+chosen. In this case the constants characterize a particular <span class="margin-block">environment. <span class="margin-comment"><span class="ellipsis">[249]</span>
+<span class="sidenote">In this case, it is
+the pressure distribution in the earth’s atmosphere.</span></span></span> Similarly, the acceleration of gravity
+<math display="inline"><mi>g</mi></math> in Eq.
+(<a href="#x42-145001r11">B.11</a>) 
+is a physical constant that characterizes the local gravitational force field at the earth’s
+surface.
+</p><p class="noindent">The basic laws of physics also contain a number of <b>universal physical constants</b> whose magnitudes
+are the same in all problems once the system of units is chosen: </p><div class="quote">  the speed of light in vacuum
+<math display="inline"><mi>c</mi></math>, the universal
+gravitational constant <math display="inline"><mi>G</mi></math>,
+Planck’s constant <math display="inline"><mi>h</mi></math>,
+Boltzmann’s constant <math display="inline"><msub><mrow><mi>k</mi></mrow><mrow><mi>B</mi></mrow></msub></math>,
+</div>
+<p class="noindent">and many others.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-24"> <a id="x42-146000"></a>Derived Quantities of the Second Kind</h5>
+</p><p class="noindent">The classification of quantities as base or derived is not unique. There exist general laws which bind
+different kinds of quantities together in certain relationships, and these laws can be used to
+transform base quantities into derived ones. Such transformations are useful as they reduce
+the number of units which must be chosen arbitrarily, and simplify the forms of physical
+laws.
+</p><p class="noindent">Area, for example, may be taken as a base quantity with its own comparison and addition
+operations, and measured in terms of an arbitrarily chosen (base) unit: </p><div class="quote">  We can use a
+certain postage stamp, as an absurd <span class="margin-block"><span class="margin"><span>example. <span class="ellipsis">[250]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Dimensional-Analysis/raster/postage stamp.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[250]</span>One could come with a better example
+but where would then there would not be an opportunity to showcase the <b>Penny Black</b>,
+which is the first postage stamp. This would be an excellent choice to measure the size of
+a room.</span></span></span></span> The floor area of a room may be measured by covering the floor with copies of
+this postage stamp and parts thereof, and counting the number of whole stamps required.
+</div>
+<p class="noindent">If we adopt this practice we will eventually find that, <b>regardless</b> of the unit we have chosen for measuring
+an area <math display="inline"><mi>A</mi></math>, its
+numerical value <math display="inline"><mi>A</mi></math>
+will depend on its linear dimensions according to </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-146001r17"></mstyle>
+<mi>A</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>c</mi><mo>∫
+ </mo><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi>
+</math></td><td class="eq-no">(B.17)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where the integral is taken over the area and <math display="inline"><mi>c</mi></math>
+is a dimensional constant the magnitude of which depends on the choice
+of base units of area and length. Dimensional homogeneity requires that
+<math display="inline"><mi>c</mi></math> be a
+derived quantity, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-146002r18"></mstyle>
+<mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>A</mi></mrow>
+<mrow>
+<mo>∫
+ </mo><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi></mrow></mfrac>
+</math></td><td class="eq-no">(B.18)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">with dimension <math display="inline"><mi>A</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math>.
+Eq. 
+(<a href="#x42-146001r17">B.17</a>) 
+can be thought of as a <b>physical law</b>. A little reflection reveals,
+however, that it holds simply because the quantity we have symbolized as
+<math display="inline"><mo>∫</mo>
+<mi>d</mi><mi>x</mi><mi>d</mi><mi>y</mi></math> is
+defined by comparison and addition rules that happen to be similar to those we have chosen for area.
+Eq. 
+(<a href="#x42-146001r17">B.17</a>) 
+is therefore not really a law of nature, but one have crafted ourselves. Dimensional constants
+like <math display="inline"><mi>c</mi></math> in
+Eq. 
+(<a href="#x42-146001r17">B.17</a>) 
+whose values depend on the choice of units but are entirely independent of the problem
+being considered are called <b>universal constant</b>.
+</p><p class="noindent">The law given in Eq. (<a href="#x42-146001r17">B.17</a>) suggests a simplification. If we choose to measure area in terms of a unit
+that is defined by the area of a square with sides equal to the length unit, the physical coefficient
+<math display="inline"><mi>c</mi></math>
+becomes unity, and Eq. (<a href="#x42-146001r17">B.17</a>) becomes: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-146003r19"></mstyle>
+<mi>A</mi> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ </mo><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi>
+</math></td><td class="eq-no">(B.19)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Area, in effect, has become a <b>derived quantity</b> defined in terms of operations involving length.
+Eq. 
+(<a href="#x42-146003r19">B.19</a>) 
+does not imply that area now “is”, in any physical sense, length squared. The
+physical property that is area remains what it was before, quite distinct from length, and for
+that matter quite distinct from “length squared”, of which we have no physical concept
+whatsoever.
+</p><p class="noindent">We have simply noted that, because our concepts of “integral” and “area” are in fact similar, we may choose to
+measure area via operations involving length, and have made a decision to do so. The fact that area now has the
+dimension <math display="inline"><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup></math>
+simply indicates that the numerical value of any area so defined will change by a factor
+<math display="inline"><msup><mrow><mi>n</mi></mrow><mrow><mn>2</mn></mrow></msup></math> when the length unit
+is changed by a factor <math display="inline"><mi>n</mi></math>.
+</p><p class="noindent">By transforming area in this way from a base to a derived quantity, we have accomplished two
+simplifications:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+1. 
+</dt><dd class="enumerate-enumitem">the length unit automatically determines the area unit, and
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem">the dimensional physical constant <math display="inline"><mi>c</mi></math>
+in Eq. (<a href="#x42-146001r17">B.17</a>) is replaced with unity.</dd></dl>
+<p class="noindent">There is nothing sacred about choosing <math display="inline"><mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></math>
+in this kind of transformation. We could have adopted as the unit for area circle
+with diameter equal to one length unit, in which case area would have been defined by
+<math display="inline"><mi>A</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mn>4</mn><mo class="MathClass-bin" stretchy="false">/</mo><mi>π</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo>∫</mo>
+<mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi></math>
+instead of by Eq. (<a href="#x42-146003r19">B.19</a>). This would have been perfectly acceptable, but less
+convenient since it would force us to waste a lot of paper writing unnecessary
+<math display="inline"><mn>4</mn><mo class="MathClass-bin" stretchy="false">/</mo><mi>π</mi></math>’s.
+</p><p class="noindent">In other instances, dimensionless coefficients other than unity are introduced deliberately
+to make things more convenient. For example, by defining the kinetic energy as
+<math display="inline"><mi>K</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></math> instead
+of <math display="inline"><mi>K</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></math>
+we make the energy equation for a point mass in a force field read
+<math display="inline"><mi>K</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>U</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle class="text"><mtext>constant</mtext></mstyle></math> instead
+of <math display="inline"><mi>K</mi><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>U</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle class="text"><mtext>constant</mtext></mstyle></math>,
+where <math display="inline"><mi>U</mi></math>
+is the force potential.
+</p><p class="noindent">Similarly, the <math display="inline"><mn>4</mn><mi>π</mi></math>
+terms that appear in the <b>SI system</b> of units in the integral forms of Gauss’s and Ampere’s laws are
+placed there in order to eliminate numerical coefficients in the differential forms such as in <b>Maxwell’s
+field equations</b> <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a id="x42-146006"></a>Griffiths, D. J. Introduction to electrodynamics (Cambridge University Press,
+2023)</span></span>.
+</p><p class="noindent">Speed offers an example similar to area. We may define speed as a base quantity with its own
+comparison and addition operations, and choose for it a base unit. If we take this route we would
+eventually discover that the quantity we have identified as speed is in fact proportional to the
+distance covered in unit time. We can then choose to <b>define</b> speed as the derived quantity
+<math display="inline"><mi>V</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>d</mi><mi>y</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><mi>x</mi><mi>x</mi><mi>t</mi></math>, which
+is equivalent to choosing a speed unit such that unit distance is covered in unit time.
+</p><p class="noindent">A more interesting example arises with force. Force may be taken as a base quantity with an
+arbitrarily specified unit. Newton’s original law of motion states that if a body of mass
+<math display="inline"><mi>m</mi></math> is subjected to a
+net force <math display="inline"><mi>F</mi></math> (in the
+x-direction, say) under non-relativistic conditions, it accelerates in the direction of the force and the acceleration
+<math display="inline"><mi>a</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>d</mi><mn>2</mn><mi>y</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><mi>x</mi><mn>2</mn><mi>x</mi><mi>t</mi></math> is related to
+the force <math display="inline"><mi>F</mi></math>
+and mass <math display="inline"><mi>m</mi></math>
+by </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-146007r20"></mstyle>
+<mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>c</mi><mi>m</mi><mi>a</mi>
+</math></td><td class="eq-no">(B.20)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where the coefficient <math display="inline"><mi>c</mi></math> is a universal
+constant with dimension <math display="inline"><mi>F</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>M</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>
+if force, length, mass and time are all selected as base quantities. Eq. (<a href="#x42-146007r20">B.20</a>) is a general physical law
+which expresses a relationship between the numerical values of three different physical quantities that
+are involved in the dynamics of a point mass-force, gravitational mass, and acceleration. We are at
+liberty, however, to choose a force unit such that one unit of force will give unit mass unit acceleration
+under non-relativistic conditions.
+</p><p class="noindent">If we do this, we make <math display="inline"><mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></math>
+in Eq. (<a href="#x42-146007r20">B.20</a>) and throw <i>Newton’s law</i> into the coefficient-less form </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-146008r21"></mstyle>
+<mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi><mi>a</mi>
+</math></td><td class="eq-no">(B.21)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where force has a dimension <math display="inline"><mi>M</mi><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup></math>.
+Eq. 
+(<a href="#x42-146008r21">B.21</a>) 
+does not imply that force <i>is</i> in any physical sense a mass times an acceleration. The product
+of a mass times an acceleration is in fact not defined in physical terms, and in any case, a force can
+exist without there being any mass or acceleration involved, as for example when we push on an
+immobile brick <span class="margin-block">wall. <span class="margin-comment"><span class="ellipsis">[251]</span>
+<span class="sidenote">and the wall exerts an equal and opposite counter-force on us.</span></span></span> In contrast with the
+examples of area and speed, Eq. (<a href="#x42-146008r21">B.21</a>) does not in all cases provide a recipe for directly evaluating a
+force by making in situ measurements of base quantities. Instead, we have imparted to force the
+character of a derived quantity by making the force unit depend in a particular way on the units of
+mass and length.
+</p><p class="noindent">Quantities that are transferred into the derived category by choosing a unit motivated by a general
+physical law are called derived quantities of the second kind. Force is one example; heat and electric
+charge are also treated in this way in the SI system.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-B.1.6"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.B.1.6"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">B.1.6</span> <span class="title"> <a id="x42-147000B.1.6"></a>Systems of units</span></h4></div>
+</p><p class="noindent">A system of units is defined by
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">   
+i. 
+</dt><dd class="enumerate-enumitem">a complete set of base quantities with their defining comparison and addition operations,
+</dd>
+<dt class="enumerate-enumitem">
+ii. 
+</dt><dd class="enumerate-enumitem">the base units, and
+</dd>
+<dt class="enumerate-enumitem">
+iii. 
+</dt><dd class="enumerate-enumitem">all relevant derived quantities, expressed in terms of their defining equations (e.g <math display="inline"><mi>V</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>d</mi><mi>y</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><mi>x</mi><mi>x</mi><mi>t</mi></math>),
+if they are of the first kind, or the forms of the physical laws that define their <span class="margin-block">units, <span class="margin-comment"><span class="ellipsis">[252]</span>
+<span class="sidenote">e.g.
+<math display="inline"><mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi><mi>a</mi></math>
+defines the force unit in the SI system.</span></span></span> if they are of the second kind.</dd></dl>
+<p class="noindent">The set of derived quantities is open-ended; new ones may be introduced at will in any
+analysis.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Systems of units are said to be of the same type if they differ only in the magnitudes of the base units.
+</p></div></div>
+<p class="noindent">In the SI system (Système International) there are six base quantities <b>Tbl.</b> <a href="#x42-150002r3">B.3</a>: </p><div class="quote">  length, time, mass, temperature,
+current, number of elementary particles, and luminous intensity. The units of length, time and mass are the
+meter (<math display="inline"><mstyle mathvariant="normal"><mi>m</mi></mstyle></math>), the
+second (<math display="inline"><mstyle mathvariant="normal"><mi>s</mi></mstyle></math>) and
+the kilogram (<math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>g</mi></mstyle></math>),
+respectively. </div>
+<p class="noindent">Force is made a derived quantity by writing <i>Newton’s law</i> as
+<math display="inline"><mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi><mi>a</mi></math>.
+</p><p class="noindent">The temperature in any system of units must be a <b>thermodynamic temperature</b>. Numbers read
+from an arbitrarily constructed thermometer scale can be used for establishing whether
+two temperatures are equal, but they are not numerical values of a physical <span class="margin-block">quantity. <span class="margin-comment"><span class="ellipsis">[253]</span>
+<span class="sidenote">Is
+<math display="inline"><mn>2</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>◦</mi><mi>C</mi></mstyle></math>
+twice as hot as <math display="inline"><mn>1</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>◦</mi><mi>C</mi></mstyle></math>?
+Is <math display="inline"><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>◦</mi><mi>C</mi></mstyle></math>
+zero temperature in the sense of there being an absence of temperature? For that matter, if temperature is
+defined in terms of a thermometer with an arbitrarily marked temperature scale, is there any reason
+why heat should flow from a higher to a lower temperature?</span></span></span> The thermodynamic (or absolute)
+temperature is, however, defined in terms of physical comparison and addition operations appropriate
+to a base <span class="margin-block">quantity. <span class="margin-comment"><span class="ellipsis">[254]</span>
+<span class="sidenote">The ratio of the numerical values of two physical thermodynamic temperatures
+<math display="inline"><msub><mrow><mi>T</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>T</mi></mrow><mrow><mn>2</mn></mrow></msub></math>
+can for example be defined in terms of the (physically measurable) efficiency
+<math display="inline"><msub><mrow><mi>η</mi></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></math> of
+a Carnot engine which operates between heat reservoirs at the two temperatures. If
+<math display="inline"><msub><mrow><mi>T</mi></mrow><mrow><mi>I</mi></mrow></msub></math> is the temperature of the
+reservoir into which heat flows, <math display="inline"><msub><mrow><mi>T</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>T</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>η</mi></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></math>,
+where <math display="inline"><msub><mrow><mi>η</mi></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></math>
+is a pure number. This provides a physical operation for determining the ratio of the numerical values
+of <math display="inline"><msub><mrow><mi>T</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>T</mi></mrow><mrow><mn>2</mn></mrow></msub></math>, and implies a physical addition
+for the two quantities: if <math display="inline"><msub><mrow><mi>T</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>n</mi><msub><mrow><mi>T</mi></mrow><mrow><mn>1</mn></mrow></msub></math>,
+where <math display="inline"><mi>n</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>T</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>T</mi></mrow><mrow><mn>1</mn></mrow></msub></math>,
+then <math display="inline"><msub><mrow><mi>T</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>T</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>T</mi></mrow><mrow><mn>3</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>n</mi><mo class="MathClass-close" stretchy="false">)</mo><msub><mrow><mi>T</mi></mrow><mrow><mn>1</mn></mrow></msub></math>. The
+temperature <math display="inline"><msub><mrow><mi>T</mi></mrow><mrow><mn>3</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>n</mi><mo class="MathClass-close" stretchy="false">)</mo><msub><mrow><mi>T</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
+can be physically identified by noting that if a Carnot engine is run between this temperature and
+<math display="inline"><msub><mrow><mi>T</mi></mrow><mrow><mi>l</mi></mrow></msub></math>, it will have
+an efficiency <math display="inline"><mi>n</mi><mo class="MathClass-bin" stretchy="false">/</mo><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>n</mi><mo class="MathClass-close" stretchy="false">)</mo></math>.</span></span></span>
+Measurements via a <i>Carnot engine</i> or equivalent device gives the ratio of two absolute temperatures; the
+temperature unit (i.e. the size of the "degree") must be chosen arbitrarily. The SI temperature unit is the kelvin
+(<math display="inline"><mstyle mathvariant="normal"><mi>K</mi></mstyle></math>), which is defined
+as the fraction 1/<math display="inline"><mn>2</mn><mn>7</mn><mn>3</mn><mi>,</mi><mn>1</mn><mn>6</mn></math>
+of the thermodynamic temperature of the triple point of water.
+</p><p class="noindent"></p><figure class="float">
+<a id="x42-147004r1"></a>
+<figcaption class="caption"><span class="id">Table B.1: </span><span class="content">The SI system of Units 
+</span></figcaption>
+<table class="tabularray tblr" id="tbl-17"> <tr id="row-17-1-"><td id="1-1" style=""> <b>Quantity</b></td><td id="1-2" style=""> <b>Symbol</b></td><td id="1-3" style=""> <b>SI 
+Name</b> </td><td colspan="4" id="1-4" style=""> <b>SI 
+Symbol</b> </td></tr>
+<tr id="row-17-2-"><td id="2-1" style=""> Length</td><td id="2-2" style=""> <math display="inline"><mi>L</mi></math> </td><td id="2-3" style="">  meter       </td><td colspan="4" id="2-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>m</mi></mstyle></math> </td></tr>
+<tr id="row-17-3-"><td id="3-1" style=""> Time</td><td id="3-2" style=""> <math display="inline"><mi>t</mi></math> </td><td id="3-3" style="">  second      </td><td colspan="4" id="3-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>s</mi></mstyle></math> </td></tr>
+<tr id="row-17-4-"><td id="4-1" style=""> Mass</td><td id="4-2" style=""> <math display="inline"><mi>M</mi></math> </td><td id="4-3" style="">  kilogram    </td><td colspan="4" id="4-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>g</mi></mstyle></math> </td></tr>
+<tr id="row-17-5-"><td id="5-1" style=""> Temperature</td><td id="5-2" style=""> <math display="inline"><mi>T</mi></math> </td><td id="5-3" style="">  kelvin       </td><td colspan="4" id="5-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>K</mi></mstyle></math> </td></tr>
+<tr id="row-17-6-"><td id="6-1" style=""> Current</td><td id="6-2" style=""> <math display="inline"><mi>I</mi></math> </td><td id="6-3" style="">  ampere     </td><td colspan="4" id="6-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>A</mi></mstyle></math> </td></tr>
+<tr id="row-17-7-"><td id="7-1" style=""> Number of elementary particles</td><td id="7-2" style="">                                                                -                                                                </td><td id="7-3" style="">  mole         </td><td colspan="4" id="7-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>m</mi><mi>o</mi><mi>l</mi></mstyle></math> </td></tr>
+<tr id="row-17-8-"><td id="8-1" style=""> Luminous Intensity</td><td id="8-2" style="">                                                                -                                                                </td><td id="8-3" style="">  candela     </td><td colspan="4" id="8-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>c</mi><mi>d</mi></mstyle></math> </td></tr></table>
+</figure>
+<p class="noindent"></p><figure class="float">
+<a id="x42-147005r2"></a>
+<figcaption class="caption"><span class="id">Table B.2: </span><span class="content">An Incomplete set of derived quantities 
+</span></figcaption>
+<table class="tabularray tblr" id="tbl-18"> <tr id="row-18-1-"><td id="1-1" style=""> <b>Quantity</b></td><td id="1-2" style=""> <b>Defining Law</b></td><td id="1-3" style=""> <b>Dimension</b></td><td id="1-4" style=""> <b>Symbol</b></td><td colspan="7" id="1-5" style=""> <b>Name</b></td></tr>
+<tr id="row-18-2-"><td id="2-1" style=""> Area</td><td id="2-2" style=""> <math display="inline"><mi>A</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo>∫</mo>
+<mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi></math> </td><td id="2-3" style=""> <math display="inline"><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup></math> </td><td id="2-4" style=""> <math display="inline"><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msup></math> </td><td colspan="7" id="2-5" style="">  –                                                                                                                              </td></tr>
+<tr id="row-18-3-"><td id="3-1" style=""> Volume</td><td id="3-2" style=""> <math display="inline"><mi>V</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo>∫</mo>
+<mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>z</mi></math> </td><td id="3-3" style=""> <math display="inline"><msup><mrow><mi>L</mi></mrow><mrow><mn>3</mn></mrow></msup></math> </td><td id="3-4" style=""> <math display="inline"><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msup></math> </td><td colspan="7" id="3-5" style="">  –                                                                                                                              </td></tr>
+<tr id="row-18-4-"><td id="4-1" style=""> Frequency</td><td id="4-2" style=""> <math display="inline"><mi>f</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mi>T</mi></math> </td><td id="4-3" style=""> <math display="inline"><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math> </td><td id="4-4" style=""> <math display="inline"><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math> </td><td colspan="7" id="4-5" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle></math> </td></tr>
+<tr id="row-18-5-"><td id="5-1" style=""> Acceleration</td><td id="5-2" style=""> <math display="inline"><mi>a</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>d</mi><mn>2</mn><mi>y</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><mi>x</mi><mn>2</mn><mi>x</mi><mi>t</mi></math> </td><td id="5-3" style=""> <math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td><td id="5-4" style=""> <math display="inline"><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td><td colspan="7" id="5-5" style="">  –                                                                                                                              </td></tr>
+<tr id="row-18-6-"><td id="6-1" style=""> Density</td><td id="6-2" style=""> <math display="inline"><mi>ρ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>M</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>V</mi> </math> </td><td id="6-3" style=""> <math display="inline"><mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math> </td><td id="6-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>g</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math> </td><td colspan="7" id="6-5" style="">  –                                                                                                                              </td></tr>
+<tr id="row-18-7-"><td id="7-1" style=""> Force</td><td id="7-2" style=""> <math display="inline"><mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>M</mi><mi>a</mi></math> </td><td id="7-3" style=""> <math display="inline"><mi>M</mi><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td><td id="7-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>g</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>m</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msup></math> </td><td colspan="7" id="7-5" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>N</mi></mstyle></math> </td></tr>
+<tr id="row-18-8-"><td id="8-1" style=""> Stress/Pressure</td><td id="8-2" style=""> <math display="inline"><mi>p</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>F</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>A</mi></math> </td><td id="8-3" style=""> <math display="inline"><mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td><td id="8-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>N</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="normal"><mi>k</mi><mi>g</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td><td colspan="7" id="8-5" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>P</mi><mi>a</mi></mstyle></math> </td></tr>
+<tr id="row-18-9-"><td id="9-1" style=""> Work/Energy</td><td id="9-2" style=""> <math display="inline"><mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo>∫</mo>
+<mi>F</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi></math> </td><td id="9-3" style=""> <math display="inline"><mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td><td id="9-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>N</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>m</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="normal"><mi>k</mi><mi>g</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td><td colspan="7" id="9-5" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>J</mi></mstyle></math> </td></tr>
+<tr id="row-18-10-"><td id="10-1" style=""> Torque</td><td id="10-2" style=""> <math display="inline"><mi>T</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>F</mi><mi>l</mi></math> </td><td id="10-3" style=""> <math display="inline"><mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td><td id="10-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>N</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>m</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="normal"><mi>k</mi><mi>g</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td><td colspan="7" id="10-5" style="">  –                                                                                                                              </td></tr>
+<tr id="row-18-11-"><td id="11-1" style=""> Power</td><td id="11-2" style=""> <math display="inline"><mi>d</mi><mi>y</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><mi>x</mi><mi>W</mi><mi>t</mi></math> </td><td id="11-3" style=""> <math display="inline"><mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math> </td><td id="11-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>J</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="normal"><mi>k</mi><mi>g</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math> </td><td colspan="7" id="11-5" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>W</mi></mstyle></math> </td></tr>
+<tr id="row-18-12-"><td id="12-1" style=""> Charge</td><td id="12-2" style=""> <math display="inline"><mi>Q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo>∫</mo>
+<mi>I</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>t</mi></math> </td><td id="12-3" style=""> <math display="inline"><mi>I</mi><mi>t</mi></math> </td><td id="12-4" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>A</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>s</mi></mstyle></math> </td><td colspan="7" id="12-5" style=""> <math display="inline"><mstyle mathvariant="normal"><mi>C</mi></mstyle></math> </td></tr></table>
+</figure>
+<p class="noindent"><span class="paragraphHead"> <a id="x42-148000"></a>Current</span>
+In SI the electric current is adopted as a <b>base quantity</b> and <i>charge</i> is thrown into the derived category
+using <math display="inline"><mi>Q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo>∫</mo>
+<mi>I</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>t</mi></math>,
+as are all other electric and magnetic quantities. The unit for current is the ampere
+(<math display="inline"><mstyle mathvariant="normal"><mi>A</mi></mstyle></math>),
+which is defined as the current which, when passed through each of two
+<b>infinite</b>, parallel conductors in vacuum one meter apart, will produce a force of
+<math display="inline"><mn>2</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>7</mn></mrow></msup></math> <math display="inline"><mstyle mathvariant="normal"><mi>N</mi></mstyle></math>
+per unit length on each <span class="margin-block">conductor. <span class="margin-comment"><span class="ellipsis">[255]</span>
+<span class="sidenote">The conventional factor
+<math display="inline"><mn>2</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>7</mn></mrow></msup></math> is
+introduced for convenience and historical reasons, and appears in the SI version of <i>Ampere’s
+law</i>.</span></span></span>
+</p>
+<p class="noindent"><span class="paragraphHead"> <a id="x42-149000"></a>Mole</span>
+The mole unit is retained in SI as an alternative way of specifying number
+of things: instead of counting things one by one, one counts them in lots of
+<math display="inline"><mn>6</mn><mi>,</mi><mn>0</mn><mn>2</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>2</mn><mn>3</mn></mrow></msup></math> <math display="inline"><mstyle mathvariant="normal"><mi>w</mi></mstyle></math>hich
+is also known as Avagadro’s number. One must, however, specify what things one is <span class="margin-block">counting. <span class="margin-comment"><span class="ellipsis">[256]</span>
+<span class="sidenote">e.g. “one
+mole of atoms, of molecules, of tennis balls”, or whatever.</span></span></span>
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The SI unit of mole is in fact the old <span class="alert">gram mole</span>. </p></div></div>
+<p class="noindent"><span class="paragraphHead"> <a id="x42-150000"></a>Luminous Intensity</span>
+It does not refer to radiant energy flow per unit solid angle as such, which could be measured in watts per steradian
+(<math display="inline"><mstyle mathvariant="normal"><mi>W</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi><mi>r</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>), but only to that
+portion of it to which “the human eye”<span class="margin-block"> <span class="margin-comment"><span class="ellipsis">[257]</span>
+<span class="sidenote">as defined by a standard response curve.</span></span></span> is sensitive. At a wavelength of
+<math display="inline"><mn>5</mn><mn>5</mn><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>n</mi><mi>m</mi></mstyle></math>,
+where the human eye is most sensitive to light, one candela is equivalent to
+<math display="inline"><mn>1</mn><mi>,</mi><mn>4</mn><mn>6</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math> <math display="inline"><mstyle mathvariant="normal"><mi>W</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi><mi>r</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>.
+</p>
+<div class="info-block" id="info-block-B.47"> <a class="copiable-link" href="#info-block-B.47"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information B.<a id="x42-150001r47"></a>47: </b> </span> <span class="info-title"> Additional Base (or Derived) Units </span> </span> <div class="body">
+<p class="noindent">Also included sometimes among the base quantities are two dimensionless quantities, plane angle and
+solid angle, which are measured in radians and steradians, respectively. We consider them derived
+quantities because, though dimensionless, they are defined in terms of operations involving length,
+much like area is defined in terms of length operations.
+</p>
+</div></div>
+<p class="noindent">We note again that the dimension of a derived quantity depends on the choice of system of units, which
+is under the control of the observer and has nothing to do with the quantity’s intrinsic
+nature.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Quantities with quite different physical meaning, like <span class="alert">work</span> and <span class="alert">torque</span>, can have the same dimension.
+</p></div></div>
+<p class="noindent">The effect of the system of units on the dimensions of quantities is illustrated in table 2.2, which
+shows the dimensions of some mechanical quantities in three different types of systems of
+units. Systems of units are of the same type if they have base units of the same kind but
+different magnitude, and the derived quantities and the basic physical laws have the same
+mathematical forms, differing only in the values of the physical constants that appear in
+them.
+</p><p class="noindent">In the first type of system illustrated in the table, length, time and mass are base quantities and
+the force unit is measured in terms of mass and acceleration via Newton’s law in the form
+<math display="inline"><mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi><mi>a</mi></math>.
+The SI and the cgs (centimeter, gram, second) systems are in this category. In
+the second type, length, time and force are base, and mass is measured via
+<math display="inline"><mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi><mi>a</mi></math>. An
+example is the British Gravitational System, in which the base units are the foot, the second and the
+pound-force (lbf). The pound-force is the force exerted by standard gravity (32.2 ft/sš) on a
+standard mass sample, the pound-mass (hence the term "gravitational system"). Mass in
+this Table 2.2: Dimensions of some mechanical quantities in different types of systems of
+units
+</p><p class="noindent"></p><figure class="float">
+<a id="x42-150002r3"></a>
+<figcaption class="caption"><span class="id">Table B.3: </span><span class="content">Dimensions of some mechanical quantities in different types of systems of units 
+</span></figcaption>
+<table class="tabularray tblr" id="tbl-19"> <tr id="row-19-1-"><td id="1-1" style=""> <b>Base Quantities and Dimensions</b></td><td id="1-2" style=""> <b>Type 1</b></td><td id="1-3" style=""> <b>Type 2</b></td><td colspan="8" id="1-4" style=""> <b>Type 3</b></td></tr>
+<tr id="row-19-2-"><td id="2-1" style=""> -</td><td id="2-2" style=""> <math display="inline"><mi>L</mi></math>, 
+<math display="inline"><mi>M</mi></math>, 
+<math display="inline"><mi>t</mi></math> </td><td id="2-3" style=""> <math display="inline"><mi>L</mi></math>, 
+<math display="inline"><mi>F</mi></math>, 
+<math display="inline"><mi>t</mi></math> </td><td colspan="8" id="2-4" style=""> <math display="inline"><mi>L</mi></math>, 
+<math display="inline"><mi>M</mi></math>, 
+<math display="inline"><mi>F</mi></math>, 
+<math display="inline"><mi>t</mi></math> </td></tr>
+<tr id="row-19-3-"><td id="3-1" style=""> <math display="inline"><mstyle class="text"><mtext>Velocity</mtext></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>d</mi><mi>y</mi> <mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><mi>x</mi> <mi>x</mi><mi>t</mi></math></td><td id="3-2" style=""> <math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math> </td><td id="3-3" style=""> <math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math> </td><td colspan="8" id="3-4" style=""> <math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math> </td></tr>
+<tr id="row-19-4-"><td id="4-1" style=""> <math display="inline"><mstyle class="text"><mtext>Acceleration</mtext></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>d</mi><mn>2</mn> <mi>y</mi> <mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><mi>x</mi><mn>2</mn> <mi>x</mi><mi>t</mi></math></td><td id="4-2" style=""> <math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td><td id="4-3" style=""> <math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td><td colspan="8" id="4-4" style=""> <math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> </td></tr>
+<tr id="row-19-5-"><td id="5-1" style=""> <math display="inline"><mstyle class="text"><mtext>Mass</mtext></mstyle> </math></td><td id="5-2" style=""> <math display="inline"><mi>M</mi></math> </td><td id="5-3" style=""> <math display="inline"><mi>F</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math> </td><td colspan="8" id="5-4" style=""> <math display="inline"><mi>M</mi></math> </td></tr>
+<tr id="row-19-6-"><td id="6-1" style=""> <math display="inline"><mstyle class="text"><mtext>Area</mtext></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo>∫</mo>
+<mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi></math> </td><td id="6-2" style=""> <math display="inline"><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup></math> </td><td id="6-3" style=""> <math display="inline"><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup></math> </td><td colspan="8" id="6-4" style=""> <math display="inline"><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup></math> </td></tr>
+</table>
+</figure>
+<p class="noindent">Dimensions of some derived quantities <math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>
+Lt&lt;sup&gt;-1&lt;/sup&gt; <math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>
+velocity = <math display="inline"><mi>d</mi><mi>x</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><mi>t</mi></math>
+<math display="inline"><mi>a</mi><mi>c</mi><mi>c</mi><mi>e</mi><mi>l</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>d</mi></mrow><mrow><mn>2</mn></mrow></msup><mi>x</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup></math>
+<math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math>
+<math display="inline"><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> Lt-2
+<math display="inline"><mi>F</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math> mass M M
+area=fdxdy <math display="inline"><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup></math>
+<math display="inline"><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup></math>
+<math display="inline"><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup></math>
+<math display="inline"><mi>M</mi><mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> F F force
+<math display="inline"><mi>F</mi><msup><mrow><mi>M</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup></math> c=F/ma in
+Newton’s law <math display="inline"><mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></math>
+<math display="inline"><mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></math>
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-150003r22"></mstyle>
+<mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mstyle class="text"><mtext>-</mtext></mstyle><mn>2</mn></mrow></msup>
+</math></td><td class="eq-no">(B.22)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"><math display="inline"><mi>w</mi><mi>o</mi><mi>r</mi><mi>k</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo>∫</mo>
+<mi>F</mi><mi>d</mi><mi>x</mi></math> FL FL
+<math display="inline"><mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math> FL&lt;sup&gt;-2&lt;/sup&gt;
+<math display="inline"><mi>F</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></math>
+<math display="inline"><mi>s</mi><mi>t</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>s</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>F</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>A</mi></math>
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x42-150004r23"></mstyle>
+<mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext>-</mtext></mstyle><mn>1</mn></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mstyle class="text"><mtext>-</mtext></mstyle><mn>1</mn></mrow></msup>
+</math></td><td class="eq-no">(B.23)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"><math display="inline"><mi>F</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup><mi>t</mi></math>
+<math display="inline"><mi>F</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup><mi>t</mi></math>
+viscosity=<math display="inline"><mi>τ</mi><mo class="MathClass-bin" stretchy="false">/</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>∂</mi><mi>u</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>y</mi><mo class="MathClass-close" stretchy="false">)</mo></math> system
+is a derived quantity with dimension Ft&lt;sup&gt;2&lt;/sup&gt;L&lt;sup&gt;-1&lt;/sup&gt; and a unit (the "slug") which turns out
+to be <math display="inline"><mi>g</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>3</mn><mn>2</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>2</mn></math> times as
+large as the pound-mass. In the third type, length, time, mass, and force are taken as base quantities, and Newton’s
+law reads <math display="inline"><mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>c</mi><mi>m</mi><mi>a</mi></math>,
+where <math display="inline"><mi>c</mi></math>
+is a physical constant with dimension Ft&lt;sup&gt;2&lt;/sup&gt;M&lt;sup&gt;-1&lt;/sup&gt;L&lt;sup&gt;-1&lt;/sup&gt;. The
+British Engineering System is an example. In this system 32 the base units taken are the foot, the
+second, the pound-mass (lbm), and the pound-force (lbf), and the constant in Newton’s law has the
+value <math display="inline"><mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>3</mn><mn>2</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>2</mn><msup><mrow><mstyle class="text"><mtext> lbf s</mtext></mstyle></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mstyle class="text"><mtext> lbm</mtext></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><msup><mrow><mstyle class="text"><mtext> ft</mtext></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>.
+</p><p class="noindent">Table 2.2 illustrates the fact that, while an actual physical quantity like force is the same regardless of
+the (arbitrary) choice of the system of units, its dimension depends on that choice. What is more,
+depending on how derived quantities are defined, a given physical law may contain a dimensional physical
+constant the value of which must be specified (as in F=cma), or it may contain no physical constant (as
+in <math display="inline"><mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi><mi>a</mi></math>).
+</p><p class="noindent">An interesting point to note is that only a few of the available universal laws are usually
+"used up" to make base quantities into derived ones of the second kind. There are many
+laws left with universal dimensional physical constants that could in principle be set
+equal to unity: the gravitational constant G, Planck’s constant h, Boltzmann’s constant
+<math display="inline"><msub><mrow><mi>k</mi></mrow><mrow><mi>B</mi></mrow></msub></math>, the speed of
+light in vacuum <math display="inline"><mi>c</mi></math>,
+etc.
+</p>
+<div class="info-block" id="info-block-B.48"> <a class="copiable-link" href="#info-block-B.48"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information B.<a id="x42-150005r48"></a>48: </b> </span> <span class="info-title"> Baseless Unit System </span> </span> <div class="body">
+<p class="noindent">This leaves us with some interesting possibilities. For example, it is possible to define systems of units
+that have no base quantities at all (see Bridgman, 1931). In such systems all units of measurement are
+related to some of the universal constants that describe our universe. In effect, there exist in the
+universe <span class="alert">natural</span> units for all base quantities, based on universal constants such as the speed of light, the
+quantum of energy, etc. Unfortunately, the choice of such <span class="alert">natural</span> systems of units turns out to be
+far from unique, which renders futile any attempt to endow any one of them with unique
+significance.
+</p>
+</div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-B.1.7"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.B.1.7"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">B.1.7</span> <span class="title"> <a id="x42-151000B.1.7"></a>Recapitulation</span></h4></div>
+</p><p class="noindent">1. A base quantity is a property that is defined in physical terms by two operations: a comparison
+operation, and an addition operation. The comparison operation is a physical procedure for establishing
+whether two samples of the quantity are equal or unequal; the addition operation defines what is meant
+by the sum of two samples of that property. 2. Base quantities are properties for which the following
+concepts are defined in terms of physical operations: equality, addition, subtraction, multiplication by a
+pure number, and division by a pure number. Not defined in terms of physical operations are: product,
+ratio, power, and logarithmic, exponential, trigonometric and other special functions of physical
+quantities. 33 3. A base quantity can be measured in terms of an arbitrarily chosen unit of its own
+kind and a numerical value. 4. A derived quantity of the first kind is a product of various
+powers of numerical values of base quantities. A derived quantity is defined in terms of
+numerical value (which depends on base unit size) and does not necessarily have a tangible
+physical representation. 5. The &lt;i&gt;dimension&lt;/i&gt; of any physical quantity, whether base or
+derived, is a formula that defines how the numerical value of the quantity changes when the
+base unit sizes are changed. The dimension of a quantity does not by itself provide any
+information on the quantity’s intrinsic nature. The same quantity (e.g. force) may have
+different dimensions in different systems of units, and quantities that are clearly physically
+different (e.g. work and torque) may have the same dimension. 6. Relationships between
+physical quantities may be represented by mathematical relationships between their numerical
+values. A mathematical equation that correctly describes a physical relationship between
+quantities is dimensionally homogeneous (see section 2.5). Such equations remain valid when
+base unit sizes are changed arbitrarily. 7. The categorization of physical quantities as either
+base or derived is to some extent arbitrary. If a particular base quantity turns out to be
+uniquely related to some other base quantities via some universal law, then we can, if we
+so desire, use the law to redefine that quantity as a derived quantity of the second kind
+whose magnitude depends on the units chosen for the others. All base quantities that are
+transformed into derived quantities in this way retain their original physical identities (i.e. their
+comparison and addition operations), but their numerical values are measured in terms of the
+remaining base quantities, either directly via a defining equation or indirectly by using a
+unit that is derivable from the remaining base units. 8. A system of units is defined by
+(a) the base quantities, (b) their units, and (c) the derived quantities, each with either its
+defining equation or the form of the physical law that has been used to cast the quantity into
+the derived category. Both the type and the number of base quantities are open to choice.
+34
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:rhs">¶</a>
+<dt class="acr-bottom" id="glo:rhs"><span class="acr-short">RHS</span><span class="acr-long">Right Hand Side</span></dt>
+<dd class="acr-desc"><p>Right Hand Side</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="ThePrincipleofDimensionalAnalysis.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="DimensionalAnalysis.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="DimensionalAnalysis.html#PhysicalQuantitiesandEquations.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section B.1: Physical Quantities and Equations</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

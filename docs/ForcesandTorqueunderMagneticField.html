@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Forces and Torque under Magnetic Field</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Electromechanic Energy Conversion</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="DeterminingForceandTorquefromEnergy.html">Determining Force and Torque from Energy</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="ElectromechanicEnergyConversion.html">Chapter: Electromechanic
+Energy Conversion</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="ElectromechanicEnergyConversion.html#ForcesandTorqueunderMagneticField.html">Chapter: Electromechanic
+Energy Conversion</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-3.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.3.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">3.1</span> <span class="title"> <a id="x14-330003.1"></a>Forces and Torque under
+Magnetic Field</span></h3></div>
+<p class="noindent">As with anything electromagnetic, it is worth starting with the <b>Lorentz force law</b>, which gives the force
+<math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math> on a particle
+of charge <math display="inline"><mi>q</mi></math>
+in the presence of both <b>electric</b> and <b>magnetic</b> <span class="margin-block"><span class="margin"><span>fields. <span class="ellipsis">[60]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Electromechanic-Energy-Conversion/raster/portrait-lorentz.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[60]</span><b>Hendrik Antoon Lorentz</b>
+(<i>1853  - 1928</i>)
+Dutch theoretical physicist who shared the 1902 Nobel Prize in Physics with Pieter Zeeman for their
+discovery and theoretical explanation of the <i>Zeeman effect</i>. He derived the Lorentz transformation of
+the special theory of relativity, as well as the Lorentz force.</span></span></span></span>
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-33001r1"></mstyle>
+<mstyle mathvariant="bold">
+<mi>F</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>q</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(3.1)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">where <math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math> is the force
+acting on the charge (<math display="inline"><mstyle mathvariant="normal"><mi>N</mi></mstyle></math>),
+<math display="inline"><mi>q</mi></math> is the charge traveling
+in the field(s) (<math display="inline"><mstyle mathvariant="normal"><mi>C</mi></mstyle></math>),
+<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math> is the electric
+field (<math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>),
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> is the magnetic
+field (<math display="inline"><mstyle mathvariant="normal"><mi>T</mi></mstyle></math>) and
+<math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math> is the velocity of the particle
+relative to the magnetic field (<math display="inline"><mstyle mathvariant="normal"><mi>m</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>)
+</p><p class="noindent">Therefore, if we were to assume the charge is travelling in a <i>pure electric-field</i> system
+(<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>), the
+force is determined simply by the charge on the particle and the electric field: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-33002r2"></mstyle>
+<mstyle mathvariant="bold">
+<mi>F</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>q</mi><mstyle mathvariant="bold"><mi>E</mi></mstyle>
+</math></td><td class="eq-no">(3.2)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">As we can see from above, the force acts in the direction of
+<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>
+and is <b>independent</b> of any particle motion. However, in pure magnetic-field systems
+(<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>), the
+situation is somewhat more complex. Here the force is represented as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-33003r3"></mstyle>
+<mstyle mathvariant="bold">
+<mi>F</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>q</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(3.3)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">and is determined by the magnitude of the charge on the particle and the magnitude of the
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> field as well as the velocity
+of the <span class="margin-block">particle. <span class="margin-comment"><span class="ellipsis">[61]</span>
+<span class="sidenote">The <math display="inline"><mi>×</mi></math>
+operator here is called the <b>cross-product</b>.</span></span></span>
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Direction of the force is always <span class="alert">perpendicular</span> to the direction of both the particle
+motion and that of the magnetic field indicated by the vector cross product
+<math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></math> in <span> Eq.
+(<a href="#x14-33003r3">3.3</a>)
+</span> . </p></div></div>
+<div class="sidenote"> <span class="figure">
+<a id="x14-33004r2"></a>
+<figcaption class="caption"><span class="id">Figure 3.2: </span><span class="content">Right-hand   rule   for   determining   the   direction   magnetic-field   component   of   the   Lorentz   force
+<math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>q</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>. </span></figcaption>
+<img alt="PIC" src="figures/Electromechanic-Energy-Conversion/figures-1.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">In <span> Eq. (<a href="#x14-33003r3">3.3</a>)</span>  The magnitude of this cross product is equal to the product of the magnitudes of
+<math display="inline"><mi>v</mi></math> and
+<math display="inline"><mi>B</mi></math> and
+the sine of the angle between them: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle mathvariant="bold">
+<mi>v</mi></mstyle>
+<mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow class="mathinner"><mspace class="negthinspace" width="-0.17em"></mspace> <mrow><mo fence="true" form="prefix">|</mo><mrow><mi>v</mi></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mrow class="mathinner"><mspace class="negthinspace" width="-0.17em"></mspace> <mrow><mo fence="true" form="prefix">|</mo><mrow><mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">with its direction can be found from the <span class="alert">right-hand rule</span>, which states that
+</p>
+<div class="quote">  when the thumb of the right hand points in the direction of
+<math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math> and the index finger
+points in the direction of <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>,
+the force, which is <b>perpendicular to the directions</b> of both
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>, points
+in the direction normal to the palm of the hand, </div>
+<p class="noindent">as shown in <b>Fig.</b> <a href="#x14-33004r2">3.2</a>.
+</p><p class="noindent">For situations where large numbers of charged particles are in motion, we can rewrite <span> Eq. (<a href="#x14-33001r1">3.1</a>)</span>  in terms of
+the <span class="alert">charge density</span> <math display="inline"><mi>ρ</mi></math>
+(<math display="inline"><mstyle mathvariant="normal"><mi>C</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math>) <span class="margin-block">as:
+<span class="margin-comment"><span class="ellipsis">[62]</span>
+<span class="sidenote">These terms and their mathematical underpinnings will be discussed in sufficient detail in the course
+<b>M.Sc Electrodynamics</b>.</span></span></span>
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-33005r4"></mstyle><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>F</mi></mstyle>
+</mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">v</mtext></mstyle></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>ρ</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(3.4)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">where the subscript <math display="inline"><mi>v</mi></math>
+indicates <math display="inline"><msub><mrow><mstyle mathvariant="bold"><mi>F</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">v</mtext></mstyle></mrow></msub></math> is a <span class="alert">force density</span>
+(<math display="inline"><mstyle mathvariant="normal"><mi>N</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math>). A final terminology to
+consider is the product <math display="inline"><mi>ρ</mi><mi>v</mi></math>
+is known as the <span class="alert">current density</span> (<math display="inline"><mstyle mathvariant="normal"><mi>A</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math>).
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-33006r5"></mstyle>
+<mstyle mathvariant="bold">
+<mi>J</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>ρ</mi><mstyle mathvariant="bold"><mi>v</mi></mstyle>
+</math></td><td class="eq-no">(3.5)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The magnetic-system force density corresponding to <span> Eq. (<a href="#x14-33003r3">3.3</a>)</span>  can then be written as:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-33007r6"></mstyle><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>F</mi></mstyle>
+</mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">v</mtext></mstyle></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>J</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle>
+</math></td><td class="eq-no">(3.6)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">For currents flowing in conducting media, <span> Eq. (<a href="#x14-33007r6">3.6</a>)</span>  can be used to find the force density acting on the
+material itself.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Considerable amount of physics is <span class="alert">hidden in this seemingly simple statemen</span>t, as the mechanism by which the force is transferred from the
+moving charges to the conducting medium is a complex one. </p></div></div>
+<div class="info-block" id="info-block-3.14"> <a class="copiable-link" href="#info-block-3.14"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 3.<a id="x14-33008r14"></a>14: </b> </span> <span class="info-title"> Limits on the Method </span> </span> <div class="body">
+<p class="noindent">For situations in which the forces act only on current-carrying elements and which are of simple
+geometry, <span> Eq. (<a href="#x14-33007r6">3.6</a>)</span>  is generally the simplest and easiest way to calculate the forces acting on
+the system. Unfortunately, very few practical situations fall into this class. </p>
+<hr/>
+<p class="noindent"> 
+In fact, most
+electromechanical-energy-conversion devices contain magnetic material where forces act <span class="alert">directly</span> on the
+magnetic material and clearly cannot be calculated from <span> Eq. (<a href="#x14-33007r6">3.6</a>)</span>
+</p>
+</div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.1.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.3.1.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.1.1</span> <span class="title"> <a id="x14-340003.1.1"></a>The Theory of Energy Balance</span></h4></div>
+</p><p class="noindent">Unfortunately, as with everything which is more than an abstract imaginary ball in the land of
+theory, the techniques for calculating the detailed, localised forces acting in systems with
+magnetic materials are <span class="alert">extremely complex</span> and require detailed knowledge of the field distribution throughout the
+<span class="margin-block">structure. <span class="margin-comment"><span class="ellipsis">[63]</span>
+<span class="sidenote">Solutions may not provide closed form descriptions and for complex geometries,
+it is better to use <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:fem">FEM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:fem">Finite Element Method</a></span><span class="acronym-desc"><a class="glossary" href="#glo:fem">A popular numerical technique for solving
+differential equations in engineering and physics, breaking complex shapes into simpler
+elements, and turning continuous problems into algebraic equations.</a></span></span></span> software to deal with
+them.</span></span></span>
+</p><p class="noindent">Fortunately, most electro-mechanical energy conversion devices are constructed of <b>rigid</b>,
+<b>non-deforming</b> structures.
+</p><p class="noindent">The performance of these devices is typically determined by the net force, or torque, acting on the
+moving component and it is rarely necessary to calculate the details of the internal force
+distribution.
+</p>
+<div class="quote"> For example, in a carefully designed motor, the motor characteristics are determined by the net
+accelerating torque acting on the rotor. Accompanying forces, such as the forces which squash or
+deform the rotor, does <b>NOT</b> have a significant role in the performance of the motor and generally are
+not calculated. </div>
+<p class="noindent">Under these assumption and the simplification, to understand the behaviour of rotating machinery, a
+simple physical picture is quite useful.
+</p><p class="noindent">To start simple, we assume both the rotor and stator have their <b>own</b> magnetic <span class="margin-block">field <span class="margin-comment"><span class="ellipsis">[64]</span>
+<span class="sidenote">produced in many
+machines by currents in windings on the rotor, or through <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from
+a material that is magnetized and creates its own persistent magnetic field</a></span></span></span>s.</span></span></span> and similarly with the
+stator:
+</p>
+<div class="quote"> We can picture them as a set of north and south magnetic poles associated with each structure.
+</div>
+<p class="noindent">Just as a compass needle tries to align with the earth’s magnetic field, these two (<span class="alert">2</span>) sets of <span class="margin-block">fields <span class="margin-comment"><span class="ellipsis">[65]</span>
+<span class="sidenote">To
+reiterate, these fields are rotor, and stator respectively.</span></span></span> attempt to align, and <b>torque is associated
+with their displacement from alignment</b>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">In a motor, the stator magnetic field rotates <span class="alert">ahead</span> of that of the rotor, pulling on it and performing work,
+whereas the <span class="alert">opposite is true for a generator</span>, in which the rotor does work on the stator. </p></div></div>
+<p class="noindent">We begin formalizing, we start with the principle of <span class="alert">conservation of energy</span> and describe it using the following
+theory:
+</p>
+<div class="theo-block" id="theo-block-3.1"> <a class="copiable-link" href="#theo-block-3.1"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory 3.<a id="x14-34001r1"></a>1: </b> </span> <span class="theo-title"> Conservation of Energy </span> </span> <div class="body">
+<p class="noindent">Energy is neither created nor destroyed as it merely changes in form <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a id="x14-34002"></a>Feynman, R. P.
+et al. The feynman lectures on physics; vol. i. American Journal of Physics <b>33</b><b>,</b> 750–752
+(1965)</span></span>.
+</p>
+</div> </div>
+<p class="noindent">For isolated systems with clearly identifiable boundaries, this fact permits us to keep track of energy in
+a simple fashion:
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The net flow of energy into the system across its boundary is equal to the sum of the time rate of
+change of energy stored in the system. </p></div></div>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-7"> <a id="x14-35000"></a>The Energy Method</h5>
+</p><p class="noindent">The technique for calculating forces and torques in the electromechanical energy-conversion
+process is known as the <span class="alert">energy method</span> and is based on the principle of conservation of energy. This result,
+which is a statement of the <b>first law of thermodynamics</b>, is quite general and allow us to
+apply to electro-mechanical systems whose predominant energy-storage mechanism is in
+<span class="alert">magnetic fields</span>.
+</p><p class="noindent">In these systems, we can account for energy transfer as:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-35001r7"></mstyle>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>Energy input</mtext></mstyle> </mtd>
+</mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>from electric</mtext></mstyle> </mtd></mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>sources</mtext></mstyle></mtd></mtr></mtable>
+</mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow><mo fence="true" form="prefix">(</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>Mechanical</mtext></mstyle> </mtd></mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>energy</mtext></mstyle></mtd>
+</mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>output</mtext></mstyle> </mtd>
+</mtr>
+</mtable> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-bin" stretchy="false">+</mo> <mrow><mo fence="true" form="prefix">(</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>Increase in energy</mtext></mstyle> </mtd>
+</mtr><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>stored in magnetic</mtext></mstyle> </mtd>
+</mtr>
+<mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>field</mtext></mstyle> </mtd>
+</mtr>
+</mtable> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-bin" stretchy="false">+</mo> <mrow><mo fence="true" form="prefix">(</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>Energy</mtext></mstyle> </mtd>
+</mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>converted</mtext></mstyle> </mtd></mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mstyle class="text"><mtext>into heat</mtext></mstyle></mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">)</mo></mrow>
+</math></td><td class="eq-no">(3.7)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent"><span> Eq. (<a href="#x14-35001r7">3.7</a>)</span> is written so, for a motor, both the electric and mechanical energy terms have
+positive values, and in case of a generator, both the terms have negative values. Either
+case, the heat generation within the system results in a flow of thermal energy <b>out</b> of the
+system.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x14-35002r3"></a>
+<figcaption class="caption"><span class="id">Figure 3.3: 
+         </span><span class="content">(a)  Schematic  magnetic-field  electromechanical-energy-conversion  device;  (b)  simple  force-producing
+         device.                                                                  </span></figcaption>
+<img alt="PIC" src="figures/Electromechanic-Energy-Conversion/figures-2.png" style=""/>
+</figure>
+<p class="noindent">In the systems which we consider in this chapter, the conversion of energy into heat occurs by the
+following mechanisms: </p>
+<dl class="description"><dt class="description"><a id="x14-35003x"></a>
+<span style="color:#1C2E4A;">Ohmic heating</span>
+</dt><dd class="description">
+<p class="noindent"> Caused by current flow in the windings of the electric terminals.
+</p>
+</dd>
+<dt class="description"><a id="x14-35004x"></a>
+<span style="color:#1C2E4A;">Mechanical friction</span>
+</dt><dd class="description">
+<p class="noindent">Caused the motion of components forming the mechanical terminals.</p></dd></dl>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">For electromechanical system, it is <span class="alert">generally possible to mathematically separate</span> these loss mechanisms from the energy-storage mechanism.
+</p></div></div>
+<p class="noindent">In such cases, the interaction between the electric and mechanical <span class="margin-block">terminals, <span class="margin-comment"><span class="ellipsis">[66]</span>
+<span class="sidenote">i.e., the electromechanical
+energy conversion.</span></span></span> occurs through the medium of the magnetic stored energy and the device can be
+represented as a <b>lossless energy-storage system</b> with electric and mechanical terminals as shown in
+<b>Fig.</b> <a href="#x14-35002r3">3.3</a>a.
+</p><p class="noindent">In systems which can be modelled in this fashion, loss mechanisms can be represented by external
+elements connected to these terminals: </p><div class="quote">  Resistances to the electric terminals, and mechanical dampers
+to the mechanical terminals, and the losses do <b>NOT</b> need to be considered in calculations involving
+the electromechanical-energy-conversion process. </div>
+<p class="noindent"><b>Fig.</b> <a href="#x14-35002r3">3.3</a>b shows an example of such a system: </p><div class="quote">  Here we see a simple force-producing device with a
+single coil forming the electric terminal, and a movable plunger serving as the mechanical terminal.
+</div>
+<p class="noindent"><b>Fig.</b> <a href="#x14-35002r3">3.3</a>a can be readily generalised to situations with any number of electric or mechanical
+terminals.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent"><b>Fig.</b> <a href="#x14-35002r3">3.3</a>a represents a system in which there is stored magnetic energy and the magnetic field serves as
+the coupling medium between the electric and mechanical terminals. </p></div></div>
+<p class="noindent">This train of thought can be applied equally well to a system with stored electric energy. The
+ability to identify a lossless-energy-storage system is the essential idea of the energy method
+and is important to recognise that this is done mathematically as part of the modeling
+process.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">It is <b>NOT</b> possible, to take the resistance out of windings or the friction out of bearings. Instead we
+are making use of the fact that a model in which this is done is a valid representation of the physical
+system. </p></div></div>
+<p class="noindent">For a lossless energy-storage system, <span> Eq. (<a href="#x14-35001r7">3.7</a>)</span>  can be written as:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-35005r8"></mstyle>
+<msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">elec</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">mech</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow><mstyle class="text"><mtext>d</mtext></mstyle>
+<msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle> <mi>t</mi></mrow></mfrac></mstyle>
+</math></td><td class="eq-no">(3.8)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">elec</mtext></mstyle></mrow></msub></math> is the electric
+input power (<math display="inline"><mstyle mathvariant="normal"><mi>W</mi></mstyle></math>),
+<math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">mech</mtext></mstyle></mrow></msub></math> is the mechanical
+output power (<math display="inline"><mstyle mathvariant="normal"><mi>W</mi></mstyle></math>)
+and <math display="inline"><mi>d</mi><mi>y</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><mi>x</mi><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub><mi>t</mi></math>
+is the rate-of-change of the magnetic stored energy with respect to time
+(<math display="inline"><mstyle mathvariant="normal"><mi>W</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>).
+</p><p class="noindent">As can be seen in <b>Fig.</b> <a href="#x14-35002r3">3.3</a>a, on the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:lhs">LHS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:lhs">Left Hand Side</a></span><span class="acronym-desc"><a class="glossary" href="#glo:lhs">Left Hand Side</a></span></span></span>, the electric terminal has two
+(<span class="alert">2</span>) terminal variables, </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">a voltage source (<math display="inline"><mi>e</mi></math>),
+and
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">a flowing current (<math display="inline"><mi>i</mi></math>),</p></li></ul>
+<p class="noindent">whereas on the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:rhs">RHS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:rhs">Right Hand Side</a></span><span class="acronym-desc"><a class="glossary" href="#glo:rhs">Right Hand Side</a></span></span></span>, the mechanical terminal, also has two
+(<span class="alert">2</span>) terminal variables: </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">a force (<math display="inline"><msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub></math>),
+and
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">a position (<math display="inline"><mi>x</mi></math>).</p></li></ul>
+<p class="noindent">The electrical input power (<math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">elec</mtext></mstyle></mrow></msub></math>) can be
+written as the <b>product</b> of the voltage <math display="inline"><mi>e</mi></math>
+and the current <math display="inline"><mi>i</mi></math>:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-35006r9"></mstyle>
+<msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">elec</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow><mstyle class="text"><mtext>d</mtext></mstyle>
+<msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">elec</mtext></mstyle></mrow></msub>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle> <mi>t</mi></mrow></mfrac></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>e</mi><mi>i</mi><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(3.9)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">and the mechanical output power can be written as the product of the force
+<math display="inline"><msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub></math> and the <span class="margin-block">velocity <span class="margin-comment"><span class="ellipsis">[67]</span>
+<span class="sidenote">the time
+derivative of the position <math display="inline"><mi>x</mi></math>.</span></span></span>
+as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-35007r10"></mstyle>
+<msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">mech</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub><mstyle displaystyle="true"><mfrac><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>t</mi> </mrow></mfrac></mstyle>
+</math></td><td class="eq-no">(3.10)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Re-arranging <span> Eq. (<a href="#x14-35005r8">3.8</a>)</span>  and substituting <span> Eq. (<a href="#x14-35006r9">3.9</a>)</span>  and <span> Eq. (<a href="#x14-35007r10">3.10</a>)</span>  gives: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-35008r11"></mstyle>
+<mstyle displaystyle="true"><mfrac><mrow><mstyle class="text"><mtext>d</mtext></mstyle>
+<msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle> <mi>t</mi></mrow></mfrac></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">elec</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">mech</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>e</mi><mi>i</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub><mstyle displaystyle="true"><mfrac><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>t</mi> </mrow></mfrac></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(3.11)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">For a magnetic-energy-storage system, the electrical terminal typically represents a winding
+such as that shown in <b>Fig.</b> <a href="#x14-35002r3">3.3</a>b. Recognising that, from <span> Eq. (<a href="FluxLinkageInductanceandEnergy.html#x5-5003r22">1.22</a>)</span> , the voltage at the
+terminals of a lossless winding is given by the time-derivative of the winding flux linkages:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-35009r12"></mstyle>
+<mi>e</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>λ</mi>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>t</mi> </mrow></mfrac></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(3.12)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Substitution into <span> Eq. (<a href="#x14-35008r11">3.11</a>)</span>   and multiplying by
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>t</mi></math> gives
+us a useful relation:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-35010r13"></mstyle>
+<mi>d</mi><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>i</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>λ</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi>
+</math></td><td class="eq-no">(3.13)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">As we shall see later, <span> Eq. (<a href="#x14-35010r13">3.13</a>)</span>  permits us to solve for the force simply as a function of the flux linkage
+<math display="inline"><mi>λ</mi></math> and the mechanical
+terminal position <math display="inline"><mi>x</mi></math>.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">This result comes about as a consequence of our assumption that it is possible to separate the losses
+out of the physical problem, resulting in a lossless energy-storage system, as in <b>Fig.</b> <a href="#x14-35002r3">3.3</a>a.
+</p></div></div>
+<p class="noindent"><span> Eq. (<a href="#x14-35008r11">3.11</a>)</span> and <span> Eq. (<a href="#x14-35010r13">3.13</a>)</span>  form the basis for the energy method. This technique is quite powerful in
+its ability to calculate forces and torques in complex electromechanical-energy-conversion
+systems.
+</p>
+<div class="info-block" id="info-block-3.15"> <a class="copiable-link" href="#info-block-3.15"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 3.<a id="x14-35011r15"></a>15: </b> </span> <span class="info-title"> The Cost of Abstraction </span> </span> <div class="body">
+<p class="noindent">This powerful technique comes at the expense of a detailed picture of the force-producing mechanism as
+the method merely <b>abstracts</b> the forces as the forces themselves are produced by such
+well-known physical phenomena as the Lorentz force on current carrying elements, described
+by <span> Eq. (<a href="#x14-33007r6">3.6</a>)</span> , and the interaction of the magnetic fields with the dipoles in the magnetic
+material.
+</p>
+</div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.1.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.3.1.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.1.2</span> <span class="title"> <a id="x14-360003.1.2"></a>Energy in a Singly Excited Magnetic Circuit</span></h4></div>
+</p><p class="noindent">Previously we focused mostly with <b>fixed-geometry magnetic circuits</b> such as those used for
+transformers and inductors. Energy in those devices is stored in the <span class="alert">leakage fields</span> and to some extent in the core
+<span class="margin-block"><span class="margin"><span>itself. <span class="ellipsis">[68]</span></span><span class="sidenote"><span class="sidenote-image"> <img alt="PIC" src="figures/Electromechanic-Energy-Conversion/vector/fringe-flux-.png" style=""/></span><span class="sidenote-text"><span class="ellipsis">[68]</span>To reiterate, leakage flux is flux which does not flow through the chosen material but
+through other unwanted environments. In the image above any dots you see which is not within the
+material is considered leakage flux.</span></span></span></span>
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">In those circuits, the stored energy does <b>NOT</b> enter directly into the transformation process.
+</p></div></div>
+<p class="noindent">In this chapter we are dealing with energy-conversion systems where:
+</p>
+<div class="quote"> The magnetic circuits have <span class="alert">air gaps</span> between the stationary and moving members in which considerable
+energy is stored in the magnetic field. </div>
+<p class="noindent">This field acts as the energy-conversion medium, and its energy is the <span class="alert">reservoir between the electric and mechanical systems</span>. To get a better
+understanding of the above description, consider the electromagnetic relay shown schematically in
+<b>Fig.</b> <a href="#x14-36001r4">3.4</a>.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x14-36001r4"></a>
+<figcaption class="caption"><span class="id">Figure 3.4: </span><span class="content">An example of an electromagnetic relay.                                            </span></figcaption>
+<img alt="PIC" src="figures/Electromechanic-Energy-Conversion/figures-4.png" style=""/>
+</figure>
+<p class="noindent">The resistance of the excitation coil is shown as an external resistance
+(<math display="inline"><mi>R</mi></math>)
+and the mechanical terminal variables are shown as a force
+(<math display="inline"><msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub></math>) produced
+by the magnetic field directed from the relay to the external mechanical system and a displacement
+(<math display="inline"><mi>x</mi></math>).
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Mechanical losses can be included as external elements connected to the mechanical terminal..
+</p></div></div>
+<p class="noindent">Similarly, the moving armature is shown as being <b>massless</b>, its mass represents mechanical energy
+storage and can be included as an external mass connected to the mechanical terminal. As a result, the
+magnetic core and armature constitute a lossless magnetic-energy-storage system as is represented
+schematically in <b>Fig.</b> <a href="#x14-35002r3">3.3</a>a.
+</p><p class="noindent">This relay structure is essentially the same as the magnetic structures we looked in <span class="refclass-ref"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits
+and Materials</a></span> in which we saw that the magnetic circuit of <b>Fig.</b> <a href="#x14-36001r4">3.4</a> can be described by an inductance
+(<math display="inline"><mi>L</mi></math>)
+which is a function of the geometry of the magnetic structure and the magnetic permeabilities of the
+various system components.
+</p><p class="noindent"><span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:eec">EEC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:eec">Electromechanical Energy Conversion</a></span><span class="acronym-desc"><a class="glossary" href="#glo:eec">The process of changing electrical energy into mechanical
+energy, or mechanical energy into electrical energy, using a magnetic field as a coupling medium</a></span></span></span> devices
+contain air gaps in their magnetic circuits to separate the moving parts and, as discussed in <span class="refclass-ref"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic
+Circuits and Materials</a></span>, in most such cases the reluctance of the air gap is much larger than
+that of the magnetic material. Therefore the predominant energy storage occurs in the air
+gap, and the properties of the magnetic circuit are determined by the dimensions of the air
+gap.
+Due to the simplicity of the resulting relations, magnetic non-linearity and core losses are often
+<b>neglected</b> in the analysis of practical devices. The final results of such approximate analyses can, if
+necessary, be corrected for the effects of these neglected factors by semi-empirical methods.
+Consequently, analyses are carried out under the assumption that the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The
+magnetic pressure which drives magnetic flux in a magnetic circuit, and is the work done
+to move a unit magnetic pole.</a></span></span></span> and flux are directly proportional for the entire magnetic
+circuit.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Therefore the flux linkages (<math display="inline"><mi>λ</mi></math>)
+and current (<math display="inline"><mi>i</mi></math>)
+are considered to be <b>linearly related</b> by an inductance which depends solely on the geometry and hence on the
+armature position (<math display="inline"><mi>x</mi></math>).
+</p></div></div>
+<table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-36002r14"></mstyle>
+<mi>λ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>i</mi>
+</math></td><td class="eq-no">(3.14)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where it can be seen that the inductance (<math display="inline"><mi>L</mi></math>)
+is <b>dependent</b> on <math display="inline"><mi>x</mi></math>.
+Given that the magnetic energy storage system is <span class="alert">lossless</span>, we can state the system is a <span class="alert">conservative system</span> and therefore the value of
+<math display="inline"><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub></math> is <b>uniquely specified</b>
+by the values of both <math display="inline"><mi>λ</mi></math>
+and <math display="inline"><mi>x</mi></math>.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent"><math display="inline"><mi>λ</mi></math> and
+<math display="inline"><mi>x</mi></math> are
+therefore referred to as <b>state variables</b> given their values uniquely determine the state of the system.
+</p></div></div>
+<p class="noindent">Given the magnetic force <math display="inline"><msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub></math>
+has been defined as acting from the relay upon the external mechanical system,
+<math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">mech</mtext></mstyle></mrow></msub></math> is
+defined as the mechanical energy output of the relay. To revisit an equation we have just
+derived:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-36003r15"></mstyle>
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>λ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>λ</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(3.15)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">we see the stored energy (<math display="inline"><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub></math>) being
+<b>uniquely</b> determined by the values of <math display="inline"><mi>λ</mi></math>
+and <math display="inline"><mi>x</mi></math>, is the same
+regardless of how <math display="inline"><mi>λ</mi></math>
+and <math display="inline"><mi>x</mi></math> are
+brought to their final values.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x14-36004r5"></a>
+<figcaption class="caption"><span class="id">Figure 3.5: </span><span class="content">Integration paths for <math display="inline"><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub></math>.</span></figcaption>
+<img alt="PIC" src="figures/Electromechanic-Energy-Conversion/figures-5.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">Consider <b>Fig.</b> <a href="#x14-36004r5">3.5</a>, in which two (<span class="alert">2</span>) separate paths are shown over which <span> Eq. (<a href="#x14-36003r15">3.15</a>)</span>  can be integrated to
+find <math display="inline"><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub></math> at the
+point (<math display="inline"><msub><mrow><mi>λ</mi></mrow><mrow><mn>0</mn></mrow></msub></math>,
+<math display="inline"><msub><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow></msub></math>).
+</p>
+<dl class="description"><dt class="description"><a id="x14-36005x3.1.2"></a>
+<span style="color:#1C2E4A;">Path 1</span>
+</dt><dd class="description">
+<p class="noindent"> The general case and is difficult to integrate unless both <math display="inline"><mi>i</mi></math>
+and <math display="inline"><msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub></math>
+are known explicitly as a function of <math display="inline"><mi>λ</mi></math>
+and <math display="inline"><mi>x</mi></math>.
+</p>
+</dd>
+<dt class="description"><a id="x14-36006x3.1.2"></a>
+<span style="color:#1C2E4A;">Path 2</span>
+</dt><dd class="description">
+<p class="noindent"> gives the same result and is much easier to integrate as the integration of <span> Eq. (<a href="#x14-36003r15">3.15</a>)</span>  is
+path independent,</p></dd></dl>
+<p class="noindent">From <span> Eq. (<a href="#x14-36003r15">3.15</a>)</span>  we see that: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-36007r16"></mstyle>
+<msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>λ</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo><munder class="msub"><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle class="text"><mtext>Path 2a</mtext></mstyle></mrow></munder><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><munder class="msub"><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle class="text"><mtext>Path 2b</mtext></mstyle></mrow></munder><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(3.16)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Please observe that on Path 2a, <math display="inline"><mi>d</mi><mi>λ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+and <math display="inline"><msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math><span class="margin-block">.
+<span class="margin-comment"><span class="ellipsis">[69]</span>
+<span class="sidenote">since <math display="inline"><mi>λ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+and there can be no magnetic force in the absence of magnetic fields.</span></span></span> Therefore from <span> Eq. (<a href="#x14-36003r15">3.15</a>)</span> ,
+<math display="inline"><mi>d</mi><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math> on Path 2a.
+On Path 2b, <math display="inline"><mi>d</mi><mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>,
+and, from <span> Eq. (<a href="#x14-36003r15">3.15</a>)</span> , <span> Eq. (<a href="#x14-36007r16">3.16</a>)</span>   reduces to the integral of
+<math display="inline"><mi>i</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>λ</mi></math> over Path 2b,
+for which <math display="inline"><mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow></msub></math>.
+Therefore we simplify the equation as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-36008r17"></mstyle>
+<msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mi>λ</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#FF0000;"><msubsup><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo><msup><menclose notation="updiagonalarrow"><mrow> <mn>0</mn></mrow></menclose><mrow><munder class="msub"><mrow><mo>∫
+ </mo></mrow><mrow><mstyle class="text"><mtext>Path 2a</mtext></mstyle></mrow></munder><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo><munder class="msub"><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle class="text"><mtext>Path 2b</mtext></mstyle></mrow></munder><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow><mo> ∫
+ </mo></mrow><mrow><mn>0</mn></mrow><mrow><msubsup><mrow><mi>λ</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup>
+</mrow></msubsup><mstyle style="color:#FF0000;"><mi>i</mi></mstyle><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mi>λ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#FF0000;"><msubsup><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>λ</mi>
+</math></td><td class="eq-no">(3.17)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">For a linear system in which <math display="inline"><mi>λ</mi></math>
+is proportional to <math display="inline"><mstyle style="color:#FF0000;"><mi>i</mi></mstyle></math>,
+as in <span> Eq. (<a href="#x14-36002r14">3.14</a>)</span> , <span> Eq. (<a href="#x14-36008r17">3.17</a>)</span>  gives </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-36009r18"></mstyle>
+<msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mi>λ</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-punc" stretchy="false">,</mo><mstyle style="color:#FF0000;"><msubsup><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow><mo> ∫
+ </mo></mrow><mrow><mn>0</mn></mrow><mrow><msubsup><mrow><mi>λ</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup>
+</mrow></msubsup><mi>i</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>λ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mstyle style="color:#FF0000;"><msubsup><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>λ</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow><mo> ∫
+ </mo></mrow><mrow><mn>0</mn></mrow><mrow><msubsup><mrow><mi>λ</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup>
+</mrow></msubsup> <mfrac>
+<mrow>
+<mi>λ</mi></mrow>
+<mrow>
+<mi>L</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle style="color:#FF0000;"><msubsup><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></mfrac><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>λ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mfrac><mrow><msubsup><mrow><mi>λ</mi></mrow><mrow><mn>0</mn></mrow><mrow><mn>2</mn></mrow></msubsup></mrow>
+<mrow>
+<mi>L</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle style="color:#FF0000;"><msubsup><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow></mfrac>
+</math></td><td class="eq-no">(3.18)</td></tr></table>
+<p class="noindent"></p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Point <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mi>λ</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-punc" stretchy="false">,</mo><mstyle style="color:#FF0000;"><msubsup><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math> is arbitrary. The
+expression for <math display="inline"><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub></math> of <span> Eq. (<a href="#x14-36009r18">3.18</a>)</span>
+is valid for all points <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>λ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo></math>.
+</p></div></div>
+<p class="noindent">To emphasise this point, <span> Eq. (<a href="#x14-36009r18">3.18</a>)</span>  can be re-written as </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-36010r19"></mstyle>
+<msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>λ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mfrac><mrow><msup><mrow><mi>λ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mstyle style="color:#FF0000;"><mi>L</mi></mstyle><msup><mrow>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle style="color:#FF0000;"><mi>x</mi></mstyle>
+</mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mrow></mfrac>
+</math></td><td class="eq-no">(3.19)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">It can be shown, the magnetic stored energy can also be expressed in terms
+of the energy density of the magnetic field integrated over the volume
+<math display="inline"><mstyle mathvariant="script"><mi>V</mi> </mstyle></math> of the
+magnetic field.
+</p><p class="noindent">In this case </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-36011r20"></mstyle>
+<msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mo>∫
+ </mo></mrow><mrow><mn>0</mn></mrow><mrow><mi>B</mi></mrow></msubsup><mstyle mathvariant="bold"><mi>H</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msup><mrow><mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mrow><mi>B</mi></mrow></msup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle style="color:#FF0000;"><mi>V</mi> </mstyle>
+</math></td><td class="eq-no">(3.20)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">For soft magnetic material of constant permeability
+(<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>μ</mi><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>), this
+reduces to </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-36012r21"></mstyle>
+<msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fld</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></msub> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac>
+<mrow>
+<msup><mrow><mi>B</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mn>2</mn><mi>μ</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow><mi>d</mi><mi>V</mi>
+</math></td><td class="eq-no">(3.21)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">In this section we have seen the relationship between the magnetic stored energy and the electric
+and mechanical terminal variables for a system which can be represented in terms of a
+lossless-magnetic-energy-storage element.
+</p><p class="noindent">If we had chosen for our example a device with a rotating mechanical terminal instead of a linearly
+displacing one, the results would have been identical except that force would be replaced by torque and
+linear displacement by angular displacement.
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:mmf">¶</a>
+<dt class="acr-bottom" id="glo:mmf"><span class="acr-short">MMF</span><span class="acr-long">Magneto-motive Force</span></dt>
+<dd class="acr-desc"><p>The
+magnetic pressure which drives magnetic flux in a magnetic circuit, and is the work done
+to move a unit magnetic pole.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:eec">¶</a>
+<dt class="acr-bottom" id="glo:eec"><span class="acr-short">EEC</span><span class="acr-long">Electromechanical Energy Conversion</span></dt>
+<dd class="acr-desc"><p>The process of changing electrical energy into mechanical
+energy, or mechanical energy into electrical energy, using a magnetic field as a coupling medium</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:rhs">¶</a>
+<dt class="acr-bottom" id="glo:rhs"><span class="acr-short">RHS</span><span class="acr-long">Right Hand Side</span></dt>
+<dd class="acr-desc"><p>Right Hand Side</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:lhs">¶</a>
+<dt class="acr-bottom" id="glo:lhs"><span class="acr-short">LHS</span><span class="acr-long">Left Hand Side</span></dt>
+<dd class="acr-desc"><p>Left Hand Side</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:pm">¶</a>
+<dt class="acr-bottom" id="glo:pm"><span class="acr-short">PM</span><span class="acr-long">Permanent Magnet</span></dt>
+<dd class="acr-desc"><p>An object made from
+a material that is magnetized and creates its own persistent magnetic field</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:fem">¶</a>
+<dt class="acr-bottom" id="glo:fem"><span class="acr-short">FEM</span><span class="acr-long">Finite Element Method</span></dt>
+<dd class="acr-desc"><p>A popular numerical technique for solving
+differential equations in engineering and physics, breaking complex shapes into simpler
+elements, and turning continuous problems into algebraic equations.</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="DeterminingForceandTorquefromEnergy.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="ElectromechanicEnergyConversion.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="ElectromechanicEnergyConversion.html#ForcesandTorqueunderMagneticField.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 3.1: Forces and Torque under Magnetic Field</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

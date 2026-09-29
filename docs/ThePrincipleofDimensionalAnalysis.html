@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>The Principle of Dimensional Analysis</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Dimensional Analysis</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><span class="nav-link"></span></span> <span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="PhysicalQuantitiesandEquations.html">Physical Quantities and Equations</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="DimensionalAnalysis.html#ThePrincipleofDimensionalAnalysis.html">Chapter: Dimensional
+Analysis</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-B.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.B.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">B.2</span> <span class="title"> <a id="x43-152000B.2"></a>The Principle of
+Dimensional Analysis</span></h3></div>
+<p class="noindent">This chapter introduces the procedure of dimensional analysis and describes <span class="margin-block"><span class="margin"><span>Buckingham’s <span class="ellipsis">[258]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Dimensional-Analysis/raster/portrait-buckingham.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[258]</span><b>Edgar Buckingham</b>
+<i>(1867  - 1940)</i>
+was an American physicist. He graduated from Harvard University with a B.Sc in physics in 1887. He
+did graduate work at Strasbourg and then studied under the chemist <i>Wilhelm Ostwald</i> at Leipzig, from
+which he was granted a Ph.D in 1893. He worked as a soil physicist at the USDA Bureau of Soils from
+1902 to 1906. He worked at the (US) National Bureau of Standards (NIST) 19061937. His fields of
+expertise included soil physics, gas properties, acoustics, fluid mechanics, and blackbody radiation.
+He is also the originator of the Buckingham  theorem in the field of dimensional analysis.</span></span></span></span>
+<math display="inline"><mi mathvariant="normal">Π</mi></math>-theorem,
+which follows from it. We will start with laying down the procedure in general terms and defines the
+vocabulary followed by an example. Finally we will discuss the utility of dimensional analysis and some
+of the pitfalls and questions that arise in its application to real problems.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-B.2.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.B.2.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">B.2.1</span> <span class="title"> <a id="x43-153000B.2.1"></a>The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi mathvariant="normal">Π</mi></math>-theorem</span></h4></div>
+</p><p class="noindent">The premise of dimensional analysis is that the form of any physically significant equation
+must be such that the relationship between the actual physical quantities remains valid
+<span class="alert">independent the magnitudes of the base units</span>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Dimensional analysis derives the logical consequences of this premise. </p></div></div>
+<p class="noindent">Suppose we are interested in some particular physical quantity
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>0</mn></mrow></msub></math> that is
+a <b>dependent variable</b> in a well defined physical process or event. By this we mean that,
+once all the quantities that define the particular process or event are specified, the value of
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>0</mn></mrow></msub></math> follows
+uniquely.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-25"> <a id="x43-154000"></a>Step 1: The independent variables</h5>
+</p><p class="noindent">The first and most important step in dimensional analysis is to identify a complete set of independent quantities
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math> that determine
+the value of <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>0</mn></mrow></msub></math>,
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-154001r24"></mstyle>
+<msub><mrow><mi>Q</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(B.24)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">A set <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math>
+is <span class="alert">complete</span> if, once the values of the members are specified, no other quantity can affect the value of
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>0</mn></mrow></msub></math>, and <span class="alert">independent</span> if
+the value of each member can be adjusted arbitrarily without affecting the value of any other
+member.
+</p><p class="noindent">Starting with a correct set <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math>
+is as important in dimensional analysis as it is in mathematical physics to start with the correct
+fundamental equations and boundary conditions.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">If the starting point is wrong, so is the answer. </p></div></div>
+<p class="noindent">The relationship expressed symbolically in Eq. (<a href="#x43-154001r24">B.24</a>) is the result of the physical laws which govern the
+phenomenon of interest. It is our premise that its form must be such that, once the values
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math> are
+specified, the equality holds regardless of the sizes of the base units in terms of which the quantities are
+measured. The steps that follow derive the consequences of this premise.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-26"> <a id="x43-155000"></a>Step 2: Dimensional considerations</h5>
+</p><p class="noindent">Next we list the dimensions of the dependent variable
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>0</mn></mrow></msub></math> and the independent
+variables <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math>.
+As we have discussed previously, the dimension of a quantity depends on the type of system of
+units (see table 2.2), and we must specify at least the type the system of units before we do
+this.
+</p><p class="noindent">For example, if we use a system of <b>Type 1</b> in table 2.2 and are dealing with a purely mechanical
+problem, all quantities have dimensions of the form </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-155001r25"></mstyle>
+<mrow><mo fence="true" form="prefix">[</mo><mrow><msub><mrow><mi>Q</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">i</mtext></mstyle></mrow></msub>
+</mrow><mo fence="true" form="postfix">]</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <msup><mrow><mi>L</mi></mrow><mrow><msub><mrow><mi>l</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">i</mtext></mstyle></mrow></msub></mrow></msup><msup><mrow><mi>M</mi></mrow><mrow><msub><mrow><mi>m</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">i</mtext></mstyle></mrow></msub></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><msub><mrow><mi>τ</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">i</mtext></mstyle></mrow></msub></mrow></msup>
+</math></td><td class="eq-no">(B.25)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where the exponents <math display="inline"><msub><mrow><mi>l</mi></mrow><mrow><mi>i</mi></mrow></msub></math>,
+<math display="inline"><msub><mrow><mi>m</mi></mrow><mrow><mi>i</mi></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>τ</mi></mrow><mrow><mi>i</mi></mrow></msub></math> are
+<i>dimensionless numbers</i> following from each quantity’s definition.
+</p><p class="noindent">We now pick from the complete set of physically independent variables
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math> a <b>complete</b>, <b>dimensionally
+independent subset</b> <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math>
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi> <mo class="MathClass-rel" stretchy="false">⩽</mo> <mi>n</mi><mo class="MathClass-close" stretchy="false">)</mo></math>,
+and express the dimension of each of the remaining independent variables
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi><mo class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math> and the dependent
+variable <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>0</mn></mrow></msub></math> as a product
+of powers of <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math>.
+</p><p class="noindent">All physical quantities have dimensions which can be expressed as products of powers of the set of base
+dimensions. Alternatively, it is possible to express the dimension of one quantity as a product of powers
+of the dimensions of other quantities which are not necessarily base quantities. A subset
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math> of the
+set <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math> is
+<b>dimensionally independent</b> if none of its members has a dimension that can be expressed in terms
+of the dimensions of the remaining members, and <b>complete</b> if the dimensions of all the remaining
+quantities <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi><mo class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math>
+of the full set <span class="alert">can</span> be expressed in terms of the dimensions of the subset
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math>.
+</p><p class="noindent">Since Eq. (<a href="#x43-154001r24">B.24</a>) is dimensionally homogeneous, the dimension of the dependent variable
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>0</mn></mrow></msub></math> is also expressible in terms
+of the dimensions of <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math>
+</p><p class="noindent">The dimensionally independent subset <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math>
+is picked by trial and error. Its members may be picked in different ways, but the number
+<math display="inline"><mi>k</mi></math> of dimensionally independent
+quantities in the full set <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math>
+is unique to the set, and cannot exceed the number of base dimensions which appear
+in the dimensions the quantities in that set. </p><div class="quote">  For example, if the dimensions of
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math> involve only length,
+mass, and time, then <math display="inline"><mi>k</mi> <mo class="MathClass-rel" stretchy="false">⩽</mo> <mn>3</mn></math>.
+</div>
+<p class="noindent">Having chosen a complete, dimensionally independent subset
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math>, we express the dimensions
+of <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>0</mn></mrow></msub></math> and the remaining
+quantities <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi><mo class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math> in terms
+of the dimensions of <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math>.
+These will have the form </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-155002r26"></mstyle>
+<mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <msub><mrow><mi>Q</mi></mrow><mrow><mi>i</mi></mrow></msub> </mtd></mtr></mtable>
+</mrow><mo fence="true" form="postfix">]</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <msubsup><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow><mrow><msub><mrow><mi>N</mi></mrow><mrow><mi>i</mi><mn>1</mn></mrow></msub></mrow></msubsup><msubsup><mrow><mi>Q</mi></mrow><mrow><mn>2</mn></mrow><mrow><msub><mrow><mi>N</mi></mrow><mrow><mi>i</mi><mn>2</mn></mrow></msub></mrow></msubsup><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msubsup><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow><mrow><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ik</mtext></mstyle></mrow></msub></mrow></msubsup> </mtd>
+</mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow>
+</math></td><td class="eq-no">(B.26)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">if <math display="inline"><mi>i</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mi>k</mi></math> or
+<math display="inline"><mi>i</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>. The
+exponents <math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ij</mtext></mstyle></mrow></msub></math>
+are dimensionless real numbers and can in most cases be found quickly by inspection, although a formal
+algebraic method can be used.
+</p><p class="noindent">The formal procedure can be illustrated with an example where length, mass and time are the
+only base quantities, in which case all dimensions have the form of Eq. (<a href="#x43-155001r25">B.25</a>). Let us take
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub></math>,
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>2</mn></mrow></msub></math>, and
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>3</mn></mrow></msub></math> as the
+complete dimensionally independent subset. Equating the dimension given by Eq. (<a href="#x43-155001r25">B.25</a>) with that of
+Eq. 
+(<a href="#x43-155002r26">B.26</a>)
+, we obtain three (<span class="alert">3</span>) equations: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-155003r27"></mstyle>
+<msub><mrow><mi>l</mi></mrow><mrow><mi>i</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><munderover accent="false" accentunder="false"><mrow><mo> ∑</mo>
+</mrow><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mn>3</mn></mrow></munderover><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ij</mtext></mstyle></mrow></msub><msub><mrow><mi>l</mi></mrow><mrow>
+<mi>j</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>m</mi></mrow><mrow><mi>i</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><munderover accent="false" accentunder="false"><mrow><mo> ∑</mo>
+</mrow><mrow><mi>j</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mn>3</mn></mrow></munderover><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ij</mtext></mstyle></mrow></msub><msub><mrow><mi>m</mi></mrow><mrow>
+<mi>j</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>and</mtext></mstyle><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>t</mi></mrow><mrow><mi>i</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><munderover accent="false" accentunder="false"><mrow><mo> ∑</mo>
+</mrow><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mn>3</mn></mrow></munderover><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ij</mtext></mstyle></mrow></msub><msub><mrow><mi>t</mi></mrow><mrow>
+<mi>j</mi></mrow></msub>
+</math></td><td class="eq-no">(B.27)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">which can be solved for the three (<span class="alert">3</span>) unknowns
+<math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">il</mtext></mstyle></mrow></msub></math>,
+<math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mi>i</mi><mn>2</mn></mrow></msub></math>, and
+<math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mi>i</mi><mn>3</mn></mrow></msub></math>.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-27"> <a id="x43-156000"></a>Step 3: Dimensionless variables</h5>
+</p><p class="noindent">We now define dimensionless forms of the <math display="inline"><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>k</mi></math>
+remaining independent variables by dividing each one with the product of powers of
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math> which
+has the same dimension, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-156001r28"></mstyle>
+<msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mi>i</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi><mo class="MathClass-bin" stretchy="false">+</mo><mi>i</mi></mrow></msub></mrow>
+<mrow><msubsup><mrow>
+<mi>Q</mi></mrow><mrow><mi>i</mi></mrow><mrow><msub><mrow><mi>N</mi></mrow><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mo class="MathClass-bin" stretchy="false">+</mo><mi>i</mi><mo class="MathClass-close" stretchy="false">)</mo><mn>1</mn></mrow></msub></mrow></msubsup><msubsup><mrow><mi>Q</mi></mrow><mrow><mn>2</mn></mrow><mrow><msub><mrow><mi>N</mi></mrow><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mo class="MathClass-bin" stretchy="false">+</mo><mi>i</mi><mo class="MathClass-close" stretchy="false">)</mo><mn>2</mn></mrow></msub></mrow></msubsup><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msubsup><mrow><mi>Q</mi></mrow><mrow><mi>i</mi></mrow><mrow><msub><mrow><mi>N</mi></mrow><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mo class="MathClass-bin" stretchy="false">+</mo><mi>i</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>k</mi></mrow></msub></mrow></msubsup></mrow></mfrac><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(B.28)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>i</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo class="MathClass-punc" stretchy="false">,</mo><mn>2</mn><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>k</mi></math>, and a dimensionless
+form of the dependent variable <math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>0</mn></mrow></msub></math>,
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-156002r29"></mstyle>
+<msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>Q</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow><msubsup><mrow>
+<mi>Q</mi></mrow><mrow><mn>1</mn></mrow><mrow><msub><mrow><mi>N</mi></mrow><mrow><mn>0</mn><mn>1</mn></mrow></msub></mrow></msubsup><msubsup><mrow><mi>Q</mi></mrow><mrow><mn>2</mn></mrow><mrow><msub><mrow><mi>N</mi></mrow><mrow><mn>0</mn><mn>2</mn></mrow></msub></mrow></msubsup><mo>…</mo><msubsup><mrow><mi>Q</mi></mrow><mrow><mi>t</mi></mrow><mrow><msub><mrow><mi>N</mi></mrow><mrow><mn>0</mn><mi>k</mi></mrow></msub></mrow></msubsup></mrow></mfrac><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(B.29)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-28"> <a id="x43-157000"></a>Step  4:  The  End  Game  and  Buckingham’s
+<math display="inline"><mi mathvariant="normal">Π</mi></math>-theorem</h5>
+</p><p class="noindent">An alternative form of Eq. (<a href="#x43-154001r24">B.24</a>) is </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-157001r30"></mstyle>
+<msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">;</mo><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mi>n</mi><mo class="MathClass-bin" stretchy="false">−</mo><mi>k</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td><td class="eq-no">(B.30)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">in which all quantities are dimensionless except
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math>. The
+values of the dimensionless quantities are independent of the sizes of the base units. The values of
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math>, on the
+other hand, do depend on base unit size. They cannot be put into dimensionless form since they are ,by
+definition, dimensionally independent of each other.
+</p><p class="noindent">From the principle that any physically meaningful equation must be dimensionally
+homogeneous, that is, valid independent of the sizes of the base units, it follows that
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>k</mi></mrow></msub></math> must
+in fact be absent from Eq. (<a href="#x43-157001r30">B.30</a>), that is, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-157002r31"></mstyle>
+<msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo class="MathClass-punc" stretchy="false">.</mo><mo class="MathClass-punc" stretchy="false">.</mo><mo class="MathClass-punc" stretchy="false">.</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mi>n</mi><mo class="MathClass-bin" stretchy="false">−</mo><mi>k</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td><td class="eq-no">(B.31)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This equation is the final result of the dimensional analysis, and contains Buckingham’s
+<math display="inline"><mi mathvariant="normal">Π</mi></math>-Theorem:
+</p>
+<div class="theo-block" id="theo-block-B.5"> <a class="copiable-link" href="#theo-block-B.5"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory B.<a id="x43-157003r5"></a>5: </b> </span> <span class="theo-title"> Buckingham’s <math display="inline"><mi mathvariant="normal">Π</mi></math>-Theorem-I
+</span> </span> <div class="body">
+<p class="noindent">When a complete relationship between dimensional physical quantities is expressed in dimensionless
+form, the number of independent quantities that appear in it is reduced from the original
+<math display="inline"><mi>n</mi></math> to
+<math display="inline"><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>k</mi></math>, where
+<math display="inline"><mi>k</mi></math> is the maximum
+number of the original <math display="inline"><mi>n</mi></math>
+that are dimensionally independent.
+</p>
+</div> </div>
+<p class="noindent">The theorem derives its name from Buckingham’s use of the symbol
+<math display="inline"><mi mathvariant="normal">Π</mi></math>
+for the dimensionless variables in his original 1914 paper. The
+<math display="inline"><mi mathvariant="normal">Π</mi></math>-theorem tells
+us that, because all complete physical equations must be dimensionally homogeneous, a restatement of any
+such equation in an appropriate dimensionless form will reduce the number of independent quantities in the
+problem by <math display="inline"><mi>k</mi></math>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">This can simplify the problem enormously, as will be evident from the example that follows.
+</p></div></div>
+<p class="noindent">The <math display="inline"><mi mathvariant="normal">Π</mi></math>-theorem
+itself merely tells us the <b>number</b> of dimensionless quantities that affect the value of a particular
+dimensionless dependent variable. It does not tell us the forms of the dimensionless variables.
+That has to be discovered in the third and fourth steps described above. Nor does the
+<math display="inline"><mi mathvariant="normal">Π</mi></math>-theorem,
+or for that matter dimensional analysis as such, say anything about the form of the functional
+relationship expressed by Eq. (<a href="#x43-157001r30">B.30</a>).
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">That form has to be discovered by <span class="alert">experimentation</span> or by <span class="alert">solving the problem theoretically</span>. </p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-B.2.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.B.2.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">B.2.2</span> <span class="title"> <a id="x43-158000B.2.2"></a>An example: Deformation of an elastic ball striking a wall</span></h4></div>
+</p><p class="noindent">Suppose we wish to investigate the <i>deformation</i> which occurs in elastic balls when they impact on a
+wall. We might be interested, for example, in finding out what determines the diameter
+<math display="inline"><mi>d</mi></math> of the
+circular imprint left on the wall after a freshly dyed ball has rebounded from it (figure
+3.1).
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-29"> <a id="x43-159000"></a>Step 1: The independent variables</h5>
+</p><p class="noindent">The first step is to identify a complete set of <b>independent quantities</b> which determine the imprint
+radius <math display="inline"><mi>d</mi></math>.
+We begin by specifying the problem more clearly.
+</p><p class="noindent">We agree to restrict our attention to initially spherical, homogeneous balls made of perfectly
+elastic material, to impacts at perpendicular to the wall, and to walls that are perfectly
+smooth and flat and so stiff and heavy that they do not deform or move during the impact
+process.
+</p><p class="noindent">We also agree to adopt a system of units of <b>Type 1</b> in table 2.2, like the SI system.
+</p><p class="noindent">The numerical value of a dependent variable like
+<math display="inline"><mi>d</mi></math> will be
+depend on the values of all quantities which distinguish one impact event from another.
+Experience suggests that these should include at least the following: </p><div class="quote">  the ball’s diameter
+<math display="inline"><mi>D</mi></math> and velocity
+<math display="inline"><mi>V</mi> </math> just prior to contact (the initial
+conditions) and its mass <math display="inline"><mi>m</mi></math>.
+</div>
+<p class="noindent">The ball’s intrinsic material properties will also play a role. Our theoretical understanding of solid
+mechanics tells us that the quasi-static response of a perfectly elastic material is characterized by two
+material properties, </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">the modulus of elasticity <math display="inline"><mi>E</mi></math>
+and Poisson’s ratio <math display="inline"><mi>γ</mi></math>,
+and that the inertial effects which inevitably come into play during collision and rebound
+will also depend on the material’s density <math display="inline"><mi>ρ</mi></math>.</p></li></ul>
+<p class="noindent">The properties of the wall are irrelevant if it is indeed <b>perfectly rigid</b>, as we will assume so. We know,
+however, by thinking of how the problem would have to be set up as a theoretical one, that the answer for the
+numerical value <math display="inline"><mi>d</mi></math>
+will also depend on the values of all universal constants that appear in the physical laws that control
+the ball’s impact dynamics.
+</p><p class="noindent">In this case the process is governed by <i>Newton</i>’s law of motion and the law of mass conservation.
+Having chosen a system of units of <b>Type 1</b> in table 2.2, we know that <i>Newton</i>’s law has the form
+<math display="inline"><mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi><mi>a</mi></math>
+and contains no universal <span class="margin-block">constants <span class="margin-comment"><span class="ellipsis">[259]</span>
+<span class="sidenote">If, on the other hand, we had decided to
+use a system of <b>Type 3</b> in Table 2.1, the value of the dimensional constant
+<math display="inline"><mi>c</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>F</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>m</mi><mi>a</mi></math>
+for the chosen system of units would have to be specified, and would affect the value of
+<math display="inline"><mi>d</mi></math>.</span></span></span>. Nor
+are there any physical constants in the law of mass conservation.
+</p><p class="noindent">We seem to arrive at the conclusion that <math display="inline"><mi>d</mi></math>
+depends on six (<span class="alert">6</span>) quantities: </p><div class="quote"> <math display="inline"><mi>D</mi></math>,
+<math display="inline"><mi>V</mi> </math>,
+<math display="inline"><mi>m</mi></math>,
+<math display="inline"><mi>E</mi></math>,
+<math display="inline"><mi>γ</mi></math>, and
+<math display="inline"><mi>ρ</mi></math>.
+</div>
+<p class="noindent">This is a complete set, as required, but not an <b>independent</b> set: once the ball’s mass and diameter are
+specified, its density follows. We must therefore exclude either the density or the <span class="margin-block">mass. <span class="margin-comment"><span class="ellipsis">[260]</span>
+<span class="sidenote">Other quantities
+like <math display="inline"><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></math>,
+<math display="inline"><mi>D</mi><msup><mrow><mi>E</mi></mrow><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></mrow></msup></math>, etcetera, all involving quantities
+that affect the value of <math display="inline"><mi>d</mi></math>,
+are excluded for the same reason. They are not independent of the quantities already included.</span></span></span> We
+conclude that the following relationship expresses the impact diameter in terms of a complete set of
+independent variables: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-159001r32"></mstyle>
+<mi>d</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>d</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>V</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>ρ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>D</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>E</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>γ</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(B.32)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Note that the choice of a <b>complete</b>, <b>independent</b> set for a specified problem is <span class="alert">not unique</span> except for the number
+<math display="inline"><mi>n</mi></math> of its members<span class="margin-block">.
+<span class="margin-comment"><span class="ellipsis">[261]</span>
+<span class="sidenote"><math display="inline"><mi>n</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>5</mn></math> in this case.</span></span></span> One could
+just as well have chosen <math display="inline"><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></math>,
+<math display="inline"><mi>ρ</mi></math>,
+<math display="inline"><mi>D</mi></math>,
+<math display="inline"><mi>E</mi></math>, and
+<math display="inline"><mi>γ</mi></math>, say, or
+<math display="inline"><mi>V</mi> </math>,
+<math display="inline"><mi>m</mi></math>,
+<math display="inline"><mi>D</mi></math>,
+<math display="inline"><mi>E</mi></math>,
+<math display="inline"><mi>γ</mi></math>.
+</p><p class="noindent">It should also be noted that further assumptions have been taken for granted in Eq. (<a href="#x43-159001r32">B.32</a>). We have
+presumed, for example, that the ball’s motion is unaffected by the properties of the fluid through which
+it approaches the <span class="margin-block">wall, <span class="margin-comment"><span class="ellipsis">[262]</span>
+<span class="sidenote">Which is certainly OK if the ball moves through vacuum and a good
+approximation in air, but may not apply to small balls in viscous liquids.</span></span></span> and that gravitational effects
+play a negligible role.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-30"> <a id="x43-160000"></a>Step 2: Dimensional considerations</h5>
+</p><p class="noindent">In the type of system of units we have adopted in <i>Step 1</i>, the dimensions of the quantities in Eq. (<a href="#x43-159001r32">B.32</a>)
+are: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Independent</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>V</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>ρ</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>D</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>E</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>γ</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"></mtd>
+</mtr><mtr><mtd columnalign="right"></mtd> <mtd columnalign="left"></mtd><mtd columnalign="right"></mtd> <mtd columnalign="left"></mtd> <mtd columnalign="right"></mtd> <mtd columnalign="left"></mtd> <mtd columnalign="right"></mtd> <mtd columnalign="left"></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Dependent</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>d</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"></mtd>
+</mtr><mtr><mtd columnalign="right"></mtd>
+</mtr> </mtable>
+</math></td></tr></table>
+<p class="noindent">Inspection of the above shows that the three (<span class="alert">3</span>) quantities
+<math display="inline"><mi>V</mi> </math>,
+<math display="inline"><mi>ρ</mi></math>, and
+<math display="inline"><mi>D</mi></math>, for
+example, comprise a complete, dimensionally independent subset of the five independent
+variables.
+</p><p class="noindent">The dimension of any one of these three cannot be made up of the dimensions
+of the other two. The dimensions of the remaining independent variables
+<math display="inline"><mi>E</mi></math> and
+<math display="inline"><mi>γ</mi></math> and the dependent
+variable <math display="inline"><mi>d</mi></math> can, however,
+be made up of those of <math display="inline"><mi>V</mi> </math>,
+<math display="inline"><mi>ρ</mi></math> and
+<math display="inline"><mi>D</mi></math> as
+follows:
+</p><p class="noindent"><math display="inline"><mo class="MathClass-open" stretchy="false">[</mo><mi>E</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>M</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mi>L</mi><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">[</mo><mi>ρ</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">]</mo></math>
+independent: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-160001r33"></mstyle>
+<mi>⎡</mi><mi>γ</mi><mi>⎤</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn>
+</math></td><td class="eq-no">(B.33)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"><math display="inline"><mo class="MathClass-open" stretchy="false">[</mo><mi>d</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">[</mo><mi>D</mi><mo class="MathClass-close" stretchy="false">]</mo></math>
+dependent:
+</p><p class="noindent">We have written down these results very simply by inspection. Note again that the dimension of a dimensionless
+quantity like <math display="inline"><mi>γ</mi></math>
+is unity, the factor by which dimensionless numbers change when the sizes of the base units are
+changed.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-31"> <a id="x43-161000"></a>Step 3: Dimensionless Similarity Parameters</h5>
+</p><p class="noindent">We non-dimensionalize the remaining independent variables
+<math display="inline"><mi>E</mi></math> and
+<math display="inline"><mi>γ</mi></math> and the dependent
+variable <math display="inline"><mi>d</mi></math> by
+dividing them by <math display="inline"><mi>ρ</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></math>,
+<math display="inline"><mi>D</mi></math>, and
+unity, respectively, as suggested by Eq. (<a href="#x43-160001r33">B.33</a>): </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-161001r34"></mstyle><mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Independent</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>1</mn></mrow></msub></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>E</mi><msup><mrow><mi>D</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow>
+<mrow>
+<mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac></mtd>
+<mtd columnalign="right"><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>2</mn></mrow></msub></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>γ</mi></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Dependent</mtext></mstyle></mtd> <mtd columnalign="left"></mtd><mtd columnalign="right"><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>0</mn></mrow></msub></mtd><mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>d</mi></mrow>
+<mrow>
+<mi>D</mi></mrow></mfrac></mtd> <mtd columnalign="right"></mtd> <mtd columnalign="left"></mtd>
+</mtr><mtr><mtd columnalign="right"></mtd>
+</mtr> </mtable>
+</math></td><td class="eq-no">(B.34)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-32"> <a id="x43-162000"></a>Step 4: The End Game</h5>
+</p><p class="noindent">Using  the  logic  that  led  to  Buckingham’s
+<math display="inline"><mi mathvariant="normal">Π</mi></math>-theorem,
+we now conclude that </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-162001r35"></mstyle>
+<msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>or</mtext></mstyle><mspace class="qquad" width="2em"></mspace> <mfrac><mrow><mi>d</mi></mrow>
+<mrow>
+<mi>D</mi></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac><mrow><mi>E</mi></mrow>
+<mrow>
+<mi>ρ</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo class="MathClass-punc" stretchy="false">,</mo><mi>γ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(B.35)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The number of independent variables has been reduced from the original
+<math display="inline"><mi>n</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>5</mn></math> that define the
+problem to <math display="inline"><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>k</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn></math>.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-B.2.3"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.B.2.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">B.2.3</span> <span class="title"> <a id="x43-163000B.2.3"></a>On the Utility and Difficulties of Dimensional Analysis</span></h4></div>
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-33"> <a id="x43-164000"></a>Similarity</h5>
+</p><p class="noindent">Dimensional analysis provides a <b>similarity law</b> for the phenomenon under consideration. Similarity in
+this context implies a certain equivalence between two physical phenomena that are actually different.
+The collisions of two (<span class="alert">2</span>) different elastic spheres 1 and 2 with a rigid wall, each with its own values of
+<math display="inline"><mi>V</mi> </math>,
+<math display="inline"><mi>ρ</mi></math>,
+<math display="inline"><mi>D</mi></math>,
+<math display="inline"><mi>E</mi></math>, and
+<math display="inline"><mi>γ</mi></math>, may
+appear to be quite different.
+</p><p class="noindent">However, under particular conditions where the parameters of the two events are such that
+<math display="inline"><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>2</mn></mrow></msub></math> have
+the same values, that is, where </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-164001r36"></mstyle>
+<mfrac>
+<mrow>
+<msub><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>ρ</mi></mrow><mrow><mn>2</mn></mrow></msub><msubsup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>ρ</mi></mrow><mrow><mn>1</mn></mrow></msub><msubsup><mrow><mi>V</mi> </mrow><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>and</mtext></mstyle><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>γ</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>γ</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(B.36)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where Eq. (<a href="#x43-162001r35">B.35</a>) informs us that <math display="inline"><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>0</mn></mrow></msub></math>
+has the same value in both cases, that is, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-164002r37"></mstyle>
+<mfrac>
+<mrow>
+<msub><mrow><mi>d</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>D</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></mfrac>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>d</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>D</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></mfrac><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(B.37)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">When the relationships in Eq. (<a href="#x43-164001r36">B.36</a>) apply, the two dynamic events are <b>similar</b> in the sense of Eq.
+(<a href="#x43-164002r37">B.37</a>)
+.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-34"> <a id="x43-165000"></a>Out-of-scale modeling</h5>
+</p><p class="noindent">Scale modeling deals with the following question: </p><div class="quote">  If we want to learn something about the
+performance of a full-scale system 1 by testing a geometrically similar small-scale system model <span class="margin-block">2, <span class="margin-comment"><span class="ellipsis">[263]</span>
+<span class="sidenote">or
+vice-versa, if the system of interest inaccessibly small.</span></span></span> at what conditions should we test the model, and
+how should we obtain the full-scale performance from measurements at the small scale?
+</div>
+<p class="noindent">Dimensional analysis provides the answer.
+</p><p class="noindent">Suppose we need to know the deformation diameter of a huge, soft rubber ball with a diameter
+<math display="inline"><msub><mrow><mi>D</mi></mrow><mrow><mn>1</mn></mrow></msub></math> of
+<math display="inline"><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>m</mi></mstyle></math>
+and properties <math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub></math>,
+<math display="inline"><msub><mrow><mi>ρ</mi></mrow><mrow><mn>1</mn></mrow></msub></math>, and
+<math display="inline"><msub><mrow><mi>γ</mi></mrow><mrow><mn>1</mn></mrow></msub></math>, as it hits the pavement
+with a speed <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msub></math>, of
+<math display="inline"><mn>1</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>m</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>,
+but are unable to compute it from basic principles. In that case we need only perform one small-scale test with a
+model 2 of diameter <math display="inline"><msub><mrow><mi>D</mi></mrow><mrow><mn>2</mn></mrow></msub></math>,
+selecting its properties and test conditions such that Eq. (<a href="#x43-164001r36">B.36</a>) are satisfied, and measure its imprint diameter
+<math display="inline"><msub><mrow><mi>d</mi></mrow><mrow><mn>2</mn></mrow></msub></math>. The full-scale
+value <math display="inline"><msub><mrow><mi>d</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
+of the big ball’s imprint diameter at its <b>design conditions</b> can then be obtained from Eq.
+(<a href="#x43-164002r37">B.37</a>)
+.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-35"> <a id="x43-166000"></a>Dimensional Analysis Reduces the Number of Variables and Minimizes Work</h5>
+</p><p class="noindent">Dimensional analysis reduces the number of variables which must be specified to describe an event,
+which often leads to an enormous simplification.
+</p><p class="noindent">In our example of the impacting ball the answer depends on five (<span class="alert">5</span>) independent variables shown in Eq.
+(<a href="#x43-159001r32">B.32</a>)
+, that is, a particular event may be represented as a distribution of d defined in a
+five-dimensional space of <b>independent variables</b>.
+</p><p class="noindent">Suppose we set out to obtain the answer in a certain region, a certain volume, of this variable-space, by
+either computation or experimentation, and decide that 10 data points will be required in
+each variable, with the other four (<span class="alert">4</span>) being held <b>constant</b>. This would require obtaining
+<math display="inline"><mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>5</mn></mrow></msup></math> data
+points. Dimensional analysis, however, shows us that in dimensionless form the answer depends only on
+two similarity parameters.
+</p><p class="noindent">This two-dimensional space can be explored with similar resolution with only
+<math display="inline"><mn>1</mn><mn>0</mn><mn>0</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>0</mn></mrow></msup></math> data points,
+that is, with <math display="inline"><mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mi>%</mi></math>
+of the effort.
+</p><p class="noindent">Table 3.1 shows some <span class="alert">experimental data</span> for impacts with balls of three materials and various values of impact
+velocity.
+</p><p class="noindent">Table 3.1: Computed "Experimental data"    d Material Symbol   (m s&lt;sup&gt;-1&lt;/sup&gt;)
+<math display="inline"><mi>ρ</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></math> D (MPa)
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mi>g</mi><msup><mrow><mi>m</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo></math> (Fig. 3.2)
+<math display="inline"><mover class="stackrel"><mrow><mi>≃</mi></mrow><mrow><mrow> <mi>∧</mi></mrow></mrow></mover></math> 3.66E+05 3960 0.22 50133
+Alumina 43 0.150 <math display="inline"><mo class="MathClass-rel" stretchy="false">⊲</mo></math> 3.66E+05
+0.170 3960 59 0.22 26937 <math display="inline"><mo class="MathClass-rel" stretchy="false">⊳</mo></math>
+3.66E+05 3960 77 0.22 15511 0.190  6.90E+04 0.250 &lt;b&gt;Aluminum&lt;/b&gt; 2705 80 0.33 3973 0 6.90E+04 0.300
+2705 126 0.33 1608 <math display="inline"><mo class="MathClass-ord">♢</mo></math>
+6.90E+04 2705 345 0.33 215 0.450
+</p><p class="noindent">Rubber 3.93E+00 1060 5 0.47 127 0.500 3.93E+00 1060 7 79 0.550 * 0.47 * 3.93E+00 12 0.700 1060
+0.47 24 1 Computation&lt;br&gt;+  = 0.5&lt;br&gt;Œ  = 0.30 &lt;u&gt;d&lt;/u&gt; 0.5 Œ Œ Œ Œ Œ Œ Œ Œ Œ Œ Œ
+Œ Œ Œ Œ Œ Œ Œ Œ  0 10&lt;sup&gt;5&lt;/sup&gt; 10&lt;sup&gt;2&lt;/sup&gt; 10&lt;sup&gt;3&lt;/sup&gt; 104 10
+E&lt;br&gt;V&lt;sup&gt;2&lt;/sup&gt; Figure 3.2: Plot of "experimental data" in dimensionless form.
+45
+</p><p class="noindent">Fig. 3.2 shows these data as a plot of d/D vs. <math display="inline"><mi>E</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>ρ</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></math>
+with <math display="inline"><mi>γ</mi></math> as
+a parameter. The simulated "experimental scatter" in Fig. 3.2 actually results from the coarseness of
+the computational grid. Disregarding the scatter, all points fall essentially on a common curve, as
+predicted by dimensional analysis. The influence of the Poisson’s ratio turns out to be virtually
+negligible, given the scatter, and all the data may be curve-fitted with an equation of the form
+<math display="inline"><mi>d</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>D</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>E</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>ρ</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo></math>.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-36"> <a id="x43-167000"></a>An Incomplete Set of Independent Quantities Can Destroy the Analysis</h5>
+</p><p class="noindent">Assuming competence on the part of the analyst, the correctness of the dimensional
+analysis will depend entirely on whether a complete set of independent quantities
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi></mrow></msub></math> is in
+fact properly identified in <i>Step 1</i>. Any complete set will provide correct results. If, however, the
+analysis is based on a set which omits even one independent quantity that affects the value of
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mi>o</mi></mrow></msub></math>,
+dimensional analysis will give <b>erroneous results</b>.
+</p><p class="noindent">Suppose in our example we had omitted the sphere’s modulus of elasticity
+<math display="inline"><mi>E</mi></math> in Eq.
+(<a href="#x43-159001r32">B.32</a>)
+. Instead of Eq. (<a href="#x43-162001r35">B.35</a>), we would then have obtained the absurd result </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-167001r38"></mstyle>
+<mfrac>
+<mrow>
+<mi>d</mi></mrow>
+<mrow>
+<mi>D</mi></mrow></mfrac>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>γ</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(B.38)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">which implies that the maximum deformation depends on the ball’s Poisson ratio, but is independent of
+its elasticity, mass and approach velocity.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">This single error of omission is clearly fatal to the analysis. </p></div></div>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-37"> <a id="x43-168000"></a>Superfluous Independent Quantities Complicate the Result Unnecessarily</h5>
+</p><p class="noindent">Errors on the side of excess have a less traumatic effect. Over-specification of independent variables
+does not destroy the analysis, but robs it of its power.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">For every superfluous independent quantity included in the set, there will be in the final dimensionless
+relationship a superfluous dimensionless similarity parameter. </p></div></div>
+<p class="noindent">Suppose we argue quite reasonably that the ball’s deformation upon
+impact will in general also depend on the local gravitational acceleration
+<math display="inline"><mi>g</mi></math><span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[264]</span>
+<span class="sidenote">Which
+we assume to be in the direction into the wall on which the impact occurs.</span></span></span> This would change Eq.
+(<a href="#x43-162001r35">B.35</a>) 
+to </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-168001r39"></mstyle>
+<mfrac>
+<mrow>
+<mi>d</mi></mrow>
+<mrow>
+<mi>D</mi></mrow></mfrac>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac><mrow><mi>E</mi></mrow>
+<mrow>
+<mi>ρ</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo class="MathClass-punc" stretchy="false">,</mo><mi>γ</mi><mo class="MathClass-punc" stretchy="false">,</mo> <mfrac><mrow><mi>g</mi><mi>D</mi></mrow>
+<mrow><msup><mrow>
+<mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow>
+</math></td><td class="eq-no">(B.39)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>g</mi><mi>D</mi><mo class="MathClass-bin" stretchy="false">/</mo><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></math>
+is a dimensionless gravity. Under conditions where the deformation is in fact insensitive to gravity, as
+we implicitly assumed earlier, Eq. (<a href="#x43-168001r39">B.39</a>) is “wrong” only in the sense that it suggests a dependence on
+<math display="inline"><mi>g</mi></math> that is not
+noticeably there, and thus unnecessarily complicates our thinking. If by experimentation or computation we
+eventually discover that there exists a broad range of conditions where the similarity parameter involving
+<math display="inline"><mi>g</mi></math> has in fact no
+measurable effect on <math display="inline"><mi>d</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>D</mi></math>,
+and that the conditions of interest fall into this <span class="margin-block">range, <span class="margin-comment"><span class="ellipsis">[265]</span>
+<span class="sidenote">To prove this with earthbound experimentation we would have
+to demonstrate that <math display="inline"><mi>d</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>D</mi></math>
+remains constant when <math display="inline"><mi>m</mi></math>,
+<math display="inline"><mi>D</mi></math> and/or
+<math display="inline"><mi>V</mi> </math> are changed so as to
+vary <math display="inline"><mi>g</mi><mi>D</mi><mo class="MathClass-bin" stretchy="false">/</mo><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></math> while keeping
+<math display="inline"><mi>E</mi><msup><mrow><mi>D</mi></mrow><mrow><mn>3</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><mi>m</mi><msub><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msub></math> constant.</span></span></span> we omit the
+parameter involving <math display="inline"><mi>g</mi></math>
+and arrive at the same simpler conclusion as before, but only after due payment in effort for our lack of
+insight.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-38"> <a id="x43-169000"></a>On the importance of simplifying assumptions</h5>
+</p><p class="noindent">The previous example illustrates an important point about most problems in dimensional
+analysis:
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Completeness in the set of independent variables is not an <span class="alert">absolute matter</span>, but depends on how we choose to
+circumscribe the problem. </p></div></div>
+<p class="noindent">It is quite conceivable, for example, that there are <i>balls</i> whose deformation upon impact with a wall is
+gravity-dependent. This would be the case for balls with such low coefficient of elasticity, or large
+diameter, or low impact velocity, that their deformation at rest on a wall in the gravitational
+field would be significant compared with their deformation upon impact. When we say <b>the
+deformation does not depend on gravity</b>, we imply that we know with some confidence
+that there exist conditions where this is true, and choose to confine our attention to those
+conditions.
+</p>
+<div class="info-block" id="info-block-B.49"> <a class="copiable-link" href="#info-block-B.49"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information B.<a id="x43-169001r49"></a>49: </b> </span> <span class="info-title"> Balance within Chaos </span> </span> <div class="body">
+<p class="noindent">If dimensional analysis depended on a truly complete identification of the independent variables that
+specify a given physical event, we would in most cases be reduced to impotence. Those familiar with
+chaos theory and the many-body systems can sympathize with the view that the wind at a certain
+street corner in Innsbruck, say, may in some measure have been affected by the wing-beat of a
+butterfly in Bratislava a month earlier. This kind of fastidiousness elicits a shrug from the
+pragmatist, who proceeds with a problem by saying: </p>
+<hr/>
+<p class="noindent"> 
+“Based on my experience as a scientist
+and engineer, I argue that this event should be controlled by the following complete set of
+independent variables. Assuming tentatively that I am correct, what does dimensional analysis tell
+me?”
+</p>
+</div></div>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-39"> <a id="x43-170000"></a>On choosing a complete set of independent variables</h5>
+</p><p class="noindent">Given what has been said above, how does one go about choosing a complete set of independent
+variables that define a particular problem?
+</p><p class="noindent">If we know the mathematical forms of all the equations and boundary (and initial) conditions that
+completely specify a particular type of process or event, one can deduce from them a complete set of
+independent parameters that define the event. This we do by simply examining all the equations and
+listing all the quantities whose values would have to be specified to define a particular event
+through all time. The set may include position and time, if the variable of interest depends
+on them, universal physical constants (e.g. gravitational constant, universal gas constant
+<math display="inline"><mi>R</mi></math>, etc.),
+material properties (e.g. density, E, etc.) and all other quantities that appear not only in the equations
+but also in the boundary and initial conditions that determine the answer to the particular
+problem at hand. The last point is not as straightforward as it sounds: the question of what
+constitutes a well-posed mathematical problem is often difficult to answer in non-linear
+systems.
+</p><p class="noindent">If the equations and boundary conditions are not well known, as for example when one is trying to use
+dimensional analysis to help correlate experimental data for a complex phenomenon that is not well
+understood, one has to proceed by trial and error based on an (educated) guess about the physics of the
+problem at hand. Support for the analysis (and thus for the guess about the physics) may be obtained à
+posteriori by showing that all experimental data can indeed be accurately correlated in
+the dimensionless form suggested by the analysis. There should be sufficient data to be
+able to show that one has neither missed an important quantity nor included one that is
+irrelevant.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-40"> <a id="x43-171000"></a>Result Independence from Chosen Dimensionally Independent Subset</h5>
+</p><p class="noindent">Suppose we had chosen the dimensionally independent subset
+<math display="inline"><mi>V</mi> </math>,
+<math display="inline"><mi>E</mi></math>, and
+<math display="inline"><mi>ρ</mi></math> instead
+of <math display="inline"><mi>V</mi> </math>,
+<math display="inline"><mi>D</mi></math> and
+<math display="inline"><mi>ρ</mi></math>. Non-dimensionalizing
+<math display="inline"><mi>d</mi></math> and
+<math display="inline"><mi>D</mi></math> with
+combinations of <math display="inline"><mi>V</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>E</mi></math>
+and <math display="inline"><mi>ρ</mi></math>,
+we might have obtained the result </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-171001r40"></mstyle>
+<mfrac>
+<mrow>
+<mi>d</mi></mrow>
+<mrow><msup><mrow>
+<mo class="MathClass-open" stretchy="false">(</mo><mi>ρ</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><mi>E</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>3</mn></mrow></msup></mrow></mfrac>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>F</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac><mrow><mi>D</mi></mrow>
+<mrow><msup><mrow>
+<mo class="MathClass-open" stretchy="false">(</mo><mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><mi>E</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>3</mn></mrow></msup></mrow></mfrac><mo class="MathClass-punc" stretchy="false">,</mo><mi>γ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow>
+</math></td><td class="eq-no">(B.40)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This can, however, be rewritten as </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-171002r41"></mstyle>
+<mfrac>
+<mrow>
+<mi>d</mi></mrow>
+<mrow>
+<mi>D</mi></mrow></mfrac>
+<mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mi>E</mi><msup><mrow><mi>D</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>3</mn></mrow></msup><mi>F</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>E</mi><msup><mrow><mi>D</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow>
+<mrow>
+<mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>3</mn></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo><mi>γ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>E</mi><msup><mrow><mi>D</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow>
+<mrow>
+<mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo class="MathClass-punc" stretchy="false">,</mo><mi>γ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow>
+</math></td><td class="eq-no">(B.41)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>F</mi></math>
+and <math display="inline"><mi>f</mi></math> are
+different functions of their arguments. Eq. (<a href="#x43-171002r41">B.41</a>) is of course identical to Eq. (<a href="#x43-162001r35">B.35</a>).
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-41"> <a id="x43-172000"></a>The Result is Independent of the Type of System of Units</h5>
+</p><p class="noindent">The choice of system of units may affect the dimensions of physical quantities as well as the values of
+the physical constants that appear in the underlying physical laws. </p><div class="quote">  What effect, if any, does this have
+on dimensional analysis? </div>
+<p class="noindent">Reason dictates there should be no effect on the <span class="alert">bottom line</span>, since the observer is free to choose or make up
+whatever system of units he wants, and his arbitrary choice should not affect the laws of
+physics.
+</p><p class="noindent">Consider our example of the dyed ball, but viewed in terms of a system of units like the British Engineering System
+(type3 in table 2.2), where mass, length, time and force are taken as base units. In such a system Newton’s law
+reads <math display="inline"><mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>c</mi><mi>m</mi><mi>a</mi></math>, where
+<math display="inline"><mi>c</mi></math> is a physical constant
+with dimension <math display="inline"><mi>F</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>m</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>.
+This affects the very first step of the analysis.
+</p><p class="noindent">Since the impact process is controlled by <i>Newton</i>’s law, which now contains the constant
+<math display="inline"><mi>c</mi></math>, the
+value of which must be specified, we now have </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-172001r42"></mstyle>
+<mi>d</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>d</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>V</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>D</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>E</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>m</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>γ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>c</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(B.42)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The number of independent variable <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>6</mn><mo class="MathClass-close" stretchy="false">)</mo></math>
+has increased by one. The dimensions of the variable are now: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-172002r43"></mstyle><mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Independent</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>V</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi><msup><mrow><mi>t</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>D</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>E</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>F</mi><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msup></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>m</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>M</mi></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>γ</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>c</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>F</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>M</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup><msup><mrow><mi>L</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></mtd>
+</mtr><mtr><mtd columnalign="right"></mtd> <mtd columnalign="left"></mtd><mtd columnalign="right"></mtd> <mtd columnalign="left"></mtd> <mtd columnalign="right"></mtd> <mtd columnalign="left"></mtd> <mtd columnalign="right"></mtd> <mtd columnalign="left"></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Dependent</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>d</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"></mtd>
+</mtr> </mtable>
+</math></td><td class="eq-no">(B.43)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The quantities <math display="inline"><mi>V</mi> </math>,
+<math display="inline"><mi>D</mi></math>,
+<math display="inline"><mi>m</mi></math> and
+<math display="inline"><mi>c</mi></math>
+comprise a convenient dimensionally independent subset. The number of this subset has also increased
+by one <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>4</mn><mo class="MathClass-close" stretchy="false">)</mo></math>.
+The dimensions of the remaining quantities can be expressed in terms of these four as </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-172003r44"></mstyle>
+<mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>d</mi> </mtd></mtr></mtable>
+</mrow><mo fence="true" form="postfix">]</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>D</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow><mspace class="qquad" width="2em"></mspace> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""><mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>E</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>c</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>D</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow> <mspace class="qquad" width="2em"></mspace> <mrow><mo fence="true" form="prefix">[</mo><mrow><mtable align="axis" class="array" columnlines="none none none none none none none none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>γ</mi> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">]</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn>
+</math></td><td class="eq-no">(B.44)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">and the final result of the analysis is </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-172004r45"></mstyle>
+<mfrac>
+<mrow>
+<mi>d</mi></mrow>
+<mrow>
+<mi>D</mi></mrow></mfrac>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac><mrow><mi>E</mi><msup><mrow><mi>D</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow>
+<mrow>
+<mi>c</mi><mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo class="MathClass-punc" stretchy="false">,</mo><mi>γ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow>
+</math></td><td class="eq-no">(B.45)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This differs from our previous result, Eq. (<a href="#x43-162001r35">B.35</a>), only in that the physical constant c appears in the non-dimensionalization
+of <math display="inline"><mi>E</mi></math>.
+Equations Eq. (<a href="#x43-162001r35">B.35</a>) and Eq. (<a href="#x43-172004r45">B.45</a>) are, however, functionally identical. Since
+<math display="inline"><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>k</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn></math> in both cases, both analyses
+imply that <math display="inline"><mi>d</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>D</mi></math> depends on two
+dimensionless parameters, <math display="inline"><mi>γ</mi></math> and
+a dimensionless <math display="inline"><mi>E</mi></math>. It is just that in
+the second system of units, <math display="inline"><mi>E</mi></math> must
+be non-dimensionalized with <math display="inline"><mi>c</mi><mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><msup><mrow><mi>D</mi></mrow><mrow><mn>3</mn></mrow></msup></math>
+instead of <math display="inline"><mi>m</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><msup><mrow><mi>D</mi></mrow><mrow><mn>3</mn></mrow></msup></math>, since the latter no
+longer has the same dimension as <math display="inline"><mi>E</mi></math>.
+In short, the forms of some of the dimensional parameters may change with the system of units, but the
+physical content of analysis remains invariant.
+</p><p class="noindent">This is, of course, as we expected; the choice of system of units is arbitrary, and should not affect the
+physical <b>bottom line</b>.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-B.2.4"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.B.2.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">B.2.4</span> <span class="title"> <a id="x43-173000B.2.4"></a>When Independent Quantities Have Fixed Values</span></h4></div>
+</p><p class="noindent">Engineering practice often involves problems where some of the quantities which define the problem
+have the same fixed values in all the applications being considered.
+</p><p class="noindent">As a simple example, suppose we are interested in determining the hydrodynamic drag <span class="margin-block">force <span class="margin-comment"><span class="ellipsis">[266]</span>
+<span class="sidenote">A force
+acting opposite to the direction of motion of any object moving with respect to a surrounding fluid.</span></span></span>
+<math display="inline"><mi>D</mi></math> on a
+fully submerged, very long, neutrally buoyant cable being dragged behind a ship, and propose to do
+this by making small scale experiments in a water tunnel.
+</p><p class="noindent">Basic fluid mechanics tells us that, barring surface roughness effects,
+the <b>drag force</b> should be completely determined by the cable’s length
+<math display="inline"><mi>L</mi></math> and diameter
+<math display="inline"><mi>d</mi></math>, the ship’s, or water’s,
+velocity <math display="inline"><mi>V</mi> </math>, along with
+the water’s density <math display="inline"><mi>ρ</mi></math>
+and viscosity <math display="inline"><mi>μ</mi></math>.
+Three of these five quantities are <b>dimensionally independent</b>, and dimensional analysis (or
+Buckingham’s pi-theorem) tells us that an appropriately defined dimensionless drag is a function of
+<math display="inline"><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>k</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn></math>
+dimensionless similarity parameters.
+</p><p class="noindent">One way of writing this relationship is </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-173001r46"></mstyle>
+<mfrac>
+<mrow>
+<mi>D</mi></mrow>
+<mrow>
+<mi>ρ</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle class="text"><mtext>Re</mtext></mstyle><mo class="MathClass-punc" stretchy="false">,</mo> <mfrac><mrow><mi>d</mi></mrow>
+<mrow>
+<mi>L</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>where</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mi>R</mi><mi>e</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>ρ</mi><mi>V</mi> <mi>L</mi></mrow>
+<mrow>
+<mi>μ</mi></mrow></mfrac>
+</math></td><td class="eq-no">(B.46)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">is a <span class="alert">Reynolds number</span> based on cable length and <math display="inline"><mi>d</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>L</mi></math>
+is the cable’s <b>fineness coefficient</b>, which defines its geometry. Eq. (<a href="#x43-173001r46">B.46</a>) is a general relationship for
+the cable-towing problem as stated.
+</p>
+<div class="desc-block" id="desc-block-B.3"> <a class="copiable-link" href="#desc-block-B.3"> ¶</a> <span class="desc-upper"> <span class="desc-header"> <b>Description: B.<a id="x43-173002r3"></a>3: </b> </span> <span class="desc-title"> Reynolds Number </span> </span> <div class="body">
+<p class="noindent">In <span class="alert">fluid dynamics</span>, the Reynolds number (Re) is a <span class="alert">dimensionless quantity</span> which helps to predict the fluid flow patterns in different situations
+by measuring the ratio between <span class="alert">inertial</span> and <span class="alert">viscous</span> <span class="margin-block"><span class="margin"><span>forces. <span class="ellipsis">[267]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Dimensional-Analysis/raster/reynolds-number.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[267]</span>The plume from this candle flame transitions from
+laminar (low Reynolds number) to turbulent (high Reynolds number).</span></span></span></span> <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a id="x43-173003"></a>Bush, J. W. Surface tension
+module. URL http://web. mit. edu/1.63/www/Lec-notes/Surfacetension (2004)</span></span> At low Reynolds
+numbers, flows tend to be dominated by <span class="alert">laminar</span> (sheet-like) flow, while at high Reynolds numbers, flows tend
+to be turbulent. </p>
+<hr/>
+<p class="noindent"> 
+The turbulence results from differences in the fluid’s speed and direction, which may
+sometimes intersect or even move counter to the overall direction of the flow, such as eddy currents.
+These eddy currents begin to churn the flow, using up energy in the process, which for liquids increases
+the chances of <span class="margin-block">cavitation. <span class="margin-comment"><span class="ellipsis">[268]</span>
+<span class="sidenote">the phenomenon in which the static pressure of a liquid reduces to below
+the liquid’s vapor pressure, leading to the formation of small vapor-filled cavities in the
+liquid.</span></span></span>
+</p>
+</div> </div>
+<p class="noindent">We observe, however, that the density and viscosity have essentially the same <span class="margin-block">values <span class="margin-comment"><span class="ellipsis">[269]</span>
+<span class="sidenote">those of sea water
+at its typical temperature.</span></span></span> in all the applications that are of interest. The number of quantities that
+actually vary from case to case are thus actually three, not five.
+</p><p class="noindent">The question arises, does this lead to a simplification of the similarity law expressed by Eq. (<a href="#x43-173001r46">B.46</a>), that is,
+to a reduction in the number of independent similarity parameters? Simply omitting the quantities which
+have fixed values and performing dimensional analysis on the rest cannot answer this <span class="margin-block">question. <span class="margin-comment"><span class="ellipsis">[270]</span>
+<span class="sidenote">Were we
+to simply omit the density and viscosity in the present problem, for example, we would imply a relationship
+<math display="inline"><mi>D</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>L</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>h</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>V</mi> <mo class="MathClass-close" stretchy="false">)</mo></math>
+which is not dimensionally homogeneous and therefore unacceptable. There is no way of
+writing the dimension of force in terms of just length and velocity.</span></span></span> Dimensional analysis must
+be based on a <b>complete</b> set of independent quantities which determine the quantity of
+interest. All the quantities whose values determine the quantity of interest must be included,
+regardless of whether some of them happen to be the same values in the problems that are of
+interest.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">As we have seen previously, omitting even one independent variable can <span class="alert">fatally damage the analysis</span>. </p></div></div>
+<p class="noindent">The general question is the following: What reduction, if any, can be obtained in the number of
+similarity parameters if a certain number of the independent quantities that define the problem always
+have the same fixed values? This can be answered by the following analysis.
+</p><p class="noindent">Suppose we are interested in a quantity <math display="inline"><mi>Q</mi></math>
+that is completely determined by the values of n independent quantities
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mi>i</mi></mrow></msub></math>, of
+which <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub></math>
+are held at fixed values in all the cases that concern us. Let the quantities that may vary be the first
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math> of
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mi>i</mi></mrow></msub></math>, and designate the
+<math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub></math> quantities with
+fixed values by <math display="inline"><msub><mrow><mi>F</mi></mrow><mrow><mi>i</mi></mrow></msub></math>:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-173004r47"></mstyle>
+<mi>Q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi><mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>n</mi></mrow><mrow><mi>r</mi></mrow></msub></mrow></msub><mo class="MathClass-punc" stretchy="false">;</mo><msub><mrow><mi>F</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>F</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>F</mi></mrow><mrow><msub><mrow><mi>k</mi></mrow><mrow><mi>r</mi></mrow></msub></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>F</mi></mrow><mrow><msub><mrow><mi>k</mi></mrow><mrow><mi>r</mi><mo class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msub></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>F</mi></mrow><mrow><msub><mrow><mi>k</mi></mrow><mrow><mi>r</mi><mo class="MathClass-bin" stretchy="false">+</mo><mn>2</mn></mrow></msub></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>F</mi></mrow><mrow><msub><mrow><mi>n</mi></mrow><mrow><mi>r</mi></mrow></msub></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td><td class="eq-no">(B.47)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Choose a complete, <b>dimensionally independent</b> subset of the set
+<math display="inline"><msub><mrow><mi>F</mi></mrow><mrow><mi>i</mi></mrow></msub></math>. Let these
+be the first <math display="inline"><msub><mrow><mi>k</mi></mrow><mrow><mi>F</mi></mrow></msub></math>
+of the fixed set, as indicated in Eq. (<a href="#x43-173004r47">B.47</a>). Using this subset, non-dimensionalize the remaining
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>k</mi></mrow><mrow><mi>F</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math> fixed
+quantities and write the relationship Eq. (<a href="#x43-173004r47">B.47</a>) in the alternative form </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-173005r48"></mstyle>
+<mi>Q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi><mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>n</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow></msub><mo class="MathClass-punc" stretchy="false">;</mo><msub><mrow><mi>F</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>F</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>F</mi></mrow><mrow><msub><mrow><mi>k</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msubsup><mrow><mi>F</mi></mrow><mrow><msub><mrow><mi>k</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msubsup><mo class="MathClass-punc" stretchy="false">,</mo><msubsup><mrow><mi>F</mi></mrow><mrow><msub><mrow>
+<mi>k</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msubsup><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msubsup><mrow><mi>F</mi></mrow><mrow><msub><mrow>
+<mi>n</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msubsup><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td><td class="eq-no">(B.48)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where the asterisks (<math display="inline"><mo class="MathClass-bin" stretchy="false">∗</mo></math>)
+indicate dimensionless quantities involving only quantities with fixed values. These dimensionless
+quantities thus have the same fixed values in the cases that concern us.
+</p><p class="noindent">For these cases, therefore, we can write Eq. (<a href="#x43-173005r48">B.48</a>) as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-173006r49"></mstyle>
+<mi>Q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>Q</mi></mrow><mrow><mi>n</mi><mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>n</mi></mrow><mrow><mi>c</mi></mrow></msub></mrow></msub><mo class="MathClass-punc" stretchy="false">;</mo><msub><mrow><mi>F</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>F</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>F</mi></mrow><mrow><msub><mrow><mi>k</mi></mrow><mrow><mi>c</mi></mrow></msub></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td><td class="eq-no">(B.49)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The value of <math display="inline"><mi>Q</mi></math> is therefore
+completely determined by a set of <math display="inline"><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>k</mi></mrow><mrow><mi>F</mi></mrow></msub></math>
+independent quantities consisting of those dependent quantities that are not fixed plus the
+dimensionally independent subset of the fixed quantities.
+</p><p class="noindent">Now perform dimensional analysis on the relationship in Eq. (<a href="#x43-173006r49">B.49</a>). First, select from the set of
+<math display="inline"><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>k</mi></mrow><mrow><mi>F</mi></mrow></msub></math>
+independent quantities in Eq. (<a href="#x43-173006r49">B.49</a>) a complete, dimensionally independent subset of
+<math display="inline"><mi>k</mi></math> quantities. Let this
+subset be the first <math display="inline"><mi>k</mi></math>
+of the quantities. Since Eq. (<a href="#x43-173006r49">B.49</a>) contains all the variable independent quantities plus
+the dimensionally independent subset of the fixed, independent, quantities, the subset we
+thus obtain is also complete, dimensionally independent subset for the whole original set of
+<math display="inline"><mi>n</mi></math>
+quantities.
+</p><p class="noindent">According to Eq. (<a href="#x43-173006r49">B.49</a>), <math display="inline"><mi>Q</mi></math>
+depends on <math display="inline"><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>k</mi></mrow><mrow><mi>F</mi></mrow></msub></math> independent
+variables, of which <math display="inline"><mi>k</mi></math>
+are independent. Dimensional analysis therefore gives the result: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x43-173007r50"></mstyle>
+<msup><mrow><mi>Q</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow>
+<mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo class="MathClass-punc" stretchy="false">.</mo><mo class="MathClass-punc" stretchy="false">.</mo><mo class="MathClass-punc" stretchy="false">.</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi mathvariant="normal">Π</mi></mrow><mrow><mi>N</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>where</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mi>N</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>k</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>n</mi></mrow><mrow><mi>E</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>k</mi></mrow><mrow><mi>E</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(B.50)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">We have arrived at the following theorem:
+</p>
+<div class="theo-block" id="theo-block-B.6"> <a class="copiable-link" href="#theo-block-B.6"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory B.<a id="x43-173008r6"></a>6: </b> </span> <span class="theo-title"> Buckingham’s <math display="inline"><mi mathvariant="normal">Π</mi></math>-Theorem-II
+</span> </span> <div class="body">
+<p class="noindent">If a quantity <math display="inline"><mi>Q</mi></math> is <span class="alert">completely determined</span> by a set of
+<math display="inline"><mi>n</mi></math> independent quantities,
+of which <math display="inline"><mi>k</mi></math> are dimensionally
+independent, and if <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub></math>
+of these quantities have fixed values in all the cases being considered, a number
+<math display="inline"><msub><mrow><mi>k</mi></mrow><mrow><mi>F</mi></mrow></msub></math>
+of these being dimensionally independent, then a suitable dimensionless
+<math display="inline"><mi>Q</mi></math> will be completely
+determined by <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>n</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>k</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>k</mi></mrow><mrow><mi>F</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math>
+dimensionless similarity parameters.
+</p>
+</div> </div>
+<p class="noindent">In other words, the fact that a number <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub></math>
+of the quantities always have fixed values reduces the number of independent similarity parameters by
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>k</mi></mrow><mrow><mi>F</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math>. This theorem is a generalization
+of Buckingham’s <math display="inline"><mi mathvariant="normal">Π</mi></math>-theorem,
+and reduces to it when <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>.
+</p><p class="noindent">Returning to the cable-towing example, in which
+<math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>F</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn></math> and
+<math display="inline"><msub><mrow><mi>k</mi></mrow><mrow><mi>F</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn></math>, we
+now see immediately that no gain in <span class="margin-block">similarity <span class="margin-comment"><span class="ellipsis">[271]</span>
+<span class="sidenote">no reduction in the number of similarity parameters.</span></span></span>
+accrues from the fact that the viscosity and density are essentially the same in all the applications that
+interest us. The similarity law Eq. (<a href="#x43-173001r46">B.46</a>) cannot be simplified.
+</p><p class="noindent">Simplification occurs only when some of the fixed quantities are dimensionally dependent on the
+rest.
+<nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><span class="nav-inactive"><i class="fa-solid fa-caret-right"></i></span></span> <span class="nav-button"><a href="PhysicalQuantitiesandEquations.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="DimensionalAnalysis.html#ThePrincipleofDimensionalAnalysis.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section B.2: The Principle of Dimensional Analysis</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

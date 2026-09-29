@@ -1,83 +1,100 @@
-<!DOCTYPE html> 
-<html lang="en">  
-<head><title>Understanding Transformer Behaviour</title> 
-<meta  charset="utf-8" /> 
-<meta name="generator" content="lms-WebBook" /> 
-<meta name="viewport" content="width=device-width,initial-scale=1" /> 
-<link rel="stylesheet" type="text/css" href="\aa:CssFile " /> 
-<meta name="src" content="DriveTechnologyLectureBook.tex" /> 
- <script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>  
-<link rel="icon" type="image/x-icon" href="logo/lms.ico"> 
-<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" /> 
-<link rel ="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css"> 
-<script src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js" async='true' crossorigin='anonymous'></script> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css"/> 
-<script src ="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script> 
-<link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"/> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/> 
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet/'> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script> 
- <style></style> </head><body 
->
-<page> 
-<nav class="wide"><img class="webbook-logo" src="logo/webbook-logo.svg"></img> <div class="header"> <div class="header-left"><span class="header-lecture-grade">B.Sc</span> 
-<span class="header-lecture-name">Drive Technology</span> 
-<span class="header-webBook">WebBook 2.1</span> </div> <div class="header-right"> <span class="header-version">WS.2026</span> 
- <span class="header-chapter">Transformers</span></div></div> <div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style='font-size:20px'></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&hl=en\&user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style='font-size:20px'></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style='font-size:20px'></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style='font-size:20px'></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style='font-size:20px'></i></a></div><hr /><span class="chapterToc"><span class="number">0</span><span class="title"><a 
-href="index.html#x2-10000">index</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a 
-href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a 
-href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic
-Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a 
-href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a 
-href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a 
-href="MagneticMaterialProperties.html#x6-60001.3">Magnetic
-Material Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a 
-href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a 
-href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a 
-href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a 
-href="TheStationaryElectricMachine.html#x9-120002.1">The
-Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a 
-href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a 
-href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
-Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a 
-href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a 
-href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The
-Effect of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a 
-href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types
-of Equivalent Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a 
-href="#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a 
-href="#x11-200002.3.1">Short-Circuit
-Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a 
-href="#x11-210002.3.2">Open-Circuit Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a 
-href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a 
-href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding
-Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a 
-href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a 
-href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span>
-<!--l. 767--><p class="noindent" ><div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> 
-<span class="nav-footer-webBook"><span id="bold" style="font-weight:bold;">Last Updated:</span> 10.9.2026, at 11:1.</span></div></div><span class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span></div></div></nav> 
-
-</p>
-<article class="chapter"> 
-<nav class="crosslinks-top"> <a 
-href="TransformersintheWild.html" ><span class="nav-next">NEXT</span></a><a 
-href="AMathematicalModeloftheTransformer.html" ><span class="nav-prev">PREV</span></a><a 
-href="AMathematicalModeloftheTransformer.html#tailAMathematicalModeloftheTransformer.html" ><span class="nav-prev-tail">PREV-TAIL</span></a><a 
-href="#tailUnderstandingTransformerBehaviour.html"><span class="nav-tail">TAIL</span></a><a 
-href="Transformers.html#UnderstandingTransformerBehaviour.html" ><span class="nav-up">UP</span></a></nav> 
-<div class="section-header"> <h3 id="header-section-2.3"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.2.3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-pdf" viewBox="0 0 16 16"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">2.3</span> <span class="title">  <a 
- id="x11-190002.3"></a>Understanding Transformer Behaviour</span></h3></div><p>
-<!--l. 769--><p class="noindent" >In analysis involving the transformer as a circuit element, it is useful to adopt one of several
-approximate forms of the <span class="margin-block">equivalent circuit <span class="margin-comment"><span class="ellipsis">[40]</span> 
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Understanding Transformer Behaviour</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Transformers</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="TransformersintheWild.html">Transformers in the Wild</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="AMathematicalModeloftheTransformer.html">A Mathematical Model of the Transformer</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="Transformers.html#UnderstandingTransformerBehaviour.html">Chapter: Transformers</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-2.3"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.2.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">2.3</span> <span class="title"> <a id="x11-190002.3"></a>Understanding
+Transformer Behaviour</span></h3></div>
+<p class="noindent">In analysis involving the transformer as a circuit element, it is useful to adopt one of several
+approximate forms of the <span class="margin-block">equivalent circuit <span class="margin-comment"><span class="ellipsis">[40]</span>
 <span class="sidenote">A theoretical circuit that retains all of the electrical
 characteristics of a given circuit. Often, an equivalent circuit is sought that simplifies calculation, and
 more broadly, that is a simplest form of a more complex circuit in order to aid analysis. But then again,
@@ -85,1122 +102,331 @@ we’ve looked at this the previous chapter so I hope this aforementioned explan
 superfluous.</span></span></span> of Fig. 2.10 rather than the full circuit. The approximations chosen in a particular
 case depend largely on physical reasoning based on orders of magnitude of the neglected
 quantities.
-</p><!--l. 778--><p class="noindent" >The approximate equivalent circuits commonly used for constant-frequency power transformer analyses
+</p><p class="noindent">The approximate equivalent circuits commonly used for constant-frequency power transformer analyses
 are summarized for comparison in Fig. 2.12. All quantities in these circuits are referred to either the
-primary or the secondary, and the ideal transformer is <span id="bold" style="font-weight:bold;">NOT</span> shown.
-</p><!--l. 782--><p class="noindent" >Calculations can often be greatly simplified by moving the shunt branch representing the exciting
+primary or the secondary, and the ideal transformer is <b>NOT</b> shown.
+</p><p class="noindent">Calculations can often be greatly simplified by moving the shunt branch representing the exciting
 current out from the middle of the T-circuit to either the primary or the secondary terminals, as in Fig.
 2.12a and b.
 </p>
-<div class="warning">
-<!--l. 788--><p class="noindent" >These forms of the equivalent circuit are referred to as cantilever circuits.
-</p>
-</div>
-<!--l. 790--><p class="noindent" >The series branch is the combined resistance and leakage reactance of the primary and secondary,
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">These forms of the equivalent circuit are referred to as cantilever circuits. </p></div></div>
+<p class="noindent">The series branch is the combined resistance and leakage reactance of the primary and secondary,
 referred to the same side. This impedance is sometimes called the equivalent series impedance
-(<!--l. 792--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-></math>) and
+(<math display="inline"><msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math>) and
 its components are: </p>
-<ul class="itemize1">     
+<ul class="itemize1">
 <li class="itemize">
-                                                                                
-                                                                                
-     
-<!--l. 795--><p class="noindent" >the equivalent series resistance (<!--l. 795--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-></math>),
+<p class="noindent">the equivalent series resistance (<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math>),
 and
-</p>     
+</p>
 </li>
-<li class="itemize">     
-<!--l. 796--><p class="noindent" >equivalent series reactance (<!--l. 796--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-></math>),</p></li></ul>
-<!--l. 799--><p class="noindent" >are shown in Fig. <!--l. 799--><math 
- 
-display="inline" ><mn>2</mn><mo 
-class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mn>2</mn><mi 
->a</mi></math>
+<li class="itemize">
+<p class="noindent">equivalent series reactance (<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math>),</p></li></ul>
+<p class="noindent">are shown in Fig. <math display="inline"><mn>2</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mn>2</mn><mi>a</mi></math>
 and b.
-</p><!--l. 801--><p class="noindent" >As compared to the <italic>equivalent-T</italic> circuit of Fig. 2.10d, the cantilever circuit introduces additional error
-in that it <span id="bold" style="font-weight:bold;">neglects the voltage drop</span> in the primary or secondary leakage impedance caused by the
+</p><p class="noindent">As compared to the <i>equivalent-T</i> circuit of Fig. 2.10d, the cantilever circuit introduces additional error
+in that it <b>neglects the voltage drop</b> in the primary or secondary leakage impedance caused by the
 exciting current. As the impedance of the exciting branch is typically quite large in large power
 transformers, the corresponding exciting current is quite small.
 </p>
-<div class="warning">
-<!--l. 809--><p class="noindent" >This error becomes <span class="alert"><alert style="color: #821131;">insignificant in most situations involving large transformers</alert></span>.
-</p>
-</div>
-<!--l. 846--><p class="noindent" >Further analytical simplification can be achieved by neglecting the exciting current <span class="alert"><alert style="color: #821131;">entirely</alert></span>, as in Fig.
-2.12c, in which the transformer is represented as an equivalent series impedance. If the transformer is
-<span class="margin-block">large, <span class="margin-comment"><span class="ellipsis">[41]</span> 
-<span class="sidenote">In this context we would be talking about several hundred kilovoltamperes or more</span></span></span> the equivalent
-resistance (<!--l. 849--><math 
- 
-display="inline" ><mstyle style="color:#FF0000;"><msubsup><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mi 
->e</mi><mi 
->q</mi></mrow><mrow 
-></mrow></msubsup 
-></mstyle></math>)
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">This error becomes <span class="alert">insignificant in most situations involving large transformers</span>. </p></div></div>
+<p class="noindent">Further analytical simplification can be achieved by neglecting the exciting current <span class="alert">entirely</span>, as in Fig. 2.12c, in
+which the transformer is represented as an equivalent series impedance. If the transformer is <span class="margin-block">large, <span class="margin-comment"><span class="ellipsis">[41]</span>
+<span class="sidenote">In this
+context we would be talking about several hundred kilovoltamperes or more</span></span></span> the equivalent resistance
+(<math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>R</mi></mrow><mrow><mi>e</mi><mi>q</mi></mrow><mrow></mrow></msubsup></mstyle></math>)
 becomes measurably insignificant compared to the equivalent reactance
-(<!--l. 850--><math 
- 
-display="inline" ><mstyle style="color:#FF0000;"><msubsup><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mi 
->e</mi><mi 
->q</mi></mrow><mrow 
-></mrow></msubsup 
-></mstyle></math>) and
+(<math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>X</mi></mrow><mrow><mi>e</mi><mi>q</mi></mrow><mrow></mrow></msubsup></mstyle></math>) and
 therefore can generally be neglected, giving the equivalent circuit of Fig. 2.12d.
-</p><!--l. 853--><p class="noindent" >For most power system problems and analysis the circuits shown in Fig. 2.12c and d are sufficiently
+</p><p class="noindent">For most power system problems and analysis the circuits shown in Fig. 2.12c and d are sufficiently
 accurate.
-</p><!--l. 856--><p class="noindent" >As a final note, in situations where the currents and voltages are determined <span id="bold" style="font-weight:bold;">almost wholly by the
-circuits external to the transformer</span> or when a high degree of accuracy is <span id="bold" style="font-weight:bold;">NOT</span> required, the
+</p><p class="noindent">As a final note, in situations where the currents and voltages are determined <b>almost wholly by the
+circuits external to the transformer</b> or when a high degree of accuracy is <b>NOT</b> required, the
 entire transformer impedance can be neglected and the transformer considered to be ideal, as
 mentioned previously.
-</p><!--l. 861--><p class="noindent" >The circuits of Fig. 2.12 have the additional advantage being the total equivalent resistance
-(<!--l. 862--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-></math>) and equivalent
-reactance (<!--l. 862--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-></math>)
+</p><p class="noindent">The circuits of Fig. 2.12 have the additional advantage being the total equivalent resistance
+(<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math>) and equivalent
+reactance (<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math>)
 can be found from a very simple test in which one terminal is short-circuited.
 Whereas, the process of determining the individual leakage reactances
-(<!--l. 864--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mn>1</mn></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></mrow></msub 
-></math> and
-<!--l. 864--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mn>1</mn></mrow><mrow 
-><mn>2</mn></mrow></msub 
-></mrow></msub 
-></math>) and a
-complete set of parameters for the <italic>equivalent-T</italic> circuit of Fig. 2.10c is, as can be expected, more
+(<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mn>1</mn></mrow><mrow><mn>1</mn></mrow></msub></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></msub></mrow></msub></math>) and a
+complete set of parameters for the <i>equivalent-T</i> circuit of Fig. 2.10c is, as can be expected, more
 difficult.
 </p>
-<div class="warning">
-<!--l. 872--><p class="noindent" >Without some prior knowledge of the turns <span class="margin-block">ratio, <span class="margin-comment"><span class="ellipsis">[42]</span> 
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Without some prior knowledge of the turns <span class="margin-block">ratio, <span class="margin-comment"><span class="ellipsis">[42]</span>
 <span class="sidenote">based for example upon knowledge of the internal
 construction of the transformer.</span></span></span> it is not possible to make a set of measurements which uniquely
-determine the turns ratio, the <span class="alert"><alert style="color: #821131;">magnetizing inductance</alert></span>, and the <span class="alert"><alert style="color: #821131;">individual leakage
-impedances</alert></span>.
-                                                                                
-                                                                                
-</p>
-</div>
-<!--l. 874--><p class="noindent" >It can be shown that, simply from terminal measurements, neither the turns ratio, the magnetizing
-reactance, or the leakage reactances are unique characteristics of a transformer equivalent circuit. <div class="quote"><p>  As
-an example, the turns ratio can be chosen arbitrarily and for each choice of turns ratio, there
-will be a corresponding set of values for the leakage and magnetizing reactances which
-matches the measured characteristic. </p></div><p>  Each of the resultant equivalent circuits will have the
-same electrical terminal characteristics, a fact which has the fortunate consequence that
-any self-consistent set of empirically determined parameters will adequately represent the
-transformer.
-<!--l. 918--><p class="noindent" >There are two (<span class="alert"><alert style="color: #821131;">2</alert></span>) simple tests employed to determine the parameters of the equivalent circuits of Fig.
+determine the turns ratio, the <span class="alert">magnetizing inductance</span>, and the <span class="alert">individual leakage impedances</span>. </p></div></div>
+<p class="noindent">It can be shown that, simply from terminal measurements, neither the turns ratio, the magnetizing
+reactance, or the leakage reactances are unique characteristics of a transformer equivalent circuit. </p><div class="quote">  As
+an example, the turns ratio can be chosen arbitrarily and for each choice of turns ratio, there will be a
+corresponding set of values for the leakage and magnetizing reactances which matches the measured
+characteristic. </div>
+<p class="noindent">Each of the resultant equivalent circuits will have the same electrical terminal characteristics, a fact
+which has the fortunate consequence that any self-consistent set of empirically determined parameters
+will adequately represent the transformer.
+</p><p class="noindent">There are two (<span class="alert">2</span>) simple tests employed to determine the parameters of the equivalent circuits of Fig.
 2.10 and 2.12. These consist of measuring the input voltage, current, and power to the primary:
-</p>     
+</p>
 <ul class="itemize1">
-<li class="itemize">     
-<!--l. 923--><p class="noindent" >first with the secondary short-circuited, and
-</p>     
+<li class="itemize">
+<p class="noindent">first with the secondary short-circuited, and
+</p>
 </li>
-<li class="itemize">     
-<!--l. 924--><p class="noindent" >then with the secondary open-circuited,</p></li></ul>
-<!--l. 927--><p class="noindent" >which are looked in detail below.
-
+<li class="itemize">
+<p class="noindent">then with the secondary open-circuited,</p></li></ul>
+<p class="noindent">which are looked in detail below.
 </p>
-<!--l. 929--><p class="noindent" ><div class="subsection-header"> <h4 id="header-subsection-2.3.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.2.3.1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-pdf" viewBox="0 0 16 16"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.3.1</span> <span class="title">  <a 
- id="x11-200002.3.1"></a>Short-Circuit Test</span></h4></div><p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.3.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.2.3.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.3.1</span> <span class="title"> <a id="x11-200002.3.1"></a>Short-Circuit Test</span></h4></div>
 </p>
-<figure class="figure"> 
-
-                                                                                
-                                                                                
-                                                                                
-                                                                                
-<!--l. 933--><p class="noindent" > <img 
- 
-src="figures/Transformers/figures-8.png" alt="PIC"  
-style="" /> <a 
- id="x11-20001r8"></a>
+<p class="noindent"></p><figure class="float">
+<p class="noindent"> <img alt="PIC" src="figures/Transformers/figures-8.png" style=""/> <a id="x11-20001r8"></a>
 </p>
-<figcaption class="caption" ><span class="id">Figure 2.8: 
-         </span><span  
-class="content">Equivalent circuit with short-circuited secondary. (a) Complete equivalent circuit. (b) Cantilever equivalent
-         circuit with the exciting branch at the transformer secondary.                             </span></figcaption><!--tex4ht:label?: x11-20001r8 -->
-                                                                                
-                                                                                
+<figcaption class="caption"><span class="id">Figure 2.8: 
+         </span><span class="content">Equivalent circuit with short-circuited secondary. (a) Complete equivalent circuit. (b) Cantilever equivalent
+         circuit with the exciting branch at the transformer secondary.                             </span></figcaption>
 </figure>
-<!--l. 939--><p class="noindent" >The short-circuit test can be used to find the equivalent series impedance: </p><table class="equation-star"><tr><td>
-<!--l. 941--><math 
- 
-display="block" class="equation">
-                               <msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-><mo 
-class="MathClass-punc" stretchy="false">.</mo>
+<p class="noindent">The short-circuit test can be used to find the equivalent series impedance: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
 </math></td></tr></table>
-<!--l. 945--><p class="noindent" >Although the choice of winding to short-circuit is arbitrary, for the sake of this discussion we shall
+<p class="noindent">Although the choice of winding to short-circuit is arbitrary, for the sake of this discussion we shall
 consider the short circuit to be applied to the transformer secondary and voltage applied to
 primary.
 </p>
-<div class="info-block"> <span class="info-upper"> <span class="info-header"> <span id="bold" style="font-weight:bold;">Information 2.<a 
- id="x11-20002r11"></a>11: </span> </span> <span class="info-title"> Practical Testing of Short-Circuit </span> </span> <div class="body"><p>
-<!--l. 951--><p class="noindent" >For convenience, the <span class="alert"><alert style="color: #821131;">high-voltage side</alert></span> is usually taken as the primary in this test due to the
-<span class="alert"><alert style="color: #821131;">equivalent series impedance is relatively small</alert></span>, typically an applied primary voltage on the
-order of 10 to 15 percent or less of the rated value will result in rated current.
-</p></div></div> </p>
-<!--l. 958--><p class="noindent" >Figure 2.15a shows the equivalent circuit with transformer secondary impedance referred to the
+<div class="info-block" id="info-block-2.11"> <a class="copiable-link" href="#info-block-2.11"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 2.<a id="x11-20002r11"></a>11: </b> </span> <span class="info-title"> Practical Testing of Short-Circuit </span> </span> <div class="body">
+<p class="noindent">For convenience, the <span class="alert">high-voltage side</span> is usually taken as the primary in this test due to the <span class="alert">equivalent series impedance is relatively small</span>, typically an applied
+primary voltage on the order of 10 to 15 percent or less of the rated value will result in rated
+current.
+</p>
+</div></div>
+<p class="noindent">Figure 2.15a shows the equivalent circuit with transformer secondary impedance referred to the
 primary side and a short circuit applied to the secondary. The short-circuit impedance
-(<!--l. 960--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >sc</mtext></mstyle></mrow></msub 
-></math>)
+(<math display="inline"><msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">sc</mtext></mstyle></mrow></msub></math>)
 looking into the primary under these conditions is: </p><table class="equation"><tr><td>
-<!--l. 962--><math 
- 
-display="block" class="equation">
-                         <mstyle 
-   id="x11-20003r25"  class="label" ></mstyle><!--endlabel-->
-                         <msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >sc</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mi 
->l</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo>  <mfrac><mrow 
-><msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mi 
->φ</mi></mrow></msub 
-><mo 
-class="MathClass-open" stretchy="false">(</mo><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>2</mn></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mi 
->l</mi></mrow><mrow 
-><mn>2</mn></mrow></msub 
-></mrow></msub 
-><mo 
-class="MathClass-close" stretchy="false">)</mo></mrow> 
-<mrow 
-><msub><mrow 
->
-<mi 
->Z</mi></mrow><mrow 
-><mi 
->φ</mi></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>2</mn></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mi 
->l</mi></mrow><mrow 
-><mn>2</mn></mrow></msub 
-></mrow></msub 
-></mrow></mfrac>
+<math class="equation" display="block">
+<mstyle class="label" id="x11-20003r25"></mstyle>
+<msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">sc</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mi>l</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>Z</mi></mrow><mrow><mi>φ</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mi>l</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow>
+<mrow><msub><mrow>
+<mi>Z</mi></mrow><mrow><mi>φ</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mi>l</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></msub></mrow></mfrac>
 </math></td><td class="eq-no">(2.25)</td></tr></table>
-<!--l. 966--><p class="noindent" >Because the impedance of the exciting branch (<!--l. 968--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mi 
->φ</mi></mrow></msub 
-></math>)
-is much larger than that of the secondary leakage <span class="margin-block">impedance, <span class="margin-comment"><span class="ellipsis">[43]</span> 
+<p class="noindent"></p>
+<p class="noindent">Because the impedance of the exciting branch (<math display="inline"><msub><mrow><mi>Z</mi></mrow><mrow><mi>φ</mi></mrow></msub></math>)
+is much larger than that of the secondary leakage <span class="margin-block">impedance, <span class="margin-comment"><span class="ellipsis">[43]</span>
 <span class="sidenote">which will be true unless the core is
 heavily saturated by excessive voltage applied to the primary; certainly not the case here</span></span></span> the
 short-circuit impedance can be approximated as </p><table class="equation"><tr><td>
-                                                                                
-                                                                                
-<!--l. 973--><math 
- 
-display="block" class="equation">
-                     <mstyle 
-   id="x11-20004r26"  class="label" ></mstyle><!--endlabel-->
-                     <msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mi 
->s</mi><mi 
->c</mi></mrow></msub 
-> <mi 
->≈</mi> <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mn>1</mn></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>2</mn></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mn>1</mn></mrow><mrow 
-><mn>2</mn></mrow></msub 
-></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mi 
->e</mi><mi 
->q</mi></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mi 
->e</mi><mi 
->q</mi></mrow></msub 
->
+<math class="equation" display="block">
+<mstyle class="label" id="x11-20004r26"></mstyle>
+<msub><mrow><mi>Z</mi></mrow><mrow><mi>s</mi><mi>c</mi></mrow></msub> <mi>≈</mi> <msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mn>1</mn></mrow><mrow><mn>1</mn></mrow></msub></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></msub></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mi>e</mi><mi>q</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mi>e</mi><mi>q</mi></mrow></msub>
 </math></td><td class="eq-no">(2.26)</td></tr></table>
-<!--l. 975--><p class="noindent" >
-</p>
-<div class="warning">
-<!--l. 980--><p class="noindent" >The approximation made here is equivalent to the approximation made in reducing the equivalent-T
-circuit to the cantilever equivalent.
-</p>
-</div>
-<!--l. 982--><p class="noindent" >This can be seen from Fig. 2.15b. The impedance seen at the input of this equivalent circuit is clearly:
+<p class="noindent"></p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The approximation made here is equivalent to the approximation made in reducing the equivalent-T
+circuit to the cantilever equivalent. </p></div></div>
+<p class="noindent">This can be seen from Fig. 2.15b. The impedance seen at the input of this equivalent circuit is clearly:
 </p><table class="equation-star"><tr><td>
-<!--l. 985--><math 
- 
-display="block" class="equation">
-                             <msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >sc</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
->
+<math class="equation" display="block">
+<msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">sc</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub>
 </math></td></tr></table>
-<!--l. 989--><p class="noindent" >given the exciting branch is directly shorted out by the short on the secondary.
-</p><!--l. 991--><p class="noindent" >Typically the instrumentation used for this test will measure the <span class="acronym"><span class="acronym-short"><a 
-href="#glo:rms" class="glossary" >RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a 
-href="#glo:rms" class="glossary" >Root-Mean Square</a></span><span class="acronym-desc"><a 
-href="#glo:rms" class="glossary" >Equivalent
+<p class="noindent">given the exciting branch is directly shorted out by the short on the secondary.
+</p><p class="noindent">Typically the instrumentation used for this test will measure the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:rms">RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:rms">Root-Mean Square</a></span><span class="acronym-desc"><a class="glossary" href="#glo:rms">Equivalent
 direct current (DC) voltage of an alternating current (AC) source.</a></span></span></span> magnitude of the applied voltage
-(<!--l. 992--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->V</mi> </mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >sc</mtext></mstyle></mrow></msub 
-></math>), the short-circuit
-current (<!--l. 992--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->I</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >sc</mtext></mstyle></mrow></msub 
-></math>), and
-the power (<!--l. 993--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->P</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >sc</mtext></mstyle></mrow></msub 
-></math>).
-Based upon these three (<span class="alert"><alert style="color: #821131;">3</alert></span>) measurements, the equivalent resistance and <span class="margin-block">reactance <span class="margin-comment"><span class="ellipsis">[44]</span> 
+(<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">sc</mtext></mstyle></mrow></msub></math>), the short-circuit
+current (<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">sc</mtext></mstyle></mrow></msub></math>), and
+the power (<math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">sc</mtext></mstyle></mrow></msub></math>).
+Based upon these three (<span class="alert">3</span>) measurements, the equivalent resistance and <span class="margin-block">reactance <span class="margin-comment"><span class="ellipsis">[44]</span>
 <span class="sidenote">Both being referred
 to the primary.</span></span></span> can be found from:
-                                                                                
-                                                                                
-</p><!--tex4ht:inline--><!--l. 1000--><math 
- 
-display="block" ><mtable 
-displaystyle="true" columnalign="left" class="align">
-                            <mtr><mtd 
-columnalign="right" class="align-odd"><mi 
->|</mi><msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-><mi 
->|</mi></mtd>
-                                                             <mtd 
-class="align-even"> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <mi 
->|</mi><msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >sc</mtext></mstyle></mrow></msub 
-><mi 
->|</mi> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow 
-><msub><mrow 
-><mi 
->V</mi> </mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >sc</mtext></mstyle></mrow></msub 
-></mrow> 
-<mrow 
-><msub><mrow 
->
-<mi 
->I</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >sc</mtext></mstyle></mrow></msub 
-></mrow></mfrac> <mspace width="2em"/></mtd>
-                                                                                                              
-                                                                                                                                          <mtd 
-columnalign="right" class="align-label"><mstyle 
-   id="x11-20005r27"  class="label" ></mstyle><!--endlabel--><mstyle 
-class="maketag"><mtext  >(2.27)</mtext></mstyle><mspace width="0.33em" class="nbsp" />
-                            </mtd></mtr><mtr><mtd 
-columnalign="right" class="align-odd"><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >eq</mtext></mstyle></mrow></msub 
-></mtd>
-                                                             <mtd 
-class="align-even"> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >sc</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow 
-><msub><mrow 
-><mi 
->P</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >sc</mtext></mstyle></mrow></msub 
-></mrow> 
-<mrow 
-><msubsup><mrow 
->
-<mi 
->I</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >sc</mtext></mstyle></mrow><mrow 
-><mn>2</mn></mrow></msubsup 
-></mrow></mfrac><mspace width="2em"/></mtd>
-                                                                                                              
-                                                                                                                                          <mtd 
-columnalign="right" class="align-label"><mstyle 
-   id="x11-20006r28"  class="label" ></mstyle><!--endlabel--><mstyle 
-class="maketag"><mtext  >(2.28)</mtext></mstyle><mspace width="0.33em" class="nbsp" />
-                            </mtd></mtr><mtr><mtd 
-columnalign="right" class="align-odd"><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >eq</mtext></mstyle></mrow></msub 
-></mtd>
-                                                             <mtd 
-class="align-even"> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >sc</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
-<mi 
->|</mi><msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >sc</mtext></mstyle></mrow></msub 
-><msup><mrow 
-><mi 
->|</mi></mrow><mrow 
-><mn>2</mn></mrow></msup 
-> <mo 
-class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >sc</mtext></mstyle></mrow><mrow 
-><mn>2</mn></mrow></msubsup 
-></mrow></msqrt><mspace width="2em"/></mtd>
-                                                                                                              
-                                                                                                                                          <mtd 
-columnalign="right" class="align-label"><mstyle 
-   id="x11-20007r29"  class="label" ></mstyle><!--endlabel--><mstyle 
-class="maketag"><mtext  >(2.29)</mtext></mstyle><mspace width="0.33em" class="nbsp" />
+</p><math display="block"><mtable class="align" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mi>|</mi><msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub><mi>|</mi></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>|</mi><msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">sc</mtext></mstyle></mrow></msub><mi>|</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">sc</mtext></mstyle></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">sc</mtext></mstyle></mrow></msub></mrow></mfrac> <mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"><mstyle class="label" id="x11-20005r27"></mstyle><mstyle class="maketag"><mtext>(2.27)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace>
+</mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext>eq</mtext></mstyle></mrow></msub></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext>sc</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext>sc</mtext></mstyle></mrow></msub></mrow>
+<mrow><msubsup><mrow>
+<mi>I</mi></mrow><mrow><mstyle class="text"><mtext>sc</mtext></mstyle></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"><mstyle class="label" id="x11-20006r28"></mstyle><mstyle class="maketag"><mtext>(2.28)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace>
+</mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext>eq</mtext></mstyle></mrow></msub></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext>sc</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
+<mi>|</mi><msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext>sc</mtext></mstyle></mrow></msub><msup><mrow><mi>|</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext>sc</mtext></mstyle></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></msqrt><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"><mstyle class="label" id="x11-20007r29"></mstyle><mstyle class="maketag"><mtext>(2.29)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace>
 </mtd></mtr></mtable></math>
-<!--l. 1002--><p class="noindent" >The equivalent impedance can, of course, be referred from one side to the other in the usual manner.
+<p class="noindent">The equivalent impedance can, of course, be referred from one side to the other in the usual manner.
 On the rare occasions when the equivalent-T circuit in Fig. 2.10d must be resorted to, approximate
 values of the individual primary and secondary resistances and leakage reactances can be obtained by
 assuming: </p><table class="equation-star"><tr><td>
-<!--l. 1007--><math 
- 
-display="block" class="equation">
-                      <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>2</mn></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo 
-class="MathClass-punc" stretchy="false">.</mo><mn>5</mn><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
-><mspace width="2em" class="qquad"/><mstyle 
-class="text"><mtext  >and</mtext></mstyle><mspace width="2em" class="qquad"/><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mn>1</mn></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mn>1</mn></mrow><mrow 
-><mn>2</mn></mrow></msub 
-></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo 
-class="MathClass-punc" stretchy="false">.</mo><mn>5</mn><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >eq</mtext></mstyle></mrow></msub 
->
+<math class="equation" display="block">
+<msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>5</mn><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>and</mtext></mstyle><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mn>1</mn></mrow><mrow><mn>1</mn></mrow></msub></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></msub></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>5</mn><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub>
 </math></td></tr></table>
-<!--l. 1011--><p class="noindent" >when all impedances are referred to the same side.
-</p><!--l. 1013--><p class="noindent" >Strictly speaking, of course, it is possible to measure
-<!--l. 1013--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></math> and
-<!--l. 1013--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>2</mn></mrow></msub 
-></math>
-directly by a <span class="acronym"><span class="acronym-short"><a 
-href="#glo:dc" class="glossary" >DC</a></span><span class="acronym-detail"><span class="acronym-long"><a 
-href="#glo:dc" class="glossary" >Direct Current</a></span><span class="acronym-desc"><a 
-href="#glo:dc" class="glossary" >One-directional flow of electric charge. Direct current may flow through
+<p class="noindent">when all impedances are referred to the same side.
+</p><p class="noindent">Strictly speaking, of course, it is possible to measure
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></math>
+directly by a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through
 a conductor such as a wire, but can also flow through semiconductors, insulators, or even through a
 vacuum as in electron or ion beams. The electric current flows in a constant direction, distinguishing it
 from alternating current (AC). A term formerly used for this type of current was galvanic current.</a></span></span></span>
-resistance measurement on each <span class="margin-block">winding. <span class="margin-comment"><span class="ellipsis">[45]</span> 
+resistance measurement on each <span class="margin-block">winding. <span class="margin-comment"><span class="ellipsis">[45]</span>
 <span class="sidenote">and then referring one or the other to the other side of the
 idea transformer</span></span></span>
 </p>
-<div class="warning">
-<!--l. 1020--><p class="noindent" >However, <span class="alert"><alert style="color: #821131;">no such simple test exists</alert></span> for the leakage reactances
-<!--l. 1020--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mn>1</mn></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></mrow></msub 
-></math> and
-<!--l. 1020--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mn>1</mn></mrow><mrow 
-><mn>2</mn></mrow></msub 
-></mrow></msub 
-></math>.
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">However, <span class="alert">no such simple test exists</span> for the leakage reactances <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mn>1</mn></mrow><mrow><mn>1</mn></mrow></msub></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></msub></mrow></msub></math>.
+</p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.3.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.2.3.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.3.2</span> <span class="title"> <a id="x11-210002.3.2"></a>Open-Circuit Test</span></h4></div>
 </p>
-</div>
-
-<!--l. 1022--><p class="noindent" ><div class="subsection-header"> <h4 id="header-subsection-2.3.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.2.3.2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-pdf" viewBox="0 0 16 16"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.3.2</span> <span class="title">  <a 
- id="x11-210002.3.2"></a>Open-Circuit Test</span></h4></div><p>
-                                                                                
-                                                                                
+<p class="noindent"></p><figure class="float">
+<p class="noindent"> <img alt="PIC" src="figures/Transformers/figures-9.png" style=""/> <a id="x11-21001r9"></a>
 </p>
-<figure class="figure"> 
-
-                                                                                
-                                                                                
-                                                                                
-                                                                                
-<!--l. 1026--><p class="noindent" > <img 
- 
-src="figures/Transformers/figures-9.png" alt="PIC"  
-style="" /> <a 
- id="x11-21001r9"></a>
-</p>
-<figcaption class="caption" ><span class="id">Figure 2.9: 
-         </span><span  
-class="content">Equivalent circuit with open-circuited secondary. (a) Complete equivalent circuit. (b) Cantilever equivalent
-         circuit with the exciting branch at the transformer primary.                              </span></figcaption><!--tex4ht:label?: x11-21001r9 -->
-                                                                                
-                                                                                
+<figcaption class="caption"><span class="id">Figure 2.9: 
+         </span><span class="content">Equivalent circuit with open-circuited secondary. (a) Complete equivalent circuit. (b) Cantilever equivalent
+         circuit with the exciting branch at the transformer primary.                              </span></figcaption>
 </figure>
-<!--l. 1033--><p class="noindent" >The open-circuit test is performed with the <span id="bold" style="font-weight:bold;">secondary open-circuited</span> and rated voltage impressed
-on the primary. Under this condition an exciting current of a few percent of full-load <span class="margin-block">current <span class="margin-comment"><span class="ellipsis">[46]</span> 
+<p class="noindent">The open-circuit test is performed with the <b>secondary open-circuited</b> and rated voltage impressed
+on the primary. Under this condition an exciting current of a few percent of full-load <span class="margin-block">current <span class="margin-comment"><span class="ellipsis">[46]</span>
 <span class="sidenote">less on
 large transformers and more on smaller ones.</span></span></span> is obtained. Rated voltage is chosen to ensure that the
 magnetizing reactance will be operating at a flux level close to that which will exist under normal
 operating conditions. If the transformer is to be used at other than its rated voltage, the test should be
 done at that voltage.
 </p>
-<div class="knowledge">
-<!--l. 1043--><p class="noindent" >For convenience, the <span class="alert"><alert style="color: #821131;">low-voltage side</alert></span> is usually taken as the primary in this test.
-</p>
-</div>
-<!--l. 1045--><p class="noindent" >If the primary in this test is chosen to be the opposite winding from that of the short-circuit
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">For convenience, the <span class="alert">low-voltage side</span> is usually taken as the primary in this test. </p></div></div>
+<p class="noindent">If the primary in this test is chosen to be the opposite winding from that of the short-circuit
 test, one must of course be careful to refer the various measured impedances to the
 same side of the transformer in order to obtain a self-consistent set of parameter values.
 Figure 2.16a shows the equivalent circuit with the transformer secondary impedance
 referred to the primary side and the secondary open-circuited. The open-circuit impedance
-<!--l. 1049--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >oc</mtext></mstyle></mrow></msub 
-></math> looking
+<math display="inline"><msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext>oc</mtext></mstyle></mrow></msub></math> looking
 into the primary under these conditions is </p><table class="equation"><tr><td>
-<!--l. 1052--><math 
- 
-display="block" class="equation">
-                   <mstyle 
-   id="x11-21002r30"  class="label" ></mstyle><!--endlabel-->
-                   <msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >oc</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mi 
->l</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mi 
->φ</mi></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><msub><mrow 
-><mi 
->l</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo>  <mfrac><mrow 
-><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >c</mtext></mstyle></mrow></msub 
-><mo 
-class="MathClass-open" stretchy="false">(</mo><mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >m</mtext></mstyle></mrow></msub 
-><mo 
-class="MathClass-close" stretchy="false">)</mo></mrow> 
-<mrow 
-><msub><mrow 
->
-<mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >c</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >m</mtext></mstyle></mrow></msub 
-></mrow></mfrac>
+<math class="equation" display="block">
+<mstyle class="label" id="x11-21002r30"></mstyle>
+<msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">oc</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mi>l</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>Z</mi></mrow><mrow><mi>φ</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><msub><mrow><mi>l</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">c</mtext></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">m</mtext></mstyle></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow>
+<mrow><msub><mrow>
+<mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">c</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">m</mtext></mstyle></mrow></msub></mrow></mfrac>
 </math></td><td class="eq-no">(2.30)</td></tr></table>
-<!--l. 1056--><p class="noindent" >Because the impedance of the exciting branch is quite large, the voltage drop in the primary leakage
+<p class="noindent"></p>
+<p class="noindent">Because the impedance of the exciting branch is quite large, the voltage drop in the primary leakage
 impedance caused by the exciting current is typically negligible, and the primary impressed voltage
-<!--l. 1060--><math 
- 
-display="inline" ><msub><mrow 
-><mover 
-accent="true"><mrow 
-><mi 
->V</mi> </mrow><mo accent="true">^</mo></mover></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >oc</mtext></mstyle></mrow></msub 
-></math> very nearly
-equals the emf <!--l. 1060--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->Ê</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >oc</mtext></mstyle></mrow></msub 
-></math>
+<math display="inline"><msub><mrow><mover accent="true"><mrow><mi>V</mi> </mrow><mo accent="true">^</mo></mover></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">oc</mtext></mstyle></mrow></msub></math> very nearly
+equals the emf <math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">oc</mtext></mstyle></mrow></msub></math>
 induced by the resultant core flux.
-</p><!--l. 1063--><p class="noindent" >Similarly, the primary <!--l. 1063--><math 
- 
-display="inline" ><msubsup><mrow 
-><mi 
->I</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >oc</mtext></mstyle></mrow><mrow 
-><mn>2</mn></mrow></msubsup 
-><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></math>
+</p><p class="noindent">Similarly, the primary <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">oc</mtext></mstyle></mrow><mrow><mn>2</mn></mrow></msubsup><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
 loss caused by the exciting current is negligible, so the power input
-<!--l. 1064--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->P</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >oc</mtext></mstyle></mrow></msub 
-></math> very nearly equals
-the core loss <!--l. 1064--><math 
- 
-display="inline" ><msubsup><mrow 
-><mi 
->E</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >oc</mtext></mstyle></mrow><mrow 
-><mn>2</mn></mrow></msubsup 
-><mo 
-class="MathClass-bin" stretchy="false">/</mo><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >c</mtext></mstyle></mrow></msub 
-></math>.
+<math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext>oc</mtext></mstyle></mrow></msub></math> very nearly equals
+the core loss <math display="inline"><msubsup><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext>oc</mtext></mstyle></mrow><mrow><mn>2</mn></mrow></msubsup><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext>c</mtext></mstyle></mrow></msub></math>.
 As a result, it is common to ignore the primary leakage impedance and to approximate the open-circuit
 impedance as being equal to the magnetizing impedance: </p><table class="equation"><tr><td>
-                                                                                
-                                                                                
-<!--l. 1068--><math 
- 
-display="block" class="equation">
-                              <mstyle 
-   id="x11-21003r31"  class="label" ></mstyle><!--endlabel-->
-                              <msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >oc</mtext></mstyle></mrow></msub 
-> <mi 
->≈</mi> <msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mi 
->φ</mi></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo>  <mfrac><mrow 
-><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >c</mtext></mstyle></mrow></msub 
-><mo 
-class="MathClass-open" stretchy="false">(</mo><mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >m</mtext></mstyle></mrow></msub 
-><mo 
-class="MathClass-close" stretchy="false">)</mo></mrow> 
-<mrow 
-><msub><mrow 
->
-<mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >c</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-bin" stretchy="false">+</mo> <mi 
->j</mi><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >m</mtext></mstyle></mrow></msub 
-></mrow></mfrac>
+<math class="equation" display="block">
+<mstyle class="label" id="x11-21003r31"></mstyle>
+<msub><mrow><mi>Z</mi></mrow><mrow><mstyle class="text"><mtext>oc</mtext></mstyle></mrow></msub> <mi>≈</mi> <msub><mrow><mi>Z</mi></mrow><mrow><mi>φ</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext>c</mtext></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext>m</mtext></mstyle></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow>
+<mrow><msub><mrow>
+<mi>R</mi></mrow><mrow><mstyle class="text"><mtext>c</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext>m</mtext></mstyle></mrow></msub></mrow></mfrac>
 </math></td><td class="eq-no">(2.31)</td></tr></table>
-<!--l. 1071--><p class="noindent" >
-</p>
-<div class="warning">
-<!--l. 1076--><p class="noindent" >The approximation made here is equivalent to the approximation made in reducing the equivalent-T
-circuit to the cantilever equivalent circuit of Fig. 2.16b
-</p>
-</div>
-<!--l. 1078--><p class="noindent" >The impedance seen at the input of this equivalent circuit is clearly
-<!--l. 1078--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mi 
->φ</mi></mrow></msub 
-></math> since
+<p class="noindent"></p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The approximation made here is equivalent to the approximation made in reducing the equivalent-T
+circuit to the cantilever equivalent circuit of Fig. 2.16b </p></div></div>
+<p class="noindent">The impedance seen at the input of this equivalent circuit is clearly
+<math display="inline"><msub><mrow><mi>Z</mi></mrow><mrow><mi>φ</mi></mrow></msub></math> since
 no current will flow in the open-circuited secondary. As with the short-circuit test, typically the
 instrumentation used for this test will measure the rms magnititude of the applied voltage,
-<!--l. 1081--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->V</mi> </mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >oc</mtext></mstyle></mrow></msub 
-></math>, the open-circuit
-current <!--l. 1081--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->I</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >oc</mtext></mstyle></mrow></msub 
-></math> and
-the power <!--l. 1081--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->P</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >oc</mtext></mstyle></mrow></msub 
-></math>.
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">oc</mtext></mstyle></mrow></msub></math>, the open-circuit
+current <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">oc</mtext></mstyle></mrow></msub></math> and
+the power <math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">oc</mtext></mstyle></mrow></msub></math>.
 Neglecting the primary leakage impedance and based upon these three measurements, the magnetizing
-resistance and <span class="margin-block">reactance <span class="margin-comment"><span class="ellipsis">[47]</span> 
+resistance and <span class="margin-block">reactance <span class="margin-comment"><span class="ellipsis">[47]</span>
 <span class="sidenote">referred to the primary.</span></span></span> can be found from </p><table class="equation-star"><tr><td>
-<!--l. 1085--><math 
- 
-display="block" class="equation">
-<mtable 
-class="aligned" displaystyle="true" ><mtr 
-><mtd columnalign="right" ><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >c</mtext></mstyle></mrow></msub 
-></mtd>
-    <mtd columnalign="left" > <mo 
-class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow 
-><msubsup><mrow 
-><mi 
->V</mi> </mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >oc</mtext></mstyle></mrow><mrow 
-><mn>2</mn></mrow></msubsup 
-></mrow>
- 
-<mrow 
-><msub><mrow 
->
-<mi 
->P</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >oc</mtext></mstyle></mrow></msub 
-></mrow></mfrac> </mtd>
-           <mtd columnalign="right" ></mtd>
-</mtr><mtr 
-><mtd columnalign="right" ><mi 
->|</mi><msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mi 
->φ</mi></mrow></msub 
-><mi 
->|</mi></mtd>
-<mtd columnalign="left" > <mo 
-class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow 
-><msub><mrow 
-><mi 
->V</mi> </mrow><mrow 
-><mstyle 
-class="text"><mtext  >oc</mtext></mstyle></mrow></msub 
-></mrow> 
-<mrow 
-><msub><mrow 
->
-<mi 
->Z</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext  >oc</mtext></mstyle></mrow></msub 
-></mrow></mfrac></mtd>
-</mtr>                                                                                </mtable><mspace width="2em" class="qquad"/><mstyle 
-class="text"><mtext  >and</mtext></mstyle><mspace width="2em" class="qquad"/><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >m</mtext></mstyle></mrow></msub 
-> <mo 
-class="MathClass-rel" stretchy="false">=</mo>               <mfrac><mrow 
-><mn>1</mn></mrow> 
-<mrow 
->
+<math class="equation" display="block">
+<mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">c</mtext></mstyle></mrow></msub></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msubsup><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">oc</mtext></mstyle></mrow><mrow><mn>2</mn></mrow></msubsup></mrow>
+<mrow><msub><mrow>
+<mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">oc</mtext></mstyle></mrow></msub></mrow></mfrac> </mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><mi>|</mi><msub><mrow><mi>Z</mi></mrow><mrow><mi>φ</mi></mrow></msub><mi>|</mi></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext>oc</mtext></mstyle></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>Z</mi></mrow><mrow><mstyle class="text"><mtext>oc</mtext></mstyle></mrow></msub></mrow></mfrac></mtd>
+</mtr> </mtable><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>and</mtext></mstyle><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">m</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
 <msqrt>
-<mrow><msup><mrow 
->
-<mo 
-class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo 
-class="MathClass-bin" stretchy="false">/</mo><mi 
->|</mi><msub><mrow 
-><mi 
->Z</mi></mrow><mrow 
-><mi 
->φ</mi></mrow></msub 
-><mi 
->|</mi><mo 
-class="MathClass-close" stretchy="false">)</mo></mrow><mrow 
-><mn>2</mn></mrow></msup 
-> <mo 
-class="MathClass-bin" stretchy="false">−</mo> <msup><mrow 
-><mo 
-class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo 
-class="MathClass-bin" stretchy="false">/</mo><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >c</mtext></mstyle></mrow></msub 
-><mo 
-class="MathClass-close" stretchy="false">)</mo></mrow><mrow 
-><mn>2</mn></mrow></msup 
-></mrow></msqrt></mrow></mfrac><mspace width="0.33em" class="nbsp" />
+<mrow><msup><mrow>
+<mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mi>|</mi><msub><mrow><mi>Z</mi></mrow><mrow><mi>φ</mi></mrow></msub><mi>|</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">c</mtext></mstyle></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow></msqrt></mrow></mfrac><mspace class="nbsp" width="0.33em"></mspace>
 </math></td></tr></table>
-<!--l. 1093--><p class="noindent" >The values obtained are, of course, referred to the side used as the primary in this test. The
+<p class="noindent">The values obtained are, of course, referred to the side used as the primary in this test. The
 open-circuit test can be used to obtain the core loss for efficiency computations and to check the
 magnitude of the exciting current. Sometimes the voltage at the terminals of the open-circuited
 secondary is measured as a check on the turns ratio.
 </p>
-<div class="info-block"> <span class="info-upper"> <span class="info-header"> <span id="bold" style="font-weight:bold;">Information 2.<a 
- id="x11-21004r12"></a>12: </span> </span> <span class="info-title"> Measure from the Other Side </span> </span> <div class="body"><p>
-<!--l. 1100--><p class="noindent" >If desired, a slightly more accurate calculation of
-<!--l. 1100--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >m</mtext></mstyle></mrow></msub 
-></math> and
-<!--l. 1100--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mstyle 
-class="text"><mtext class="textup" mathvariant="normal" >c</mtext></mstyle></mrow></msub 
-></math> by retaining the
-measurements of <!--l. 1101--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->R</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></math>
-                                                                                
-                                                                                
-and <!--l. 1101--><math 
- 
-display="inline" ><msub><mrow 
-><mi 
->X</mi></mrow><mrow 
-><mn>1</mn></mrow></msub 
-></math>
-obtained from the short-circuit <span class="margin-block">test, <span class="margin-comment"><span class="ellipsis">[48]</span> 
+<div class="info-block" id="info-block-2.12"> <a class="copiable-link" href="#info-block-2.12"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 2.<a id="x11-21004r12"></a>12: </b> </span> <span class="info-title"> Measure from the Other Side </span> </span> <div class="body">
+<p class="noindent">If desired, a slightly more accurate calculation of
+<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">m</mtext></mstyle></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">c</mtext></mstyle></mrow></msub></math> by retaining the
+measurements of <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
+obtained from the short-circuit <span class="margin-block">test, <span class="margin-comment"><span class="ellipsis">[48]</span>
 <span class="sidenote">referred to the proper side of the transformer.</span></span></span> and basing the
-derivation on <span> Eq. (<a 
-href="#x11-21002r30">2.30<!--tex4ht:ref: eq:tr-33 --></a>)</span> . However, such additional effort is rarely necessary for the purposes of
+derivation on <span> Eq. (<a href="#x11-21002r30">2.30</a>)</span> . However, such additional effort is rarely necessary for the purposes of
 engineering accuracy.
-</p></div></div> </p>
-                                                                                
-                                                                                
-<div class="crosslinks-bottom"><a 
-href="TransformersintheWild.html" ><span class="nav-next">NEXT</span></a><a 
-href="AMathematicalModeloftheTransformer.html" ><span class="nav-prev">PREV</span></a><a 
-href="AMathematicalModeloftheTransformer.html#tailAMathematicalModeloftheTransformer.html" ><span class="nav-prev-tail">PREV-TAIL</span></a><a 
-href="UnderstandingTransformerBehaviour.html" ><span class="nav-front">FRONT</span></a><a 
-href="Transformers.html#UnderstandingTransformerBehaviour.html" ><span class="nav-up">UP</span></a></nav><a 
- id="tailUnderstandingTransformerBehaviour.html"></a>  </div> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span> 
-<span class="footer-webBook"><span id="bold" style="font-weight:bold;">Last Updated:</span> 10.9.2026, at 11:1.</span> </div> </div> </div> <div class="author-notes"> 
-<span class="note">Authors Note </span> 
-<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span> 
-</div> 
-</article> 
-<div class="mode-line"> 
-<div class="core-line"> 
-<div class="button-group"> 
-</div> 
-</div> 
-<div class="supp-line"></div> 
-</div> 
-</page> 
- 
-</body> 
+</p>
+</div></div>
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:dc">¶</a>
+<dt class="acr-bottom" id="glo:dc"><span class="acr-short">DC</span><span class="acr-long">Direct Current</span></dt>
+<dd class="acr-desc"><p>One-directional flow of electric charge. Direct current may flow through
+a conductor such as a wire, but can also flow through semiconductors, insulators, or even through a
+vacuum as in electron or ion beams. The electric current flows in a constant direction, distinguishing it
+from alternating current (AC). A term formerly used for this type of current was galvanic current.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:rms">¶</a>
+<dt class="acr-bottom" id="glo:rms"><span class="acr-short">RMS</span><span class="acr-long">Root-Mean Square</span></dt>
+<dd class="acr-desc"><p>Equivalent
+direct current (DC) voltage of an alternating current (AC) source.</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="TransformersintheWild.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="AMathematicalModeloftheTransformer.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="Transformers.html#UnderstandingTransformerBehaviour.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 2.3: Understanding Transformer Behaviour</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
 </html>

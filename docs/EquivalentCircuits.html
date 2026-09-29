@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Equivalent Circuits</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Synchronous Machines</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="OpenandShortCircuitCharacteristics.html">Open and Short Circuit Characteristics</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="SynchronousMachines1.html">Synchronous Machines</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="SynchronousMachines.html#EquivalentCircuits.html">Chapter: Synchronous
+Machines</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-5.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.5.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">5.2</span> <span class="title"> <a id="x28-770005.2"></a>Equivalent
+Circuits</span></h3></div>
+<div class="sidenote"> <span class="figure">
+<a id="x28-77001r5"></a>
+<figcaption class="caption"><span class="id">Figure 5.5: </span><span class="content">Schematic diagram of a two-pole, three-phase cylindrical- rotor synchronous machine.             </span></figcaption>
+<img alt="PIC" src="figures/Synchronous-Machines/raster/synm-schematic.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">We have looked previously that the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates
+at a constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</a></span></span></span> torque-angle characteristics are described in
+terms of the interacting air-gap flux and <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which
+drives magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> waves.
+Our goal now is to derive an <span class="alert">equivalent circuit</span> which represents the steady-state terminal volt-ampere characteristics. A
+cross-sectional sketch of a three-phase cylindrical-rotor synchronous machine is shown schematically in
+<b>Fig.</b> <a href="#x28-77001r5">5.5</a>.
+This figure shows a two-pole machine. However, this can be considered as two poles of a multi-pole machine. In this
+diagram, coils <math display="inline"><mi>a</mi><msup><mrow><mi>a</mi></mrow><mrow><mi>′</mi></mrow></msup></math>,
+<math display="inline"><mi>b</mi><msup><mrow><mi>b</mi></mrow><mrow><mi>′</mi></mrow></msup></math>, and
+<math display="inline"><mi>c</mi><msup><mrow><mi>c</mi></mrow><mrow><mi>′</mi></mrow></msup></math>
+represent distributed windings producing sinusoidal <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure
+which drives magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span>
+and flux-density waves in the air-gap.
+The reference directions for the currents are shown by dots and crosses. The field winding
+<math display="inline"><mi>f</mi><msup><mrow><mi>f</mi></mrow><mrow><mi>′</mi></mrow></msup></math> on the
+rotor also represents a distributed winding which produces a sinusoidal <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The
+magnetic pressure which drives magnetic flux in a magnetic circuit, and is the work done to move a
+unit magnetic pole.</a></span></span></span> and flux-density wave centered on its magnetic axis and rotating with the
+rotor.
+When the flux linkages with armature phases <math display="inline"><mi>a</mi></math>,
+<math display="inline"><mi>b</mi></math>,
+<math display="inline"><mi>c</mi></math> and field
+winding <math display="inline"><mi>f</mi></math>
+are expressed in terms of the inductances and currents as follows, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-77002r2"></mstyle><mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><msub><mrow><mi>λ</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">aa</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ab</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ac</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>f</mi></mrow></msub></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><msub><mrow><mi>λ</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">b</mtext></mstyle></mrow></msub></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ba</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">bb</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">bc</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">bf</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>f</mi></mrow></msub></mtd>
+</mtr><mtr><mtd columnalign="right"><msub><mrow><mi>λ</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">c</mtext></mstyle></mrow></msub></mtd><mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ca</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">cb</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">cc</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">cf</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>f</mi></mrow></msub></mtd>
+</mtr><mtr><mtd columnalign="right"><msub><mrow><mi>λ</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">f</mtext></mstyle></mrow></msub></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fa</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fb</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fc</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ff</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>f</mi></mrow></msub></mtd>
+</mtr> </mtable>
+</math></td><td class="eq-no">(5.2)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">the induced voltages can be found from <i>Faraday’s law</i>.
+</p>
+<div class="theo-block" id="theo-block-5.2"> <a class="copiable-link" href="#theo-block-5.2"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory 5.<a id="x28-77003r2"></a>2: </b> </span> <span class="theo-title"> Faraday’s Law </span> </span> <div class="body">
+<p class="noindent">A time-varying magnetic field is always accompanied by a circulating electric field.
+</p>
+<table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-77004r3"></mstyle><msub><mrow>
+<mi>∮</mi>
+</mrow><mrow><mstyle mathvariant="script"><mi>C</mi></mstyle></mrow></msub>
+<mstyle mathvariant="bold">
+<mi>E</mi></mstyle>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>s</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>t</mi></mrow></mfrac></mstyle><msub><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="bold"><mi>S</mi></mstyle></mrow></msub><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle>
+</math></td><td class="eq-no">(5.3)</td></tr></table>
+<p class="noindent"></p>
+</div> </div>
+<p class="noindent">Here, in <span> Eq. (<a href="#x28-77002r2">5.2</a>)</span> , two like subscripts denote a <b>self inductance</b> and two unlike
+subscripts denote a <b>mutual inductance</b> between the two (<span class="alert">2</span>) <span class="margin-block">windings. <span class="margin-comment"><span class="ellipsis">[121]</span>
+<span class="sidenote">i.e.,
+<math display="inline"><msub><mrow><mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow>
+<mstyle class="text"><mtext class="textup" mathvariant="normal">ba</mtext></mstyle></mrow></msub></math> means the mutual
+inductance of inductances <math display="inline"><mi>b</mi></math>
+and <math display="inline"><mi>a</mi></math>, and
+<math display="inline"><msub><mrow><mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">aa</mtext></mstyle></mrow></msub></math> is the self inductance
+of the winding <math display="inline"><mi>a</mi></math>.</span></span></span>
+The script <math display="inline"><mstyle mathvariant="script"><mi>L</mi></mstyle></math>
+is used to indicate that in general, both the self and mutual inductances of a three-phase machine may
+vary with <span class="alert">rotor angle</span>.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.2.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.2.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.2.1</span> <span class="title"> <a id="x28-780005.2.1"></a>The Rotor Self-Inductance</span></h4></div>
+</p><p class="noindent">With a cylindrical stator, the self-inductance of the field winding is <b>independent</b> of the rotor position
+<math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">m</mtext></mstyle></mrow></msub></math> when
+the harmonic effects of stator slot openings are neglected.
+</p>
+<div class="info-block" id="info-block-5.30"> <a class="copiable-link" href="#info-block-5.30"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 5.<a id="x28-78001r30"></a>30: </b> </span> <span class="info-title"> The Rationale </span> </span> <div class="body">
+<p class="noindent">This make sense as the primary cause of changing inductance inside a machine is the <span class="alert">varying air-gap</span>. In a round rotor
+the air-gap is constant across its entire rotation and due to this the inductance values stay constant as
+well.
+</p>
+</div></div>
+<p class="noindent">Therefore we can write: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-78002r4"></mstyle><msub><mrow>
+<mstyle mathvariant="script"><mi>L</mi></mstyle>
+</mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ff</mtext></mstyle></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ff</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>L</mi></mrow><mrow><mi>f</mi><mi>f</mi><mn>0</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fl</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(5.4)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>L</mi></math> is used for an inductance
+which is <b>independent</b> of <math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">m</mtext></mstyle></mrow></msub></math>.
+The component <math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mi>f</mi><mi>f</mi><mn>0</mn></mrow></msub></math> corresponds
+to that portion of <math display="inline"><msub><mrow><mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ff</mtext></mstyle></mrow></msub></math>
+due to the space-fundamental component of air-gap <span class="margin-block">flux. <span class="margin-comment"><span class="ellipsis">[122]</span>
+<span class="sidenote">This component can be
+computed from air-gap dimensions and winding data</span></span></span>. The additional component
+<math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fl</mtext></mstyle></mrow></msub></math>
+accounts for field-winding leakage flux.
+</p><p class="noindent">Under transient or unbalanced conditions, the flux linkages with the field winding given in <span> Eq. (??)</span> ,
+vary with time, and the voltages induced in the rotor circuits have an important effect on machine
+performance. However, with the rotor rotating at <b>synchronous speed</b> and with balanced three-phase
+armature currents, the constant-amplitude magnetic flux produced by the armature currents rotates in <span class="alert">synchronism</span>
+with the rotor.
+</p><p class="noindent">Therefore, the field-winding flux linkage produced by this flux does <b>NOT</b> vary with time and does
+<b>NOT</b> induce voltage in the field winding. As a result, with constant <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional
+flow of electric charge. Direct current may flow through a conductor such as a wire, but can also
+flow through semiconductors, insulators, or even through a vacuum as in electron or ion
+beams. The electric current flows in a constant direction, distinguishing it from alternating
+current (AC). A term formerly used for this type of current was galvanic current.</a></span></span></span> voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>f</mi></mrow></msub></math>
+applied to the field-winding terminals, the field direct current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi></mrow></msub></math> can be
+determined by <i>Ohm’s law</i>:
+</p>
+<table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>f</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>R</mi></mrow><mrow><mi>f</mi></mrow></msub></mrow></mfrac>
+</math></td></tr></table>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.2.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.2.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.2.2</span> <span class="title"> <a id="x28-790005.2.2"></a>Stator-to-Rotor Mutual Inductance</span></h4></div>
+</p><p class="noindent">The stator-to-rotor mutual inductances vary <b>periodically</b> with
+<math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">me</mtext></mstyle></mrow></msub></math>, the
+electrical angle between the magnetic axes of the field winding and the armature phase a as shown in
+<b>Fig.</b> <a href="#x28-77001r5">5.5</a>. With the space-<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> and
+air-gap flux distribution assumed sinusoidal, the mutual inductance between the field winding
+<math display="inline"><mi>f</mi></math> and phase
+a varies as <math display="inline"><mi class="loglike">cos</mi><mo>⁡</mo><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">me</mtext></mstyle></mrow></msub></math>.
+Therefore: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-79001r5"></mstyle><msub><mrow>
+<mstyle mathvariant="script"><mi>L</mi></mstyle>
+</mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fa</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><mi class="loglike">cos</mi><mo>⁡</mo><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext>me</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(5.5)</td></tr></table>
+<p class="noindent"></p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">This equation can also be applied to phases <math display="inline"><mi>b</mi></math>
+and <math display="inline"><mi>c</mi></math>, with
+<math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">me</mtext></mstyle></mrow></msub></math> replaced
+by <math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">me</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>1</mn><mn>2</mn><mn>0</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math> and
+<math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">me</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>1</mn><mn>2</mn><mn>0</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>,
+respectively but to keep things simple, we will be focusing only on phase
+<math display="inline"><mi>a</mi></math>.
+</p></div></div>
+<p class="noindent">With the rotor rotating at synchronous speed <math display="inline"><msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub></math>,
+the rotor angle will vary as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-79002r6"></mstyle>
+<msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">m</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub><mi>t</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>δ</mi></mrow><mrow><mn>0</mn></mrow></msub>
+</math></td><td class="eq-no">(5.6)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>δ</mi></mrow><mrow><mn>0</mn></mrow></msub></math> is the angle of
+the rotor at time <math display="inline"><mi>t</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>.
+We can now derive the electrical angle from the mechanical angle as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-79003r7"></mstyle>
+<msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">me</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mstyle class="text"><mtext>poles</mtext></mstyle></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">m</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><mi>t</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>δ</mi></mrow><mrow><mi>e</mi><mn>0</mn></mrow></msub>
+</math></td><td class="eq-no">(5.7)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Here, <math display="inline"><msub><mrow><mi>ω</mi></mrow><mrow><mi>e</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mstyle class="text"><mtext>poles</mtext></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo><msub><mrow><mi>ω</mi></mrow><mrow><mi>s</mi></mrow></msub></math> is the electrical
+frequency and <math display="inline"><msub><mrow><mi>δ</mi></mrow><mrow><mi>e</mi><mn>0</mn></mrow></msub></math> is the electrical
+angle of the rotor at time <math display="inline"><mi>t</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>.
+</p><p class="noindent">Finally, substituting into <span> Eq. (<a href="#x28-79001r5">5.5</a>)</span>  gives us the stator-to-rotor mutual inductance. </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-79004r8"></mstyle><msub><mrow>
+<mstyle mathvariant="script"><mi>L</mi></mstyle>
+</mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">fa</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><mi class="loglike">cos</mi><mo>⁡</mo> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><mi>t</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>δ</mi></mrow><mrow><mstyle class="text"><mtext>e</mtext></mstyle><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td><td class="eq-no">(5.8)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.2.3"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.2.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.2.3</span> <span class="title"> <a id="x28-800005.2.3"></a>Synchronous Inductance</span></h4></div>
+</p><p class="noindent">With a cylindrical rotor, the air gap geometry is independent of
+<math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>m</mi></mrow></msub></math> if the
+effects of rotor slots are neglected as we discussed in a previous section. The stator self-inductances
+then are constant. With this in mind, we can state: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-80001r9"></mstyle><msub><mrow>
+<mstyle mathvariant="script"><mi>L</mi></mstyle>
+</mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">aa</mtext></mstyle></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">bb</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">cc</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">aa</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">al</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(5.9)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub></math>
+is the component of self-inductance due to space-fundamental air-gap flux and
+<math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mn>1</mn></mrow></msub></math> is the
+additional component due to armature-winding leakage flux.
+</p><p class="noindent">The armature phase-to-phase mutual inductances can be found on the assumption that the
+mutual inductance is due solely to space-fundamental air-gap <span class="margin-block">flux. <span class="margin-comment"><span class="ellipsis">[123]</span>
+<span class="sidenote">Here we are doing a
+generous assumption as the armature windings in practical machines are generally wound with
+overlapping phase windings (i.e., portions of adjacent windings share the same slots), there is an
+additional component of the phase-to-phase mutual inductance which is due to slot leakage
+flux.</span></span></span>
+</p><p class="noindent">Under this assumption, we see the air-gap mutual inductance of two identical windings displaced by
+<math display="inline"><mi>α</mi></math>
+electrical degrees is equal to the air-gap component of their self inductance multiplied by
+<math display="inline"><mi class="loglike">cos</mi><mo>⁡</mo><mi>α</mi></math>.
+</p><p class="noindent">Therefore, because the armature phases are displaced by
+<math display="inline"><mn>1</mn><mn>2</mn><mn>0</mn></math><math display="inline"><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>
+electrical degrees and <math display="inline"><mi class="loglike">cos</mi><mo>⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>±</mi><mn>1</mn><mn>2</mn><mn>0</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow><mn>1</mn>
+</mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></math>,
+the mutual inductances between the armature phases are equal and given by </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-80002r10"></mstyle><msub><mrow>
+<mstyle mathvariant="script"><mi>L</mi></mstyle>
+</mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ab</mtext></mstyle></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ba</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ac</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ca</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">bc</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">cb</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub>
+</math></td><td class="eq-no">(5.10)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Substituting <span> Eq. (<a href="#x28-80001r9">5.9</a>)</span>  and <span> Eq. (<a href="#x28-80002r10">5.10</a>)</span>  for the self and mutual inductances into the expression for the
+phase-<i>a</i> flux linkages (<span> Eq. (??)</span> ) gives: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-80003r11"></mstyle>
+<msub><mrow><mi>λ</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">al</mtext></mstyle></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">b</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">c</mtext></mstyle></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">f</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(5.11)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Under balanced three-phase armature currents:
+</p><math display="block"><mtable class="align" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><msub><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>i</mi></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"><mstyle class="label" id="x28-80004r12"></mstyle><mstyle class="maketag"><mtext>(5.12)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace>
+</mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">b</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">c</mtext></mstyle></mrow></msub></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"><mstyle class="label" id="x28-80005r13"></mstyle><mstyle class="maketag"><mtext>(5.13)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace>
+</mtd></mtr></mtable></math>
+<p class="noindent">Substitution of <span> Eq. (<a href="#x28-80005r13">5.13</a>)</span>  into <span> Eq. (<a href="#x28-80003r11">5.11</a>)</span>  gives
+</p><math display="block"><mtable class="align" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><msub><mrow><mi>λ</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">al</mtext></mstyle></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">f</mtext></mstyle></mrow></msub><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>3</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">al</mtext></mstyle></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">f</mtext></mstyle></mrow></msub><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"><mstyle class="label" id="x28-80006r14"></mstyle><mstyle class="maketag"><mtext>(5.14)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace>
+</mtd></mtr></mtable></math>
+<p class="noindent">It is useful to define the <b>synchronous inductance</b>
+<math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mi>s</mi></mrow></msub></math> as
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-80007r15"></mstyle>
+<msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>3</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">al</mtext></mstyle></mrow></msub><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>therefore</mtext></mstyle><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>λ</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="script"><mi>L</mi></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">f</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(5.15)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-10"> <a id="x28-81000"></a>Interpretation</h5>
+</p><p class="noindent">The synchronous inductance <math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+is the <b>effective inductance</b> seen by phase-<i>a</i> under steady-state, balanced three-phase machine
+operating conditions. It is made up of three (<span class="alert">3</span>) components.
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+1. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub></math>,
+is due to the space-fundamental air-gap component of the phase-<math display="inline"><mi>a</mi></math>
+flux linkages due to phase-a currents alone.
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">al</mtext></mstyle></mrow></msub></math>,
+known as the armature-winding <span class="alert">leakage inductance</span>, is due to the leakage component of phase-a flux linkages,
+</dd>
+<dt class="enumerate-enumitem">
+3. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub></math>,
+is due to the phase-<i>a</i> flux linkages due to the space-fundamental component of air-gap flux
+pro- duced by currents in phases <i>b</i> and <i>c</i>.</dd></dl>
+<p class="noindent">Under balanced three-phase conditions, the phase-<i>b</i> and -<i>c</i> currents are related to the current in phase
+<i>a</i> by <span> Eq. (<a href="#x28-80005r13">5.13</a>)</span> . Therefore the synchronous inductance is an <span class="alert">apparent inductance</span> in that it accounts for the flux linkages
+of phase <i>a</i> in terms of the current in phase <i>a</i> even though some of this flux linkage is due to currents in
+phases <i>b</i> and <i>c</i>.
+</p><p class="noindent">Therefore, it should be remembered that, although
+<math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+appears from <span> Eq. (<a href="#x28-80007r15">5.15</a>)</span>  to be the self-inductance of phase <i>a</i>, that is not actually the case and that it
+is defined under the assumption of balanced 3-phase armature currents.
+</p><p class="noindent">The significance of the synchronous inductance can be further appreciated when under balanced three-phase
+conditions, the armature currents create a rotating magnetic flux wave in the air gap of magnitude equal to
+<math display="inline"><mn>3</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></math>
+times the magnitude of that due to phase <i>a</i> alone, the additional component
+being due to the phase-<i>b</i> and -<i>c</i> currents. This corresponds directly to the
+<math display="inline"><mfrac><mrow><mn>3</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub></math>
+component of the synchronous inductance in <span> Eq. (<a href="#x28-80007r15">5.15</a>)</span> .
+</p><p class="noindent">This component of the synchronous inductance accounts for the total space-fundamental air-gap
+component of phase-<i>a</i> flux linkages produced by the three armature currents under balanced
+three-phase conditions.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.2.4"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.2.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.2.4</span> <span class="title"> <a id="x28-820005.2.4"></a>Deriving the Equivalent Circuit</span></h4></div>
+</p><p class="noindent">The phase-a terminal voltage is the sum of the armature-resistance voltage drop
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>a</mi></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow></msub></math> and the induced
+voltage. The voltage <math display="inline"><msub><mrow><mi>e</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math>
+induced by the field winding <span class="margin-block">flux <span class="margin-comment"><span class="ellipsis">[124]</span>
+<span class="sidenote">This is often referred to as the generated voltage or internal
+voltage.</span></span></span> can be found from the time derivative of <span> Eq. (<a href="#x28-80007r15">5.15</a>)</span>  with the armature current
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow></msub></math> set
+equal to zero.
+</p><p class="noindent">With <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a
+conductor such as a wire, but can also flow through semiconductors, insulators, or even through a vacuum
+as in electron or ion beams. The electric current flows in a constant direction, distinguishing it from
+alternating current (AC). A term formerly used for this type of current was galvanic current.</a></span></span></span> excitation
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">f</mtext></mstyle></mrow></msub></math> in the
+field winding, substitution of <span> Eq. (<a href="#x28-79004r8">5.8</a>)</span>  gives: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-82001r16"></mstyle>
+<msub><mrow><mi>e</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow>
+<mstyle mathvariant="script"><mi>L</mi></mstyle>
+</mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle> <msub><mrow><mi>i</mi></mrow><mrow>
+<mi>f</mi></mrow></msub> </mrow></mfrac></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi></mrow></msub> <mi class="loglike">sin</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><mi>t</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>δ</mi></mrow><mrow><mi>e</mi><mn>0</mn></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(5.16)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Using <span> Eq. (<a href="#x28-80007r15">5.15</a>)</span> , the terminal voltage can then be expressed as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-82002r17"></mstyle>
+<msub><mrow><mi>v</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mi>a</mi></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>λ</mi></mrow><mrow><mi>a</mi></mrow></msub>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>t</mi> </mrow></mfrac></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub><mfrac><mrow><mi>d</mi><msub><mrow><mi>i</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub></mrow>
+<mrow>
+<mi>d</mi><mi>t</mi></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>e</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(5.17)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The generated voltage <math display="inline"><msub><mrow><mi>e</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math> of <span>
+Eq. 
+(<a href="#x28-82001r16">5.16</a>)
+</span> is at frequency <math display="inline"><msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub></math>,
+equal to the electrical frequency of the generator terminal voltage. Its <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:rms">RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:rms">Root-Mean
+Square</a></span><span class="acronym-desc"><a class="glossary" href="#glo:rms">Equivalent direct current (DC) voltage of an alternating current (AC) source.</a></span></span></span> amplitude is given
+by: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-82003r18"></mstyle>
+<msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac>
+<mrow>
+<msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">f</mtext></mstyle></mrow></msub></mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>2</mn></mrow></msqrt>
+</mrow>
+</mfrac>
+</math></td><td class="eq-no">(5.18)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Under this synchronous operating condition, all machine armature <span class="margin-block">quantities <span class="margin-comment"><span class="ellipsis">[125]</span>
+<span class="sidenote">In this context we are
+focusing on current and flux linkage.</span></span></span> will also vary sinusoidally in time at this frequency.
+</p><p class="noindent">Therefore, we can write the terminal-voltage equation, <span> Eq. (<a href="#x28-82002r17">5.17</a>)</span> , in terms of <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:rms">RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:rms">Root-Mean
+Square</a></span><span class="acronym-desc"><a class="glossary" href="#glo:rms">Equivalent direct current (DC) voltage of an alternating current (AC) source.</a></span></span></span> complex
+amplitudes as: </p><div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-82004r19"></mstyle>
+<mover accent="true"><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub></mrow><mo accent="true">^</mo></mover>
+<mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mi>a</mi></mrow></msub><msub><mrow><mi>Î</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi></mrow></msub><msub><mrow><mi>Î</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mi>Ê</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(5.19)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mi>e</mi></mrow></msub><msub><mrow><mi>L</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+is known as the <span class="alert">synchronous reactance</span>.
+</p><p class="noindent">The <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:rms">RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:rms">Root-Mean Square</a></span><span class="acronym-desc"><a class="glossary" href="#glo:rms">Equivalent direct current (DC) voltage of an
+alternating current (AC) source.</a></span></span></span> complex amplitude of the generated voltage
+<math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow>
+<mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math> can be
+found by: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-82005r20"></mstyle>
+<msub><mrow><mi>e</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><mi class="qopname"> Re</mi><mo> ⁡ </mo> <mrow><mo fence="true" form="prefix">[</mo><mrow><msqrt><mrow>
+<mn>2</mn></mrow></msqrt><msub><mrow><mi>Ê</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><mi class="qopname"><mi class="loglike">exp</mi><mo>⁡</mo></mi><mo> ⁡ </mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>j</mi><msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><mi>t</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mrow><mo fence="true" form="postfix">]</mo></mrow><mstyle class="text"><mtext></mtext></mstyle>
+</math></td><td class="eq-no">(5.20)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where the notation <math display="inline"><mi class="qopname">Re</mi><mo> ⁡ </mo> <mrow><mo fence="true" form="prefix">[</mo><mrow><mi>·</mi></mrow><mo fence="true" form="postfix">]</mo></mrow> <mstyle class="text"><mtext></mtext></mstyle></math>
+indicates the real part of a complex quantity. Therefore from <span> Eq. (<a href="#x28-82001r16">5.16</a>)</span>  we see that: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-82006r21"></mstyle><msub><mrow>
+<mi>Ê</mi>
+</mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>j</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac>
+<mrow>
+<msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">f</mtext></mstyle></mrow></msub></mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>2</mn></mrow></msqrt>
+</mrow>
+</mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mi class="loglike">exp</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>j</mi><msub><mrow><mi>δ</mi></mrow><mrow><mi>e</mi><mn>0</mn></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(5.21)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">An equivalent circuit in complex form is shown in <b>Fig.</b> <a href="#x28-82007r6">5.6</a>a. It worth noting
+that <span> Eq. (<a href="#x28-82004r19">5.19</a>)</span>  and <b>Fig.</b> <a href="#x28-82007r6">5.6</a>a are written with the reference direction for
+<math display="inline"><msub><mrow><mi>Î</mi></mrow><mrow><mi>a</mi></mrow></msub></math> defined
+as positive into the machine terminals.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x28-82007r6"></a>
+<figcaption class="caption"><span class="id">Figure 5.6: 
+         </span><span class="content">Synchronous-machine  equivalent  circuits:  (a)  motor  reference  direction  and  (b)  generator  reference
+         direction.                                                                </span></figcaption>
+<img alt="PIC" src="figures/Synchronous-Machines/figures-3.png" style=""/>
+</figure>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">This is known as the <span class="alert">motor reference direction</span> for the current. </p></div></div>
+<p class="noindent">Alternatively, the <b>generator reference direction</b> is defined with the reference direction for
+<math display="inline"><msub><mrow><mi>Î</mi></mrow><mrow><mi>a</mi></mrow></msub></math> chosen
+as positive out of the machine terminals, as shown in <b>Fig.</b> <a href="#x28-82007r6">5.6</a>b. Under these choice of current reference
+direction, <span> Eq. (<a href="#x28-82004r19">5.19</a>)</span>  becomes </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-82008r22"></mstyle><msub><mrow>
+<mover accent="true"><mrow><mi>V</mi> </mrow><mo accent="true">^</mo></mover>
+</mrow><mrow><mi>a</mi></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>R</mi></mrow><mrow><mi>a</mi></mrow></msub><msub><mrow><mi>Î</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi></mrow></msub><msub><mrow><mi>Î</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mi>Ê</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(5.22)</td></tr></table>
+<p class="noindent"></p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">These two representations are <span class="alert">equivalent</span>. When analyzing a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device
+which operates at a constant synchronous speed, serving as either a synchronous generator (alternator)
+or a synchronous motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</a></span></span></span> operating condition the current will be the <span class="alert">same</span>. The
+sign of <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>a</mi></mrow></msub></math>
+will be determined by reference direction. </p></div></div>
+<p class="noindent">Most of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant
+synchronous speed, serving as either a synchronous generator (alternator) or a synchronous motor.
+It features a stationary stator with three-phase windings and a rotating rotor excited by
+direct current (DC) or permanent magnets.</a></span></span></span> analysis techniques were first developed to
+analyse the performance of synchronous generators in electric power systems. As a result, the
+generator reference direction is more common and is generally used from this point on in the
+text.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x28-82009r7"></a>
+<figcaption class="caption"><span class="id">Figure 5.7: 
+         </span><span class="content">Synchronous-machine equivalent circuit showing air-gap and leakage components of synchronous reactance
+         and air-gap voltage.                                                         </span></figcaption>
+<img alt="PIC" src="figures/Synchronous-Machines/figures-4.png" style=""/>
+</figure>
+<p class="noindent"><b>Fig.</b> <a href="#x28-82009r7">5.7</a> shows an alternative form of the equivalent circuit in which the synchronous reactance is
+shown in terms of its components. From <span> Eq. (<a href="#x28-80007r15">5.15</a>)</span>
+</p>
+<table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x28-82010r23"></mstyle>
+<msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">al</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>3</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>L</mi></mrow><mrow><mi>a</mi><mi>a</mi><mn>0</mn></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">al</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>X</mi></mrow><mrow><mi>φ</mi></mrow></msub>
+</math></td><td class="eq-no">(5.23)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">al</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">al</mtext></mstyle></mrow></msub></math> is the
+armature <span class="alert">leakage reactance</span> and <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mi>φ</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>3</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">aa</mtext></mstyle></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>
+is the reactance corresponding to the rotating space-fundamental air-gap flux produced by the three
+armature currents.
+</p><p class="noindent">The reactance <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mi>φ</mi></mrow></msub></math>
+is the effective <b>magnetizing reactance</b> of the armature winding under balanced three-phase conditions.
+The <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:rms">RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:rms">Root-Mean Square</a></span><span class="acronym-desc"><a class="glossary" href="#glo:rms">Equivalent direct current (DC) voltage of an alternating current (AC) source.</a></span></span></span>
+voltage <math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mi>R</mi></mrow></msub></math>
+is the internal voltage generated by the resultant air-gap flux and is usually referred to as the air-gap
+voltage or the voltage “behind” leakage reactance.
+</p>
+<p class="noindent"><span class="paragraphHead"> <a id="x28-83000"></a>Turning Single-Phase to Multi-Phase</span>
+It is important to recognize that the equivalent circuits of <b>Fig.</b> <a href="#x28-82007r6">5.6</a> and <b>Fig.</b> <a href="#x28-82009r7">5.7</a> are single-phase,
+line-to-neutral equivalent circuits for a three-phase machine operating under balanced, three-phase
+conditions. Therefore, once the phase-<i>a</i> voltages and currents are found, either from the
+equivalent circuit or directly from the voltage equations, Eq. (<a href="#x28-82004r19">5.19</a>) and Eq. (<a href="#x28-82008r22">5.22</a>), the currents
+and voltages for phases <i>b</i> and <i>c</i> can be found simply by phase-shifting those of phase <i>a</i> by
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>1</mn><mn>2</mn><mn>0</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math> and
+<math display="inline"><mn>1</mn><mn>2</mn><mn>0</mn><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>
+respectively.
+</p><p class="noindent">Similarly, the total three-phase power of the machine can be found simply by multiplying that of phase
+<i>a</i> by three, unless the analysis is being performed in per unit, in which case the three-phase, per-unit
+power is equal to that found from solving for phase a alone and the factor of three is not
+needed.
+</p>
+<div class="info-block" id="info-block-5.31"> <a class="copiable-link" href="#info-block-5.31"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 5.<a id="x28-83001r31"></a>31: </b> </span> <span class="info-title"> A Rule of Thumb </span> </span> <div class="body">
+<p class="noindent">It is helpful to have a rough idea of the order of magnitude of the impedance components of typical
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed,
+serving as either a synchronous generator (alternator) or a synchronous motor. It features a
+stationary stator with three-phase windings and a rotating rotor excited by direct current
+(DC) or permanent magnets.</a></span></span></span>s. For machines with ratings above a few hundred kVA, the
+armature-resistance voltage drop at rated current usually is less than 0.01 times rated voltage. </p>
+<hr/>
+<p class="noindent"> 
+In all
+but small machines, the <span class="alert">armature resistance can usually be neglected</span> in most analyses, except insofar as its effect on losses and heating is
+concerned.
+</p>
+</div></div>
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:rms">¶</a>
+<dt class="acr-bottom" id="glo:rms"><span class="acr-short">RMS</span><span class="acr-long">Root-Mean
+Square</span></dt>
+<dd class="acr-desc"><p>Equivalent direct current (DC) voltage of an alternating current (AC) source.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:dc">¶</a>
+<dt class="acr-bottom" id="glo:dc"><span class="acr-short">DC</span><span class="acr-long">Direct Current</span></dt>
+<dd class="acr-desc"><p>One-directional
+flow of electric charge. Direct current may flow through a conductor such as a wire, but can also
+flow through semiconductors, insulators, or even through a vacuum as in electron or ion
+beams. The electric current flows in a constant direction, distinguishing it from alternating
+current (AC). A term formerly used for this type of current was galvanic current.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:mmf">¶</a>
+<dt class="acr-bottom" id="glo:mmf"><span class="acr-short">MMF</span><span class="acr-long">Magneto-motive Force</span></dt>
+<dd class="acr-desc"><p>The magnetic pressure which
+drives magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:synm">¶</a>
+<dt class="acr-bottom" id="glo:synm"><span class="acr-short">SynM</span><span class="acr-long">Synchronous Machine</span></dt>
+<dd class="acr-desc"><p>an AC electrical device which operates
+at a constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="OpenandShortCircuitCharacteristics.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="SynchronousMachines1.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="SynchronousMachines.html#EquivalentCircuits.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 5.2: Equivalent Circuits</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

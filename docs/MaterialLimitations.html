@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Material Limitations</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Rotating Magnetic Fields</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="SynchronousMachines.html">Chapter: Synchronous
+Machines</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="TorqueinNonSalientPoleMachines.html">Torque in Non-Salient-Pole Machines</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="RotatingMagneticFields.html#MaterialLimitations.html">Chapter: Rotating
+Magnetic Fields</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-4.7"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.4.7"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">4.7</span> <span class="title"> <a id="x25-650004.7"></a>Material Limitations</span></h3></div>
+<p class="noindent">Every engineering project revolves around what a material can do and this is true with design of
+electrical machines, and when it comes to electrical machines no material play as much as the magnetic
+material. In this section we will have a look at the relevant limitations imposed by the materials:
+saturation and leakage flux.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-4.7.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.4.7.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">4.7.1</span> <span class="title"> <a id="x25-660004.7.1"></a>Magnetic Saturation</span></h4></div>
+</p><p class="noindent">It goes without saying but to reiterate:
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The characteristics of electric machines depend heavily upon the use of magnetic materials.
+</p></div></div>
+<p class="noindent">These materials are required to form the magnetic circuit and are used by the machine designer to
+obtain specific machine characteristics. However, as we can imagine, <b>magnetic materials are less
+than ideal</b>. As the magnetic flux they carry increases, they begin to <span class="alert">saturate</span>, with the result being a decrease
+in the materials magnetic permeability, along with its effectiveness in contributing to the overall flux
+density in the machine.
+</p><p class="noindent">Both electromechanical torque and generated voltage in all machines depend on the winding flux
+linkages. For specific <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in a
+magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span>s in the windings, the
+fluxes depend on the reluctances of the iron portions of the magnetic circuits and on those
+of the air gaps. Saturation may therefore appreciably influence the characteristics of the
+machines.
+Another aspect of saturation which is important is how we approach to model an electrical
+machine. Specifically, relations for the air-gap <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic
+pressure which drives magnetic flux in a magnetic circuit, and is the work done to move a
+unit magnetic pole.</a></span></span></span> are generally based on the assumption of negligible reluctance in the
+<b>iron</b>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">When these relations are applied to practical machines with varying degrees of saturation in the iron, <span class="alert">significant errors in the analytical results</span>
+can be expected. </p></div></div>
+<p class="noindent">To improve these analytical relationships, in one approach the actual machine is replaced by an
+equivalent machine whose iron has negligible reluctance but whose air-gap length is increased by an
+amount sufficient to absorb the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> drop in the
+iron of the actual machine.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">This means that to model the effect of saturation, we increase the air-gap in our idealised machine to
+take the effect into account. </p></div></div>
+<p class="noindent">Similar to the above premise, the effects of air-gap non-uniformities such as <b>slots</b> and <b>ventilating
+ducts</b> are also incorporated by increasing the effective air-gap <span class="margin-block">length. <span class="margin-comment"><span class="ellipsis">[108]</span>
+<span class="sidenote">However, from a manufacturing
+point of view, techniques must be verified and confirmed experimentally before we can call a product
+ready.</span></span></span>
+</p>
+<div class="info-block" id="info-block-4.26"> <a class="copiable-link" href="#info-block-4.26"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 4.<a id="x25-66001r26"></a>26: </b> </span> <span class="info-title"> Limits of Analytical Technique </span> </span> <div class="body">
+<p class="noindent">In cases where such simple techniques are found to be inadequate or if the motor geometry proves itself
+to be unwieldy, detailed analyses, such finite-element or other numerical techniques, can be used.
+</p></div></div>
+<div class="sidenote"> <span class="figure">
+<a id="x25-66002r20"></a>
+<figcaption class="caption"><span class="id">Figure 4.20: </span><span class="content">Typical open-circuit characteristic and air-gap line.                                   </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-12.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">Saturation characteristics of rotating machines are often presented in the form of an open-circuit
+characteristic, also called a magnetization curve or saturation curve. For a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous
+Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed, serving as either a
+synchronous generator (alternator) or a synchronous motor. It features a stationary stator with
+three-phase windings and a rotating rotor excited by direct current (DC) or permanent
+magnets.</a></span></span></span>, the open-circuit saturation curve is obtained by operating the machine at constant
+speed and measuring the open-circuit armature voltage as a function of the field current. A
+typical open-circuit saturation curve for a synchronous machine takes the form shown in
+<b>Fig.</b> <a href="#x25-66002r20">4.20</a>.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x25-66003r21"></a>
+<figcaption class="caption"><span class="id">Figure 4.21: </span><span class="content">A FEM simulation of salient pole. The simulation is done using getDP.                      </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/vector/salient-pole-fem-.png" style=""/>
+</figure>
+<p class="noindent">It is worth mentioning here that the nature of this curve is determined both by the <b>geometry of the
+machine</b> under consideration as well as by the <b>magnetization characteristics of the electrical
+steel</b> used in the machine. The straight line tangent to the lower portion of the curve is the <span class="alert">air-gap line</span>,
+corresponding to low levels of flux density within the machine. Under these conditions the reluctance of
+the machine iron is typically negligible, and the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure
+which drives magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic
+pole.</a></span></span></span> required to excite the machine is simply that required to overcome the reluctance of
+the air gap. If it were not for the effects of saturation, the air-gap line and open-circuit
+characteristic would coincide. Therefor, the departure of the curve from the air-gap line as the
+field current is increased is an indication of the degree of saturation in the <span class="margin-block">machine. <span class="margin-comment"><span class="ellipsis">[109]</span>
+<span class="sidenote">In
+typical machines the ratio at rated voltage of the total <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The
+magnetic pressure which drives magnetic flux in a magnetic circuit, and is the work done
+to move a unit magnetic pole.</a></span></span></span> to that required by the air gap alone is between 1.1 and
+1.25.</span></span></span>
+</p><p class="noindent">At the design stage, the open-circuit characteristic can be calculated using techniques such as
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:fem">FEM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:fem">Finite Element Method</a></span><span class="acronym-desc"><a class="glossary" href="#glo:fem">A popular numerical technique for solving differential equations
+in engineering and physics, breaking complex shapes into simpler elements, and turning
+continuous problems into algebraic equations.</a></span></span></span>. A typical <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:fem">FEM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:fem">Finite Element Method</a></span><span class="acronym-desc"><a class="glossary" href="#glo:fem">A
+popular numerical technique for solving differential equations in engineering and physics,
+breaking complex shapes into simpler elements, and turning continuous problems into algebraic
+equations.</a></span></span></span> solution for the flux distribution around the pole of a salient-pole machine is shown in
+<b>Fig.</b> <a href="#x25-66003r21">4.21</a> using the open-source software getDP. The distribution of the air-gap flux found from
+this solution, together with the fundamental and third-harmonic components, is shown in
+<b>Fig.</b> <a href="#x25-66004r22">4.22</a>.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x25-66004r22"></a>
+<figcaption class="caption"><span class="id">Figure 4.22: </span><span class="content">Flux-density wave with its fundamental and third-harmonic components.                     </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-8.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">In addition to saturation effects, <b>Fig.</b> <a href="#x25-66004r22">4.22</a> clearly illustrates the effect of a <span class="alert">non-uniform air gap</span>. As we would expect, the
+flux density over the pole face, where the air gap is small, is much higher than that away from the <span class="margin-block">pole.
+<span class="margin-comment"><span class="ellipsis">[110]</span>
+<span class="sidenote">This type of detailed analysis is of great use to a designer in obtaining specific machine
+characteristics.</span></span></span>
+</p><p class="noindent">As we have seen by now, the magnetization curve for an existing <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC
+electrical device which operates at a constant synchronous speed, serving as either a synchronous
+generator (alternator) or a synchronous motor. It features a stationary stator with three-phase windings
+and a rotating rotor excited by direct current (DC) or permanent magnets.</a></span></span></span> can be determined by
+operating the machine as an unloaded generator and measuring the values of terminal voltage
+corresponding to a series of values of field current.
+If we want to do the same thing for an <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which the electric
+current in the rotor that produces torque is obtained by electromagnetic induction from the magnetic
+field of the stator winding.</a></span></span></span>, the machine is operated at or close to synchronous <span class="margin-block">speed, <span class="margin-comment"><span class="ellipsis">[111]</span>
+<span class="sidenote">in which case
+very little current will be induced in the rotor windings.</span></span></span> and the stator current is measured as a
+function of stator terminal voltage. The magnetization curve is produced by plotting the stator voltage
+as a function of stator current.
+</p>
+<div class="info-block" id="info-block-4.27"> <a class="copiable-link" href="#info-block-4.27"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 4.<a id="x25-66005r27"></a>27: </b> </span> <span class="info-title"> Difference During Operation </span> </span> <div class="body">
+<p class="noindent">It should be emphasized that saturation in a fully loaded machine occurs as a result of the total
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in a magnetic circuit,
+and is the work done to move a unit magnetic pole.</a></span></span></span> acting on the magnetic circuit. As flux distribution
+under load generally differs from that of no-load conditions, machine saturation characteristics may
+vary from the open-circuit curve of <b>Fig.</b> <a href="#x25-66002r20">4.20</a>.
+</p>
+</div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-4.7.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.4.7.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">4.7.2</span> <span class="title"> <a id="x25-670004.7.2"></a>Leakage Flux</span></h4></div>
+</p><p class="noindent">When we studied transformers in a previous chapter, we have seen that in a two-winding
+transformer, the flux created by each winding can be separated into two (<span class="alert">2</span>) components:
+</p>
+<dl class="description"><dt class="description"><a id="x25-67001x4.7.2"></a>
+<span style="color:#1C2E4A;">Mutual Flux</span>
+</dt><dd class="description">
+<p class="noindent">One component consists of flux which links both windings, causing coupling between the
+two coils.
+</p>
+</dd>
+<dt class="description"><a id="x25-67002x4.7.2"></a>
+<span style="color:#1C2E4A;">Leakage Flux</span>
+</dt><dd class="description">
+<p class="noindent">the other consists of flux which links only the winding creating the flux. Contributes only
+to the self-inductance of each coil.</p></dd></dl>
+<p class="noindent">Note that the concept of mutual and leakage flux is meaningful only in the context of a multi-winding
+system. For systems of three or more windings, the bookkeeping must be done very carefully. Consider,
+for example, the three-winding system of <b>Fig.</b> <a href="#x25-67003r23">4.23</a>.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x25-67003r23"></a>
+<figcaption class="caption"><span class="id">Figure 4.23: </span><span class="content">Three-coil system showing components of mutual and leakage flux produced by current in coil 1.     </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-9.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">Shown schematically are the different components of flux created by a current in winding 1. Here
+<math display="inline"><msub><mrow><mi>φ</mi></mrow><mrow><mn>1</mn><mn>2</mn><mn>3</mn></mrow></msub></math> is clearly mutual flux that
+links all three windings, and <math display="inline"><msub><mrow><mi>φ</mi></mrow><mrow><mn>1</mn><mi>l</mi></mrow></msub></math>
+is clearly leakage flux since it links only winding 1. However,
+<math display="inline"><msub><mrow><mi>φ</mi></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></math> is
+mutual flux with respect to winding 2 yet is leakage flux with respect to winding 3, while
+<math display="inline"><msub><mrow><mi>φ</mi></mrow><mrow><mn>1</mn><mn>3</mn></mrow></msub></math> mutual
+flux with respect to winding 3 and leakage flux with respect to winding 2.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Electric machinery is a <span class="alert">system of multiple windings</span>, which requires a careful overview to account for the <span class="alert">flux contributions of different types windings</span>. </p></div></div>
+<p class="noindent"><span class="paragraphHead"> <a id="x25-68000"></a>Air-Gap Space-Harmonic Fluxes</span>
+Although single distributed coils create air-gap flux with a significant amount of space-harmonic
+content, it is possible to distribute these windings so the space-fundamental component is accentuated
+while the harmonic effects are greatly reduced.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">As a result, we can <span class="alert">neglect harmonic effects</span> and <span class="alert">consider only space-fundamental fluxes</span>. </p></div></div>
+<p class="noindent">Though often small, the space-harmonic components of air-gap flux do exist. </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">In  <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct  Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional  flow  of  electric  charge.  Direct  current  may  flow
+through a conductor such as a wire, but can also flow through semiconductors, insulators,
+or even through a vacuum as in electron or ion beams. The electric current flows in a
+constant direction, distinguishing it from alternating current (AC). A term formerly used
+for this type of current was galvanic current.</a></span></span></span> machines they are useful torque-producing
+fluxes and therefore can be counted as mutual flux between the rotor and stator windings.
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">In  <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating  Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An  electric  current  that  periodically  reverses  direction  and
+changes its magnitude continuously with time, in contrast to direct current (DC), which
+flows only in one direction.</a></span></span></span> machines, however, they may generate time-harmonic voltages
+or asynchronously rotating flux waves.</p></li></ul>
+<p class="noindent"><span class="paragraphHead"> <a id="x25-69000"></a>Slot-Leakage Flux</span>
+<b>Fig.</b> <a href="#x25-69001r24">4.24</a> shows the flux created by a single coil side in a slot. Please observe that, in addition to flux
+which crosses the air gap, which contributes to the air-gap flux, there are flux components which <b>cross
+the slot</b>. In a slot with coils from a single phase, this flux links only the coil that is producing it. It
+also forms a component of the leakage inductance of the winding producing it. In other cases, coils of
+two phases share a single slot and some of the slot flux is mutual between the phases. However, since
+this flux does not cross the air gap, it remains leakage flux with respect to any windings on the
+rotor.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x25-69001r24"></a>
+<figcaption class="caption"><span class="id">Figure 4.24: </span><span class="content">Flux created by a single coil side in a slot.                                         </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-11.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent"><span class="paragraphHead"> <a id="x25-70000"></a>End-Turn Fluxes</span>
+<b>Fig.</b> <a href="#x25-70001r25">4.25</a> shows the stator end windings of an <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current
+that periodically reverses direction and changes its magnitude continuously with time, in
+contrast to direct current (DC), which flows only in one direction.</a></span></span></span> machine. The magnetic
+field distribution created by end turns is extremely complex. In general these fluxes do not
+contribute to useful rotor-to-stator mutual flux, and thus they, too, contribute to leakage
+inductance.
+From this discussion we can see the self-inductance expression needs to be modified by an additional
+term <math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mi>l</mi></mrow></msub></math>,
+which represents the <b>winding leakage inductance</b>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">This leakage inductance corresponds directly to the leakage inductance of a transformer winding as
+discussed in <span class="refclass-ref"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span>. </p></div></div>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Although the leakage inductance is usually difficult to calculate analytically and must be determined by
+approximate or empirical techniques, it plays an important role in machine performance.
+</p></div></div>
+<p class="noindent"></p><figure class="float">
+<a id="x25-70001r25"></a>
+<figcaption class="caption"><span class="id">Figure 4.25: </span><span class="content">The end windings of an induction machine.                                         </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/raster/motor-winding.jpg" style=""/>
+</figure>
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:ac">¶</a>
+<dt class="acr-bottom" id="glo:ac"><span class="acr-short">AC</span><span class="acr-long">Alternating  Current</span></dt>
+<dd class="acr-desc"><p>An  electric  current  that  periodically  reverses  direction  and
+changes its magnitude continuously with time, in contrast to direct current (DC), which
+flows only in one direction.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:dc">¶</a>
+<dt class="acr-bottom" id="glo:dc"><span class="acr-short">DC</span><span class="acr-long">Direct  Current</span></dt>
+<dd class="acr-desc"><p>One-directional  flow  of  electric  charge.  Direct  current  may  flow
+through a conductor such as a wire, but can also flow through semiconductors, insulators,
+or even through a vacuum as in electron or ion beams. The electric current flows in a
+constant direction, distinguishing it from alternating current (AC). A term formerly used
+for this type of current was galvanic current.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:im">¶</a>
+<dt class="acr-bottom" id="glo:im"><span class="acr-short">IM</span><span class="acr-long">Induction Machine</span></dt>
+<dd class="acr-desc"><p>an AC electric motor in which the electric
+current in the rotor that produces torque is obtained by electromagnetic induction from the magnetic
+field of the stator winding.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:fem">¶</a>
+<dt class="acr-bottom" id="glo:fem"><span class="acr-short">FEM</span><span class="acr-long">Finite Element Method</span></dt>
+<dd class="acr-desc"><p>A popular numerical technique for solving differential equations
+in engineering and physics, breaking complex shapes into simpler elements, and turning
+continuous problems into algebraic equations.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:synm">¶</a>
+<dt class="acr-bottom" id="glo:synm"><span class="acr-short">SynM</span><span class="acr-long">Synchronous
+Machine</span></dt>
+<dd class="acr-desc"><p>an AC electrical device which operates at a constant synchronous speed, serving as either a
+synchronous generator (alternator) or a synchronous motor. It features a stationary stator with
+three-phase windings and a rotating rotor excited by direct current (DC) or permanent
+magnets.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:mmf">¶</a>
+<dt class="acr-bottom" id="glo:mmf"><span class="acr-short">MMF</span><span class="acr-long">Magneto-motive Force</span></dt>
+<dd class="acr-desc"><p>The magnetic pressure which drives magnetic flux in a
+magnetic circuit, and is the work done to move a unit magnetic pole.</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="SynchronousMachines.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="TorqueinNonSalientPoleMachines.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="RotatingMagneticFields.html#MaterialLimitations.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 4.7: Material Limitations</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

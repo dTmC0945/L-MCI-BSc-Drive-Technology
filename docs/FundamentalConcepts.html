@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Fundamental Concepts</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Rotating Magnetic Fields</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="MMFofDistributedWindings.html">MMF of Distributed Windings</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="RotatingMagneticFields.html">Chapter: Rotating
+Magnetic Fields</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="RotatingMagneticFields.html#FundamentalConcepts.html">Chapter: Rotating
+Magnetic Fields</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-4.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.4.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">4.1</span> <span class="title"> <a id="x19-470004.1"></a>Fundamental
+Concepts</span></h3></div>
+<p class="noindent">In rotating machines, voltages are generated in windings or groups of coils by rotating these windings
+<b>mechanically</b> through a magnetic field, by mechanically rotating a magnetic field past the winding,
+or by designing the magnetic circuit so that the <b>reluctance</b> varies with rotation of the
+rotor.
+</p><p class="noindent">By either or both of these methods, the flux linking a specific coil is changed <b>cyclically</b>, and a
+time-varying voltage is generated.
+</p>
+<div class="info-block" id="info-block-4.18"> <a class="copiable-link" href="#info-block-4.18"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 4.<a id="x19-47001r18"></a>18: </b> </span> <span class="info-title"> Armature Winding </span> </span> <div class="body">
+<p class="noindent">A set of coils connected together is typically referred to as an <span class="alert">armature</span> winding. In general, the term armature
+winding is used to refer to a winding or a set of windings on a rotating machine which carry
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in one
+direction.</a></span></span></span>. In <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction and changes
+its magnitude continuously with time, in contrast to direct current (DC), which flows only in one
+direction.</a></span></span></span> machines such as <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a
+constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating
+rotor excited by direct current (DC) or permanent magnets.</a></span></span></span> or <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC
+electric motor in which the electric current in the rotor that produces torque is obtained by
+electromagnetic induction from the magnetic field of the stator winding.</a></span></span></span>, the armature
+winding is typically on the <span class="alert">stationary portion</span> of the motor referred to as the <span class="alert">stator</span>, in which case these windings
+may also be referred to as <span class="alert">stator windings</span>. </p>
+<hr/>
+<p class="noindent"> 
+In <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The electric
+current flows in a constant direction, distinguishing it from alternating current (AC). A
+term formerly used for this type of current was galvanic current.</a></span></span></span> machines, however, the
+armature winding is found on the rotating part, referred to as the <span class="alert">rotor</span>.<b>Fig.</b> <a href="#x19-47002r1">4.1</a> shows a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct
+Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a conductor such as a
+wire, but can also flow through semiconductors, insulators, or even through a vacuum as in
+electron or ion beams. The electric current flows in a constant direction, distinguishing it from
+alternating current (AC). A term formerly used for this type of current was galvanic current.</a></span></span></span>
+machine rotor with its armature windings. As we will see, the armature winding of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct
+Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a conductor such as a
+wire, but can also flow through semiconductors, insulators, or even through a vacuum as in
+electron or ion beams. The electric current flows in a constant direction, distinguishing it
+from alternating current (AC). A term formerly used for this type of current was galvanic
+current.</a></span></span></span> machine consists of numerous coils connected together to form a closed loop. A
+rotating mechanical contact is used to supply current to the armature winding as the rotor
+rotates.
+</p>
+</div></div>
+<div class="sidenote"> <span class="figure">
+<a id="x19-47002r1"></a>
+<figcaption class="caption"><span class="id">Figure 4.1: </span><span class="content">A partially-constructed DC armature, showing the (incomplete) windings.                     </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/raster/armature-winding.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent"><span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed,
+serving as either a synchronous generator (alternator) or a synchronous motor. It features a
+stationary stator with three-phase windings and a rotating rotor excited by direct current
+(DC) or permanent magnets.</a></span></span></span> and <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The electric
+current flows in a constant direction, distinguishing it from alternating current (AC). A term
+formerly used for this type of current was galvanic current.</a></span></span></span> machines typically include a
+<math display="inline"><msup><mrow><mstyle class="text"><mtext>2</mtext></mstyle></mrow><mrow><mstyle class="text"><mtext>nd</mtext></mstyle></mrow></msup></math> set of
+<span class="margin-block">winding <span class="margin-comment"><span class="ellipsis">[76]</span>
+<span class="sidenote">or set of windings.</span></span></span> which carry <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct
+current may flow through a conductor such as a wire, but can also flow through semiconductors,
+insulators, or even through a vacuum as in electron or ion beams. The electric current flows
+in a constant direction, distinguishing it from alternating current (AC). A term formerly
+used for this type of current was galvanic current.</a></span></span></span> current and which are used to produce
+the main operating flux in the machine. Such a winding is typically referred to as <b>field
+winding</b>. The field winding on a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The electric
+current flows in a constant direction, distinguishing it from alternating current (AC). A term
+formerly used for this type of current was galvanic current.</a></span></span></span> machine is found on the stator,
+while that on a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a
+constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating
+rotor excited by direct current (DC) or permanent magnets.</a></span></span></span> is found on the rotor, in which
+case current is typically supplied to the field winding via a rotating mechanical contact,
+with the exception being machines for which a rotating excitation system supplies the field
+current.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent"><span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and creates its own
+persistent magnetic field</a></span></span></span>s are also produce <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through semiconductors,
+insulators, or even through a vacuum as in electron or ion beams. The electric current flows in a
+constant direction, distinguishing it from alternating current (AC). A term formerly used
+for this type of current was galvanic current.</a></span></span></span> magnetic flux and are <span class="alert">used in the place of field windings</span> in some machines.
+</p></div></div>
+<p class="noindent">For most rotating machines, the stator and rotor are made of <span class="alert">electrical steel</span>, and the windings are inserted in slots on
+these structures.
+</p>
+<div class="info-block" id="info-block-4.19"> <a class="copiable-link" href="#info-block-4.19"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 4.<a id="x19-47003r19"></a>19: </b> </span> <span class="info-title"> Electric Grain Steel </span> </span> <div class="body">
+<p class="noindent"><span class="alert">Electrical steel</span> is a specialty steel used in the cores of electromagnetic devices such as motors, generators, and
+transformers because <span class="alert">it reduces power loss</span>. It is an iron alloy with silicon as the main additive element, instead of
+carbon.
+</p>
+</div></div>
+<p class="noindent">The use of such high-permeability material maximises the coupling between the coils and increases the
+magnetic energy density associated with the electromechanical interaction. It also enables the engineer
+to shape and distribute the magnetic fields according to the requirements of each particular machine
+design.
+</p><p class="noindent">The time-varying flux present in the armature structures of these machines tends to induce currents,
+known as <span class="alert">eddy currents</span>, in the electrical steel.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Eddy currents can be a large source of loss in these machines and can significantly inhibit machine
+performance. </p></div></div>
+<p class="noindent">To minimize the effects of eddy currents, the armature structure is typically built from thin laminations
+of electrical steel which are <b>insulated</b> from each other.
+</p>
+<div class="info-block" id="info-block-4.20"> <a class="copiable-link" href="#info-block-4.20"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 4.<a id="x19-47004r20"></a>20: </b> </span> <span class="info-title"> Winding-less Rotors </span> </span> <div class="body">
+<p class="noindent">Machines, such as <span class="alert">variable reluctance machines</span><span class="margin-block"> <span class="margin-comment"><span class="ellipsis">[77]</span>
+<span class="sidenote">Also known as switched reluctance machines in literature.</span></span></span> and <span class="margin-block"><span class="margin"><span>stepper motors
+<span class="ellipsis">[78]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Rotating-Magnetic-Fields/raster/stepper-motor-schematic.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[78]</span>An schematic view of a stepper motor. As we can see the rotor has no windings <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a id="x19-47005"></a>linengineering.
+Basic Features And Construction Of A Hybrid Stepper Motor 2025</span></span>.</span></span></span></span> have no windings on the rotor.
+Operation of these machines depends on the <span class="alert">non-uniformity of air-gap reluctance</span> associated with variations in rotor position in conjunction
+with time-varying currents applied to their stator windings. </p>
+<hr/>
+<p class="noindent"> 
+In such machines, both the stator
+and rotor structures are subjected to time-varying magnetic flux and, as a result, both
+<span class="alert">require lamination to reduce eddy-current losses</span>.
+</p>
+</div></div>
+<p class="noindent">Rotating electric machines take many forms and are known by many names: </p><div class="quote">  For examaple: <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct
+Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a conductor such as a
+wire, but can also flow through semiconductors, insulators, or even through a vacuum as in electron or
+ion beams. The electric current flows in a constant direction, distinguishing it from alternating current
+(AC). A term formerly used for this type of current was galvanic current.</a></span></span></span>, <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous
+Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed, serving as either a
+synchronous generator (alternator) or a synchronous motor. It features a stationary stator with
+three-phase windings and a rotating rotor excited by direct current (DC) or permanent magnets.</a></span></span></span>,
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and creates its own
+persistent magnetic field</a></span></span></span>, <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which the electric
+current in the rotor that produces torque is obtained by electromagnetic induction from the
+magnetic field of the stator winding.</a></span></span></span>, variable reluctance, hysteresis, brush-less, and so on.
+</div>
+<p class="noindent">While these machines appear to be quite different, the physical principles governing their behavior are
+quite similar, and it is often helpful to think of them in terms of the same physical picture. For
+example: </p>
+<dl class="description"><dt class="description"><a id="x19-47006x4.1"></a>
+<span style="color:#1C2E4A;">DC Machine</span>
+</dt><dd class="description">
+<p class="noindent">Analysis  shows  that  associated  with  both  the  rotor  and  the  stator  are  magnetic  flux
+distributions which are fixed in space and the torque-producing characteristic of stems from
+the tendency of these flux distributions to align.
+</p>
+</dd>
+<dt class="description"><a id="x19-47007x4.1"></a>
+<span style="color:#1C2E4A;">Induction Machine</span>
+</dt><dd class="description">
+<p class="noindent">Works on exactly the same principle. We can identify flux distributions associated with the
+rotor and stator. While they are <b>NOT</b> stationary but rather rotate in synchronism, just
+as in a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow
+through a conductor such as a wire, but can also flow through semiconductors, insulators,
+or even through a vacuum as in electron or ion beams. The electric current flows in a
+constant direction, distinguishing it from alternating current (AC). A term formerly used
+for this type of current was galvanic current.</a></span></span></span> motor they are displaced by a constant angular
+separation, and torque is produced by the tendency of these flux distribution to <span class="margin-block">align. <span class="margin-comment"><span class="ellipsis">[79]</span>
+<span class="sidenote">A
+more important aspect is to create an analogy between <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric
+current that periodically reverses direction and changes its magnitude continuously with
+time, in contrast to direct current (DC), which flows only in one direction.</a></span></span></span> and <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct
+Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a conductor
+such as a wire, but can also flow through semiconductors, insulators, or even through a
+vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of
+current was galvanic current.</a></span></span></span> machines, which allows high-efficient control. This will be one
+of the main topics in <b>M.Sc Drive Systems</b>.</span></span></span></p></dd></dl>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-4.1.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.4.1.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">4.1.1</span> <span class="title"> <a id="x19-480004.1.1"></a>A Look at AC and DC Drives</span></h4></div>
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x19-48001r2"></a>
+<figcaption class="caption"><span class="id">Figure 4.2: </span><span class="content">A schematic view of the first quadrant of a simple, two-pole, single-phase synchronous generator.      </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-1.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">Traditionally <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction and changes
+its magnitude continuously with time, in contrast to direct current (DC), which flows only in one
+direction.</a></span></span></span> machines fall into one of two (<span class="alert">2</span>) broad categories: </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">Synchronous, or
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">Induction.</p></li></ul>
+<p class="noindent">In <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed,
+serving as either a synchronous generator (alternator) or a synchronous motor. It features a stationary
+stator with three-phase windings and a rotating rotor excited by direct current (DC) or permanent
+magnets.</a></span></span></span>, rotor-winding currents are supplied <b>directly</b> from the stationary frame through a
+rotating contact whereas in <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which the electric
+current in the rotor that produces torque is obtained by electromagnetic induction from the
+magnetic field of the stator winding.</a></span></span></span>, rotor currents are <span class="alert">induced</span> in the rotor windings by a combination
+of the time-variation of the stator currents and the motion of the rotor <b>relative to the
+stator</b>.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-8"> <a id="x19-49000"></a>Synchronous Machines</h5>
+</p><p class="noindent">A rough picture of <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant
+synchronous speed, serving as either a synchronous generator (alternator) or a synchronous motor. It
+features a stationary stator with three-phase windings and a rotating rotor excited by direct current
+(DC) or permanent magnets.</a></span></span></span> performance can be obtained by discussing the voltage induced in the
+armature of the noticeably simplified <span class="alert">salient-pole</span> <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically
+reverses direction and changes its magnitude continuously with time, in contrast to direct current (DC),
+which flows only in one direction.</a></span></span></span> <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:syng">SynG</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span><span class="acronym-desc"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span></span></span> shown
+schematically in <b>Fig.</b> <a href="#x19-48001r2">4.2</a>. The field-winding of this machine produces a single pair of magnetic <span class="margin-block">poles,
+<span class="margin-comment"><span class="ellipsis">[80]</span>
+<span class="sidenote">You can think of this as a bar magnet.</span></span></span> and therefore this machine is referred to as a <span class="alert">two-pole machine</span> or
+<span class="alert">one-pole pair machine</span>.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">With rare exceptions, armature winding of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which
+operates at a constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</a></span></span></span> is on the stator, and the field winding is on the
+rotor. </p></div></div>
+<p class="noindent">The field winding is excited by <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The electric
+current flows in a constant direction, distinguishing it from alternating current (AC). A term
+formerly used for this type of current was galvanic current.</a></span></span></span>, typically conducted to it by
+means of stationary <b>carbon brushes</b> which contact rotating slip rings or collector <span class="margin-block"><span class="margin"><span>rings.
+<span class="ellipsis">[81]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Rotating-Magnetic-Fields/raster/carbon-brushes.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[81]</span>For cost-effective systems, carbon brushes are generally used. However in some cases the
+field winding may be supplied from a rotating excitation system, typically referred to as a
+brush-less excitation system.</span></span></span></span> Practical factors usually dictate this orientation of the two
+windings:
+</p>
+<div class="quote"> It is advantageous to have the single, low-power field winding on the rotor while having the
+high-power, typically multiple-phase, armature winding on the stator. </div>
+<p class="noindent">The armature winding, consisting here of only a single coil of
+<math display="inline"><mi>N</mi></math>
+turns, is indicated in cross section by the two coil sides <i>a</i> and <i>-a</i> placed in diametrically
+opposite narrow slots on the inner periphery of the stator of <b>Fig.</b> <a href="#x19-48001r2">4.2</a>. The conductors forming
+these coil sides are parallel to the shaft of the machine and are connected in series by end
+connections.
+</p><p class="noindent">The rotor is turned at a constant speed by a source of mechanical power connected to its shaft. The
+armature winding is assumed to be <b>open-circuited</b> and therefore the flux in this machine is
+produced by the field winding alone. Flux paths are shown schematically by dashed lines in
+<b>Fig.</b> <a href="#x19-48001r2">4.2</a>.
+</p><p class="noindent">A highly idealised analysis of this machine would be to assume a <span class="alert">sinusoidal distribution</span> of magnetic flux
+in the air gap. The resultant idealised radial distribution of air-gap flux density
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> is shown in <b>Fig.</b> <a href="#x19-49001r3">4.3</a>a as a
+function of the spatial angle <math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mi>a</mi></mrow></msub></math>
+around the rotor <span class="margin-block">periphery. <span class="margin-comment"><span class="ellipsis">[82]</span>
+<span class="sidenote">measured with respect to the magnetic axis of the armature
+winding</span></span></span>
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x19-49001r3"></a>
+<figcaption class="caption"><span class="id">Figure 4.3: 
+         </span><span class="content">(a) Idealized sinusoidal space distribution of the air-gap radial flux density and (b) corresponding waveform
+         of the generated voltage for the single-phase generator of <b>Fig.</b> <a href="#x19-48001r2">4.2</a>.                          </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-14.png" style=""/>
+</figure>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">In practice, the air-gap flux-density of practical salient-pole machines <span class="alert">can be made to approximate a sinusoidal distribution</span> by properly shaping the pole
+faces. </p></div></div>
+<p class="noindent">As the rotor rotates, the flux-linkages of the armature winding <b>change with time</b>. Under the
+assumption of a sinusoidal flux distribution and constant rotor speed, the resulting coil voltage will be
+sinusoidal in time as shown in <b>Fig.</b> <a href="#x19-49001r3">4.3</a>b. The coil voltage passes through a complete cycle for each
+revolution of the two-pole machine of <b>Fig.</b> <a href="#x19-48001r2">4.2</a>.
+</p>
+<div class="info-block" id="info-block-4.21"> <a class="copiable-link" href="#info-block-4.21"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 4.<a id="x19-49002r21"></a>21: </b> </span> <span class="info-title"> The Reason of Synchronous Behavior </span> </span> <div class="body">
+<p class="noindent">Its frequency in cycles per second (<math display="inline"><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle></math>)
+is the same as the speed of the rotor in revolutions per second: the electric frequency of the generated
+voltage is synchronised with the mechanical speed. </p>
+<hr/>
+<p class="noindent"> 
+This is the reason for the designation <span class="alert">synchronous</span> machine and
+therefore a two-pole synchronous machine must revolve at 3000 revolutions per minute
+(<math display="inline"><mstyle mathvariant="normal"><mi>r</mi><mi>p</mi><mi>m</mi></mstyle></math>) to produce a
+<math display="inline"><mn>5</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle></math>
+voltage.
+</p>
+</div></div>
+<div class="sidenote"> <span class="figure">
+<a id="x19-49003r4"></a>
+<figcaption class="caption"><span class="id">Figure 4.4: </span><span class="content">Schematic view of a simple, four-pole, single-phase synchronous generator.                     </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-2.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">It is worth mentioning most <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a
+constant synchronous speed, serving as either a synchronous generator (alternator) or a synchronous
+motor. It features a stationary stator with three-phase windings and a rotating rotor excited by direct
+current (DC) or permanent magnets.</a></span></span></span>s have more than just two poles. As a specific example, <b>Fig.</b> <a href="#x19-49003r4">4.4</a>
+shows in schematic form a <span class="alert">four-pole</span> single-phase generator. The field coils are connected so that the poles are of
+alternate polarity. There are two complete wavelengths, or cycles, in the flux distribution around the
+periphery, as shown in <b>Fig.</b> <a href="#x19-49004r5">4.5</a>.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x19-49004r5"></a>
+<figcaption class="caption"><span class="id">Figure 4.5: </span><span class="content">Space distribution of the air-gap flux density in an idealised, four-pole synchronous generator.        </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-15.png" style=""/>
+</figure>
+<p class="noindent">The armature winding now consists of two (<span class="alert">2</span>) coils:
+<math display="inline"><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn></mrow></msub></math>,
+-<math display="inline"><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn></mrow></msub></math>,
+-<math display="inline"><msub><mrow><mi>a</mi></mrow><mrow><mn>2</mn></mrow></msub></math> which
+can be connected either in <b>series</b> or <b>parallel</b>. The span of each coil is one wavelength of flux. The
+generated voltage now goes through two (<span class="alert">2</span>) complete cycles per revolution of the rotor. The frequency
+in <math display="inline"><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle></math> will
+therefore be twice the speed in revolutions per second.
+</p><p class="noindent">When a machine has more than two (<span class="alert">2</span>) poles, it is convenient to concentrate on a single pair of <span class="margin-block">poles <span class="margin-comment"><span class="ellipsis">[83]</span>
+<span class="sidenote">Or
+what we call pole-pairs.</span></span></span> and to recognise the electric, magnetic, and mechanical conditions associated
+with every other pole pair are repetitions of those for the pair under consideration. For
+this reason it is convenient to express angles in <span class="alert">electrical</span> degrees or radians rather than in physical
+units.
+</p><p class="noindent">One pair of poles in a multi-pole machine or one cycle of flux distribution corresponds to 360 electrical degrees or
+<math display="inline"><mn>2</mn><mi>π</mi></math> electrical radians.
+Given there are <math display="inline"><mstyle class="text"><mtext>poles</mtext></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></math>
+amount of complete wavelengths, or cycles, in one complete revolution, we can state:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-49005r1"></mstyle>
+<msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ae</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mstyle class="text"><mtext>poles</mtext></mstyle></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(4.1)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ae</mtext></mstyle></mrow></msub></math> is the angle
+in electrical units, <math display="inline"><msub><mrow><mi>𝜃</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub></math>
+is the spatial angle. This same relationship applies to all angular measurements in a multi-pole
+machine.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Values in electrical units will be equal to <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mstyle class="text"><mtext>poles</mtext></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></math>
+times their actual spatial values. </p></div></div>
+<p class="noindent">The coil voltage of a multi-pole machine passes through a complete cycle every time a pair of poles sweeps by, or
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mstyle class="text"><mtext>poles</mtext></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></math> times each revolution.
+The electrical frequency <math display="inline"><msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub></math>
+of the voltage generated in a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a
+constant synchronous speed, serving as either a synchronous generator (alternator) or a synchronous
+motor. It features a stationary stator with three-phase windings and a rotating rotor excited by direct
+current (DC) or permanent magnets.</a></span></span></span> is therefore: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-49006r2"></mstyle>
+<msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mstyle class="text"><mtext>poles</mtext></mstyle></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mfrac><mrow><mi>n</mi></mrow>
+<mrow>
+<mn>6</mn><mn>0</mn></mrow></mfrac><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle>
+</math></td><td class="eq-no">(4.2)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>n</mi></math> is the mechanical speed
+in revolutions per minute (<math display="inline"><mstyle mathvariant="normal"><mi>r</mi><mi>p</mi><mi>m</mi></mstyle></math>),
+which means <math display="inline"><mi>n</mi><mo class="MathClass-bin" stretchy="false">/</mo><mn>6</mn><mn>0</mn></math> is the speed
+in revolutions per second (<math display="inline"><mstyle mathvariant="normal"><mi>r</mi><mi>p</mi><mi>m</mi></mstyle></math>).
+The electrical frequency of the generated voltage in radians per second is </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-49007r3"></mstyle>
+<msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mstyle class="text"><mtext>poles</mtext></mstyle></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">m</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(4.3)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>ω</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">m</mtext></mstyle></mrow></msub></math> is the mechanical speed
+in radians per second (<math display="inline"><mstyle mathvariant="normal"><mi>r</mi><mi>a</mi><mi>d</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>).
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x19-49008r6"></a>
+<figcaption class="caption"><span class="id">Figure 4.6: </span><span class="content">Simple two-pole round-rotor field winding. 
+</span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-16.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">The rotors shown in <b>Fig.</b> <a href="#x19-48001r2">4.2</a> and <b>Fig.</b> <a href="#x19-49003r4">4.4</a> have <span class="alert">salient</span>, or <span class="alert">projecting</span>, poles with concentrated windings. <b>Fig.</b> <a href="#x19-49008r6">4.6</a>
+shows diagrammatically a non-salient-pole, or cylindrical, rotor. The field winding on the rotor is a
+two-pole distributed winding; the coil sides are distributed in multiple slots around the rotor
+periphery and arranged to produce an approximately sinusoidal distribution of radial air-gap
+flux.
+</p><p class="noindent">The relationship between electrical frequency and rotor speed of <span> Eq. (<a href="#x19-49006r2">4.2</a>)</span>  can serve as a basis for
+understanding why some synchronous generators have salient-pole rotor structures while others have
+cylindrical rotors.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Most power systems in the world operate at frequencies of either
+<math display="inline"><mn>5</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle></math>
+or <math display="inline"><mn>6</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle></math>.
+</p></div></div>
+<dl class="description"><dt class="description"><a id="x19-49009x"></a>
+<span style="color:#1C2E4A;">Salient Pole</span>
+</dt><dd class="description">
+<p class="noindent">characteristic of hydro-electric generators because hydraulic turbines operate at relatively
+low speeds, and hence a relatively large number of poles is required to produce the desired
+frequency. A salient-pole construction is better adapted mechanically to this situation.
+</p>
+</dd>
+<dt class="description"><a id="x19-49010x"></a>
+<span style="color:#1C2E4A;">Cylindrical Rotor</span>
+</dt><dd class="description">
+<p class="noindent">Steam turbines and gas turbines operate best at relatively high speeds, and turbine-driven
+alternators or turbine generators are commonly two- or four-pole cylindrical-rotor machines.</p></dd></dl>
+<p class="noindent">These cylindrical rotors are made from a single steel forging or from several forgings, as shown in
+<b>Fig.</b> <a href="#x19-49011r7">4.7</a>.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x19-49011r7"></a>
+<figcaption class="caption"><span class="id">Figure 4.7: 
+         </span><span class="content">Round  rotor  synchronous  generator  used  in  grid  regulation <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail">sssgears.  Managing grid stability with
+         synchronous condensers 2025</span></span>. 
+</span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/raster/round-rotor.jpg" style=""/>
+</figure>
+<p class="noindent">Most of the world’s power systems are three-phase systems and, as a result, with
+very few exceptions, <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:syng">SynG</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span><span class="acronym-desc"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span></span></span> are
+three-phase machines. For the production of a set of three voltages phase-displaced by
+<math display="inline"><mn>1</mn><mn>2</mn><mn>0</mn></math><math display="inline"><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>
+electrical in time, a minimum of three coils phase-displaced
+<math display="inline"><mn>1</mn><mn>2</mn><mn>0</mn></math><math display="inline"><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>
+electrical in space must be used. A simplified schematic view of a three-phase, two-pole machine with
+one coil per phase is shown in <b>Fig.</b> <a href="#x19-49013r8">4.8</a>a. The three phases are designated by the letters <i>a</i>, <i>b</i>, and <i>c</i>. In
+an elementary four-pole machine, a minimum of two such sets of coils must be used, as illustrated in
+<b>Fig.</b> <a href="#x19-49013r8">4.8</a>b; in an elementary multi-pole machine, the minimum number of coil sets is given by one half
+the number of poles.
+The two coils in each phase of <b>Fig.</b> <a href="#x19-49013r8">4.8</a>b are connected in series so that their voltages add, and the three phases may
+then be either <math display="inline"><mi>Y</mi> </math>-
+or <math display="inline"><mi mathvariant="normal">Δ</mi></math>-connected.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x19-49013r8"></a>
+<figcaption class="caption"><span class="id">Figure 4.8: 
+         </span><span class="content">Schematic  views  of  three-phase  generators:  (a)  two-pole,  (b)  four-pole,  and  (c)  Y  connection  of  the
+         windings.                                                                </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-7.png" style=""/>
+</figure>
+<p class="noindent">When a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:syng">SynG</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span><span class="acronym-desc"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span></span></span> supplies electric power to a load, the
+armature current creates a magnetic flux wave in the air gap which rotates at synchronous speed. This
+flux reacts with the flux created by the field current, and electromechanical torque results from the
+tendency of these two magnetic fields to align. In a generator this torque <b>opposes rotation</b>, and
+mechanical torque must be applied from the prime mover to sustain rotation. This electromechanical
+torque is the mechanism through which the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:syng">SynG</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span><span class="acronym-desc"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span></span></span>
+converts mechanical to electric energy.
+The opposite of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:syng">SynG</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span><span class="acronym-desc"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span></span></span> is the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous
+Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed, serving as
+either a synchronous generator (alternator) or a synchronous motor. It features a stationary
+stator with three-phase windings and a rotating rotor excited by direct current (DC) or
+permanent magnets.</a></span></span></span>. Here, <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses
+direction and changes its magnitude continuously with time, in contrast to direct current (DC),
+which flows only in one direction.</a></span></span></span> is supplied to the armature winding on the stator, and
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a
+conductor such as a wire, but can also flow through semiconductors, insulators, or even through
+a vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of current was
+galvanic current.</a></span></span></span> excitation is supplied to the field winding on the rotor. The magnetic field
+produced by the armature currents rotates at synchronous <span class="margin-block">speed. <span class="margin-comment"><span class="ellipsis">[84]</span>
+<span class="sidenote">equal to 2/poles times the
+electrical frequency of the armature currents</span></span></span> A steady electromechanical torque is produced
+when the rotor rotates in synchronism with the magnetic field produced by the armature
+currents.
+</p><p class="noindent">Therefore the steady-state speed of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates
+at a constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating
+rotor excited by direct current (DC) or permanent magnets.</a></span></span></span> is determined by the number
+of poles and the frequency of the armature current and a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an
+AC electrical device which operates at a constant synchronous speed, serving as either a
+synchronous generator (alternator) or a synchronous motor. It features a stationary stator with
+three-phase windings and a rotating rotor excited by direct current (DC) or permanent magnets.</a></span></span></span>
+operated from a constant-frequency <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically
+reverses direction and changes its magnitude continuously with time, in contrast to direct
+current (DC), which flows only in one direction.</a></span></span></span> source will operate at a constant steady-state
+speed.
+In a motor the electromechanical torque is in the direction of rotation and balances the opposing torque
+required to drive the mechanical load. The flux produced by currents in the armature of a
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed,
+serving as either a synchronous generator (alternator) or a synchronous motor. It features a
+stationary stator with three-phase windings and a rotating rotor excited by direct current
+(DC) or permanent magnets.</a></span></span></span> rotates <b>ahead</b> of that produced by the rotor field winding,
+thus pulling on the field <span class="margin-block">winding <span class="margin-comment"><span class="ellipsis">[85]</span>
+<span class="sidenote">and therefore on the rotor</span></span></span> and doing work. This is the
+opposite of the situation in a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:syng">SynG</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span><span class="acronym-desc"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span></span></span>, where the
+field does work as its flux pulls on that of the armature. In both generators and motors, in
+addition to an electromechanical torque, a speed voltage (<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy
+transfer to an electric circuit per unit of electric charge, measured in volts. Devices called
+electrical transducers provide an EMF by converting other forms of energy into electrical
+energy. Other types of electrical equipment also produce an emf, such as batteries, which
+convert chemical energy, and generators, which convert mechanical energy. This energy
+conversion is achieved by physical forces applying physical work on electric charges. However,
+electromotive force itself is not a physical force</a></span></span></span>) is induced in the armature by the rotating field
+winding.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Production of both <span class="alert">force</span> or <span class="alert">torque</span> and a <span class="alert">speed voltage</span> are both essential components of electromechanical energy conversion.
+</p></div></div>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-9"> <a id="x19-50000"></a>Induction Machines</h5>
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x19-50001r9"></a>
+<figcaption class="caption"><span class="id">Figure 4.9: </span><span class="content">A   cutaway   of   an   explosion-proof   induction   motor <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail">Dacworldwide.   Three-Phase  Squirrel-Cage
+Explosion-Proof AC Motor Cutaway 2025</span></span>.                                                   </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/raster/induction-motor-cutaway.jpg" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">A <math display="inline"><msup><mrow><mstyle class="text"><mtext>2</mtext></mstyle></mrow><mrow><mstyle class="text"><mtext>nd</mtext></mstyle></mrow></msup></math> type
+of <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in one direction.</a></span></span></span>
+machine is the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which the electric current in the rotor
+that produces torque is obtained by electromagnetic induction from the magnetic field of
+the stator winding.</a></span></span></span>. In an <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which the electric
+current in the rotor that produces torque is obtained by electromagnetic induction from
+the magnetic field of the stator winding.</a></span></span></span>, the stator windings are essentially the same as
+those of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant
+synchronous speed, serving as either a synchronous generator (alternator) or a synchronous motor.
+It features a stationary stator with three-phase windings and a rotating rotor excited by
+direct current (DC) or permanent magnets.</a></span></span></span>. However, the rotor windings are electrically
+short-circuited and frequently have <b>no external connections</b>. Currents are induced by transformer
+action from the stator winding. A cutaway view of a squirrel-cage induction motor is shown
+in <b>Fig.</b> <a href="#x19-50001r9">4.9</a>. Here the rotor “windings” are actually solid aluminium bars which are cast
+into the slots in the rotor and which are shorted together by cast aluminium rings at each
+end of the rotor. This type of rotor construction results in <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC
+electric motor in which the electric current in the rotor that produces torque is obtained by
+electromagnetic induction from the magnetic field of the stator winding.</a></span></span></span> which are relatively
+inexpensive and highly reliable, factors contributing to their immense popularity and widespread
+application.
+In contrast to a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a
+constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</a></span></span></span> in which a field winding on the rotor
+is excited with <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current
+may flow through a conductor such as a wire, but can also flow through semiconductors,
+insulators, or even through a vacuum as in electron or ion beams. The electric current flows in a
+constant direction, distinguishing it from alternating current (AC). A term formerly used for
+this type of current was galvanic current.</a></span></span></span> current and the rotor rotates in synchronism
+with the flux wave produced by <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically
+reverses direction and changes its magnitude continuously with time, in contrast to direct
+current (DC), which flows only in one direction.</a></span></span></span> armature currents, the rotor windings of an
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which the electric current in the rotor that
+produces torque is obtained by electromagnetic induction from the magnetic field of the
+stator winding.</a></span></span></span> are <b>NOT</b> excited by an external source. Rather, currents are induced in the
+shorted rotor windings as the rotor slips past the synchronously-rotating armature flux
+wave.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent"><span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which the electric current in the rotor that produces
+torque is obtained by electromagnetic induction from the magnetic field of the stator winding.</a></span></span></span>s are
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed,
+serving as either a synchronous generator (alternator) or a synchronous motor. It features a stationary
+stator with three-phase windings and a rotating rotor excited by direct current (DC) or permanent
+magnets.</a></span></span></span> and <span class="alert">produce torque only when rotor speed differs from synchronous speed</span>. </p></div></div>
+<p class="noindent">Interestingly, although the rotor operates <b>asynchronously</b>, the flux wave produced by the induced
+rotor currents rotates <b>in synchronism</b> with the stator flux wave. This in fact is a requirement for, and
+consistent with, the ability of an <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which the electric
+current in the rotor that produces torque is obtained by electromagnetic induction from the magnetic
+field of the stator winding.</a></span></span></span> to produce net torque. <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which
+the electric current in the rotor that produces torque is obtained by electromagnetic induction from the
+magnetic field of the stator winding.</a></span></span></span>s operate at speeds less than the synchronous mechanical
+speed, in which case the armature flux in the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in
+which the electric current in the rotor that produces torque is obtained by electromagnetic
+induction from the magnetic field of the stator winding.</a></span></span></span> leads that of the rotor and produces an
+electromechanical torque which pulls on the rotor just as is the case in a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous
+Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed, serving as
+either a synchronous generator (alternator) or a synchronous motor. It features a stationary
+stator with three-phase windings and a rotating rotor excited by direct current (DC) or
+permanent magnets.</a></span></span></span>, A typical speed-torque characteristic for an <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC
+electric motor in which the electric current in the rotor that produces torque is obtained
+by electromagnetic induction from the magnetic field of the stator winding.</a></span></span></span> is shown in
+<b>Fig.</b> <a href="#x19-50003r10">4.10</a>.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x19-50003r10"></a>
+<figcaption class="caption"><span class="id">Figure 4.10: </span><span class="content">The speed-torque plot of an induction machine during steady-state operation.                  </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/figures-13.png" style=""/>
+</figure>
+<div class="info-block" id="info-block-4.22"> <a class="copiable-link" href="#info-block-4.22"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 4.<a id="x19-50004r22"></a>22: </b> </span> <span class="info-title"> Rotating Transformers </span> </span> <div class="body">
+<p class="noindent">Because rotor currents are by produced by induction, an <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in
+which the electric current in the rotor that produces torque is obtained by electromagnetic induction
+from the magnetic field of the stator winding.</a></span></span></span> may be regarded as a generalised transformer in which
+electric power is transformed between rotor and stator together with a change of frequency
+and a flow of mechanical power. </p>
+<hr/>
+<p class="noindent"> 
+Although <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in
+which the electric current in the rotor that produces torque is obtained by electromagnetic
+induction from the magnetic field of the stator winding.</a></span></span></span>s are primarily used as motors, in
+recent years induction generators have been found to be well suited for some wind-power
+applications.
+</p>
+</div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-4.1.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.4.1.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">4.1.2</span> <span class="title"> <a id="x19-510004.1.2"></a>DC Machines</span></h4></div>
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x19-51001r11"></a>
+<figcaption class="caption"><span class="id">Figure 4.11: </span><span class="content">A cutaway diagram of a standard DC machine.                                      </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/raster/dc-motor-diagram.jpg" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">As discussed previously, the armature winding of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric
+charge. Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The electric current
+flows in a constant direction, distinguishing it from alternating current (AC). A term formerly
+used for this type of current was galvanic current.</a></span></span></span> machine is on the rotor with current
+conducted to it by means of <b>carbon brushes</b>. The field winding is on the stator and is
+excited by direct current. A cutaway view of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of
+electric charge. Direct current may flow through a conductor such as a wire, but can also
+flow through semiconductors, insulators, or even through a vacuum as in electron or ion
+beams. The electric current flows in a constant direction, distinguishing it from alternating
+current (AC). A term formerly used for this type of current was galvanic current.</a></span></span></span> motor is
+shown in <b>Fig.</b> <a href="#x19-51001r11">4.11</a> and a simple <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The
+electric current flows in a constant direction, distinguishing it from alternating current (AC).
+A term formerly used for this type of current was galvanic current.</a></span></span></span> armature is shown in
+<b>Fig.</b> <a href="#x19-51003r13">4.13</a>.
+The armature winding, as can be seen consisting of coils of, say
+<math display="inline"><mi>N</mi></math>, turns,
+placed at diametrically opposite points on the rotor with the conductors parallel to the shaft. The rotor
+is normally turned at a constant speed by a source of mechanical power connected to the shaft. The
+air-gap flux distribution usually approximates a <b>flat-topped wave</b>, rather than the sine wave found in
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in one direction.</a></span></span></span>
+machines.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Rotation of the coil, generates a coil voltage which is a time function having the same waveform as the
+spatial flux-density distribution. </p></div></div>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The function of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow
+through a conductor such as a wire, but can also flow through semiconductors, insulators, or even
+through a vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of current was
+galvanic current.</a></span></span></span> generator is the production of <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric
+charge. Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The electric
+current flows in a constant direction, distinguishing it from alternating current (AC). A term
+formerly used for this type of current was galvanic current.</a></span></span></span> voltage and current. Therefore the
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in
+one direction.</a></span></span></span> voltages and currents induced in the armature winding must be rectified.
+</p></div></div>
+<div class="sidenote"> <span class="figure">
+<a id="x19-51002r12"></a>
+<figcaption class="caption"><span class="id">Figure 4.12: </span><span class="content">An example of a mechanical commutation ring. Please observe that each segment is electrically isolated.</span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/raster/commutation-ring.jpg" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">In a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a
+conductor such as a wire, but can also flow through semiconductors, insulators, or even
+through a vacuum as in electron or ion beams. The electric current flows in a constant
+direction, distinguishing it from alternating current (AC). A term formerly used for this
+type of current was galvanic current.</a></span></span></span> machine, rectification is produced mechanically by
+means of a <span class="alert">commutator</span> which is a cylinder formed of copper segments to which the armature coils are
+connected, shown in <b>Fig.</b> <a href="#x19-51002r12">4.12</a>. These segments are otherwise insulated from each other by mica
+or some other highly insulating material and mounted on, but insulated from, the rotor
+shaft. Stationary carbon brushes held against the commutator surface connect the winding
+to the external armature terminals. The commutator and brushes can readily be seen in
+<b>Fig.</b> <a href="#x19-51001r11">4.11</a>
+To understand its function as a rectifier, the commutator at all times connects the coil side which is
+closest to the south pole to the positive brush and the coil side closest to the north pole is connected to
+the negative brush.
+</p><p class="noindent">Therefore, each half rotation of the rotor, the brushes switch their polarity with respect to the coil
+polarity. As a result, although the coil voltage is an alternating voltage, the commutator provides
+full-wave rectification, transforming the coil voltage to the voltage between brushes and making
+available a <b>unidirectional</b> voltage to the external <span class="margin-block">circuit. <span class="margin-comment"><span class="ellipsis">[86]</span>
+<span class="sidenote">In a later chapter, we shall look at <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct
+Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a conductor such as a
+wire, but can also flow through semiconductors, insulators, or even through a vacuum as in electron or
+ion beams. The electric current flows in a constant direction, distinguishing it from alternating current
+(AC). A term formerly used for this type of current was galvanic current.</a></span></span></span> machines in more
+detail.</span></span></span>
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x19-51003r13"></a>
+<figcaption class="caption"><span class="id">Figure 4.13: </span><span class="content">Example of a DC armature.                                                   </span></figcaption>
+<img alt="PIC" src="figures/Rotating-Magnetic-Fields/raster/dc-armature.jpg" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">The <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a
+conductor such as a wire, but can also flow through semiconductors, insulators, or even through a
+vacuum as in electron or ion beams. The electric current flows in a constant direction, distinguishing it
+from alternating current (AC). A term formerly used for this type of current was galvanic current.</a></span></span></span> in
+the field winding of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current
+may flow through a conductor such as a wire, but can also flow through semiconductors,
+insulators, or even through a vacuum as in electron or ion beams. The electric current flows in a
+constant direction, distinguishing it from alternating current (AC). A term formerly used
+for this type of current was galvanic current.</a></span></span></span> machine creates a magnetic flux distribution
+which is stationary with respect to the stator. Similarly, the effect of the commutator is such
+that when direct current flows through the brushes, the armature creates a magnetic flux
+distribution which is also fixed in space and whose axis, determined by the design of the
+machine and the position of the brushes, is typically perpendicular to the axis of the field
+flux.
+Therefore, just as in the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction
+and changes its magnitude continuously with time, in contrast to direct current (DC), which
+flows only in one direction.</a></span></span></span> machines discussed previously, it is the interaction of these two
+(<span class="alert">2</span>) flux distributions that creates the torque of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of
+electric charge. Direct current may flow through a conductor such as a wire, but can also
+flow through semiconductors, insulators, or even through a vacuum as in electron or ion
+beams. The electric current flows in a constant direction, distinguishing it from alternating
+current (AC). A term formerly used for this type of current was galvanic current.</a></span></span></span> machine:
+</p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">If the machine is acting as a generator, the electro-mechanical torque opposes rotation.
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">If  it  is  acting  as  a  motor,  the  torque  acts  in  the  direction  of  rotation.  Remarks
+similar to those already made concerning the roles played by the generated voltage and
+electromechanical torque in the energy conversion process in <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an
+AC electrical device which operates at a constant synchronous speed, serving as either a
+synchronous generator (alternator) or a synchronous motor. It features a stationary stator
+with three-phase windings and a rotating rotor excited by direct current (DC) or permanent
+magnets.</a></span></span></span>s apply equally well to <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The
+electric current flows in a constant direction, distinguishing it from alternating current
+(AC). A term formerly used for this type of current was galvanic current.</a></span></span></span> machines.</p></li></ul>
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:emf">¶</a>
+<dt class="acr-bottom" id="glo:emf"><span class="acr-short">EMF</span><span class="acr-long">Electro-motive Force</span></dt>
+<dd class="acr-desc"><p>An energy
+transfer to an electric circuit per unit of electric charge, measured in volts. Devices called
+electrical transducers provide an EMF by converting other forms of energy into electrical
+energy. Other types of electrical equipment also produce an emf, such as batteries, which
+convert chemical energy, and generators, which convert mechanical energy. This energy
+conversion is achieved by physical forces applying physical work on electric charges. However,
+electromotive force itself is not a physical force</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:syng">¶</a>
+<dt class="acr-bottom" id="glo:syng"><span class="acr-short">SynG</span><span class="acr-long">Synchronous Generator</span></dt>
+<dd class="acr-desc"><p>Synchronous Generator</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:pm">¶</a>
+<dt class="acr-bottom" id="glo:pm"><span class="acr-short">PM</span><span class="acr-long">Permanent Magnet</span></dt>
+<dd class="acr-desc"><p>An object made from a material that is magnetized and creates its own
+persistent magnetic field</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:dc">¶</a>
+<dt class="acr-bottom" id="glo:dc"><span class="acr-short">DC</span><span class="acr-long">Direct Current</span></dt>
+<dd class="acr-desc"><p>One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The electric
+current flows in a constant direction, distinguishing it from alternating current (AC). A
+term formerly used for this type of current was galvanic current.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:im">¶</a>
+<dt class="acr-bottom" id="glo:im"><span class="acr-short">IM</span><span class="acr-long">Induction Machine</span></dt>
+<dd class="acr-desc"><p>an AC
+electric motor in which the electric current in the rotor that produces torque is obtained by
+electromagnetic induction from the magnetic field of the stator winding.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:synm">¶</a>
+<dt class="acr-bottom" id="glo:synm"><span class="acr-short">SynM</span><span class="acr-long">Synchronous Machine</span></dt>
+<dd class="acr-desc"><p>an AC electrical device which operates at a
+constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating
+rotor excited by direct current (DC) or permanent magnets.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:ac">¶</a>
+<dt class="acr-bottom" id="glo:ac"><span class="acr-short">AC</span><span class="acr-long">Alternating Current</span></dt>
+<dd class="acr-desc"><p>An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in one
+direction.</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="MMFofDistributedWindings.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="RotatingMagneticFields.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="RotatingMagneticFields.html#FundamentalConcepts.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 4.1: Fundamental Concepts</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Open and Short Circuit Characteristics</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Synchronous Machines</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="SteadyStatePowerAngleCharacteristics.html">Steady-State Power-Angle Characteristics</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="EquivalentCircuits.html">Equivalent Circuits</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="SynchronousMachines.html#OpenandShortCircuitCharacteristics.html">Chapter: Synchronous
+Machines</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-5.3"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.5.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">5.3</span> <span class="title"> <a id="x29-840005.3"></a>Open and Short Circuit
+Characteristics</span></h3></div>
+<p class="noindent">The fundamental characteristics of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates
+at a constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</a></span></span></span> can be determined by a pair of two
+(<span class="alert">2</span>) tests:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+1. 
+</dt><dd class="enumerate-enumitem">Where we keep the armature terminals open-circuited, and
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem">Where we deliberately short-circuit the armature terminals.</dd></dl>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Except for a few remarks, the aforementioned tests apply to both <span class="alert">cylindrical-rotor</span> and <span class="alert">salient-pole machines</span>. </p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.3.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.3.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.3.1</span> <span class="title"> <a id="x29-850005.3.1"></a>Open-Circuit Saturation and No-Load Rotational Losses</span></h4></div>
+</p><p class="noindent">The open-circuit <span class="margin-block">characteristic <span class="margin-comment"><span class="ellipsis">[126]</span>
+<span class="sidenote">also referred to as the open-circuit saturation curve.</span></span></span> of a
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous
+speed, serving as either a synchronous generator (alternator) or a synchronous motor. It
+features a stationary stator with three-phase windings and a rotating rotor excited by direct
+current (DC) or permanent magnets.</a></span></span></span> is a curve of open-circuit armature terminal voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>o</mi><mi>c</mi></mrow></msub></math> as a function
+of field current <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi></mrow></msub></math>
+when the machine is running at synchronous speed, as shown by curve labelled <b>occ</b> in <b>Fig.</b> <a href="#x29-85001r8">5.8</a>.
+The open-circuit characteristic represents the relationship between the space-fundamental component of
+the air-gap flux and the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux
+in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> acting on the
+magnetic circuit when the field winding constitutes the only <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The
+magnetic pressure which drives magnetic flux in a magnetic circuit, and is the work done to
+move a unit magnetic pole.</a></span></span></span> source. The effects of magnetic saturation can be clearly seen in
+<b>Fig.</b> <a href="#x29-85001r8">5.8</a>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The characteristic bends downward with increasing field current as saturation of the magnetic material
+increases the reluctance of the flux paths in the machine and <span class="alert">reduces the effectiveness of the field current in producing magnetic flux</span>. </p></div></div>
+<div class="sidenote"> <span class="figure">
+<a id="x29-85001r8"></a>
+<figcaption class="caption"><span class="id">Figure 5.8: </span><span class="content">Open-circuit characteristic of a synchronous machine.                                   </span></figcaption>
+<img alt="PIC" src="figures/Synchronous-Machines/figures-2.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">It is worth mentioning, that with the machine armature winding open-circuited, the terminal voltage is <b>equal</b> to the
+generated voltage <math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math>.
+Therefore the open-circuit characteristic is also a measurement of the relationship between the field
+current <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math>
+and can provide a direct measurement of the field-to-armature mutual inductance
+<math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math>.
+</p><p class="noindent">As can be seen from <b>Fig.</b> <a href="#x29-85001r8">5.8</a>, the open-circuit characteristic is <b>initially</b> linear as the field current is
+increased from zero. This portion of the <span class="margin-block">curve <span class="margin-comment"><span class="ellipsis">[127]</span>
+<span class="sidenote">and its linear extension for higher values of field current.</span></span></span>
+is known as the <span class="alert">air-gap line</span> <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a id="x29-85002"></a>Holt, T. Measurement of electromagnetic air gap torque produced by a syschronous
+motor during starting. IEEE Transactions on Power Apparatus and Systems, 2059–2067 (1981)</span></span>. It
+represents the machine open-circuit voltage characteristic corresponding to unsaturated operating
+conditions, in which case the air-gap is the dominant reluctance in the flux path of the
+machine.
+</p><p class="noindent">Consider the field excitation required to achieve the open-circuit armature voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub></math>
+in <b>Fig.</b> <a href="#x29-85001r8">5.8</a>. If there were no saturation, the machine open-circuit voltage characteristic
+would correspond to the air-gap line and this voltage would be produced by field current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>u</mi></mrow></msub></math>.
+However, due to the effects of saturation, a field current of magnitude
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>s</mi></mrow></msub></math>
+is required to produce the same voltage. The difference between
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>s</mi></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>u</mi></mrow></msub></math> is a
+measure of the degree of saturation in the machine at that level of voltage.
+</p>
+<a id="x29-85003r1"></a>
+<div class="exer-block"> <span class="exer-upper"> <span class="exer-header"> <b><b>Exercise</b> 5.1: </b> </span> <span class="exer-title"> Open-Circuit Test </span> </span> <div class="body">
+<p class="noindent">An open-circuit test performed on a three-phase,
+<math display="inline"><mn>6</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle></math>
+synchronous generator shows that the rated open-circuit voltage of
+<math display="inline"><mn>1</mn><mn>3</mn><mi>,</mi><mn>8</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>V</mi></mstyle></math>
+is produced by a field current of <math display="inline"><mn>3</mn><mn>1</mn><mn>8</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>A</mi></mstyle></math>.
+Extrapolation of the air-gap line from a complete set of measurements
+on the machine shows that the field-current corresponding to
+<math display="inline"><mn>1</mn><mn>3</mn><mi>,</mi><mn>8</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>V</mi></mstyle></math>
+on the air-gap line is <math display="inline"><mn>2</mn><mn>6</mn><mn>3</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>A</mi></mstyle></math>.
+Using this information, please calculate the saturated and unsaturated values of
+<math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math>.
+</p>
+<hr/> From Eq. (<a href="EquivalentCircuits.html#x28-82003r18">5.18</a>), <math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math>
+is found from: <table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac>
+<mrow>
+<msqrt>
+<mrow>
+<mn>2</mn></mrow></msqrt>
+<msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></mrow>
+<mrow><msub><mrow><mi>ω</mi></mrow><mrow>
+<mstyle class="text"><mtext class="textup" mathvariant="normal">e</mtext></mstyle></mrow></msub><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">f</mtext></mstyle></mrow></msub></mrow></mfrac>
+</math></td></tr></table>
+<p class="noindent">Here, <math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mn>3</mn><mi>,</mi><mn>8</mn><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>k</mi><mi>V</mi></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><msqrt><mrow>
+<mn>3</mn></mrow></msqrt> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>7</mn><mi>,</mi><mn>9</mn><mn>7</mn><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>k</mi><mi>V</mi></mstyle></math>. Therefore the
+saturated value of <math display="inline"><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math>
+is given by: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block"><msup><mrow>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub>
+</mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mo class="MathClass-open" stretchy="false">[</mo><mi>s</mi><mi>a</mi><mi>t</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msqrt><mrow>
+<mn>2</mn></mrow></msqrt><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mn>7</mn><mi>,</mi><mn>9</mn><mn>7</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>3</mn></mrow></msup>
+</mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup></mrow>
+<mrow>
+<mn>1</mn><mn>2</mn><mn>0</mn><mi>π</mi> <mi>×</mi> <mn>3</mn><mn>1</mn><mn>8</mn></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>9</mn><mn>4</mn><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>m</mi><mi>H</mi></mstyle>
+</math></td></tr></table>
+<p class="noindent">and the unsaturated value is </p><table class="equation-star"><tr><td>
+<math class="equation" display="block"><msup><mrow>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>L</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub>
+</mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mo class="MathClass-open" stretchy="false">[</mo><mi>u</mi><mi>n</mi><mi>s</mi><mi>a</mi><mi>t</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msqrt><mrow>
+<mn>2</mn></mrow></msqrt><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mn>7</mn><mi>,</mi><mn>9</mn><mn>7</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>3</mn></mrow></msup>
+</mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup></mrow>
+<mrow>
+<mn>1</mn><mn>2</mn><mn>0</mn><mi>π</mi> <mi>×</mi> <mn>2</mn><mn>6</mn><mn>3</mn></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mn>1</mn><mn>4</mn><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>m</mi><mi>H</mi></mstyle>
+</math></td></tr></table>
+<p class="noindent">In this case, we see that saturation reduces the mutual inductance between the field and armature windings by
+approximately 18 percent <math display="inline"><mspace class="quad" width="1em"></mspace><mo class="MathClass-ord">■</mo></math>
+</p></div> </div>
+<div class="sidenote"> <span class="figure">
+<a id="x29-85004r9"></a>
+<figcaption class="caption"><span class="id">Figure 5.9: </span><span class="content">An approximate behavior of an open-circuit core-loss curve.                               </span></figcaption>
+<img alt="PIC" src="figures/Synchronous-Machines/figures-11.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">If we are studying a pre-built <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a
+constant synchronous speed, serving as either a synchronous generator (alternator) or a synchronous
+motor. It features a stationary stator with three-phase windings and a rotating rotor excited by direct
+current (DC) or permanent magnets.</a></span></span></span>, the open-circuit characteristic is usually determined <span class="alert">experimentally</span> by driving
+the machine mechanically at synchronous speed with its armature terminals open-circuited and by
+measuring the terminal voltage as a function of field current. If the mechanical power required to
+drive the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant
+synchronous speed, serving as either a synchronous generator (alternator) or a synchronous motor.
+It features a stationary stator with three-phase windings and a rotating rotor excited by
+direct current (DC) or permanent magnets.</a></span></span></span> during the open-circuit test is measured, the
+no-load rotational losses can be obtained. These losses consist of friction and windage losses
+associated with rotation as well as the core loss corresponding to the flux in the machine
+at no load. The friction and windage losses at synchronous speed are constant, while the
+open-circuit core loss is a function of the flux, which in turn is proportional to the open-circuit
+voltage.
+The mechanical power required to drive the machine at synchronous speed and unexcited is its <b>friction
+and windage loss</b>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">When the field is excited, the mechanical power equals the <span class="alert">sum of the friction, windage, and open-circuit core loss</span>. </p></div></div>
+<p class="noindent">The open-circuit core loss therefore can be found from the difference between these two values of
+mechanical power.
+</p><p class="noindent">A typical curve of open-circuit core loss as a function of open-circuit voltage takes the form of that
+found in <b>Fig.</b> <a href="#x29-85004r9">5.9</a>. It is common to assume that the core loss under loaded conditions at a given
+terminal voltage is equal to the open-circuit core loss at the corresponding voltage.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.3.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.3.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.3.2</span> <span class="title"> <a id="x29-860005.3.2"></a>Short-Circuit Characteristic and Load Loss</span></h4></div>
+</p><p class="noindent">The <b>short-circuit characteristic</b> of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which
+operates at a constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</a></span></span></span> is a curve of short-circuit terminal current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>s</mi><mi>c</mi></mrow></msub></math><span class="margin-block">
+<span class="margin-comment"><span class="ellipsis">[128]</span>
+<span class="sidenote">This can be represented as either amperes of in per unit.</span></span></span> as a function of field current.
+The short-circuit characteristic can be obtained by applying a three-phase short circuit
+through suitable current sensors to the armature terminals of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an
+AC electrical device which operates at a constant synchronous speed, serving as either a
+synchronous generator (alternator) or a synchronous motor. It features a stationary stator with
+three-phase windings and a rotating rotor excited by direct current (DC) or permanent
+magnets.</a></span></span></span>.
+With the machine driven at synchronous speed, the field current can be increased and a curve of
+armature current versus field current can be <span class="margin-block">obtained. <span class="margin-comment"><span class="ellipsis">[129]</span>
+<span class="sidenote">In reality, this test does not have to be
+conducted at synchronous speed. The short-circuit armature current will remain essentially
+constant with speed as long as the corresponding electrical frequency is sufficiently large that
+the synchronous reactance at that frequency is much larger than the armature resistance.</span></span></span>
+An open-circuit characteristic occ and a short-circuit characteristic scc are shown in Fig.
+5.8.
+</p>
+<p class="noindent"></p><figure class="float">
+<p class="noindent"><img alt="PIC" src="example-image-a.png" style=""/> <a id="x29-86001r10"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 5.10: 
+          </span><span class="content">Open- and short-circuit characteristics of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which
+          operates at a constant synchronous speed, serving as either a synchronous generator (alternator) or a
+          synchronous motor. It features a stationary stator with three-phase windings and a rotating rotor excited
+          by direct current (DC) or permanent magnets.</a></span></span></span> </span></figcaption>
+</figure>
+<p class="noindent">With the armature short-circuited, <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+and, from <span> Eq. (<a href="EquivalentCircuits.html#x28-82008r22">5.22</a>)</span> <span class="margin-block">: <span class="margin-comment"><span class="ellipsis">[130]</span>
+<span class="sidenote">using the generator reference direction for current.</span></span></span> </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86002r24"></mstyle><msub><mrow>
+<mi>Ê</mi>
+</mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mi>Î</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(5.24)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The corresponding phasor diagram is shown in Fig. 5.9. As the resistance is significantly smaller than
+the synchronous reactance, the armature current <b>lags</b> the excitation voltage by very nearly
+<math display="inline"><mn>9</mn><mn>0</mn></math><math display="inline"><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>.
+Consequently the armature <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span>
+wave is very nearly in line with the axis of the field poles and in opposition to the
+field <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives magnetic flux in a
+magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span>, as shown by phasors
+<math display="inline"><mi>Â</mi></math> and
+<math display="inline"><mover accent="true"><mrow><mi>F</mi></mrow><mo accent="true">^</mo></mover></math>
+representing the armature and field <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> waves,
+respectively.
+The resultant <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic
+pole.</a></span></span></span> creates the resultant air-gap flux wave which generates the air- gap voltage
+<math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mi>R</mi></mrow></msub></math>,
+shown in <b>Fig.</b> <a href="EquivalentCircuits.html#x28-82009r7">5.7</a> equal to the voltage drop across the armature resistance
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>a</mi></mrow></msub></math> and leakage
+reactance <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">al</mtext></mstyle></mrow></msub></math>.
+As an equation, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86003r25"></mstyle><msub><mrow>
+<mi>Ê</mi>
+</mrow><mrow><mi>R</mi></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mi>Î</mi></mrow><mrow><mi>a</mi></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>R</mi></mrow><mrow><mi>a</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mi>a</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(5.25)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">In many <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous
+speed, serving as either a synchronous generator (alternator) or a synchronous motor. It features a
+stationary stator with three-phase windings and a rotating rotor excited by direct current (DC) or
+permanent magnets.</a></span></span></span>s the armature resistance is negligible, and the leakage reactance is between
+<math display="inline"><mn>0</mn><mi>,</mi><mn>1</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle></math>
+to 
+<math display="inline"><mn>0</mn><mi>,</mi><mn>2</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle></math>,
+a representative value is about <math display="inline"><mn>0</mn><mi>,</mi><mn>1</mn><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle></math>.
+That is, at rated armature current the leakage reactance voltage drop is about
+<math display="inline"><mn>0</mn><mi>,</mi><mn>1</mn><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle></math><span class="margin-block">.
+<span class="margin-comment"><span class="ellipsis">[131]</span>
+<span class="sidenote">or 15 percent of the machine rated voltage.</span></span></span> From <span> Eq. (<a href="#x29-86003r25">5.25</a>)</span> , therefore,
+the air-gap voltage at rated armature current on short circuit is about
+<math display="inline"><mn>0</mn><mi>,</mi><mn>1</mn><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle></math><span class="margin-block">.
+<span class="margin-comment"><span class="ellipsis">[132]</span>
+<span class="sidenote">i.e., the resultant air-gap flux is only about 0.15 times its rated-voltage value.</span></span></span> Consequently, the
+machine is operating in an <b>unsaturated</b> condition.
+</p>
+<p class="noindent"></p><figure class="float">
+<p class="noindent"><img alt="PIC" src="example-image-a.png" style=""/> <a id="x29-86004r11"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 5.11: </span><span class="content">Phasor diagram for short-circuit conditions.                                        </span></figcaption>
+</figure>
+<p class="noindent">The short-circuit armature current, therefore, is directly proportional to the field current over the range
+from zero to well above rated armature current. When plotted versus field current, it is thus a straight
+line as can be seen in Fig. 5.8.
+</p><p class="noindent">The <i>unsaturated synchronous reactance</i> <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>u</mi></mrow></msub></math><span class="margin-block">
+<span class="margin-comment"><span class="ellipsis">[133]</span>
+<span class="sidenote">corresponding to unsaturated operating conditions within the machine</span></span></span> can be found from
+the open- and short-circuit characteristics. At any convenient field excitation, such as
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi><mn>0</mn></mrow></msub></math> in Fig. 5.8, the armature
+current on short circuit is <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>a</mi><mn>0</mn></mrow></msub></math>,
+and the unsaturated generated voltage for the same field is equal to
+<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mi>a</mi><mi>f</mi><mn>0</mn></mrow></msub></math>, as
+read from the air-gap line.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The voltage on the air-gap line should be used because the machine is <span class="alert">assumed to be operating in an unsaturated condition</span>. </p></div></div>
+<p class="noindent">If <math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mi>a</mi><mi>f</mi><mn>0</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>a</mi><mn>0</mn></mrow></msub></math> are expressed in
+real units with <math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mi>a</mi><mi>f</mi><mn>0</mn></mrow></msub></math>
+being the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:rms">RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:rms">Root-Mean Square</a></span><span class="acronym-desc"><a class="glossary" href="#glo:rms">Equivalent direct current (DC) voltage of an alternating current (AC)
+source.</a></span></span></span> line-to-neutral generated voltage, then from <span> Eq. (<a href="#x29-86002r24">5.24</a>)</span> , with armature resistance
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>a</mi></mrow></msub></math> neglected, the unsaturated
+synchronous reactance <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>u</mi></mrow></msub></math>
+in <math display="inline"><mstyle mathvariant="normal"><mi mathvariant="normal">Ω</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>p</mi><mi>h</mi><mi>a</mi><mi>s</mi><mi>e</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math> is
+calculated as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86005r26"></mstyle>
+<msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>u</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>E</mi></mrow><mrow><mi>a</mi><mi>f</mi><mn>0</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>I</mi></mrow><mrow><mi>a</mi><mn>0</mn></mrow></msub></mrow></mfrac>
+</math></td><td class="eq-no">(5.26)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Because the air-gap line and the short-circuit characteristic are both linear, the value of synchronous
+reactance as calculated by <span> Eq. (<a href="#x29-86005r26">5.26</a>)</span>  is <b>independent</b> of the specific value of field current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi><mn>0</mn></mrow></msub></math>.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">the synchronous reactance in <math display="inline"><mstyle mathvariant="normal"><mi mathvariant="normal">Ω</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>p</mi><mi>h</mi><mi>a</mi><mi>s</mi><mi>e</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>
+is calculated by using the phase or line-to-neutral voltage. </p></div></div>
+<p class="noindent">Often the open-circuit saturation curve is given in terms of the line-to-line voltage,
+in which case the voltage must be converted to the line-to-neutral value by dividing by
+<math display="inline"><msqrt><mrow>
+<mn>3</mn></mrow></msqrt></math>. If, on the
+other hand, <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>o</mi><mi>c</mi></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>s</mi><mi>c</mi></mrow></msub></math> are
+expressed in per unit, the synchronous reactance as calculated by <span> Eq. (<a href="#x29-86005r26">5.26</a>)</span>  will be in per
+unit.
+</p>
+<p class="noindent"></p><figure class="float">
+<p class="noindent"><img alt="PIC" src="example-image-a.png" style=""/> <a id="x29-86006r12"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 5.12: 
+          </span><span class="content">Open- and short-circuit characteristics showing equivalent magnetization line for saturated operating
+          conditions.                                                              </span></figcaption>
+</figure>
+<p class="noindent">For operation at or near rated terminal voltage, it is common to assume that the machine is equivalent to
+an unsaturated one with a <b>linear magnetizing characteristic</b> which starts at the origin and which
+passes through the rated-voltage point on the open-circuit characteristic, as shown by the dashed line
+<math display="inline"><mi>O</mi><mi>p</mi></math> in Fig. 5.10.
+Under this approximation, the machine can be represented by an equivalent circuit of the form of Fig. 5.3 with the
+generated voltage <math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math>
+linearly proportional to field current such that it is equal to rated voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mstyle class="text"><mtext>rated</mtext></mstyle></mrow></msub></math> (or one per unit)
+when <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi></mrow></msub></math> is equal
+to that value of field current, referred to as AFNL (Amperes Field No Load), which produces rated open-circuit
+voltage <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mstyle class="text"><mtext>rated</mtext></mstyle></mrow></msub></math>
+on the open-circuit characteristic as shown in Fig. 5.10.
+</p><p class="noindent">Correspondingly, <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+is assumed equal to the rated-voltage saturated synchronous reactance given by </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86007r27"></mstyle>
+<msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub></mrow>
+<mrow><msubsup><mrow>
+<mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow><mrow><mi>′</mi></mrow></msubsup></mrow></mfrac>
+</math></td><td class="eq-no">(5.27)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>a</mi></mrow><mrow><mi>′</mi></mrow></msubsup></math>
+is the armature current read from the short-circuit characteristic at the
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi></mrow></msub></math>
+= AFNL. Similar to the unsaturated synchronous reactance, if
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mstyle class="text"><mtext>rated</mtext></mstyle></mrow></msub></math> and
+<math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow><mrow><mi>′</mi></mrow></msubsup></math> are expressed in
+<math display="inline"><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle></math>, the synchronous
+reactance will be in <math display="inline"><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle></math>.
+If <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mstyle class="text"><mtext>rated</mtext></mstyle></mrow></msub></math> and
+<math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>a</mi></mrow><mrow><mi>′</mi></mrow></msubsup></math> are expressed
+in <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:rms">RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:rms">Root-Mean Square</a></span><span class="acronym-desc"><a class="glossary" href="#glo:rms">Equivalent direct current (DC) voltage of an alternating current (AC) source.</a></span></span></span>
+line-to-neutral <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>p</mi><mi>h</mi><mi>a</mi><mi>s</mi><mi>e</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>
+and <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:rms">RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:rms">Root-Mean Square</a></span><span class="acronym-desc"><a class="glossary" href="#glo:rms">Equivalent direct current (DC) voltage of an alternating current (AC) source.</a></span></span></span>
+<math display="inline"><mstyle mathvariant="normal"><mi>A</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>p</mi><mi>h</mi><mi>a</mi><mi>s</mi><mi>e</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>, respectively, the synchronous
+reactance will be in <math display="inline"><mstyle mathvariant="normal"><mi mathvariant="normal">Ω</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>p</mi><mi>h</mi><mi>a</mi><mi>s</mi><mi>e</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>.
+</p>
+<div class="info-block" id="info-block-5.32"> <a class="copiable-link" href="#info-block-5.32"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 5.<a id="x29-86008r32"></a>32: </b> </span> <span class="info-title"> Ramifications of Simplifications </span> </span> <div class="body">
+<p class="noindent">This method of handling the effects of saturation can be justified by recognizing that <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous
+Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed, serving as
+either a synchronous generator (alternator) or a synchronous motor. It features a stationary
+stator with three-phase windings and a rotating rotor excited by direct current (DC) or
+permanent magnets.</a></span></span></span>s, for example <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:syng">SynG</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span><span class="acronym-desc"><a class="glossary" href="#glo:syng">Synchronous Generator</a></span></span></span> with
+terminal-voltage regulation and connected to power systems, operate at a relatively constant terminal
+voltage.
+To a good approximation, ignoring the voltage drop across the armature-winding resistance
+and leakage reactance, this implies that the net air-gap flux in the machine, and hence
+the degree of saturation in the machine, remains relatively constant, independent of
+load. A fixed degree of saturation in-turn corresponds to a magnetic circuit with
+constant reluctances, which in turn implies a linear relationship between the field current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi></mrow></msub></math> and the field-produced
+magnetic flux/terminal voltage <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub></math>
+as shown in Fig. 5.10.
+</p>
+</div></div>
+<p class="noindent">Although not commonly done, this same argument could be applied to determine
+the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant
+synchronous speed, serving as either a synchronous generator (alternator) or a synchronous
+motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</a></span></span></span> equivalent-circuit parameters,
+<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math> as a function of
+field current and <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi></mrow></msub></math>,
+for operation at terminal voltages other than rated value.
+For example, if the machine were operating at very low terminal voltages, the generated voltage would
+be calculated from the air-gap line and the corresponding unsaturated synchronous reactance would be
+given by </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86009r28"></mstyle>
+<msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>u</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub></mrow>
+<mrow><msubsup><mrow>
+<mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow><mrow><mi>″</mi></mrow></msubsup></mrow></mfrac>
+</math></td><td class="eq-no">(5.28)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Comparing Figs 5.8 and 5.10, we see that Eq. (<a href="#x29-86007r27">5.27</a>) and Eq. (<a href="#x29-86009r28">5.28</a>) are equivalent.
+</p><p class="noindent">Note that, with the short-circuit terminal current expressed in per unit, the short-circuit current
+characteristic scc can be expressed as </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86010r29"></mstyle>
+<msub><mrow><mi>I</mi></mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>s</mi><mi>c</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac>
+<mrow>
+<msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">f</mtext></mstyle></mrow></msub></mrow>
+<mrow><mstyle class="text"><mtext>AFSC</mtext></mstyle></mrow></mfrac><mspace class="quad" width="1em"></mspace><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle>
+</math></td><td class="eq-no">(5.29)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where AFSC (Amperes Field Short Circuit) is the value of field current which produces rated
+(<math display="inline"><mn>1</mn><mi>,</mi><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle></math>)
+short-circuit current. Therefore, with <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle class="text"><mtext>AFNL</mtext></mstyle></math>,
+<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mstyle class="text"><mtext>rated</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo></math> 1.0 per
+unit and </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86011r30"></mstyle>
+<msubsup><mrow><mi>I</mi></mrow><mrow><mi>a</mi></mrow><mrow><mi>′</mi></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mstyle class="text"><mtext>AFNL</mtext></mstyle></mrow>
+<mrow>
+<mstyle class="text"><mtext>AFSC</mtext></mstyle>
+</mrow>
+</mfrac> <mspace class="quad" width="1em"></mspace><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle>
+</math></td><td class="eq-no">(5.30)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Thus, the per-unit saturated synchronous reactance can be calculated from <span> Eq. (<a href="#x29-86007r27">5.27</a>)</span>  as
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86012r31"></mstyle>
+<msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub></mrow>
+<mrow><msubsup><mrow>
+<mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow><mrow><mi>′</mi></mrow></msubsup></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mstyle class="text"><mtext>AFSC</mtext></mstyle></mrow>
+<mrow>
+<mstyle class="text"><mtext>AFNL</mtext></mstyle></mrow></mfrac><mspace class="quad" width="1em"></mspace><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle>
+</math></td><td class="eq-no">(5.31)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">By a similar argument, the per-unit unsaturated synchronous reactance can be calculated as:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86013r32"></mstyle>
+<msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>u</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>d</mi></mrow></msub></mrow>
+<mrow><msubsup><mrow>
+<mi>I</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">a</mtext></mstyle></mrow><mrow><mi>′</mi></mrow></msubsup></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mfrac><mrow><mstyle class="text"><mtext>AFSC</mtext></mstyle></mrow>
+<mrow>
+<mstyle class="text"><mtext>AFNL</mtext></mstyle></mrow></mfrac></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ag</mtext></mstyle></mrow></msub><mspace class="quad" width="1em"></mspace><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle>
+</math></td><td class="eq-no">(5.32)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mstyle class="text"><mtext>AFNL</mtext></mstyle></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">ag</mtext></mstyle></mrow></msub></math>
+is the field current corresponding to rated open-circuit voltage on the air-gap line.
+</p><p class="noindent">The Short-Circuit Ratio (SCR) is defined as the ratio of AFNL to AFSC and
+therefore is equal to the inverse of the per-unit saturated synchronous reactance
+<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi></mrow></msub></math>:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86014r33"></mstyle>
+<mstyle class="text"><mtext>SCR</mtext></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mstyle class="text"><mtext>AFNL</mtext></mstyle></mrow>
+<mrow>
+<mstyle class="text"><mtext>AFSC</mtext></mstyle>
+</mrow>
+</mfrac>
+</math></td><td class="eq-no">(5.33)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">As we have discussed, when the machine is operating at rated voltage, it is
+assumed that the generated voltage is linearly proportional to the field current
+with a slope such that the generated voltage is equal to the machine rated value
+(<math display="inline"><mn>1</mn><mi>,</mi><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>p</mi><mo class="MathClass-punc" stretchy="false">.</mo><mi>u</mi><mo class="MathClass-punc" stretchy="false">.</mo></mstyle></math>)
+when the field current <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi></mrow></msub></math>
+is equal to AFNL, as represented by the dashed line
+<math display="inline"><mi>O</mi><mi>p</mi></math> in Fig.
+5.10. Thus, for any given value of generated voltage, the field current can be found from the <b>per-unit
+value</b> of <math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math> as
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86015r34"></mstyle>
+<msub><mrow><mi>I</mi></mrow><mrow><mi>f</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub> <mi>×</mi> <mstyle class="text"><mtext>AFNL</mtext></mstyle><mspace class="quad" width="1em"></mspace><mstyle mathvariant="normal"><mi>A</mi></mstyle>
+</math></td><td class="eq-no">(5.34)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">As the machine flux level is low under short-circuit conditions, the core loss under this condition is
+typically considered to be <span class="alert">negligible</span>. Therefore the mechanical power required to drive the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous
+Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed, serving as either a
+synchronous generator (alternator) or a synchronous motor. It features a stationary stator with
+three-phase windings and a rotating rotor excited by direct current (DC) or permanent magnets.</a></span></span></span> during
+a short-circuit test equals the sum of friction and windage <span class="margin-block">loss <span class="margin-comment"><span class="ellipsis">[134]</span>
+<span class="sidenote">determined from the open-circuit test at
+zero field current</span></span></span> plus losses caused by the armature current. The losses caused by the
+armature current can then be found by subtracting friction and windage from the driving
+power.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x29-86016r13"></a>
+<figcaption class="caption"><span class="id">Figure 5.13: </span><span class="content">Typical form of short-circuit load loss and stray load loss curves.                          </span></figcaption>
+<img alt="PIC" src="figures/Synchronous-Machines/figures-12.png" style=""/>
+</figure>
+<p class="noindent">The losses caused by the short-circuit armature current are known collectively as the <span class="alert">short-circuit load loss</span>. A curve
+showing the typical form of short-circuit load loss plotted against armature current is shown in
+<b>Fig.</b> ??.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Often this loss is assumed to vary parabolically with armature current. </p></div></div>
+<p class="noindent">The short-circuit load loss consists of <math display="inline"><msup><mrow><mi>I</mi></mrow><mrow><mn>2</mn></mrow></msup><mi>R</mi></math>
+loss in the armature winding, local core losses caused by the armature leakage flux, and the small core
+loss component caused by the net resultant flux. For a <i>q</i>-phase machine, the short-circuit resistance
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a conductor
+such as a wire, but can also flow through semiconductors, insulators, or even through a vacuum as in
+electron or ion beams. The electric current flows in a constant direction, distinguishing it from
+alternating current (AC). A term formerly used for this type of current was galvanic current.</a></span></span></span> loss
+<math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mi>a</mi><mi>r</mi><mi>m</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>d</mi><mi>c</mi></mrow></msub></math>,
+calculated as </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86017r35"></mstyle>
+<msub><mrow><mi>P</mi></mrow><mrow><mi>a</mi><mi>r</mi><mi>m</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>d</mi><mi>c</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>q</mi><msubsup><mrow><mi>I</mi></mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>s</mi><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msubsup><msub><mrow><mi>R</mi></mrow><mrow>
+<mstyle class="text"><mtext class="textup" mathvariant="normal">dc</mtext></mstyle></mrow></msub>
+</math></td><td class="eq-no">(5.35)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">can be computed if the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow
+through a conductor such as a wire, but can also flow through semiconductors, insulators, or even through a
+vacuum as in electron or ion beams. The electric current flows in a constant direction, distinguishing it from
+alternating current (AC). A term formerly used for this type of current was galvanic current.</a></span></span></span> winding
+resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">dc</mtext></mstyle></mrow></msub></math>
+is measured and corrected, when necessary, for the temperature of the windings during the short-circuit
+test.
+For copper conductors: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86018r36"></mstyle>
+<mfrac>
+<mrow>
+<msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">dc</mtext></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>T</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow>
+<mrow><msub><mrow>
+<mi>R</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">dc</mtext></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow></mfrac>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>2</mn><mn>3</mn><mn>4</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>5</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>T</mi></mrow>
+<mrow>
+<mn>2</mn><mn>3</mn><mn>4</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>5</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>t</mi></mrow></mfrac>
+</math></td><td class="eq-no">(5.36)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>T</mi></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>t</mi></mrow></msub></math> are the resistances at
+Celsius temperatures <math display="inline"><mi>T</mi></math>
+and <math display="inline"><mi>t</mi></math>,
+respectively. If this <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow
+through a conductor such as a wire, but can also flow through semiconductors, insulators, or even
+through a vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of current was
+galvanic current.</a></span></span></span> resistance loss is subtracted from the short-circuit load loss, the difference will be the
+loss due to <b>skin effect</b> and <b>eddy currents</b> in the armature conductors plus the local core losses
+caused by the armature leakage flux.
+This difference between the short-circuit load loss and the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of
+electric charge. Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The electric current
+flows in a constant direction, distinguishing it from alternating current (AC). A term formerly used for
+this type of current was galvanic current.</a></span></span></span> resistance loss is the additional loss caused by the
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in one
+direction.</a></span></span></span> in the armature. It is the <span class="alert">stray-load loss</span> described in, commonly considered to have the same
+value under normal load conditions as on short circuit. It is a function of the armature
+current, as shown by the curve in <b>Fig.</b> <a href="#x29-86016r13">5.13</a>. As with any <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric
+current that periodically reverses direction and changes its magnitude continuously with
+time, in contrast to direct current (DC), which flows only in one direction.</a></span></span></span> device, the <span class="alert">effective resistance of the armature</span>,
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>e</mi><mi>f</mi><mi>f</mi></mrow></msub></math>, can be
+computed as the power loss attributable to the armature current divided by the square of the
+current. On the assumption that the stray load loss is a function of only the armature current,
+the effective resistance of the armature can be determined from the short-circuit load loss:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x29-86019r37"></mstyle>
+<msub><mrow><mi>R</mi></mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>e</mi><mi>f</mi><mi>f</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mstyle class="text"><mtext>short-circuit load loss</mtext></mstyle></mrow>
+<mrow><msup><mrow>
+<mo class="MathClass-open" stretchy="false">(</mo><mstyle class="text"><mtext>short-circuit armature current</mtext></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac>
+</math></td><td class="eq-no">(5.37)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">If the short-circuit load loss and armature current are expressed in per
+unit, the effective resistance will be in per unit. If they are expressed in
+<math display="inline"><mstyle mathvariant="normal"><mi>W</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>p</mi><mi>h</mi><mi>a</mi><mi>s</mi><mi>e</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math> and
+<math display="inline"><mstyle mathvariant="normal"><mi>A</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>p</mi><mi>h</mi><mi>a</mi><mi>s</mi><mi>e</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>, respectively, the effective
+resistance will be in <math display="inline"><mstyle mathvariant="normal"><mi mathvariant="normal">Ω</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>p</mi><mi>h</mi><mi>a</mi><mi>s</mi><mi>e</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Often, it is sufficiently accurate to find the value of
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>a</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>e</mi><mi>f</mi><mi>f</mi></mrow></msub></math> at
+rated current and then to assume it to be <span class="alert">constant</span>. </p></div></div>
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:ac">¶</a>
+<dt class="acr-bottom" id="glo:ac"><span class="acr-short">AC</span><span class="acr-long">Alternating Current</span></dt>
+<dd class="acr-desc"><p>An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in one
+direction.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:dc">¶</a>
+<dt class="acr-bottom" id="glo:dc"><span class="acr-short">DC</span><span class="acr-long">Direct Current</span></dt>
+<dd class="acr-desc"><p>One-directional flow of electric charge. Direct current may flow through a conductor
+such as a wire, but can also flow through semiconductors, insulators, or even through a vacuum as in
+electron or ion beams. The electric current flows in a constant direction, distinguishing it from
+alternating current (AC). A term formerly used for this type of current was galvanic current.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:syng">¶</a>
+<dt class="acr-bottom" id="glo:syng"><span class="acr-short">SynG</span><span class="acr-long">Synchronous Generator</span></dt>
+<dd class="acr-desc"><p>Synchronous Generator</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:rms">¶</a>
+<dt class="acr-bottom" id="glo:rms"><span class="acr-short">RMS</span><span class="acr-long">Root-Mean Square</span></dt>
+<dd class="acr-desc"><p>Equivalent direct current (DC) voltage of an alternating current (AC)
+source.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:mmf">¶</a>
+<dt class="acr-bottom" id="glo:mmf"><span class="acr-short">MMF</span><span class="acr-long">Magneto-motive Force</span></dt>
+<dd class="acr-desc"><p>The magnetic pressure which drives magnetic flux
+in a magnetic circuit, and is the work done to move a unit magnetic pole.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:synm">¶</a>
+<dt class="acr-bottom" id="glo:synm"><span class="acr-short">SynM</span><span class="acr-long">Synchronous Machine</span></dt>
+<dd class="acr-desc"><p>an AC electrical device which operates
+at a constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="SteadyStatePowerAngleCharacteristics.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="EquivalentCircuits.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="SynchronousMachines.html#OpenandShortCircuitCharacteristics.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 5.3: Open and Short Circuit Characteristics</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

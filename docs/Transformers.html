@@ -1,123 +1,134 @@
-<!DOCTYPE html> 
-<html lang="en">  
-<head><title>2 Transformers</title> 
-<meta  charset="utf-8" /> 
-<meta name="generator" content="lms-WebBook" /> 
-<meta name="viewport" content="width=device-width,initial-scale=1" /> 
-<link rel="stylesheet" type="text/css" href="\aa:CssFile " /> 
-<meta name="src" content="DriveTechnologyLectureBook.tex" /> 
- <script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>  
-<link rel="icon" type="image/x-icon" href="logo/lms.ico"> 
-<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" /> 
-<link rel ="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css"> 
-<script src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js" async='true' crossorigin='anonymous'></script> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css"/> 
-<script src ="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script> 
-<link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"/> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/> 
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet/'> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script> 
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script> 
- <style></style> </head><body 
->
-<page> 
-<nav class="wide"><img class="webbook-logo" src="logo/webbook-logo.svg"></img> <div class="header"> <div class="header-left"><span class="header-lecture-grade">B.Sc</span> 
-<span class="header-lecture-name">Drive Technology</span> 
-<span class="header-webBook">WebBook 2.1</span> </div> <div class="header-right"> <span class="header-version">WS.2026</span> 
- <span class="header-chapter">Magnetic Circuits and Materials</span></div></div> <div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style='font-size:20px'></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&hl=en\&user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style='font-size:20px'></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style='font-size:20px'></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style='font-size:20px'></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style='font-size:20px'></i></a></div><hr /><span class="chapterToc"><span class="number">0</span><span class="title"><a 
-href="index.html#x2-10000">index</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a 
-href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a 
-href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic
-Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a 
-href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a 
-href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a 
-href="MagneticMaterialProperties.html#x6-60001.3">Magnetic
-Material Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a 
-href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a 
-href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a 
-href="#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a 
-href="TheStationaryElectricMachine.html#x9-120002.1">The
-Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a 
-href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a 
-href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
-Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a 
-href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a 
-href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The
-Effect of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a 
-href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types
-of Equivalent Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a 
-href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a 
-href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit
-Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a 
-href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a 
-href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a 
-href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding
-Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a 
-href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a 
-href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span>
-<!--l. 10--><p class="noindent" ><div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> 
-<span class="nav-footer-webBook"><span id="bold" style="font-weight:bold;">Last Updated:</span> 10.9.2026, at 11:1.</span></div></div><span class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span></div></div></nav> 
-
-</p>
-<article class="chapter"> 
-<nav class="crosslinks-top"> <a 
-href="TheStationaryElectricMachine.html" ><span class="nav-next">NEXT</span></a><a 
-href="ACExcitation.html" ><span class="nav-prev">PREV</span></a><a 
-href="ACExcitation.html#tailACExcitation.html" ><span class="nav-prev-tail">PREV-TAIL</span></a><a 
-href="#tailTransformers.html"><span class="nav-tail">TAIL</span></a><a 
-href="DriveTechnologyLectureBook.html#Transformers.html" ><span class="nav-up">UP</span></a></nav> 
-<h2 class="chapterHead"><div class="chapter-header">Chapter <span class="titlemark">2</span>  </div><br />  <a 
- id="x8-110002"></a>Transformers</h2>
-<!--l. 16--><p class="noindent" >Before we continue on with electric drives, it is worthwhile to discuss particular aspects of the theory of
-magnetically-coupled circuits, with a special emphasis on the <span class="alert"><alert style="color: #821131;">transformer</alert></span>. Although the transformer
-is <span id="bold" style="font-weight:bold;">NOT</span> an energy conversion <span class="margin-block">device, <span class="margin-comment"><span class="ellipsis">[23]</span> 
-<span class="sidenote"> In the end all it does is to convert one level of AC voltage to
-another level of AC voltage. It does <span id="bold" style="font-weight:bold;">NOT</span> <span id="bold" style="font-weight:bold;">convert</span> energy.</span></span></span> by the strictest of the definition, it is
-nevertheless an <span id="bold" style="font-weight:bold;">indispensable component</span> in many energy conversion systems and used
+<!DOCTYPE html>
+<html lang="en">
+<head><title>2 Transformers</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Transformers</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="TheStationaryElectricMachine.html">The Stationary Electric Machine</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="ACExcitation.html">AC Excitation</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<h2 class="chapterHead"><div class="chapter-header">Chapter <span class="titlemark">2</span>  </div><br/> <a id="x8-110002"></a>Transformers</h2>
+<p class="noindent">Before we continue on with electric drives, it is worthwhile to discuss particular aspects of the theory of
+magnetically-coupled circuits, with a special emphasis on the <span class="alert">transformer</span>. Although the transformer is <b>NOT</b> an
+energy conversion <span class="margin-block">device, <span class="margin-comment"><span class="ellipsis">[23]</span>
+<span class="sidenote"> In the end all it does is to convert one level of AC voltage to another
+level of AC voltage. It does <b>NOT</b> <b>convert</b> energy.</span></span></span> by the strictest of the definition, it is
+nevertheless an <b>indispensable component</b> in many energy conversion systems and used
 heavily by the power generation, distribution, and transmission companies as it allows the:
-</p>     
+</p>
 <ul class="itemize1">
-<li class="itemize">     
-<!--l. 25--><p class="noindent" >electric generation at the most economical generator voltage,
-</p>     
-</li>
-<li class="itemize">     
-<!--l. 26--><p class="noindent" >power transfer at the most economical transmission voltage, and
-</p>     
-</li>
-<li class="itemize">     
-<!--l. 27--><p class="noindent" >power utilization at the most suitable voltage,</p></li></ul>
-<!--l. 30--><p class="noindent" >for the particular utilisation device. The transformer is also widely used in low-power, low-current
-electronic and control circuits for performing such functions as: </p>
-<ul class="itemize1">     
 <li class="itemize">
-<!--l. 34--><p class="noindent" >matching the impedances of a source and its load for maximum power transfer,
-</p>     
+<p class="noindent">electric generation at the most economical generator voltage,
+</p>
 </li>
-<li class="itemize">     
-<!--l. 35--><p class="noindent" >isolating one circuit from another, or
-</p>     
+<li class="itemize">
+<p class="noindent">power transfer at the most economical transmission voltage, and
+</p>
 </li>
-<li class="itemize">     
-<!--l. 36--><p class="noindent" >isolating direct current while maintaining ac continuity between two circuits.</p></li></ul>
-                                                                                
-                                                                                
-<!--l. 39--><p class="noindent" >The transformer is one of the simpler devices made from two (<span class="alert"><alert style="color: #821131;">2</alert></span>) or more electric circuits coupled by
-a <span id="bold" style="font-weight:bold;">common magnetic circuit</span>. Its analysis involves many of the principles essential to
+<li class="itemize">
+<p class="noindent">power utilization at the most suitable voltage,</p></li></ul>
+<p class="noindent">for the particular utilisation device. The transformer is also widely used in low-power, low-current
+electronic and control circuits for performing such functions as: </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">matching the impedances of a source and its load for maximum power transfer,
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">isolating one circuit from another, or
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">isolating direct current while maintaining ac continuity between two circuits.</p></li></ul>
+<p class="noindent">The transformer is one of the simpler devices made from two (<span class="alert">2</span>) or more electric circuits coupled by
+a <b>common magnetic circuit</b>. Its analysis involves many of the principles essential to
 the study of electric drives. Therefore, our study of the transformer will serve as a bridge
 between the introduction to magnetic-circuit analysis we conducted previously and the more
-detailed study of electric drives to <span class="margin-block"><span class="margin"><span>follow. <span class="ellipsis">[24]</span></span><span class="sidenote"><span class="sidenote-image"> <img 
- 
-src="figures/Transformers/raster/portrait-zbd.jpg" alt="PIC"  
-style="" /></span><span class="sidenote-text"><span class="ellipsis">[24]</span>In 1884, <italic>Zipernowsky</italic>, <italic>Bláthy</italic> and <italic>Déri</italic> (ZBD),
+detailed study of electric drives to <span class="margin-block"><span class="margin"><span>follow. <span class="ellipsis">[24]</span></span><span class="sidenote"><span class="sidenote-image"> <img alt="PIC" src="figures/Transformers/raster/portrait-zbd.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[24]</span>In 1884, <i>Zipernowsky</i>, <i>Bláthy</i> and <i>Déri</i> (ZBD),
 associated with the Ganz Works, determined open-core devices were impracticable, as they
 were incapable of reliably regulating voltage. In their joint 1885 patent applications for
 novel transformers, later called ZBD transformers, they described two designs with closed
@@ -125,71 +136,53 @@ magnetic circuits where copper windings were either wound around an iron wire ri
 or surrounded by an iron wire core. The two designs were the first application of the two
 basic transformer constructions in common use to this day, termed “core form” or “shell
 form”.</span></span></span></span>
-
 </p>
 <div class="sectionTOCS">
-<span class="sectionToc" >2.1  <a 
-href="TheStationaryElectricMachine.html#x9-120002.1">The Stationary Electric Machine</a></span>
-<br /><span class="subsectionToc" >2.1.1  <a 
-href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span>
-<br /><span class="sectionToc" >2.2  <a 
-href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical Model of the Transformer</a></span>
-<br /><span class="subsectionToc" >2.2.1  <a 
-href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span>
-<br /><span class="subsectionToc" >2.2.2  <a 
-href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect of Secondary Current on an Ideal Transformer</a></span>
-<br /><span class="subsectionToc" >2.2.3  <a 
-href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent Circuits</a></span>
-<br /><span class="sectionToc" >2.3  <a 
-href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span>
-<br /><span class="subsectionToc" >2.3.1  <a 
-href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span>
-<br /><span class="subsectionToc" >2.3.2  <a 
-href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit Test</a></span>
-<br /><span class="sectionToc" >2.4  <a 
-href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span>
-<br /><span class="subsectionToc" >2.4.1  <a 
-href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span>
-<br /><span class="subsectionToc" >2.4.2  <a 
-href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase Transformers</a></span>
-<br /><span class="subsectionToc" >2.4.3  <a 
-href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span>
+<span class="sectionToc">2.1  <a href="TheStationaryElectricMachine.html#x9-120002.1">The Stationary Electric Machine</a></span>
+<br/><span class="subsectionToc">2.1.1  <a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span>
+<br/><span class="sectionToc">2.2  <a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical Model of the Transformer</a></span>
+<br/><span class="subsectionToc">2.2.1  <a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span>
+<br/><span class="subsectionToc">2.2.2  <a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect of Secondary Current on an Ideal Transformer</a></span>
+<br/><span class="subsectionToc">2.2.3  <a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent Circuits</a></span>
+<br/><span class="sectionToc">2.3  <a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span>
+<br/><span class="subsectionToc">2.3.1  <a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span>
+<br/><span class="subsectionToc">2.3.2  <a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit Test</a></span>
+<br/><span class="sectionToc">2.4  <a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span>
+<br/><span class="subsectionToc">2.4.1  <a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span>
+<br/><span class="subsectionToc">2.4.2  <a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase Transformers</a></span>
+<br/><span class="subsectionToc">2.4.3  <a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span>
 </div>
-<!--l. 53--><p class="noindent" >
-                                                                                
-                                                                                
-</p><!--l. 152--><p class="noindent" >
+<p class="noindent">
+</p><p class="noindent">
 </p>
-                                                                                
-                                                                                
-<!--l. 767--><p class="noindent" >
+<p class="noindent">
 </p>
-                                                                                
-                                                                                
-<!--l. 1165--><p class="noindent" >
+<p class="noindent">
 </p>
-                                                                                
-                                                                                
-<div class="crosslinks-bottom"><a 
-href="TheStationaryElectricMachine.html" ><span class="nav-next">NEXT</span></a><a 
-href="ACExcitation.html" ><span class="nav-prev">PREV</span></a><a 
-href="ACExcitation.html#tailACExcitation.html" ><span class="nav-prev-tail">PREV-TAIL</span></a><a 
-href="Transformers.html" ><span class="nav-front">FRONT</span></a><a 
-href="DriveTechnologyLectureBook.html#Transformers.html" ><span class="nav-up">UP</span></a></nav><a 
- id="tailTransformers.html"></a> </div> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span> 
-<span class="footer-webBook"><span id="bold" style="font-weight:bold;">Last Updated:</span> 10.9.2026, at 11:1.</span> </div> </div> </div> <div class="author-notes"> 
-<span class="note">Authors Note </span> 
-<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span> 
-</div> 
-</article> 
-<div class="mode-line"> 
-<div class="core-line"> 
-<div class="button-group"> 
-</div> 
-</div> 
-<div class="supp-line"></div> 
-</div> 
-</page> 
- 
-</body> 
+<nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="TheStationaryElectricMachine.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="ACExcitation.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href=""><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Chapter 2: Transformers</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
 </html>

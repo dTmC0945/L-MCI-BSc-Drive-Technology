@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Permanent Magnet AC Machines</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Synchronous Machines</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="InductionMachines.html">Chapter: Induction
+Machines</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="AStudyindqAxisTheory.html">A Study in dq-Axis Theory</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="SynchronousMachines.html#PermanentMagnetACMachines.html">Chapter: Synchronous
+Machines</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-5.7"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.5.7"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">5.7</span> <span class="title"> <a id="x33-980005.7"></a>Permanent Magnet AC
+Machines</span></h3></div>
+<p class="noindent"><span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and creates its
+own persistent magnetic field</a></span></span></span> <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically
+reverses direction and changes its magnitude continuously with time, in contrast to direct
+current (DC), which flows only in one direction.</a></span></span></span> machines are poly-phase <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous
+Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous speed, serving as
+either a synchronous generator (alternator) or a synchronous motor. It features a stationary
+stator with three-phase windings and a rotating rotor excited by direct current (DC) or
+permanent magnets.</a></span></span></span> with <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is
+magnetized and creates its own persistent magnetic field</a></span></span></span> rotors. Thus they are similar to the
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous
+speed, serving as either a synchronous generator (alternator) or a synchronous motor. It
+features a stationary stator with three-phase windings and a rotating rotor excited by direct
+current (DC) or permanent magnets.</a></span></span></span> discussed up to this point in this chapter with the
+exception that field windings are replaced by <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a
+material that is magnetized and creates its own persistent magnetic field</a></span></span></span> as a <b>source of rotor
+excitation</b>.
+Figure 5.34 is a schematic diagram of a three-phase <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a
+material that is magnetized and creates its own persistent magnetic field</a></span></span></span> ac machine. Comparison of
+this figure with Fig. 5.2 emphasizes the similarities between a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made
+from a material that is magnetized and creates its own persistent magnetic field</a></span></span></span> ac machine and a
+conventional wound-rotor synchronous machine.
+</p>
+<div class="info-block" id="info-block-5.36"> <a class="copiable-link" href="#info-block-5.36"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 5.<a id="x33-98001r36"></a>36: </b> </span> <span class="info-title"> A Much Needed Convenience </span> </span> <div class="body">
+<p class="noindent">In fact, a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and creates its own
+persistent magnetic field</a></span></span></span> <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses
+direction and changes its magnitude continuously with time, in contrast to direct current
+(DC), which flows only in one direction.</a></span></span></span> machine can be analyzed using the techniques of
+this chapter simply by assuming that the machine is <span class="alert">excited by a field current of constant value</span>, making sure to calculate the various
+machine inductances based on the effective permeability of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An
+object made from a material that is magnetized and creates its own persistent magnetic field</a></span></span></span>
+rotor.
+</p>
+</div></div>
+<p class="noindent">Small <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and creates its own
+persistent magnetic field</a></span></span></span> motors are found in many applications, especially in the electronics
+<span class="margin-block">industry. <span class="margin-comment"><span class="ellipsis">[151]</span>
+<span class="sidenote">e.g., disk drives and fans, and in the automotive industry where they are used
+in fuel pumps, wipers, and power windows, doors and seats, etc.</span></span></span> A growing application
+of larger <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and
+creates its own persistent magnetic field</a></span></span></span> machines is in hybrid-electric vehicles and in even
+larger sizes in generators for large wind turbines. Although space- and time-harmonic fluxes
+produced by the stator may induce losses in the rotor structure of <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An
+object made from a material that is magnetized and creates its own persistent magnetic field</a></span></span></span>
+machines, these rotors are relatively loss free because the magnets produce rotor flux without
+dissipation.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x33-98002r23"></a>
+<figcaption class="caption"><span class="id">Figure 5.23: </span><span class="content">An example of a PM synchronous machine.                                         </span></figcaption>
+<img alt="PIC" src="figures/Synchronous-Machines/raster/pmsm-motor.jpg" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">As a result, with the increased emphasis on energy efficiency, <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An
+object made from a material that is magnetized and creates its own persistent magnetic field</a></span></span></span>
+machines will be found in an increasing number of applications of continually increasing
+ratings.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.7.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.7.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.7.1</span> <span class="title"> <a id="x33-990005.7.1"></a>Merits and Demerits</span></h4></div>
+</p><p class="noindent">The advantages of <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and
+creates its own persistent magnetic field</a></span></span></span>s do not however come without a price.
+In addition to the actual cost of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is
+magnetized and creates its own persistent magnetic field</a></span></span></span> materials themselves, there are
+technical challenges which must be taken into account, both at the design and application
+stage:
+</p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">As discussed in Section 1.6, the characteristics of <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made
+from  a  material  that  is  magnetized  and  creates  its  own  persistent  magnetic  field</a></span></span></span>s  are
+<b>temperature dependent</b>. The residual flux-density of rare-earth permanent magnets
+such as neodymium-iron-boron (NeFB) decreases as the magnet temperature increases.
+As the machine will heat up under operating conditions, it is necessary to account for the
+corresponding reduction in generated voltage and torque-production.
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">Unlike a wound-rotor <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates
+at a constant synchronous speed, serving as either a synchronous generator (alternator)
+or a synchronous motor. It features a stationary stator with three-phase windings and a
+rotating rotor excited by direct current (DC) or permanent magnets.</a></span></span></span>, the rotor excitation
+in a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and creates
+its own persistent magnetic field</a></span></span></span> machine is <b>fixed</b>.
+This poses challenges both with respect to control as well as for protection. For example:
+</p>
+<div class="quote">  The <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and creates its
+own persistent magnetic field</a></span></span></span> motors are often designed such that the generated voltage is equal
+to rated terminal voltage at a <span class="margin-block">speed <span class="margin-comment"><span class="ellipsis">[152]</span>
+<span class="sidenote">typically referred to as the motor’s <b>base speed</b>.</span></span></span> significantly
+less than their maximum operating speed. Under these conditions, the drive supplying the motor
+must be capable of supplying the current required to limit the terminal voltage to its rated
+value.
+<p class="noindent">In addition, problems can arise should the drive trip at high speed. Although saturation will
+somewhat limit the motor terminal voltage, it may still be high enough to damage insulation.
+Similarly, problems can arise should a <b>fault occurs</b>, either externally to the motor or within the
+motor windings, since there is no way to to de-energize the rotor excitation. Unless there is a
+circuit-breaker or a fuse which can isolate the fault, fault current will continue to flow until the
+motor comes to a stop. </p></div>
+</li></ul>
+<p class="noindent">Because they are <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a
+constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating
+rotor excited by direct current (DC) or permanent magnets.</a></span></span></span>, <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An
+object made from a material that is magnetized and creates its own persistent magnetic
+field</a></span></span></span> <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in one
+direction.</a></span></span></span> motors must be operated from variable-frequency motor drives, and one of the key
+problems is the determination of rotor position which is generally achieved by the use of
+sensors.
+A number of techniques may be used for shaft-position sensing, including Hall-effect devices,
+light-emitting diodes and phototransistors in combination with a pulsed wheel, and inductance
+pickups.
+</p><p class="noindent">The great majority of radial-air-gap <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material
+that is magnetized and creates its own persistent magnetic field</a></span></span></span> synchronous motors and
+generators tend to fall into two general classes; </p><div class="quote">  surface- and interior-permanent- magnet.
+</div>
+<p class="noindent">These machines are characterized by a non-salient rotor of uniform cross section with magnets
+producing radial magnetic flux mounted on the surface of the rotor. As can be seen, Fig. 5.36(a) shows
+a four-pole rotor with radially-magnetized magnets of alternate polarity mounted on the rotor surface.
+Fig- ure 5.36(b) shows a two-dimensional finite-element solution for the open-circuit flux distribution
+produced by this rotor in a typical stator.
+</p><p class="noindent">In a surface-permanent-magnet machine, a non-magnetic retaining ring is frequently employed to
+support the magnets on the rotor against the <b>centrifugal forces</b> of rotation. The retaining ring
+increases the length of the magnetic gap between the rotor and the stator which in-turn reduces
+somewhat the torque-producing capability of the motor. The design of a retaining ring is thus a
+compromise.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">a thicker retaining ring increases the mechanical integrity of the rotor while a thinner ring increases the
+effectiveness of the <span class="alert">magnetic circuit</span>. </p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.7.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.7.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.7.2</span> <span class="title"> <a id="x33-1000005.7.2"></a>Case Study: A Machine with Permanent Magnets</span></h4></div>
+</p><p class="noindent">A four-pole, three-phase, surface-permanent-magnet motor has a synchronous inductance of
+<math display="inline"><mn>0</mn><mi>,</mi><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>m</mi><mi>H</mi></mstyle></math>,
+an armature resistance of <math display="inline"><mn>1</mn><mn>1</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>m</mi><mi mathvariant="normal">Ω</mi></mstyle></math>,
+and  a  line-line  generated  voltage  of
+<math display="inline"><mn>0</mn><mi>,</mi><mn>1</mn><mn>1</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>r</mi><mi>p</mi><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>
+or <math display="inline"><mn>3</mn><mi>,</mi><mn>3</mn><mn>1</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>.
+</p><p class="noindent">It is designed for nominal <math display="inline"><mn>1</mn><mi>,</mi><mn>8</mn><mn>0</mn><mn>0</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>3</mn></mrow></msup></math> <math display="inline"><mstyle mathvariant="normal"><mi>r</mi><mi>p</mi><mi>m</mi></mstyle></math>
+operation  but  with  over-speed  capability  to
+<math display="inline"><mn>2</mn><mi>,</mi><mn>4</mn><mn>0</mn><mn>0</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>3</mn></mrow></msup></math> <math display="inline"><mstyle mathvariant="normal"><mi>r</mi><mi>p</mi><mi>m</mi></mstyle></math>
+at reduced power output. The motor can be operated up to a maximum terminal voltage of
+<math display="inline"><mn>2</mn><mn>0</mn><mn>8</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>,
+line-line  and  a  maximum  terminal  current  of
+<math display="inline"><mn>1</mn><mn>8</mn><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>A</mi></mstyle></math>.
+</p><p class="noindent">For the purposes of this example, the armature resistance will be neglected.
+</p><p class="noindent">The motor is supplied by a current-source drive which provides variable-frequency, balanced
+three-phase currents of adjustable magnitude and with a phase angle that can be varied with respect
+to the timing of a marker pulse obtained from a position sensor installed on the motor
+shaft.
+</p><p class="noindent">This phase adjustment can be used to align the flux wave produced by the stator currents arbitrarily
+with respect to the rotor direct axis. In order to insure that the flux density in the motor remains
+within acceptable limits, the drive has a V/Hz limit whose function is to insure that the motor terminal
+voltage does not exceed the rated V/Hz of the motor. </p><div class="quote">  in this case, the rated V/Hz is equal to 208 V/60 Hz
+= <math display="inline"><mn>3</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>4</mn><mn>7</mn></math> V
+line-line per Hz </div>
+<p class="noindent">
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">  
+a. 
+</dt><dd class="enumerate-enumitem">With the drive supplying a terminal current of <math display="inline"><mn>1</mn><mn>8</mn><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>A</mi></mstyle></math>,
+calculate  the  maximum  power  and  torque  which  the  motor  can  supply  at  a  speed  of
+<math display="inline"><mn>1</mn><mi>,</mi><mn>8</mn><mn>0</mn><mn>0</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>3</mn></mrow></msup></math> <math display="inline"><mstyle mathvariant="normal"><mi>r</mi><mi>p</mi><mi>m</mi></mstyle></math>.
+Calculate the <i>d</i>- and <i>q</i>-axis currents under this operating condition.
+<p class="noindent">Verify that under this operating condition, the motor terminal voltage will not exceed
+<math display="inline"><mn>2</mn><mn>0</mn><mn>8</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>,
+line-line.
+</p>
+</dd>
+<dt class="enumerate-enumitem">
+b. 
+</dt><dd class="enumerate-enumitem">If the motor is operated at speed of <math display="inline"><mn>2</mn><mi>,</mi><mn>4</mn><mn>0</mn><mn>0</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>3</mn></mrow></msup></math> <math display="inline"><mstyle mathvariant="normal"><mi>r</mi><mi>p</mi><mi>m</mi></mstyle></math>,
+calculate the maximum output power and torque which can be supplied by the motor
+assuming that the drive control limits the motor terminal voltage to its maximum value of
+<math display="inline"><mn>2</mn><mn>0</mn><mn>8</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>
+line-line and its terminal current to <math display="inline"><mn>1</mn><mn>8</mn><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>A</mi></mstyle></math>.
+Also calculate the <i>d</i>- and <i>q</i>-axis components of the armature current under this operating
+condition.</dd></dl>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-11"> <a id="x33-101000"></a>Solution</h5>
+</p><p class="noindent">Let’s start with the first one.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.7.3"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.7.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.7.3</span> <span class="title"> <a id="x33-1020005.7.3"></a>Interior Magnet Design</span></h4></div>
+</p><p class="noindent">Figure 5.39 shows a cross section of the rotor of a typical <i>interior-permanent</i>- magnet ac machine. In
+such machines, the magnets are placed in slots in the interior of the rotor. The rotor of Fig. 5.39 is a
+4-pole rotor with pairs of magnets of alternating polarity. Figure 5.40(a) shows a two-dimensional
+finite-element solution for the open- circuit flux distribution produced by this rotor in a typical stator.
+Because of the presence of these slots, and the fact that the effective permeability of the magnets is
+close to that of free space, interior-permanent-magnet rotors exhibit saliency. As a result, they are
+similar to wound-rotor salient-pole synchronous machines and produce both reluctance and magnet
+torque.
+</p><p class="noindent">There is, however, one significant difference between wound-rotor salient-pole synchronous machines
+and their interior-permanent-magnet machine counterparts. In wound-rotor salient-pole synchronous
+machines, the direct-axis inductance is larger than that of the quadrature axis. As can be seen from
+Fig. 5.40(a), direct-axis flux in the machine, in this case produced by the magnets alone, passes through
+the magnets. On the other hand, Fig. 5.40(b) shows that quadrature-axis flux passes around the
+magnets and remains in the rotor steel. The net result is that the rotor presents a larger reluctance to
+direct-axis flux than to quadrature-axis flux and hence, the quadrature- axis inductance is larger than
+that of the direct axis.
+</p><p class="noindent">A careful examination of Fig. 5.40(a) also shows a concentration of magnet flux around the
+ends of each of the magnets. This flux concentration is critical to the performance of the
+rotor. From the rotor cross-section of Fig. 5.39, we see that there is magnetic material which
+surrounds each magnet. If the magnet material in these "flux bridges" were linear and of a
+reasonable permeability, they would simply shunt the majority of the magnet flux around the
+magnets and very little magnet flux, if any, would cross the airgap to interact with the
+stator.
+</p><p class="noindent">(b) Quadrature-axis flux distribution.
+</p><p class="noindent">In reality, the <b>electrical steel</b> is non-linear and saturation of the magnetic material in these flux
+bridges plays a key role in determining the performance of an <i>interior-permanent-magnet</i> machine.
+Because they are thin, they can carry only a small amount of flux before they saturate, in-turn forcing
+the majority of the magnet flux to cross the airgap.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The bridges also serve a second function of structural support as they <span class="alert">hold the magnets</span> and <span class="alert">keep the rotor from flying apart</span>. </p></div></div>
+<p class="noindent">As with the retaining ring in a <i>surface-permanent-magnet machine</i>, the design of the bridges involves a
+compromise between structural integrity and magnetic performance. </p><div class="quote">  Thin bridges are desirable
+to make most effective use of the flux produced by the rotor magnets while thick bridges
+are desirable to insure that the motor remains intact at its maximum operating speed.
+</div>
+<p class="noindent">The “V”-magnet arrangement of Fig. 5.39 is one of many which can be found in interior-permanent-magnet
+machines. For example, magnets may be oriented parallel or perpendicular radial lines, there may be
+multiple magnets in parallel slots, etc. 9 For each topology, saturating flux bridges or flux <span class="margin-block">barriers
+<span class="margin-comment"><span class="ellipsis">[153]</span>
+<span class="sidenote">non-magnetic slots in the rotor steel.</span></span></span> are required to guide the magnet flux across the air
+gap.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Although the details of the various topologies vary, typically the rotor saliency will result in a
+quadrature-axis inductance which is larger than that of the direct axis. </p></div></div>
+<p class="noindent">Saturation also plays a role in determining the flux paths through the rotor when
+interior-permanent-magnet machines are loaded. As a result, although interior- <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent
+Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and creates its own persistent
+magnetic field</a></span></span></span> motors are frequently analyzed using the direct- and quadrature- axis theory of
+Sections 5.6 and 5.7, their direct- and quadrature-axis inductances may vary significantly with
+load.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.7.4"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.7.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.7.4</span> <span class="title"> <a id="x33-1030005.7.4"></a>Applications</span></h4></div>
+</p><p class="noindent"><span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and creates its own
+persistent magnetic field</a></span></span></span> <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction
+and changes its magnitude continuously with time, in contrast to direct current (DC), which flows only
+in one direction.</a></span></span></span> motors are frequently referred to as <b>brushless motors</b> or <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:bldc">BLDC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:bldc">Brushless
+DC</a></span><span class="acronym-desc"><a class="glossary" href="#glo:bldc">Brushless DC</a></span></span></span> motors. This terminology comes about both because of the similarity, when combined
+with a variable-frequency, variable-voltage drive system, of their speed-torque characteristics to those of
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a
+conductor such as a wire, but can also flow through semiconductors, insulators, or even through
+a vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of current was
+galvanic current.</a></span></span></span> motors and because of the fact that one can view these motors as inside-out
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a
+conductor such as a wire, but can also flow through semiconductors, insulators, or even through
+a vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of current was
+galvanic current.</a></span></span></span> motors, with their field winding on the rotor and with their armature
+electronically commutated by the shaft-position sensor and by switches connected to the armature
+windings.
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:dc">¶</a>
+<dt class="acr-bottom" id="glo:dc"><span class="acr-short">DC</span><span class="acr-long">Direct Current</span></dt>
+<dd class="acr-desc"><p>One-directional flow of electric charge. Direct current may flow through a
+conductor such as a wire, but can also flow through semiconductors, insulators, or even through
+a vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of current was
+galvanic current.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:bldc">¶</a>
+<dt class="acr-bottom" id="glo:bldc"><span class="acr-short">BLDC</span><span class="acr-long">Brushless
+DC</span></dt>
+<dd class="acr-desc"><p>Brushless DC</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:synm">¶</a>
+<dt class="acr-bottom" id="glo:synm"><span class="acr-short">SynM</span><span class="acr-long">Synchronous
+Machine</span></dt>
+<dd class="acr-desc"><p>an AC electrical device which operates at a constant synchronous speed, serving as
+either a synchronous generator (alternator) or a synchronous motor. It features a stationary
+stator with three-phase windings and a rotating rotor excited by direct current (DC) or
+permanent magnets.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:ac">¶</a>
+<dt class="acr-bottom" id="glo:ac"><span class="acr-short">AC</span><span class="acr-long">Alternating Current</span></dt>
+<dd class="acr-desc"><p>An electric current that periodically
+reverses direction and changes its magnitude continuously with time, in contrast to direct
+current (DC), which flows only in one direction.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:pm">¶</a>
+<dt class="acr-bottom" id="glo:pm"><span class="acr-short">PM</span><span class="acr-long">Permanent Magnet</span></dt>
+<dd class="acr-desc"><p>An object made from a material that is magnetized and creates its
+own persistent magnetic field</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="InductionMachines.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="AStudyindqAxisTheory.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="SynchronousMachines.html#PermanentMagnetACMachines.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 5.7: Permanent Magnet AC Machines</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

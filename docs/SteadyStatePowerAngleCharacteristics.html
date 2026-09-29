@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Steady-State Power-Angle Characteristics</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Synchronous Machines</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="EffectsofRotorResistance.html#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="SteadyStateOperatingCharacteristics.html">Steady-State Operating Characteristics</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="OpenandShortCircuitCharacteristics.html">Open and Short Circuit Characteristics</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="SynchronousMachines.html#SteadyStatePowerAngleCharacteristics.html">Chapter: Synchronous
+Machines</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-5.4"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.5.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">5.4</span> <span class="title"> <a id="x30-870005.4"></a>Steady-State
+Power-Angle Characteristics</span></h3></div>
+<p class="noindent">The maximum power a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant
+synchronous speed, serving as either a synchronous generator (alternator) or a synchronous motor. It
+features a stationary stator with three-phase windings and a rotating rotor excited by direct current
+(DC) or permanent magnets.</a></span></span></span> can deliver is determined <b>solely</b> by the maximum torque which can be
+applied <span class="alert">without losing synchronicity</span> with the external system to which it is <span class="margin-block">connected. <span class="margin-comment"><span class="ellipsis">[135]</span>
+<span class="sidenote">In the context of this discussion, the term
+“maximum power” refers to the maximum power which can <b>theoretically</b> be delivered
+without loss of synchronism. In practice, this value may be significantly higher than the
+machine’s rated power which is the practical operating power limit of the machine and which is
+determined by thermal limitations.</span></span></span> The purpose of this study is to derive expressions for the
+steady-state power limits of <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates
+at a constant synchronous speed, serving as either a synchronous generator (alternator)
+or a synchronous motor. It features a stationary stator with three-phase windings and a
+rotating rotor excited by direct current (DC) or permanent magnets.</a></span></span></span>s in simple situations for
+which the external system can be represented as an impedance in series with a voltage
+source.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.4.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.4.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.4.1</span> <span class="title"> <a id="x30-880005.4.1"></a>Describing the Equivalent Circuit</span></h4></div>
+</p><p class="noindent">Given both the external system and the machine itself, they can be represented as, </p><div class="quote">  an impedance <span class="alert">in series</span>
+with a voltage source. </div>
+<p class="noindent">The study of power limits becomes a special case of the more general problem of the limitations on
+power flow through a series impedance. The impedance will include the synchronous impedance
+(<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub></math>)
+of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant
+synchronous speed, serving as either a synchronous generator (alternator) or a synchronous
+motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</a></span></span></span> as well as an equivalent impedance
+(<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math>) of
+the external <span class="margin-block">system. <span class="margin-comment"><span class="ellipsis">[136]</span>
+<span class="sidenote">which may consist of transmission lines and transformer banks as well as
+additional <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous
+speed, serving as either a synchronous generator (alternator) or a synchronous motor. It features a
+stationary stator with three-phase windings and a rotating rotor excited by direct current (DC) or
+permanent magnets.</a></span></span></span>s.</span></span></span>
+</p><p class="noindent">Consider the simple circuit of <b>Fig.</b> <a href="#x30-88001r14">5.14</a>a, consisting of two (<span class="alert">2</span>) <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An
+electric current that periodically reverses direction and changes its magnitude continuously
+with time, in contrast to direct current (DC), which flows only in one direction.</a></span></span></span> voltages,
+<math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>2</mn></mrow></msub></math>, connected by an
+impedance <math display="inline"><mi>Z</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>R</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><mi>X</mi></math> through
+which the current is <math display="inline"><mi>Î</mi></math>.
+The phasor diagram is shown in <b>Fig.</b> <a href="#x30-88001r14">5.14</a>b.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x30-88001r14"></a>
+<figcaption class="caption"><span class="id">Figure 5.14: </span><span class="content">(a) Impedance interconnecting two voltages; (b) phasor diagram.                          </span></figcaption>
+<img alt="PIC" src="figures/Synchronous-Machines/figures-5.png" style=""/>
+</figure>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">In this phasor diagram, the voltage <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>Ê</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mstyle></math>
+is chosen as the reference phasor and the reference direction for positive angles is counter-clockwise.
+</p></div></div>
+<p class="noindent">Therefore, looking at the phasor diagram, the phase angle
+(<math display="inline"><mi>δ</mi></math>) of
+<math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>1</mn></mrow></msub></math> is <b>positive</b> while the phase
+angle of the current (<math display="inline"><mi>ϕ</mi></math>)
+can be seen to be <b>negative</b>. The phasor current is </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x30-88002r38"></mstyle>
+<mi>Î</mi>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>Ê</mi></mrow><mrow><mn>1</mn></mrow></msub>
+<mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow> <mi>Ê</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow>
+<mi>Z</mi></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub> <mi class="loglike">exp</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>j</mi><mi>δ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow>
+<mi>R</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>j</mi><mi>X</mi></mrow></mfrac>
+</math></td><td class="eq-no">(5.38)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The power <math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mn>2</mn></mrow></msub></math> delivered through
+the impedance to voltage source <math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>2</mn></mrow></msub></math>
+is: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x30-88003r39"></mstyle>
+<msub><mrow><mi>P</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><mi class="qopname"> Re</mi><mo> ⁡ </mo> <mrow><mo fence="true" form="prefix">[</mo><mrow><msub><mrow><mi>Ê</mi></mrow><mrow><mn>2</mn></mrow></msub><msup><mrow><mi>Î</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">∗</mo></mrow></msup></mrow><mo fence="true" form="postfix">]</mo></mrow>
+<mstyle class="text"><mtext></mtext></mstyle>
+</math></td><td class="eq-no">(5.39)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where, as usual, the notation <math display="inline"><mi class="qopname">Re</mi><mo> ⁡ </mo></math>
+indicates the real part of a complex number and the superscript (∗) indicates the <span class="alert">complex conjugate</span>.
+</p><p class="noindent">To keep our calculations simple, we will assume the resistance
+<math display="inline"><mi>R</mi></math>
+is <span class="margin-block">negligible. <span class="margin-comment"><span class="ellipsis">[137]</span>
+<span class="sidenote">This is frequently the case in the analysis of large power systems.</span></span></span>
+This means, there is <b>NO</b> power dissipated in the series impedance and the power
+<math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mn>1</mn></mrow></msub></math> supplied by
+the source <math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
+is equal to <math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mn>2</mn></mrow></msub></math>.
+Under this assumption, <span> Eq. (<a href="#x30-88003r39">5.39</a>)</span>  reduces to the simple form: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x30-88004r40"></mstyle>
+<msub><mrow><mi>P</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>P</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow>
+<mi>X</mi></mrow></mfrac> <mi class="loglike">sin</mi><mo>⁡</mo><mi>δ</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.40)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">When the power-angle expression of <span> Eq. (<a href="#x30-88004r40">5.40</a>)</span>  is compared with the expression of <span> Eq. (<a href="SynchronousMachines1.html#x27-75002r1">5.1</a>)</span>  for
+torque in terms of interacting flux and <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mmf">MMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mmf">Magneto-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mmf">The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</a></span></span></span> waves, they are
+seen to be of the same form, which is to be expected.
+Remember torque and power are proportional when, as is the case here, speed is constant. What we
+are really saying is that <span> Eq. (<a href="SynchronousMachines1.html#x27-75002r1">5.1</a>)</span> , applied specifically to an idealized cylindrical-rotor
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous
+speed, serving as either a synchronous generator (alternator) or a synchronous motor. It
+features a stationary stator with three-phase windings and a rotating rotor excited by direct
+current (DC) or permanent magnets.</a></span></span></span> and translated to circuit terms, becomes <span> Eq. (<a href="#x30-88004r40">5.40</a>)</span>
+.
+</p>
+<div class="info-block" id="info-block-5.33"> <a class="copiable-link" href="#info-block-5.33"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 5.<a id="x30-88005r33"></a>33: </b> </span> <span class="info-title"> Power Angle Characteristic </span> </span> <div class="body">
+<p class="noindent"><span> Eq. (<a href="#x30-88004r40">5.40</a>)</span> is an important equation in the study of <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device
+which operates at a constant synchronous speed, serving as either a synchronous generator (alternator)
+or a synchronous motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</a></span></span></span>s and <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current
+that periodically reverses direction and changes its magnitude continuously with time, in contrast
+to direct current (DC), which flows only in one direction.</a></span></span></span> power systems in general as <span>
+Eq. 
+(<a href="#x30-88004r40">5.40</a>)
+</span> is commonly referred to as the <b>power-angle characteristic</b>, and the angle
+<math display="inline"><mi>δ</mi></math> is known as
+the <span class="alert">power angle</span>. </p>
+<hr/>
+<p class="noindent"> 
+If <math display="inline"><mi>δ</mi></math> is
+positive, <math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>1</mn></mrow></msub></math> <span class="alert">leads</span>
+<math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>2</mn></mrow></msub></math> and power flows
+from source <math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
+to <math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>2</mn></mrow></msub></math>. When
+<math display="inline"><mi>δ</mi></math> is negative,
+<math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>1</mn></mrow></msub></math> <span class="alert">lags</span>
+<math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>2</mn></mrow></msub></math> and power flows
+from source <math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>2</mn></mrow></msub></math>
+to <math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>1</mn></mrow></msub></math>.
+</p>
+</div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.4.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.5.4.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.4.2</span> <span class="title"> <a id="x30-890005.4.2"></a>The Power Relation</span></h4></div>
+</p><p class="noindent">From <span> Eq. (<a href="#x30-88004r40">5.40</a>)</span>  the maximum power which can be transferred between sources 1 and 2 is
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x30-89001r41"></mstyle>
+<msub><mrow><mi>P</mi></mrow><mrow><mn>1</mn><mo class="MathClass-punc" stretchy="false">,</mo><mstyle class="text"><mtext> max</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>P</mi></mrow><mrow><mn>2</mn><mo class="MathClass-punc" stretchy="false">,</mo><mstyle class="text"><mtext> max</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>±</mi><mfrac><mrow><msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow>
+<mi>X</mi></mrow></mfrac> <mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>occurs when</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mi>δ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>±</mi><mn>9</mn><msup><mrow><mn>0</mn></mrow><mrow><mi>◦</mi></mrow></msup>
+</math></td><td class="eq-no">(5.41)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">It is worth noting here that the derivation of <span> Eq. (<a href="#x30-88002r38">5.38</a>)</span>  to <span> Eq. (<a href="#x30-88004r40">5.40</a>)</span>  is based on a single-phase,
+line-to-neutral <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses
+direction and changes its magnitude continuously with time, in contrast to direct current
+(DC), which flows only in one direction.</a></span></span></span> circuit. When considering a three-phase system, if
+<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msub></math> are expressed
+in per unit or in terms of line-to-line voltages, <span> Eq. (<a href="#x30-88004r40">5.40</a>)</span>  gives three-phase power directly. Alternatively, if
+<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msub></math> are the
+line-neutral voltages, the power must be multiplied by three to get the total three-phase power and <span> Eq.
+(<a href="#x30-88004r40">5.40</a>)
+</span> becomes </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x30-89002r42"></mstyle>
+<msub><mrow><mi>P</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>P</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>3</mn><msub><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow>
+<mi>X</mi></mrow></mfrac> <mi class="loglike">sin</mi><mo>⁡</mo><mi>δ</mi>
+</math></td><td class="eq-no">(5.42)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"><span> Eq. (<a href="#x30-88004r40">5.40</a>)</span>  and <span> Eq. (<a href="#x30-89002r42">5.42</a>)</span>   are valid for any voltage sources
+<math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mn>2</mn></mrow></msub></math> separated by a
+reactive impedance <math display="inline"><mi>j</mi><mi>X</mi></math>.
+Therefore for a three-phase <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates
+at a constant synchronous speed, serving as either a synchronous generator (alternator)
+or a synchronous motor. It features a stationary stator with three-phase windings and a
+rotating rotor excited by direct current (DC) or permanent magnets.</a></span></span></span> with generated voltage
+<math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow>
+<mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math> and synchronous
+reactance <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+connected to a system whose Thevènin equivalent is a voltage source
+<math display="inline"><msub><mrow><mover accent="true"><mrow><mi>V</mi> </mrow><mo accent="true">^</mo></mover></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math> in series with a
+reactive impedance <math display="inline"><mi>j</mi><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math>,
+as shown in Fig. 5.14, the power-angle characteristic can be written </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x30-89003r43"></mstyle>
+<mi>P</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac>
+<mrow>
+<msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></mrow>
+<mrow><msub><mrow><mi>X</mi></mrow><mrow>
+<mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></mrow></mfrac><mi class="loglike">sin</mi><mo>⁡</mo><mi>δ</mi>
+</math></td><td class="eq-no">(5.43)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">if <math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math>
+are expressed in terms of line-to-line voltages or in per <span class="margin-block">unit <span class="margin-comment"><span class="ellipsis">[138]</span>
+<span class="sidenote">in which case
+<math display="inline"><mi>P</mi></math>,
+<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math> must
+also be expressed in per unit.</span></span></span> and </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x30-89004r44"></mstyle>
+<mi>P</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac>
+<mrow>
+<mn>3</mn><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></mrow>
+<mrow><msub><mrow><mi>X</mi></mrow><mrow>
+<mstyle class="text"><mtext class="textup" mathvariant="normal">s</mtext></mstyle></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></mrow></mfrac><mi class="loglike">sin</mi><mo>⁡</mo><mi>δ</mi>
+</math></td><td class="eq-no">(5.44)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p><figure class="float">
+<a id="x30-89005r15"></a>
+<figcaption class="caption"><span class="id">Figure 5.15: </span><span class="content">Equivalent-circuit representation of a synchronous machine connected to an external system.        </span></figcaption>
+<img alt="PIC" src="figures/Synchronous-Machines/figures-6.png" style=""/>
+</figure>
+<p class="noindent">if <math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math> are expressed in terms of
+line-to-neutral voltages. Here <math display="inline"><mi>P</mi></math>
+is the power transferred from the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates
+at a constant synchronous speed, serving as either a synchronous generator (alternator)
+or a synchronous motor. It features a stationary stator with three-phase windings and a
+rotating rotor excited by direct current (DC) or permanent magnets.</a></span></span></span> to the system and
+<math display="inline"><mi>δ</mi></math> is the phase
+angle of <math display="inline"><msub><mrow><mi>Ê</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math> with
+respect to <math display="inline"><msub><mrow><mover accent="true"><mrow><mi>V</mi> </mrow><mo accent="true">^</mo></mover></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math>.
+In a similar fashion, it is possible to write a power-angle characteristic in terms of
+<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mi>s</mi></mrow></msub></math>,
+<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math>, the terminal voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub></math>, and the relative angle between
+them, or alternatively <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math>,
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math>
+and their relative angle. Although these various expressions are equally valid, they are not
+equally useful. </p><div class="quote">  For example, if the machine is operated with constant field current, both
+<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math> will remain constant
+as <math display="inline"><mi>P</mi></math> is varied while
+the terminal voltage <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub></math>
+will not. </div>
+<p class="noindent">Therefore, while <span> Eq. (<a href="#x30-89003r43">5.43</a>)</span>  and <span> Eq. (<a href="#x30-89004r44">5.44</a>)</span>  give an easily solved relation between
+<math display="inline"><mi>P</mi></math> and
+<math display="inline"><mi>δ</mi></math>, a power-angle
+characteristic based upon <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub></math>,
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math> cannot be solved without an
+additional expression relating <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub></math>
+to <math display="inline"><mi>P</mi></math>.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent"><span> Eq. (<a href="#x30-88004r40">5.40</a>)</span> - <span> Eq. (<a href="#x30-89004r44">5.44</a>)</span>  are derived based upon the choice of the generator reference direction for the
+current. </p></div></div>
+<p class="noindent">If the motor reference direction is chosen, the sign of the current is reversed in <span> Eq. (<a href="#x30-88002r38">5.38</a>)</span>  a minus sign
+must be included in these equations to account for the fact that with the choice of motor reference
+direction, <math display="inline"><mi>P</mi></math>
+represents the power into the machine and positive input power will correspond to negative values of power
+angle <math display="inline"><mi>δ</mi></math>.
+</p><p class="noindent">From <span> Eq. (<a href="#x30-89003r43">5.43</a>)</span>  and <span> Eq. (<a href="#x30-89004r44">5.44</a>)</span>  we see that the peak of the power-angle characteristic associated
+with <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous
+speed, serving as either a synchronous generator (alternator) or a synchronous motor. It features a
+stationary stator with three-phase windings and a rotating rotor excited by direct current (DC)
+or permanent magnets.</a></span></span></span> operation is proportional to the magnitude of the system voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">eq</mtext></mstyle></mrow></msub></math> as well as to that of the
+generator internal voltage <math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">af</mtext></mstyle></mrow></msub></math>.
+Therefore, for constant system voltage, the maximum power which can be supplied by a synchronous
+generator or supplied to a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a
+constant synchronous speed, serving as either a synchronous generator (alternator) or a
+synchronous motor. It features a stationary stator with three-phase windings and a rotating rotor
+excited by direct current (DC) or permanent magnets.</a></span></span></span> can be increased by increasing the
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical device which operates at a constant synchronous
+speed, serving as either a synchronous generator (alternator) or a synchronous motor. It
+features a stationary stator with three-phase windings and a rotating rotor excited by direct
+current (DC) or permanent magnets.</a></span></span></span> field current and thus the internal voltage. Of course,
+this cannot be done without limit; neither the field current nor the machine fluxes can be
+raised past the point where losses become excessive and the machine cannot be adequately
+cooled.
+In general, stability considerations dictate that a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC
+electrical device which operates at a constant synchronous speed, serving as either a
+synchronous generator (alternator) or a synchronous motor. It features a stationary
+stator with three-phase windings and a rotating rotor excited by direct current (DC) or
+permanent magnets.</a></span></span></span> achieve steady-state operation for a power angle considerably less than
+<math display="inline"><mn>9</mn><mn>0</mn></math><math display="inline"><mstyle mathvariant="normal"><mi>◦</mi></mstyle></math>.
+Therefore, the peak of the power-angle characteristic of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an AC electrical
+device which operates at a constant synchronous speed, serving as either a synchronous generator
+(alternator) or a synchronous motor. It features a stationary stator with three-phase windings
+and a rotating rotor excited by direct current (DC) or permanent magnets.</a></span></span></span> under normal
+operating conditions is considerably larger than the mechanical power supplied to it in the case
+of generator operation or the load power in the case of a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:synm">SynM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:synm">Synchronous Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:synm">an
+AC electrical device which operates at a constant synchronous speed, serving as either a
+synchronous generator (alternator) or a synchronous motor. It features a stationary stator with
+three-phase windings and a rotating rotor excited by direct current (DC) or permanent
+magnets.</a></span></span></span>.
+</p>
+<div class="info-block" id="info-block-5.34"> <a class="copiable-link" href="#info-block-5.34"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 5.<a id="x30-89006r34"></a>34: </b> </span> <span class="info-title"> Automatic Voltage Regulator </span> </span> <div class="body">
+<p class="noindent">Most large synchronous generators connected to a power system cannot be loaded to rated power with
+their internal voltage equal to rated voltage. The peak of the per-unit power-angle characteristic
+<math display="inline"><msub><mrow><mi>P</mi></mrow><mrow><mstyle class="text"><mtext class="textup" mathvariant="normal">max</mtext></mstyle></mrow></msub></math> is less
+than the generator rating. Thus, in order to properly load the generator, the field current
+must be increased, increasing the internal voltage, as the load is increased. </p>
+<hr/>
+<p class="noindent"> 
+Although this
+can be done manually, it is typically done automatically through the action of an <span class="alert">automatic voltage regulator</span> (AVR).
+An automatic voltage regulator measures a system <span class="margin-block">voltage <span class="margin-comment"><span class="ellipsis">[139]</span>
+<span class="sidenote">e.g., the generator terminal
+voltage.</span></span></span> and controls the generator field current to maintain that voltage at a pre-specified
+value.
+</p>
+</div></div>
+<div class="info-block" id="info-block-5.35"> <a class="copiable-link" href="#info-block-5.35"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 5.<a id="x30-89007r35"></a>35: </b> </span> <span class="info-title"> The Process of Synchronicity </span> </span> <div class="body">
+<p class="noindent">There are five (<span class="alert">5</span>) conditions we must be met before the synchronization process takes place such as
+introducing a synchronous generator to the grid.
+</p><p class="noindent">The source must have equal <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:rms">RMS</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:rms">Root-Mean Square</a></span><span class="acronym-desc"><a class="glossary" href="#glo:rms">Equivalent direct current (DC) voltage of an
+alternating current (AC) source.</a></span></span></span> voltage, frequency, phase sequence, phase angle, and waveform
+to that of the system to which it is being synchronised <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail"><a id="x30-89008"></a>Mazloomzadeh, A., Salehi, V.
+&amp; Mohammed, O. Soft synchronization of dispersed generators to micro grids for smart
+grid applications in 2012 IEEE PES Innovative Smart Grid Technologies (ISGT) (2012),
+1–7</span></span>.
+Waveform and phase sequence are fixed by the construction of the generator and its connections to the
+system. During installation of a generator, careful checks are made to ensure the generator terminals
+and all control wiring is correct so that the order of phases (phase sequence) matches the
+system. Connecting a generator with the wrong phase sequence will result in large, possibly
+damaging, currents as the system voltages are opposite to those of the generator terminal
+voltages.
+</p><p class="noindent">The voltage, frequency and phase angle must be controlled each time a generator is to be connected to
+a grid <span class="cite"><span class="cite-show">[†]</span><span class="cite-detail">Mazloomzadeh, A., Salehi, V. &amp; Mohammed, O. Soft synchronization of dispersed generators
+to micro grids for smart grid applications in 2012 IEEE PES Innovative Smart Grid Technologies
+(ISGT) (2012), 1–7</span></span>.
+</p>
+</div></div>
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:rms">¶</a>
+<dt class="acr-bottom" id="glo:rms"><span class="acr-short">RMS</span><span class="acr-long">Root-Mean Square</span></dt>
+<dd class="acr-desc"><p>Equivalent direct current (DC) voltage of an
+alternating current (AC) source.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:mmf">¶</a>
+<dt class="acr-bottom" id="glo:mmf"><span class="acr-short">MMF</span><span class="acr-long">Magneto-motive Force</span></dt>
+<dd class="acr-desc"><p>The magnetic pressure which drives
+magnetic flux in a magnetic circuit, and is the work done to move a unit magnetic pole.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:ac">¶</a>
+<dt class="acr-bottom" id="glo:ac"><span class="acr-short">AC</span><span class="acr-long">Alternating Current</span></dt>
+<dd class="acr-desc"><p>An
+electric current that periodically reverses direction and changes its magnitude continuously
+with time, in contrast to direct current (DC), which flows only in one direction.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:synm">¶</a>
+<dt class="acr-bottom" id="glo:synm"><span class="acr-short">SynM</span><span class="acr-long">Synchronous Machine</span></dt>
+<dd class="acr-desc"><p>an AC electrical device which operates at a constant
+synchronous speed, serving as either a synchronous generator (alternator) or a synchronous motor. It
+features a stationary stator with three-phase windings and a rotating rotor excited by direct current
+(DC) or permanent magnets.</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="SteadyStateOperatingCharacteristics.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="OpenandShortCircuitCharacteristics.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="SynchronousMachines.html#SteadyStatePowerAngleCharacteristics.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 5.4: Steady-State Power-Angle Characteristics</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

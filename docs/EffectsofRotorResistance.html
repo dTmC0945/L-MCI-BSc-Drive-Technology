@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Effects of Rotor Resistance</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure@latest/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">B.Sc</span>
+<span class="header-lecture-name">Drive Technology</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">WS.2026</span>
+<span class="header-chapter">Induction Machines</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="MagneticCircuitsandMaterials.html#x3-20001">Magnetic Circuits and Materials</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-30001.1">An Overview on Magnetic Circuits</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="AnOverviewonMagneticCircuits.html#x4-40001.1.1">Maxwell’s
+Equations</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="FluxLinkageInductanceandEnergy.html#x5-50001.2">Flux Linkage, Inductance, and Energy</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="MagneticMaterialProperties.html#x6-60001.3">Magnetic Material
+Properties</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="MagneticMaterialProperties.html#x6-70001.3.1">Ferromagnetic Materials</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="ACExcitation.html#x7-80001.4">AC Excitation</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="Transformers.html#x8-110002">Transformers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-120002.1">The
+Stationary Electric Machine</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheStationaryElectricMachine.html#x9-130002.1.1">An Overview of Transformers</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-140002.2">A Mathematical
+Model of the Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-150002.2.1">Transformers under No-Load Conditions</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-160002.2.2">The Effect
+of Secondary Current on an Ideal Transformer</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="AMathematicalModeloftheTransformer.html#x10-170002.2.3">Reactances and Types of Equivalent
+Circuits</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-190002.3">Understanding Transformer Behaviour</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-200002.3.1">Short-Circuit Test</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="UnderstandingTransformerBehaviour.html#x11-210002.3.2">Open-Circuit
+Test</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="TransformersintheWild.html#x12-220002.4">Transformers in the Wild</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="TransformersintheWild.html#x12-230002.4.1">Auto and Multiwinding Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="TransformersintheWild.html#x12-270002.4.2">Poly-Phase
+Transformers</a></span></span><span class="subsectionToc"><span class="number">2.4.3</span><span class="title"><a href="TransformersintheWild.html#x12-290002.4.3">Voltage and Current Transformers</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="ElectromechanicEnergyConversion.html#x13-320003">Electromechanic Energy
+Conversion</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-330003.1">Forces and Torque under Magnetic Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-340003.1.1">The Theory of Energy
+Balance</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="ForcesandTorqueunderMagneticField.html#x14-360003.1.2">Energy in a Singly Excited Magnetic Circuit</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-370003.2">Determining Force and
+Torque from Energy</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-380003.2.1">Linear Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-390003.2.2">Rotating Motion</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DeterminingForceandTorquefromEnergy.html#x15-400003.2.3">Case Study: Inductance
+of a Solenoid</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-410003.3">Determining Magnetic Force and Torque from Co-Energy</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-420003.3.1">Linear
+Motion</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="DeterminingMagneticForceandTorquefromCoEnergy.html#x16-430003.3.2">Rotating Motion</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-440003.4">Multiply Excited Magnetic Systems</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="MultiplyExcitedMagneticSystems.html#x17-450003.4.1">Linear
+Motion</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="RotatingMagneticFields.html#x18-460004">Rotating Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="FundamentalConcepts.html#x19-470004.1">Fundamental Concepts</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="FundamentalConcepts.html#x19-480004.1.1">A Look at AC and DC
+Drives</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="FundamentalConcepts.html#x19-510004.1.2">DC Machines</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="MMFofDistributedWindings.html#x20-520004.2">MMF of Distributed Windings</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="MMFofDistributedWindings.html#x20-530004.2.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-540004.3">Magnetic
+Field in Rotating Machinery</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="MagneticFieldinRotatingMachinery.html#x21-550004.3.1">Machines with Uniform Air-Gaps</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-560004.4">Describing Rotating
+MMF Waves in AC Machines</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-570004.4.1">MMF Wave of a Single-Phase Winding</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="DescribingRotatingMMFWavesinACMachines.html#x22-580004.4.2">MMF
+Wave of a Polyphase Winding</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="GeneratedVoltage.html#x23-600004.5">Generated Voltage</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="GeneratedVoltage.html#x23-610004.5.1">AC Machines</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-620004.6">Torque
+in Non-Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-630004.6.1">Coupled-Circuit Viewpoint</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="TorqueinNonSalientPoleMachines.html#x24-640004.6.2">Magnetic Field
+Viewpoint</a></span></span><span class="sectionToc"><span class="number">4.7</span><span class="title"><a href="MaterialLimitations.html#x25-650004.7">Material Limitations</a></span></span><span class="subsectionToc"><span class="number">4.7.1</span><span class="title"><a href="MaterialLimitations.html#x25-660004.7.1">Magnetic Saturation</a></span></span><span class="subsectionToc"><span class="number">4.7.2</span><span class="title"><a href="MaterialLimitations.html#x25-670004.7.2">Leakage Flux</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="SynchronousMachines.html#x26-710005">Synchronous
+Machines</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="SynchronousMachines1.html#x27-720005.1">Synchronous Machines</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="SynchronousMachines1.html#x27-730005.1.1">Construction</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="SynchronousMachines1.html#x27-740005.1.2">Excitation</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="SynchronousMachines1.html#x27-750005.1.3">Parallel
+Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="SynchronousMachines1.html#x27-760005.1.4">Starting Method</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="EquivalentCircuits.html#x28-770005.2">Equivalent Circuits</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="EquivalentCircuits.html#x28-780005.2.1">The Rotor Self-Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="EquivalentCircuits.html#x28-790005.2.2">Stator-to-Rotor
+Mutual Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="EquivalentCircuits.html#x28-800005.2.3">Synchronous Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="EquivalentCircuits.html#x28-820005.2.4">Deriving the Equivalent
+Circuit</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-840005.3">Open and Short Circuit Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-850005.3.1">Open-Circuit Saturation
+and No-Load Rotational Losses</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="OpenandShortCircuitCharacteristics.html#x29-860005.3.2">Short-Circuit Characteristic and Load
+Loss</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-870005.4">Steady-State Power-Angle Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-880005.4.1">Describing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="SteadyStatePowerAngleCharacteristics.html#x30-890005.4.2">The Power Relation</a></span></span><span class="sectionToc"><span class="number">5.5</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-900005.5">Steady-State Operating Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.5.1</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-910005.5.1">Capability
+Curves</a></span></span><span class="subsectionToc"><span class="number">5.5.2</span><span class="title"><a href="SteadyStateOperatingCharacteristics.html#x31-920005.5.2">V-Curves</a></span></span><span class="sectionToc"><span class="number">5.6</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-940005.6">A Study in dq-Axis Theory</a></span></span><span class="subsectionToc"><span class="number">5.6.1</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-950005.6.1">FLux and MMF Waves</a></span></span><span class="subsectionToc"><span class="number">5.6.2</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-960005.6.2">Phasor
+Diagrams for Salient-Pole Machines</a></span></span><span class="subsectionToc"><span class="number">5.6.3</span><span class="title"><a href="AStudyindqAxisTheory.html#x32-970005.6.3">Power Angle Characteristics</a></span></span><span class="sectionToc"><span class="number">5.7</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-980005.7">Permanent Magnet
+AC Machines</a></span></span><span class="subsectionToc"><span class="number">5.7.1</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-990005.7.1">Merits and Demerits</a></span></span><span class="subsectionToc"><span class="number">5.7.2</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1000005.7.2">Case Study: A Machine with Permanent
+Magnets</a></span></span><span class="subsectionToc"><span class="number">5.7.3</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1020005.7.3">Interior Magnet Design</a></span></span><span class="subsectionToc"><span class="number">5.7.4</span><span class="title"><a href="PermanentMagnetACMachines.html#x33-1030005.7.4">Applications</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="InductionMachines.html#x34-1040006">Induction Machines</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1050006.1">Polyphase
+Induction Machines</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1060006.1.1">Speed Analysis</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1070006.1.2">Torque Behaviour</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PolyphaseInductionMachines.html#x35-1080006.1.3">Current and
+Flux Flow</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1090006.2">Induction Machine Equivalent Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1120006.2.1">Analysing the Equivalent
+Circuit</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="InductionMachineEquivalentCircuit.html#x36-1130006.2.2">Determining Power and Torque</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="ParametersTests.html#x37-1140006.3">Parameters Tests</a></span></span><span class="subsectionToc"><span class="number">6.3.1</span><span class="title"><a href="ParametersTests.html#x37-1150006.3.1">No-Load
+Test</a></span></span><span class="subsectionToc"><span class="number">6.3.2</span><span class="title"><a href="ParametersTests.html#x37-1180006.3.2">Blocked-Rotor Test</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="#x38-1190006.4">Effects of Rotor Resistance</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="#x38-1200006.4.1">Wound-Rotor
+Machines</a></span></span><span class="subsectionToc"><span class="number">6.4.2</span><span class="title"><a href="#x38-1210006.4.2">Deep-Bar and Double-Squirrel-Cage Rotors</a></span></span><span class="subsectionToc"><span class="number">6.4.3</span><span class="title"><a href="#x38-1230006.4.3">Motor-Application
+Considerations and Classes</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x39-128000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-129000A.1">An Introduction to Scientific Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-130000A.1.1">A
+Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-131000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-134000A.1.3">Decimal Multiples and Sub-multiples of
+SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x40-137000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x41-138000B">Dimensional Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-139000B.1">Physical
+Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-140000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-141000B.1.2">Physical Quantities
+and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-142000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-143000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-144000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-147000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x42-151000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-152000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-153000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-158000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-163000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x43-173000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, PhD</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="SIUnit.html">Chapter: SI
+Unit</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="ParametersTests.html">Parameters Tests</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="InductionMachines.html#EffectsofRotorResistance.html">Chapter: Induction
+Machines</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-6.4"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#section.6.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">6.4</span> <span class="title"> <a id="x38-1190006.4"></a>Effects of Rotor
+Resistance</span></h3></div>
+<p class="noindent"></p><figure class="float">
+<a id="x38-119001r17"></a>
+<figcaption class="caption"><span class="id">Figure 6.17: 
+          </span><span class="content">A Close-up view of the slip rings of a wound-rotor. These slip rings allows external resistances to be
+          applied during startup, which in turn allows a smoother startup.                          </span></figcaption>
+<img alt="PIC" src="figures/Induction-Machines/raster/slip-rings.jpg" style=""/>
+</figure>
+<p class="noindent">A fundamental limitation of <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which the electric current in
+the rotor that produces torque is obtained by electromagnetic induction from the magnetic field of
+the stator winding.</a></span></span></span>s with <b>constant rotor resistance</b> is the rotor design <b>has to be a
+compromise</b>.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">High efficiency under normal conditions requires low rotor resistance, but low rotor resistance
+results in low starting torque and high starting current with low starting power factor.
+</p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-6.4.1"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.6.4.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">6.4.1</span> <span class="title"> <a id="x38-1200006.4.1"></a>Wound-Rotor Machines</span></h4></div>
+</p><p class="noindent">The use of a <b>wound rotor</b> is an effective way of avoiding the need for compromise. In a this
+configuration, the rotor is constructed with a poly-phase winding similar to the stator. The terminals of
+the rotor windings are connected to <b>slip rings</b> such as the ones shown in <b>Fig.</b> <a href="#x38-119001r17">6.17</a>. Stationary brushes
+in contact with the slip rings are used to connect the windings in series with external resistors which
+can be used to control the starting torque and current. As the motor comes up to speed, the resistor
+values can be varied and they can ultimately be short-circuited to achieve maximum efficiency at
+operating <span class="margin-block"><span class="margin"><span>speeds. <span class="ellipsis">[178]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Induction-Machines/raster/wrim-starter.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[178]</span>An example of a modern implementation of a wound-rotor starter. In the lower
+right the three resistors for each phase can be seen, and on the upper right, the control circuit is
+shown.</span></span></span></span>
+</p><p class="noindent">The general nature of the effects on the torque-speed characteristics caused by varying
+rotor resistance has been shown in <b>Fig.</b> <a href="InductionMachineEquivalentCircuit.html#x36-113013r14">6.14</a>. By use of the appropriate value of rotor
+resistance, the maximum torque can be made to occur at standstill if high starting torque
+is needed. As the rotor speeds up, the external resistances can be decreased, making
+maximum torque available throughout the accelerating range. Given most of the rotor loss
+(<math display="inline"><msup><mrow><mi>I</mi></mrow><mrow><mn>2</mn></mrow></msup><mi>R</mi></math>) is
+dissipated in the external resistors, the rotor temperature rise during starting is lower than it would be
+if the resistance were incorporated in the rotor winding. For normal running, the rotor winding can be
+short-circuited directly at the brushes. The rotor winding itself is typically designed to have low
+resistance so that running efficiency is high and full-load slip is low. Besides their use when
+starting requirements are severe, wound-rotor <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in
+which the electric current in the rotor that produces torque is obtained by electromagnetic
+induction from the magnetic field of the stator winding.</a></span></span></span>s can be used for adjustable-speed
+drives.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Their primary disadvantage is greater cost and complexity than squirrel-cage motors. </p></div></div>
+<p class="noindent">The principal effects of varying rotor resistance on the starting and running characteristics of
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which the electric current in the rotor that produces
+torque is obtained by electromagnetic induction from the magnetic field of the stator winding.</a></span></span></span>s can be
+shown quantitatively by the following example.
+</p>
+<a id="x38-120001r3"></a>
+<div class="exer-block"> <span class="exer-upper"> <span class="exer-header"> <b><b>Exercise</b> 6.3: </b> </span> <span class="exer-title"> Effects of Rotor Resistance </span> </span> <div class="body">
+<p class="noindent">A three-phase, <math display="inline"><mn>4</mn><mn>6</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>,
+<math display="inline"><mn>6</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle></math>,
+four-pole, <math display="inline"><mn>5</mn><mn>0</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>h</mi><mi>p</mi></mstyle></math>
+wound-rotor induction motor, with its slip rings short-circuited, has the following properties:
+</p><p class="noindent"></p><figure class="float">
+<a id="x38-120002r2"></a>
+<figcaption class="caption"><span class="id">Table 6.2: </span><span class="content">Values given for the question “Effects of Rotor Resistance”.
+</span></figcaption>
+<table class="tabularray tblr" id="tbl-10"> <tr id="row-10-1-"><td id="1-1" style=""> <b>Parameter</b></td><td colspan="5" id="1-2" style=""> <b>Value</b></td></tr>
+<tr id="row-10-2-"><td id="2-1" style=""> Full-load slip</td><td colspan="5" id="2-2" style=""> <math display="inline"><mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>5</mn><mi>%</mi></math> </td></tr>
+<tr id="row-10-3-"><td id="3-1" style=""> Rotor 
+<math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mstyle><mstyle style="color:#FF0000;"><mi>R</mi></mstyle></math> 
+at full-load torque                                     </td><td colspan="5" id="3-2" style=""> <math display="inline"><mn>5</mn><mi>,</mi><mn>6</mn><mn>9</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>W</mi></mstyle></math> </td></tr>
+<tr id="row-10-4-"><td id="4-1" style=""> Slip at maximum torque</td><td colspan="5" id="4-2" style=""> <math display="inline"><mn>6</mn><mi>%</mi></math> </td></tr>
+<tr id="row-10-5-"><td id="5-1" style=""> Rotor current at maximum torque</td><td colspan="5" id="5-2" style=""> <math display="inline"><mn>2</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>8</mn><mn>2</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow><mn>2</mn><mo class="MathClass-punc" stretchy="false">,</mo><mi>f</mi><mi>l</mi></mrow><mrow></mrow></msubsup></mstyle></math>, 
+where <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow><mn>2</mn><mo class="MathClass-punc" stretchy="false">,</mo><mi>f</mi><mi>l</mi></mrow><mrow></mrow></msubsup></mstyle></math> 
+is the full-load rotor current                        </td></tr>
+<tr id="row-10-6-"><td id="6-1" style=""> Torque at 20% slip</td><td colspan="5" id="6-2" style=""> <math display="inline"><mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>2</mn><mn>0</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>T</mi></mrow><mrow><mi>f</mi><mi>l</mi></mrow><mrow></mrow></msubsup></mstyle></math>, 
+where <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>T</mi></mrow><mrow><mi>f</mi><mi>l</mi></mrow><mrow></mrow></msubsup></mstyle></math> 
+is the full-load torque                                 </td></tr>
+<tr id="row-10-7-"><td id="7-1" style=""> Rotor current at 20% slip</td><td colspan="5" id="7-2" style=""> <math display="inline"><mn>3</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>9</mn><mn>5</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow><mn>2</mn><mo class="MathClass-punc" stretchy="false">,</mo><mi>f</mi><mi>l</mi></mrow><mrow></mrow></msubsup></mstyle></math> </td></tr>
+</table>
+</figure>
+<p class="noindent">If the rotor-circuit resistance is increased to <math display="inline"><mn>5</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>R</mi></mrow><mrow><mi>r</mi><mi>o</mi><mi>t</mi><mi>o</mi><mi>r</mi></mrow><mrow></mrow></msubsup></mstyle></math>
+by connecting non-inductive resistances in series with each rotor slip ring, determine:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+a. 
+</dt><dd class="enumerate-enumitem">the slip at which the motor will develop the same full-load torque,
+</dd>
+<dt class="enumerate-enumitem">
+b. 
+</dt><dd class="enumerate-enumitem">total rotor-circuit <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mstyle><mstyle style="color:#FF0000;"><mi>R</mi></mstyle></math>
+loss at full-load torque,
+</dd>
+<dt class="enumerate-enumitem">
+c. 
+</dt><dd class="enumerate-enumitem">horsepower output at full-load torque,
+</dd>
+<dt class="enumerate-enumitem">
+d. 
+</dt><dd class="enumerate-enumitem">slip at maximum torque,
+</dd>
+<dt class="enumerate-enumitem">
+e. 
+</dt><dd class="enumerate-enumitem">rotor current at maximum torque,
+</dd>
+<dt class="enumerate-enumitem">
+f. 
+</dt><dd class="enumerate-enumitem">starting torque, and
+</dd>
+<dt class="enumerate-enumitem">
+g. 
+</dt><dd class="enumerate-enumitem">rotor current at starting.</dd></dl>
+<p class="noindent">Express the torques and rotor currents in per unit based on the full-load torque values.
+</p>
+<hr/>
+<p class="noindent">To solve this problem, we need to understand the effects of changes in the rotor
+resistance are seen from the stator in terms of changes in the referred resistance
+<math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mstyle></math>.
+Examining the equivalent circuit shows that, for specified applied voltage and
+frequency, everything concerning the stator performance is fixed by the value of
+<math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mstyle></math>,
+assuming <span class="alert">the other impedance elements being constant</span>
+</p>
+<div class="quote"> For example, if <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mstyle></math>
+is doubled and <math display="inline"><mstyle style="color:#FF0000;"><mi>s</mi></mstyle></math>
+is simultaneously doubled, there will be no indication from the stator that anything has changed. The stator
+current and power factor, the power delivered to the air gap, and the torque will be unchanged as long as
+the ratio <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mi>s</mi></math>
+remains constant. </div>
+<p class="noindent">Added physical significance can be given to the argument by examining the effects of simultaneously
+doubling <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mstyle></math>
+and <math display="inline"><mstyle style="color:#FF0000;"><mi>s</mi></mstyle></math>
+from the viewpoint of the rotor. An observer on the rotor would see the resultant air-gap flux wave
+traveling past at twice the original slip speed, generating twice the original rotor voltage at twice the
+original slip frequency. The rotor reactance therefore is doubled, and since the original premise is that
+the rotor resistance also is doubled, the rotor impedance is doubled while the rotor power
+factor is unchanged. Since rotor voltage and impedance are both doubled, the effective
+value of the rotor current remains the same; only its frequency is changed. The air gap still
+has the same synchronously rotating flux and mmf waves with the same torque angle. An
+observer on the rotor would then agree with a counterpart on the stator that the torque is
+unchanged.
+</p><p class="noindent">An observer on the rotor, however, would be aware of two changes not apparent in the
+stator:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+1. 
+</dt><dd class="enumerate-enumitem">the rotor <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mstyle><mstyle style="color:#FF0000;"><mi>R</mi></mstyle></math>
+loss will doubled, and
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem">the rotor is turning more slowly and therefore developing less mechanical power with the
+same torque.</dd></dl>
+<p class="noindent">In other words, more of the power absorbed from the stator goes into
+<math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mstyle><mstyle style="color:#FF0000;"><mi>R</mi></mstyle></math> heat in
+the rotor, and less is available for mechanical power.
+</p><p class="noindent">Let’s apply our logic to the given questions now:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+a. 
+</dt><dd class="enumerate-enumitem">If the rotor resistance is increased five (<span class="alert">5</span>) times, the slip must increase five times for the same
+value of <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mstyle style="color:#FF0000;"><mi>s</mi></mstyle></math>
+and therefore for the same torque. But the original slip at full load is 0.015. The new slip at
+full-load torque therefore is <math display="inline"><mn>5</mn> <mi>×</mi> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>0</mn><mn>1</mn><mn>5</mn> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>0</mn><mn>7</mn><mn>5</mn></math>.
+</dd>
+<dt class="enumerate-enumitem">
+b. 
+</dt><dd class="enumerate-enumitem">The effective value of the rotor current is the same as its full-load
+value before addition of the series resistance, and therefore the rotor
+(<math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mstyle style="color:#FF0000;"><mi>s</mi></mstyle></math>) loss is five times the full-load value of
+<math display="inline"><mn>5</mn><mi>,</mi><mn>6</mn><mn>9</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>W</mi></mstyle></math>,
+or: <table class="equation-star"><tr><td>
+<math class="equation" display="block"><msup><mrow>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mstyle><mstyle style="color:#FF0000;"><mi>R</mi></mstyle>
+</mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mo class="MathClass-open" stretchy="false">[</mo><mi>R</mi><mi>o</mi><mi>t</mi><mi>o</mi><mi>r</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>5</mn> <mi>×</mi> <mn>5</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>6</mn><mn>9</mn> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mn>8</mn><mi>,</mi><mn>4</mn><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>k</mi><mi>W</mi></mstyle>
+</math></td></tr></table>
+</dd>
+<dt class="enumerate-enumitem">  
+c. 
+</dt><dd class="enumerate-enumitem">The increased slip has caused the per-unit speed at full-load torque to drop <table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="quad" width="1em"></mspace>
+<mstyle class="text"><mtext>from</mtext></mstyle>
+<mspace class="quad" width="1em"></mspace>
+<mn>1</mn> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle style="color:#FF0000;"><mi>s</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>9</mn><mn>8</mn><mn>5</mn><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>down to</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mn>1</mn> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle style="color:#FF0000;"><mi>s</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>9</mn><mn>2</mn><mn>5</mn><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">Given the ratio <math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mi>s</mi></math>
+is unchanged, the torque is the same and therefore the power output has dropped proportionally,
+or </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle style="color:#FF0000;"><msubsup><mrow><mi>P</mi></mrow><mrow><mi>m</mi><mi>e</mi><mi>c</mi><mi>h</mi></mrow><mrow></mrow></msubsup></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>9</mn><mn>2</mn><mn>5</mn></mrow>
+<mrow>
+<mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>9</mn><mn>8</mn><mn>5</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mn>5</mn><mn>0</mn><mn>0</mn> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>4</mn><mn>7</mn><mn>0</mn><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>h</mi><mi>p</mi></mstyle>
+</math></td></tr></table>
+<p class="noindent">Because the air-gap power is unchanged, the decrease in electromechanical
+shaft power must be accompanied by a corresponding increase in rotor
+<math display="inline"><mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mstyle><mstyle style="color:#FF0000;"><mi>R</mi></mstyle></math>
+loss.
+</p>
+</dd>
+<dt class="enumerate-enumitem">
+d. 
+</dt><dd class="enumerate-enumitem">If rotor resistance is increased five times, the slip at maximum torque simply increases five times.
+But the original slip at maximum torque is 0.060. The new slip at maximum torque with the
+added rotor resistance therefore is <table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle style="color:#FF0000;"><msubsup><mrow><mi>s</mi></mrow><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>T</mi></mrow><mrow></mrow></msubsup></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mn>5</mn> <mi>×</mi> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>0</mn><mn>6</mn><mn>0</mn> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>3</mn><mn>0</mn>
+</math></td></tr></table>
+</dd>
+<dt class="enumerate-enumitem">
+e. 
+</dt><dd class="enumerate-enumitem">The effective value of the rotor current at maximum torque is independent of rotor
+resistance; only its frequency is changed when rotor resistance is varied. Therefore,
+<table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow><mn>2</mn><mo class="MathClass-punc" stretchy="false">,</mo><mi>m</mi><mi>a</mi><mi>x</mi><mi>T</mi></mrow><mrow></mrow></msubsup></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>8</mn><mn>2</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow><mn>2</mn><mo class="MathClass-punc" stretchy="false">,</mo><mi>f</mi><mi>l</mi></mrow><mrow></mrow></msubsup></mstyle>
+</math></td></tr></table>
+</dd>
+<dt class="enumerate-enumitem">
+f. 
+</dt><dd class="enumerate-enumitem">With the rotor resistance increased five times, the starting torque will be the same as the original
+running torque at a slip of 0.20 and therefore equals the running torque without the series
+resistors, namely, <table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle style="color:#FF0000;"><msubsup><mrow><mi>T</mi></mrow><mrow><mi>s</mi><mi>t</mi><mi>a</mi><mi>r</mi><mi>t</mi></mrow><mrow></mrow></msubsup></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>2</mn><mn>0</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>T</mi></mrow><mrow><mi>f</mi><mi>l</mi></mrow><mrow></mrow></msubsup></mstyle>
+</math></td></tr></table>
+</dd>
+<dt class="enumerate-enumitem">
+g. 
+</dt><dd class="enumerate-enumitem">The rotor current at starting with the added rotor resistances will be the same as the rotor
+current when running at a slip of 0.20 with the slip rings short-circuited, namely,
+<table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow><mn>2</mn><mo class="MathClass-punc" stretchy="false">,</mo><mi>s</mi><mi>t</mi><mi>a</mi><mi>r</mi><mi>t</mi></mrow><mrow></mrow></msubsup></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mn>3</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>9</mn><mn>5</mn><mstyle style="color:#FF0000;"><msubsup><mrow><mi>I</mi></mrow><mrow><mn>2</mn><mo class="MathClass-punc" stretchy="false">,</mo><mi>f</mi><mi>l</mi></mrow><mrow></mrow></msubsup></mstyle>
+</math></td></tr></table>
+</dd></dl>
+<p class="noindent"></p></div> </div>
+<p class="noindent">With the prominence of variable-speed <span class="margin-block">drives <span class="margin-comment"><span class="ellipsis">[179]</span>
+<span class="sidenote">also called <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:vfd">VFD</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:vfd">Variable Frequency Drive</a></span><span class="acronym-desc"><a class="glossary" href="#glo:vfd">Variable
+Frequency Drive</a></span></span></span></span></span></span> which can apply variable-frequency voltages and currents to the stator and hence can
+control the slip as a function of motor speed, it is possible to control the applied frequency, and hence
+the motor slip, to achieve maximum torque at any desired rotor speed, including under starting
+conditions.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">As a result, the use of wound-rotor motors has become less common because similar performance can
+now be obtained with squirrel-cage motors. </p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-6.4.2"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.6.4.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">6.4.2</span> <span class="title"> <a id="x38-1210006.4.2"></a>Deep-Bar and Double-Squirrel-Cage Rotors</span></h4></div>
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x38-121001r18"></a>
+<figcaption class="caption"><span class="id">Figure 6.18: </span><span class="content">Deep rotor bar with slot-leakage flux.                                            </span></figcaption>
+<img alt="PIC" src="figures/Induction-Machines/figures-14.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">A simple and a clever way of obtaining a rotor resistance which automatically varies with speed is to
+use the following principle: </p><div class="quote">  at standstill, the rotor frequency equals the stator frequency and, as the
+motor accelerates, the rotor frequency decreases to a very low value at the speed associated with
+normal operating conditions. </div>
+<p class="noindent">With suitable shapes and arrangements for rotor bars, squirrel-cage rotors can be designed so their effective resistance at
+<math display="inline"><mn>5</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle></math>
+is several times their <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current
+may flow through a conductor such as a wire, but can also flow through semiconductors,
+insulators, or even through a vacuum as in electron or ion beams. The electric current flows
+in a constant direction, distinguishing it from alternating current (AC). A term formerly
+used for this type of current was galvanic current.</a></span></span></span> resistance. The various schemes all make
+use of the inductive effect of the slot-leakage flux on the current distribution in the rotor
+bars.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">This phenomenon is similar to the <span class="alert">skin</span> and <span class="alert">proximity effect</span> in any system of conductors carrying alternating current.
+</p></div></div>
+<div class="desc-block" id="desc-block-6.1"> <a class="copiable-link" href="#desc-block-6.1"> ¶</a> <span class="desc-upper"> <span class="desc-header"> <b>Description: 6.<a id="x38-121002r1"></a>1: </b> </span> <span class="desc-title"> Proximity Effect </span> </span> <div class="body">
+<p class="noindent">A <span class="alert">redistribution</span> of current occurring in nearby parallel electrical conductors with <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric
+current that periodically reverses direction and changes its magnitude continuously with time, in
+contrast to direct current (DC), which flows only in one direction.</a></span></span></span>, caused by <span class="alert">magnetic effects</span>. In adjacent
+conductors carrying <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses
+direction and changes its magnitude continuously with time, in contrast to direct current (DC),
+which flows only in one direction.</a></span></span></span> current in the same direction, it causes the current in the
+conductor to concentrate on the <span class="alert">side away from the nearby conductor</span>, whereas in opposite directions, it causes the current in
+the conductor to concentrate on the side adjacent to the nearby conductor. </p>
+<hr/>
+<p class="noindent"> 
+The proximity
+effect is caused by <span class="alert">induced eddy currents</span> For example, in a coil of wire carrying alternating current with multiple
+turns of wire lying next to each other, the current in each wire will be concentrated in
+a strip on each side of the wire facing away from the adjacent wires. This <span class="alert">current crowding</span> effect causes
+the current to occupy a smaller effective cross-sectional area of the conductor, increasing
+current density and <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses
+direction and changes its magnitude continuously with time, in contrast to direct current (DC),
+which flows only in one direction.</a></span></span></span> electrical resistance of the conductor. </p>
+<hr/>
+<p class="noindent"> 
+The concentration of
+current on the side of the conductor gets larger with increasing frequency, so proximity
+effect causes adjacent wires carrying the same current to have more resistance at higher
+frequencies.
+</p>
+</div> </div>
+<p class="noindent">Consider first a squirrel-cage rotor having deep, narrow bars like that shown in cross section in
+<b>Fig.</b> <a href="#x38-121001r18">6.18</a>. The general character of the slot-leakage flux produced by the current in the bar within this
+slot is shown in schematic form in the figure. If the rotor iron had infinite permeability, all the
+leakage-flux lines would close in paths below the slot, as shown. Now imagine the bar to consist of an
+infinite number of layers of differential depth where one at the bottom and one at the top are indicated
+in <b>Fig.</b> <a href="#x38-121001r18">6.18</a>.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x38-121003r19"></a>
+<figcaption class="caption"><span class="id">Figure 6.19: </span><span class="content">An example of skin effect in a copper rotor bar <math display="inline"><mn>2</mn><mi>,</mi><mn>5</mn></math><math display="inline"><mstyle mathvariant="normal"><mi>c</mi><mi>m</mi></mstyle></math>
+deep.                                                                            </span></figcaption>
+<img alt="PIC" src="figures/Induction-Machines/figures-10.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">The leakage inductance of the bottom layer is greater than that of the top layer because the bottom
+layer is linked by more leakage flux. Because all the layers are electrically in parallel, under
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric current that periodically reverses direction and changes its
+magnitude continuously with time, in contrast to direct current (DC), which flows only in one direction.</a></span></span></span>
+conditions the current in the low-reactance upper layers will be greater than that in the high-reactance
+lower layers.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">As a result, the current will be <span class="alert">forced toward the top of the slot</span>, and the phase of current in the upper layers will lead that of the
+current in the lower ones. </p></div></div>
+<p class="noindent">This non-uniform current distribution results in an increase in the effective bar resistance and a smaller
+decrease in the effective leakage inductance of the bar. Since the distortion in current distribution
+depends on an inductive effect, the effective resistance is a function of the frequency as well as the
+depth and shape of the bar and the permeability and resistivity of the bar material. As an
+example, <b>Fig.</b> <a href="#x38-121003r19">6.19</a> shows a curve of the ratio of effective <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ac">AC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ac">Alternating Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ac">An electric
+current that periodically reverses direction and changes its magnitude continuously with
+time, in contrast to direct current (DC), which flows only in one direction.</a></span></span></span> resistance to
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a
+conductor such as a wire, but can also flow through semiconductors, insulators, or even through
+a vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of current
+was galvanic current.</a></span></span></span> resistance as a function of frequency for a rectangular copper bar
+<math display="inline"><mn>2</mn><mi>,</mi><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>c</mi><mi>m</mi></mstyle></math>
+deep.
+A squirrel-cage rotor with deep bars can be readily designed to have an effective resistance at stator
+<span class="margin-block">frequency <span class="margin-comment"><span class="ellipsis">[180]</span>
+<span class="sidenote">corresponding to rotor standstill conditions.</span></span></span> several times greater than its <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct
+Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a conductor such as a
+wire, but can also flow through semiconductors, insulators, or even through a vacuum as in
+electron or ion beams. The electric current flows in a constant direction, distinguishing it
+from alternating current (AC). A term formerly used for this type of current was galvanic
+current.</a></span></span></span> resistance. As the motor accelerates, the rotor frequency decreases and therefore the
+effective rotor resistance decreases, approaching its <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of
+electric charge. Direct current may flow through a conductor such as a wire, but can also flow
+through semiconductors, insulators, or even through a vacuum as in electron or ion beams.
+The electric current flows in a constant direction, distinguishing it from alternating current
+(AC). A term formerly used for this type of current was galvanic current.</a></span></span></span> value at small
+slips.
+</p>
+<p class="noindent"><span class="paragraphHead"> <a id="x38-122000"></a>Double-Cage Design</span>
+An alternative way of attaining similar results is the double-cage arrangement shown in <b>Fig.</b> <a href="#x38-122001r20">6.20</a>. In
+this case, the squirrel-cage winding consists of two (<span class="alert">2</span>) layers of bars short-circuited by end rings. The
+upper bars are of smaller cross-sectional area than the lower bars and consequently have higher
+resistance. The general nature of the slot-leakage field is shown in <b>Fig.</b> <a href="#x38-122001r20">6.20</a>, from which it can be seen
+that the inductance of the lower bars is greater than that of the upper ones because of the flux crossing
+the slot between the two layers.
+</p><p class="noindent">The difference in inductance can be made quite large by properly proportioning the constriction in the
+slot between the two bars. At standstill, when rotor frequency equals stator frequency, there is
+relatively little current in the lower bars because of their high reactance.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">the effective resistance of the rotor at standstill is then approximately equal to that of the
+high-resistance upper layer. </p></div></div>
+<p class="noindent">At the low rotor frequencies corresponding to small slips, however, reactance effects become negligible,
+and the rotor resistance then approaches that of the two layers in parallel.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Given the effective resistance and leakage inductance of double-cage and deep-bar rotors vary with frequency,
+the parameters <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mn>2</mn></mrow></msub></math>,
+representing the referred effects of rotor resistance and leakage inductance as viewed from the stator,
+vary with rotor speed and are not <span class="margin-block">constant. <span class="margin-comment"><span class="ellipsis">[181]</span>
+<span class="sidenote">a more complicated form of equivalent circuit, with
+multiple parallel branches, is required in order to represent these cases.</span></span></span> </p></div></div>
+<p class="noindent">Under steady-state conditions, the simple equivalent circuit derived previously can still be used to represent
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:im">IM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:im">Induction Machine</a></span><span class="acronym-desc"><a class="glossary" href="#glo:im">an AC electric motor in which the electric current in the rotor that produces torque is
+obtained by electromagnetic induction from the magnetic field of the stator winding.</a></span></span></span>s in these cases.
+However <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mn>2</mn></mrow></msub></math>
+must be varied with slip.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x38-122001r20"></a>
+<figcaption class="caption"><span class="id">Figure 6.20: </span><span class="content">Double-squirrel-cage rotor bars with slot-leakage flux shown in schematic form.                 </span></figcaption>
+<img alt="PIC" src="figures/Induction-Machines/raster/double-cage-design.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">All basic relations still apply to the motor if the values of
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mn>2</mn></mrow></msub></math> are
+properly adjusted with changes in slip.
+</p>
+<div class="quote">  For example, in calculating the starting performance,
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mn>2</mn></mrow></msub></math> should be
+taken as their effective values at stator frequency, while in computing the running performance at small
+slips, <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></math>
+should be taken as its effective value at a low frequency, and
+<math display="inline"><msub><mrow><mi>X</mi></mrow><mrow><mn>2</mn></mrow></msub></math> should
+be taken as the stator-frequency value of the reactance corresponding to a low-frequency effective value
+of the rotor leakage inductance. </div>
+<p class="noindent">Over the normal running range of slips, the rotor resistance and leakage inductance usually can be
+considered constant at substantially their <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through semiconductors,
+insulators, or even through a vacuum as in electron or ion beams. The electric current flows in a
+constant direction, distinguishing it from alternating current (AC). A term formerly used for this type
+of current was galvanic current.</a></span></span></span> values.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-6.4.3"> <a class="pdf-icon" href="DriveTechnologyLectureBook.pdf#subsection.6.4.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">6.4.3</span> <span class="title"> <a id="x38-1230006.4.3"></a>Motor-Application Considerations and Classes</span></h4></div>
+</p><p class="noindent">By use of double-cage and deep-bar rotors, squirrel-cage motors can be designed to have the <b>good
+starting characteristics</b> resulting from <b>high rotor resistance</b> and, at the same time, the <b>good
+running characteristics resulting from low rotor resistance</b>. The design is necessarily somewhat
+of a compromise, however, and such motors lack the flexibility of a wound-rotor machine with external
+rotor resistance.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Wound-rotor motors were commonly preferred when starting requirements were severe.
+</p></div></div>
+<div class="sidenote"> <span class="figure">
+<a id="x38-123001r21"></a>
+<figcaption class="caption"><span class="id">Figure 6.21: </span><span class="content">Typical torque-speed curves for 1800-r/min general-purpose induction motors.                 </span></figcaption>
+<img alt="PIC" src="figures/Induction-Machines/raster/induction-motor-class.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">However, as discussed in the previous section, when combined with solid-state power-electronics,
+squirrel-cage motors can achieve all the flexibility of wound-rotor motors, which caused wound-rotor
+motors to become increasingly less common even in cases where starting requirements require
+significant aid.
+</p><p class="noindent">To meet the usual requirements of industry, integral-horsepower, three-phase, squirrel-cage
+motors are available from manufacturers’ stock in a range of standard ratings up to
+<math display="inline"><mn>2</mn><mn>0</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>h</mi><mi>p</mi></mstyle></math>
+at various standard frequencies, voltages, and <span class="margin-block">speeds. <span class="margin-comment"><span class="ellipsis">[182]</span>
+<span class="sidenote">Larger motors are generally regarded as
+special-purpose rather than general-purpose motors.</span></span></span> Several standard designs are available to meet
+various starting and running requirements.
+</p><p class="noindent">Representative torque-speed characteristics of the four (<span class="alert">4</span>) most common
+designs are shown in <b>Fig.</b> <a href="#x38-123001r21">6.21</a>. These curves are fairly typical of 1800
+<math display="inline"><mstyle mathvariant="normal"><mi>r</mi><mi>p</mi><mi>m</mi></mstyle></math> motors in ratings from
+<math display="inline"><mn>6</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>W</mi></mstyle></math>
+to <math display="inline"><mn>1</mn><mn>5</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>W</mi></mstyle></math>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Individual motors may differ appreciably from these average curves. </p></div></div>
+<p class="noindent">Briefly, the characteristic features of these designs are as follows:
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-16"> <a id="x38-124000"></a>Design Class A: Normal Starting Torque, Normal Starting Current, Low Slip</h5>
+</p><p class="noindent">This design usually has a low-resistance, single-cage rotor and emphasizes good running performance at
+the expense of starting. The full-load slip is low and the full-load efficiency is high. The maximum
+torque usually is well over 200 percent of full-load torque and occurs at a small <span class="margin-block">slip. <span class="margin-comment"><span class="ellipsis">[183]</span>
+<span class="sidenote">This is usually less
+than 20 percent.</span></span></span> The starting torque at full voltage varies from about 200 percent of full-load torque in
+small motors to about 100 percent in large motors. The high starting <span class="margin-block">current <span class="margin-comment"><span class="ellipsis">[184]</span>
+<span class="sidenote">500 to 800
+percent of full-load current when started at rated voltage.</span></span></span> is the principal disadvantage of this
+design.
+</p><p class="noindent">In sizes below about <math display="inline"><mn>7</mn><mi>,</mi><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>h</mi><mi>p</mi></mstyle></math>
+these starting currents usually are within the limits on in-rush current which the distribution system
+supplying the motor can withstand, and across-the-line starting at full voltage then can be used.
+Otherwise, reduced-voltage starting must be used. Reduced-voltage starting results in a decrease in
+starting torque because the starting torque is proportional to the square of the voltage
+applied to the motor terminals. The reduced voltage for starting is usually obtained from an
+<b>autotransformer</b><span class="margin-block">, <span class="margin-comment"><span class="ellipsis">[185]</span>
+<span class="sidenote">This is also known as <b>starting compensator</b>.</span></span></span> which may be manually operated or
+automatically operated by relays which cause full voltage to be applied after the motor is up to
+speed.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">If a smoother start is necessary, <span class="alert">series resistance or reactance</span> in the stator may be used. </p></div></div>
+<p class="noindent">The class-A motor is the basic standard design in sizes below about
+<math display="inline"><mn>7</mn><mi>,</mi><mn>5</mn></math> and above about
+<math display="inline"><mn>2</mn><mn>0</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>h</mi><mi>p</mi></mstyle></math>.
+It is also used in intermediate ratings where design considerations may make it difficult to meet the
+starting-current limitations of the class-B design. Its field of application is about the same as that of
+the class-B design.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-17"> <a id="x38-125000"></a>Design Class B: Normal Starting Torque, Low Starting Current, Low Slip</h5>
+</p><p class="noindent">Almost the same starting torque as the class-A design but with 75 percent of the starting current.
+Full-voltage starting, therefore, may be used with larger sizes than with class-A. The starting current is
+reduced by designing for relatively high leakage reactance, and the starting torque is maintained by use
+of a double-cage or deep-bar rotor.
+</p><p class="noindent">The full-load slip and efficiency are good, about the same as for the class-A design. However, the use of
+high reactance slightly decreases the power factor and decidedly lowers the maximum <span class="margin-block">torque. <span class="margin-comment"><span class="ellipsis">[186]</span>
+<span class="sidenote">Usually
+only slightly over 200 percent of full-load torque being obtainable.</span></span></span>
+</p><p class="noindent">This  design  is  the  most  common  in  the
+<math display="inline"><mn>7</mn><mi>,</mi><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>h</mi><mi>p</mi></mstyle></math>
+to 
+<math display="inline"><mn>2</mn><mn>0</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>h</mi><mi>p</mi></mstyle></math>
+range of sizes. It is used for substantially constant-speed drives where starting-torque requirements are
+not severe, such as in driving fans, blowers, pumps, and machine tools.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-18"> <a id="x38-126000"></a>Design Class C: High Starting Torque, Low Starting Current</h5>
+</p><p class="noindent">Uses a double-cage rotor with higher rotor resistance than the class-B design. Results in higher starting
+torque with low starting current with somewhat lower running efficiency and higher slip than the
+class-A and class-B designs.
+</p><p class="noindent">Typical applications are in driving compressors and conveyor belts.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-19"> <a id="x38-127000"></a>Design Class D: High Starting Torque, High Slip</h5>
+</p><p class="noindent">This design usually has a single-cage, high-resistance <span class="margin-block">rotor. <span class="margin-comment"><span class="ellipsis">[187]</span>
+<span class="sidenote">Generally brass bars are chosen.</span></span></span> It produces
+high starting torque at low starting current, high maximum torque at 50 to 100 percent slip, but runs
+at a high slip at full <span class="margin-block">load <span class="margin-comment"><span class="ellipsis">[188]</span>
+<span class="sidenote">This is around 7 to 11 percent.</span></span></span> and which forces the operation to be at low
+running efficiency.
+</p><p class="noindent">Its principal uses are for driving intermittent loads involving high accelerating duty and for driving
+high-impact loads such as punch presses and shears. When driving high-impact loads, the motor is
+generally aided by a flywheel which helps supply the impact and reduces the pulsations in power drawn
+from the supply system. A motor whose speed falls appreciably with an increase in torque is
+required so that the flywheel can slow down and deliver some of its kinetic energy to the
+impact.
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:ac">¶</a>
+<dt class="acr-bottom" id="glo:ac"><span class="acr-short">AC</span><span class="acr-long">Alternating Current</span></dt>
+<dd class="acr-desc"><p>An electric
+current that periodically reverses direction and changes its magnitude continuously with time, in
+contrast to direct current (DC), which flows only in one direction.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:dc">¶</a>
+<dt class="acr-bottom" id="glo:dc"><span class="acr-short">DC</span><span class="acr-long">Direct Current</span></dt>
+<dd class="acr-desc"><p>One-directional flow of electric charge. Direct current
+may flow through a conductor such as a wire, but can also flow through semiconductors,
+insulators, or even through a vacuum as in electron or ion beams. The electric current flows
+in a constant direction, distinguishing it from alternating current (AC). A term formerly
+used for this type of current was galvanic current.</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:vfd">¶</a>
+<dt class="acr-bottom" id="glo:vfd"><span class="acr-short">VFD</span><span class="acr-long">Variable Frequency Drive</span></dt>
+<dd class="acr-desc"><p>Variable
+Frequency Drive</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:im">¶</a>
+<dt class="acr-bottom" id="glo:im"><span class="acr-short">IM</span><span class="acr-long">Induction Machine</span></dt>
+<dd class="acr-desc"><p>an AC electric motor in which the electric current in
+the rotor that produces torque is obtained by electromagnetic induction from the magnetic field of
+the stator winding.</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="SIUnit.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="ParametersTests.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="InductionMachines.html#EffectsofRotorResistance.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, PhD</span>
+<span class="footer-webBook"><b>Last Updated:</b> 29.9.2026, at 14:15.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 6.4: Effects of Rotor Resistance</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>
